@@ -1,8 +1,8 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper functions.",
-  "main": "app.js",
+  "main": "./src/app.js",
   "private": false,
   "type": "module",
   "scripts": {
