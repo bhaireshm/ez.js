@@ -4,9 +4,12 @@
   "description": "Helper functions.",
   "main": "./src/app.js",
   "private": false,
-  "type": "module",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js",
+    "build": "webpack --config webpack.config.js",
+    "prepublishOnly": "",
+    "publish:pre": "npm run build",
+    "publish": "npm run publish:pre && npm version"
   },
   "keywords": [
     "helper",
@@ -25,5 +28,12 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "engineStrict": true
+  "publishConfig": {},
+  "engineStrict": true,
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
