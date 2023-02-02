@@ -1,12 +1,29 @@
 {
   "name": "@bhairesh/ez.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Helper functions.",
   "main": "app.js",
+  "private": false,
+  "type": "module",
   "scripts": {
     "start": "node app.js"
   },
-  "keywords": [],
-  "author": "bhaireshm",
-  "license": "ISC"
+  "keywords": [
+    "helper",
+    "js"
+  ],
+  "homepage": "https://github.com/bhaireshm/ez.js",
+  "bugs": {
+    "url": "https://github.com/bhaireshm/ez.js/issues",
+    "email": "bhairesh@arithaconsulting.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhaireshm/ez.js.git"
+  },
+  "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "engineStrict": true
 }
