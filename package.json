@@ -1,15 +1,14 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Helper functions.",
-  "main": "./src/app.js",
+  "main": "./dist/ez.js",
   "private": false,
   "scripts": {
     "start": "node src/app.js",
     "build": "webpack --config webpack.config.js",
     "prepublishOnly": "",
-    "publish:pre": "npm run build",
-    "publish": "npm run publish:pre && npm version"
+    "publish:pre": "npm run build"
   },
   "keywords": [
     "helper",
