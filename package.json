@@ -2,7 +2,7 @@
   "name": "@bhairesh/ez.js",
   "version": "1.0.5",
   "description": "Helper functions.",
-  "main": "./dist/ez.js",
+  "main": "./dist/bundle.js",
   "private": false,
   "scripts": {
     "start": "node ./app.js",

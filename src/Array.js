@@ -37,7 +37,7 @@ function arrayIntoChunks(arr, n) {
  * @example uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
  * @example uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
  */
-export function uniqueArrayOfObjects(arr) {
+function uniqueArrayOfObjects(arr) {
     return arr.reduce((acc, curr) => {
         if (acc.length > 0) {
             acc.forEach((a) => {
@@ -51,7 +51,7 @@ export function uniqueArrayOfObjects(arr) {
 /**
  * @param {Array} arr
  */
-export const getUniqueArray = (arr = []) => {
+function getUniqueArray(arr = []) {
     const uArr = [];
     arr.forEach((a) => {
         if (uArr.indexOf(a) === -1) uArr.push(a);

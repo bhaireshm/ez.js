@@ -1,5 +1,5 @@
-const array = require("./src/Array");
+const { addDelEleFromArray, arrayIntoChunks, uniqueArrayOfObjects, getUniqueArray } = require("./src/Array");
 
 module.exports = {
-    ...array
+    addDelEleFromArray, arrayIntoChunks, uniqueArrayOfObjects, getUniqueArray
 };
