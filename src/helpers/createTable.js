@@ -14,6 +14,8 @@
 export function createTable(tableData) {
   const { data = [], fields = [], fieldTitles = [], tableProps = {} } = tableData;
 
+  // TODO: Check for DOM access
+
   const tbl = document.createElement("table");
   tbl.id = tableProps.id || "generic-table";
   tbl.classList = tableProps.classList || "";

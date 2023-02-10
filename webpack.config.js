@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        ez: './src/app.js',
+        ez: './app.js',
     },
     mode: "development",
     devtool: 'inline-source-map',
@@ -30,6 +30,6 @@ module.exports = {
     node: {
         global: false,
         __filename: false,
-        __dirname: false,
+        __dirname: false
     },
 };

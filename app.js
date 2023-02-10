@@ -1,3 +1,5 @@
-import { isEmpty } from "./src/isEmpty";
+const array = require("./src/Array");
 
-export { isEmpty };
+module.exports = {
+    ...array
+};
