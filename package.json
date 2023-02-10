@@ -2,10 +2,11 @@
   "name": "@bhairesh/ez.js",
   "version": "1.0.6",
   "description": "Helper functions.",
-  "main": "./dist/bundle.js",
+  "main": "./app.js",
   "private": false,
   "scripts": {
     "start": "node ./app.js",
+    "test": "node ./test.js",
     "build": "webpack --config webpack.config.js",
     "prepublishOnly": "",
     "publish:pre": "npm run build"

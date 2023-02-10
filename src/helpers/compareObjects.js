@@ -9,7 +9,7 @@
  * @example compareObject({a: 2}, {a: 23}); // false
  * @example compareObject({a: {b: 2}}, {a: {b: 2}}); // true
  */
-export function compareObject(obj1, obj2) {
+function compareObject(obj1, obj2) {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
   if (keys1.length !== keys2.length) return false;
@@ -24,3 +24,5 @@ export function compareObject(obj1, obj2) {
   }
   return true;
 };
+
+module.exports = compareObject;
