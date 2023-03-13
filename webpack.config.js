@@ -1,26 +1,29 @@
 const path = require('path');
 
 module.exports = {
+    target: "node",
     entry: {
-        ez: './app.js',
+        index: './app.js',
     },
     mode: "development",
     devtool: 'inline-source-map',
     devServer: {
-        static: './dist',
         hot: true,
+        static: './dist',
     },
     output: {
+        clean: true,
+        publicPath: "/",
+        globalObject: 'this',
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true,
     },
     module: {
         rules: [
             {
                 test: /\.js?$/,
-                exclude: /(node_modules)/,
                 use: 'babel-loader',
+                exclude: /(node_modules)/
             },
         ],
     },
@@ -29,7 +32,7 @@ module.exports = {
     },
     node: {
         global: false,
-        __filename: false,
-        __dirname: false
+        __dirname: false,
+        __filename: false
     },
 };
