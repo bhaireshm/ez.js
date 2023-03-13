@@ -2,12 +2,12 @@
   "name": "@bhairesh/ez.js",
   "version": "1.0.9",
   "description": "Helper functions.",
-  "main": "./app.js",
+  "main": "dist/main.js",
   "private": false,
   "scripts": {
     "start": "node ./app.js",
     "test": "node ./test.js",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --mode production",
     "publish:pre": "npm test && npm run build",
     "publish:clean": "npm run publish:pre && npm publish"
   },

@@ -2,10 +2,8 @@ const path = require('path');
 
 module.exports = {
     target: "node",
-    entry: {
-        index: './app.js',
-    },
-    mode: "development",
+    entry: './app.js',
+    mode: "production",
     devtool: 'inline-source-map',
     devServer: {
         hot: true,
