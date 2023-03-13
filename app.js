@@ -1,1 +1,1 @@
-require("./src/Array");
+require("./src/Array.js");
