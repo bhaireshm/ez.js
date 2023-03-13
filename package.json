@@ -1,8 +1,8 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Helper functions.",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "private": false,
   "scripts": {
     "start": "node ./app.js",
