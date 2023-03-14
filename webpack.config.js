@@ -1,16 +1,12 @@
 const path = require('path');
 
 module.exports = {
-    target: "node",
-    entry: './app.js',
-    mode: "production",
-    devtool: 'inline-source-map',
-    devServer: {
-        hot: true,
-        static: './dist',
-    },
+    // target: "node",
+    entry: './index.js',
+    mode: "development",
+    // devtool: 'inline-source-map',
     output: {
-        // clean: true,
+        clean: true,
         // publicPath: "/",
         // globalObject: 'this',
         filename: 'index.js',

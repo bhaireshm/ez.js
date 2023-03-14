@@ -2,13 +2,13 @@
   "name": "@bhairesh/ez.js",
   "version": "1.0.13",
   "description": "Helper functions.",
-  "main": "dist/index.js",
+  "main": "index.js",
   "private": false,
   "scripts": {
-    "start": "node ./app.js",
+    "start": "node ./index.js",
     "test": "node ./test.js",
-    "build": "webpack --config webpack.config.js --mode production",
-    "publish:pre": "npm test && npm run build",
+    "build": "webpack --config webpack.config.js",
+    "publish:pre": "rimraf dist && npm run build && npm test",
     "publish:clean": "npm run publish:pre && npm publish"
   },
   "keywords": [
@@ -33,11 +33,10 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "babel-loader": "^9.1.2",
+    "nodemon": "^2.0.21",
+    "rimraf": "^4.4.0",
+    "ts-node": "^10.9.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
-  },
-  "dependencies": {
-    "nodemon": "^2.0.20",
-    "ts-node": "^10.9.1"
   }
 }

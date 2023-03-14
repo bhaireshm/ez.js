@@ -1,4 +1,6 @@
-const { addDelEleFromArrays, arrayIntoChunks, uniqueArrayOfObjects, getUniqueArray } = require("./src/Array.js");
+const { addDelEleFromArrays, arrayIntoChunks, uniqueArrayOfObjects, getUniqueArray } = require("./dist/index.js");
+// const array = require("./dist/index.js");
+
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2];
 
