@@ -1,1 +1,3 @@
-module.exports = require("./dist/index.js");
+const ez = { ...require("./src/Array.js") };
+
+module.exports = ez;
