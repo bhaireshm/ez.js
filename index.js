@@ -1,1 +1,1 @@
-module.exports = require("./src/Array.js");
+module.exports = require("./dist/index.js");
