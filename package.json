@@ -1,9 +1,10 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "1.0.14-03",
+  "version": "1.0.14-09",
   "description": "Helper functions.",
   "main": "index.js",
   "private": false,
+  "type": "commonjs",
   "scripts": {
     "start": "node ./index.js",
     "test": "node ./test.js",
@@ -29,6 +30,11 @@
     "node": ">=6.0.0"
   },
   "publishConfig": {},
+  "files": [
+    "dist",
+    "READMR.md",
+    "src/helper/*"
+  ],
   "engineStrict": true,
   "devDependencies": {
     "@babel/core": "^7.20.12",

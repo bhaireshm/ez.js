@@ -1,3 +1,3 @@
-const ez = { ...require("./src/Array.js") };
+const arrays = require("./src/Array.js");
 
-module.exports = ez;
+module.exports = { ...arrays };
