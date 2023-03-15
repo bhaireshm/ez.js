@@ -1,6 +1,6 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "1.0.14-03",
+  "version": "1.0.14-04",
   "description": "Helper functions.",
   "main": "index.js",
   "private": false,
