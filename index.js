@@ -1,3 +1,1 @@
-const arrays = require("./src/Array.js");
-
-module.exports = { ...arrays };
+module.exports = require("./src/Array.js");
