@@ -1,5 +1,5 @@
 /**
- * Data formatter 
+ * Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.
  * 
  * @param {object} obj - data to be formateted
  * @param {string} formatter - key:valuePath, each key value is separated by comma
@@ -34,11 +34,17 @@
   ERRORS: { block: 'not found' }
 }
  */
-export function dataFormatter(obj = {}, formatter = "", options = {}) {
+function dataFormatter(obj = {}, formatter = "", options = {}) {
     const { error = true, oldData = true } = options;
     const alterNames = String(formatter).split(",");
     const newData = {};
     const errors = {};
+
+    if (!Object.keys(obj).length) {
+        newData["OLD_DATA"] = obj;
+        newData["ERRORS"] = "data/object cannot be empty.";
+        return newData;
+    }
 
     function getNestedValue(d, k) {
         const keys = String(k).split(".");
@@ -91,5 +97,5 @@ const payload = {
 
 // Different format checks
 // "alterName:key" or "alterName:nested.key" or "nested.alterName:key" or "nested.alterName:nested.key"
-const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+const a = dataFormatter({}, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
 console.log(a);
