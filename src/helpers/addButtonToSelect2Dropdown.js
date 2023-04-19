@@ -3,7 +3,7 @@
 * @param text - content for the link
 */
 
-export function addBtnToDropdown(className, text) {
+module.exports = function addBtnToDropdown(className, text) {
     let flg = 0;
     $(`.${className}`).on("select2:open", function () {
         flg++;

@@ -3,7 +3,7 @@
  * @param {Object} obj2
  * @returns merged object
  */
-export function mergeObjects(obj1, obj2) {
+function mergeObjects(obj1, obj2) {
   for (const key in obj1) {
     if (obj1.hasOwnProperty(key)) {
       if (typeof obj2[key] === "object" && typeof obj1[key] === "object") {
@@ -15,3 +15,5 @@ export function mergeObjects(obj1, obj2) {
   }
   return obj2;
 }
+
+module.exports = mergeObjects;

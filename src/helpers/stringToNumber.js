@@ -3,7 +3,7 @@
  * @returns number
  * @example console.log(toNumber("-23.32"))
  */
-export const toNumber = (s, returnStrings = false) =>
+const toNumber = (s, returnStrings = false) =>
   isNaN(Number(s)) ? (returnStrings ? s : console.error(`${s} NaN`)) : Number(s);
 
 /**
@@ -13,7 +13,7 @@ export const toNumber = (s, returnStrings = false) =>
  * @example strToNum(["3","4",3,"7",8])
  * @example strToNum({ a:2, b:"4", c:"5" }, "c,b")
  */
-export const strToNum = (data, str) => {
+const strToNum = (data, str) => {
   if (typeof data == "object") {
     if (!str && data.length > 0) return data.map((d) => toNumber(d, true));
     if (str && data.length == undefined) {
@@ -28,3 +28,6 @@ export const strToNum = (data, str) => {
     }
   }
 };
+
+
+module.exports = { toNumber, strToNum };

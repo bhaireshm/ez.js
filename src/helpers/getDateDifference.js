@@ -2,7 +2,7 @@
  * @param {Date} from 
  * @param {Date} to 
  */
-export function dateDiff(from, to) {
+function dateDiff(from, to) {
   from = new Date(from);
   to = new Date(to);
   let diffMs = to - from; // milliseconds between from & to
@@ -21,3 +21,5 @@ export function dateDiff(from, to) {
     minutes: diffMins,
   };
 }
+
+module.exports = dateDiff;

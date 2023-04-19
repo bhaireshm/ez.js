@@ -1,15 +1,14 @@
 {
-  "name": "@bhairesh/ez.js",
+  "name": "@bhai/ez.js",
   "version": "1.0.14-09",
   "description": "Helper functions.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "private": false,
-  "type": "commonjs",
   "scripts": {
     "start": "node ./index.js",
     "test": "node ./test.js",
     "build": "webpack --config webpack.config.js",
-    "publish:pre": "rimraf dist && npm run build && npm test",
+    "prepublishOnly": "rimraf dist && npm run build && npm test",
     "publish:clean": "npm run publish:pre && npm publish"
   },
   "keywords": [

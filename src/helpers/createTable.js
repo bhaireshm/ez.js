@@ -11,7 +11,7 @@
  * @param {String[]} tableData.tableProps.style - Table custom styles
  * @returns [object HTMLArrayElement]
  */
-export function createTable(tableData) {
+module.exports = function createTable(tableData) {
   const { data = [], fields = [], fieldTitles = [], tableProps = {} } = tableData;
 
   // TODO: Check for DOM access

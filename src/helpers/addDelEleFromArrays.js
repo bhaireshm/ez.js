@@ -8,4 +8,3 @@ module.exports = function addDelEleFromArray(arr = [], ele = "", remEle = "") {
     if (remEle) return arr.filter((a) => a != remEle);
     return arr;
 }
-// Array.prototype.addDelEleFromArray = addDelEleFromArray;

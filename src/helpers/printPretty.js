@@ -5,7 +5,7 @@
  * @example let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
  * printPretty(obj);
 */
-export function printPretty(obj) {
+function printPretty(obj) {
   let l = ((o) => {
     let w = 0;
     for (let k in o) {
@@ -20,3 +20,5 @@ export function printPretty(obj) {
     console.log(`${k}${s} : ${obj[k]}`);
   }
 }
+
+module.exports = printPretty;

@@ -1,6 +1,6 @@
 import { isEmpty } from "./isEmpty";
 
-export function checkObject(data, columns) {
+module.exports = function checkObject(data, columns) {
   let obj = {};
   Object.entries(data).forEach((ele, i) => {
     columns.forEach(col => {

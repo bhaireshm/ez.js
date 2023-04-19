@@ -10,6 +10,4 @@ function add2Matrix(matrices) {
     return result;
 }
 
-// console.log(add2Matrix([[1, 2, 3], [4, 5, 6]]));
-
 module.exports = add2Matrix;

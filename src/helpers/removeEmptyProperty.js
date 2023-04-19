@@ -2,7 +2,7 @@
  * Removes all the key's for which the value is empty. 
  * @param {Object} obj
  */
-export function removeEmptyProperty(obj = {}) {
+function removeEmptyProperty(obj = {}) {
   const data = { ...obj };
   if (!data) return data;
   Object.keys(data).forEach((key) => {
@@ -11,3 +11,5 @@ export function removeEmptyProperty(obj = {}) {
   });
   return data;
 }
+
+module.exports = removeEmptyProperty;

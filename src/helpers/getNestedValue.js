@@ -13,14 +13,10 @@
  * 
  * @returns value, If nothing found null will be returned.
  */
-function getNestedKeyValue(d = {}, k = "") {
+function getNestedValue(d = {}, k = "") {
     const keys = String(k).split(".");
     if (!keys.length) return null;
     return keys.reduce((p, c) => Object(p).hasOwnProperty(c) ? p[c] : null, d);
 }
 
-const data = {
-    pid: 'some-id',
-    portions: { name: 'section' }
-}
-console.log(getNestedKeyValue(data, "portions.nameas")); // 'section'
+module.exports = getNestedValue;

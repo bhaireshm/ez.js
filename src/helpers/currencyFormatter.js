@@ -11,7 +11,7 @@
  *
  * @link Reference - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options
  */
-export function currencyFormatter(val, options = {}) {
+module.exports = function currencyFormatter(val, options = {}) {
   options = {
     currency: "INR",
     style: "currency",

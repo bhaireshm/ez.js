@@ -9,7 +9,9 @@
  * 
  * @returns Array of array[s].
  */
-module.exports = function arrayIntoChunks(arr, n) {
+function arrayIntoChunks(arr, n) {
     if (!arr.length) return [];
     return [arr.slice(0, n)].concat(arrayIntoChunks(arr.slice(n), n));
 }
+
+module.exports = arrayIntoChunks;

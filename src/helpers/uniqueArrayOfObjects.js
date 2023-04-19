@@ -10,7 +10,7 @@ const compareObjects = require('./compareObjects.js');
  * @example uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
  * @example uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
  */
-module.exports = function uniqueArrayOfObjects(arr) {
+function uniqueArrayOfObjects(arr) {
     return arr.reduce((acc, curr) => {
         if (acc.length > 0) {
             acc.forEach((a) => {
@@ -20,3 +20,5 @@ module.exports = function uniqueArrayOfObjects(arr) {
         return acc;
     }, []);
 }
+
+module.exports = uniqueArrayOfObjects;

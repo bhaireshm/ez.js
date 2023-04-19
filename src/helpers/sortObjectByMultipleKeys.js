@@ -8,7 +8,7 @@
  *
  * @returns Sorted array of objects.
  */
-export const sortObjectByMultipleKeys = (arr = [], keys = []) => {
+const sortObjectByMultipleKeys = (arr = [], keys = []) => {
   return arr.sort((a, b) => {
     return keys
       .map((o) => {
@@ -24,3 +24,5 @@ export const sortObjectByMultipleKeys = (arr = [], keys = []) => {
       .reduce((p, n) => (p ? p : n), 0);
   });
 };
+
+module.exports = sortObjectByMultipleKeys;
