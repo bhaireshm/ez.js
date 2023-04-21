@@ -1,7 +1,4 @@
-const dataFormatter = require("../helpers/dataFormatter.js");
-const isURLValid = require('../helpers/isURLValid.js');
-
-console.log(isURLValid("http://adsasd/asd..,asd"));
+const { dataFormatter, getNestedValue, stringToNumber  } = require("../../dist")
 
 const payload = {
     id: "some-id",
@@ -15,6 +12,10 @@ const payload = {
         }
     }
 };
+
+// stringToNumber.
+
+console.log('getNestedValue()', getNestedValue(payload, "portion.data"))
 
 // Different format checks
 // "alterName:key" or "alterName:nested.key" or "nested.alterName:key" or "nested.alterName:nested.key"
