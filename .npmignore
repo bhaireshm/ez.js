@@ -16,7 +16,5 @@ coverage
 .idea
 .editorconfig
 
-#
-scripts
 src
 webpack.config.js

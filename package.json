@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "start": "node ./index.js",
-    "test": "node ./test.js",
+    "test": "node ./src/tests/",
     "build": "webpack --config webpack.config.js",
     "prepublishOnly": "rimraf dist && npm run build && npm test"
   },
