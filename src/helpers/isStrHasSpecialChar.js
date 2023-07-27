@@ -1,6 +1,6 @@
 /**
- * @param {String} str
- * @param {String} pattern - regexp pattern.
+ * @param {string} str
+ * @param {string} pattern - regexp pattern.
  * @example console.log(isStrHasSpecialChar("hello h@rry"))
  */
 const isStrHasSpecialChar = (str, pattern = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=") =>

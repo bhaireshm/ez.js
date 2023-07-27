@@ -1,6 +1,6 @@
 /**
  * @param {Object} obj
- * @param {String} keys : keys seperated by comma
+ * @param {string} keys : keys seperated by comma
  * Example : console.log( hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d") );
  */
 const hasOwnProperty = (obj, keys) => {
