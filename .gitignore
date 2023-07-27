@@ -6,3 +6,9 @@ package-lock.json
 
 # IDEs
 .vscode
+
+# Docs
+docs
+
+# Environments
+*.env
