@@ -1,5 +1,5 @@
 /**
- * @param {Object} o
+ * @param {object} o
  */
 const objectToQueryParams = (o = {}) =>
   Object.entries(o)

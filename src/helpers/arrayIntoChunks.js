@@ -7,7 +7,7 @@
  * @example arrayIntoChunks([1,2,3,4,5,6], 3);
  * @output [[1,2],[3,4],[5,6]]
  * 
- * @returns Array of array[s].
+ * @returns {Array} Array of array[s].
  */
 function arrayIntoChunks(arr, n) {
     if (!arr.length) return [];

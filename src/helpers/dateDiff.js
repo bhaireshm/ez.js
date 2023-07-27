@@ -1,6 +1,13 @@
 /**
- * @param {Date} from 
+ * Calculates the difference between provided two dates.
+ * 
+ * @param {Date} from
  * @param {Date} to 
+ * 
+ * @example
+ * console.log(getDateDifference(new Date("12/12/2012"), new Date()));
+ * 
+ * @return {{ short: string, full: string, days: number, hours: number, minutes: number }}
  */
 function dateDiff(from, to) {
   from = new Date(from);

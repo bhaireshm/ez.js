@@ -10,7 +10,7 @@
     "test": "node ./src/tests/",
     "build": "rollup -c",
     "prepublishOnly": "npm run build && npm test",
-    "docs:md": "jsdoc2md src/helpers/*.js >> README.md"
+    "docs:md": "echo '' > README.md && jsdoc2md --files src/helpers/*.js > README.md"
   },
   "repository": {
     "type": "git",
