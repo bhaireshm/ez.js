@@ -1,9 +1,9 @@
 /**
  * This method compares both key and value of given objects. This even works for nested objects.
  * 
- * @param {Object} obj1 
- * @param {Object} obj2
- * @returns boolean
+ * @param {object} obj1 
+ * @param {object} obj2
+ * @returns {boolean}
  * 
  * @example compareObject({a: 2}, {a: 2}); // true
  * @example compareObject({a: 2}, {a: 23}); // false

@@ -1,7 +1,7 @@
 /**
  * Determines whether an object has a property with the specified name.
  * 
- * @param {Object} obj
+ * @param {object} obj
  * @param {string} keys seperated by comma
  * 
  * @default false

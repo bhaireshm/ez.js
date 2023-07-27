@@ -1,17 +1,17 @@
 /**
  * Creates table with custom data.
  *
- * @param {Object} tableData
+ * @param {object} tableData
  * @param {Object[]} tableData.data - Array of objects
- * @param {String[]} tableData.fields - Fields to be shown
- * @param {String[]} tableData.fieldTitles - Field Names
- * @param {Object} tableData.tableProps - Field Names
+ * @param {string[]} tableData.fields - Fields to be shown
+ * @param {string[]} tableData.fieldTitles - Field Names
+ * @param {object} tableData.tableProps - Field Names
  * @param {string} tableData.tableProps.id - Table id
- * @param {String[]} tableData.tableProps.classList - Table custom class list
- * @param {String[]} tableData.tableProps.style - Table custom styles
+ * @param {string[]} tableData.tableProps.classList - Table custom class list
+ * @param {string[]} tableData.tableProps.style - Table custom styles
  * @returns [object HTMLArrayElement]
  */
-module.exports = function createTable(tableData) {
+function createTable(tableData) {
   const { data = [], fields = [], fieldTitles = [], tableProps = {} } = tableData;
 
   // TODO: Check for DOM access
@@ -57,3 +57,5 @@ module.exports = function createTable(tableData) {
 
   return tbl;
 }
+
+module.exports = createTable;

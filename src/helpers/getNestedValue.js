@@ -11,7 +11,7 @@
 }
  * console.log(getNestedKeyValue(data, "portions.name")); // 'section'
  * 
- * @returns value, If nothing found null will be returned.
+ * @returns {any} value, If nothing found null will be returned.
  */
 function getNestedValue(d = {}, k = "") {
     const keys = String(k).split(".");

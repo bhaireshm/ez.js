@@ -1,7 +1,9 @@
 /**
-* @param data - any datatype value.
-*/
-
+ * Check's the provided input is valid.
+ * 
+ * @param {any} data
+ * @returns {boolean}
+ */
 function isEmpty(data) {
   if (typeof data == "number" || typeof data == "boolean") return false;
   if (typeof data == "undefined" || data === null) return true;

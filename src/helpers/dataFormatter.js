@@ -7,7 +7,7 @@
  * @param {object} options
  * @param {object} options.error - default true, returns error content if any key or value is not found 
  * @param {object} options.oldData - default true, returns object 
- * @returns return modified object along with the provided object
+ * @returns {object} return modified object along with the provided object
  * 
  * @example
  * const payload = {
