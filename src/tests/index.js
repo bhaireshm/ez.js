@@ -1,4 +1,4 @@
-const { dataFormatter, getNestedValue, stringToNumber  } = require("../../dist")
+const { dataFormatter, getNestedValue  } = require("../../dist")
 
 const payload = {
     id: "some-id",

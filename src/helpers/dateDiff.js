@@ -15,7 +15,7 @@ function dateDiff(from, to) {
   str += diffMins ? " " + diffMins + "m" : "";
   return {
     short: str.trimEnd().trimStart().replace(/ {2}/g, " "),
-    full: diffDays + " day(s) " + diffHrs + " hours, " + diffMins + " minutes",
+    full: `${diffDays} day(s) ${diffHrs} hours, ${diffMins} minutes`,
     days: diffDays,
     hours: diffHrs,
     minutes: diffMins,

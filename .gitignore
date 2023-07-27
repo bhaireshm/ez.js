@@ -7,8 +7,5 @@ package-lock.json
 # IDEs
 .vscode
 
-# Docs
-.docusaurus
-blog
-docs
-static
+# Environments
+*.env
