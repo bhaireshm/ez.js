@@ -1,22 +1,31 @@
+''  
 ## Functions
 
 <dl>
-<dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒</dt>
+<dt><a href="#addDelEleFromArray">addDelEleFromArray(arr, ele, remEle:)</a> ⇒ <code>Array</code></dt>
+<dd></dd>
+<dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒ <code>Array</code></dt>
 <dd><p>Convert an array into given chunk(s).</p>
 </dd>
-<dt><a href="#camelCase">camelCase(str)</a></dt>
+<dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts each word&#39;s first letter into uppercase.</p>
 </dd>
-<dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒</dt>
+<dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
 <dd><p>This method compares both key and value of given objects. This even works for nested objects.</p>
 </dd>
-<dt><a href="#toNumber">toNumber(s)</a> ⇒</dt>
+<dt><a href="#toNumber">toNumber(s)</a> ⇒ <code>number</code></dt>
 <dd><p>Converts given string formatted value into number.</p>
 </dd>
-<dt><a href="#strToNum">strToNum(data, str)</a> ⇒</dt>
+<dt><a href="#strToNum">strToNum(data, str)</a> ⇒ <code>Array</code> | <code>object</code></dt>
 <dd><p>Checks the provided array or an object&#39;s string formatted value into number.</p>
 </dd>
-<dt><a href="#dataFormatter">dataFormatter(obj, formatter, options)</a> ⇒</dt>
+<dt><a href="#createTable">createTable(tableData)</a> ⇒</dt>
+<dd><p>Creates table with custom data.</p>
+</dd>
+<dt><a href="#currencyFormatter">currencyFormatter(val, options)</a> ⇒ <code>string</code></dt>
+<dd><p>Converts number into formatted currency value.</p>
+</dd>
+<dt><a href="#dataFormatter">dataFormatter(obj, formatter, options)</a> ⇒ <code>object</code></dt>
 <dd><p>Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.</p>
 </dd>
 <dt><a href="#dateDiff">dateDiff(from, to)</a> ⇒ <code>Object</code></dt>
@@ -28,18 +37,21 @@
 <dt><a href="#getDiffInHrs">getDiffInHrs(from, to)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculates the difference between provided two dates.</p>
 </dd>
-<dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒</dt>
+<dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>any</code></dt>
 <dd><p>Get nested value from the given object.</p>
 </dd>
 <dt><a href="#hasOwnProperty">hasOwnProperty(obj, keys, returnType)</a> ⇒ <code>string</code> | <code>boolean</code></dt>
 <dd><p>Determines whether an object has a property with the specified name.</p>
 </dd>
-<dt><a href="#isEmpty">isEmpty(data)</a></dt>
-<dd></dd>
-<dt><a href="#isStrHasSpecialChar">isStrHasSpecialChar(str, pattern)</a></dt>
-<dd></dd>
-<dt><a href="#mergeObjects">mergeObjects(obj1, obj2)</a> ⇒</dt>
-<dd></dd>
+<dt><a href="#isEmpty">isEmpty(data)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Check&#39;s the provided input is valid.</p>
+</dd>
+<dt><a href="#isStrHasSpecialChar">isStrHasSpecialChar(str, pattern)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Check&#39;s the special characters in the provided string.</p>
+</dd>
+<dt><a href="#mergeObjects">mergeObjects(obj1, obj2)</a> ⇒ <code>object</code></dt>
+<dd><p>Uses deep merge way to merge objects.</p>
+</dd>
 <dt><a href="#objectToQueryParams">objectToQueryParams(o)</a></dt>
 <dd></dd>
 <dt><a href="#printPretty">printPretty(obj)</a></dt>
@@ -67,13 +79,24 @@
 </dd>
 </dl>
 
+<a name="addDelEleFromArray"></a>
+
+## addDelEleFromArray(arr, ele, remEle:) ⇒ <code>Array</code>
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> |  |
+| ele | <code>any</code> | element to be added |
+| remEle: | <code>any</code> | element to be deleted |
+
 <a name="arrayIntoChunks"></a>
 
-## arrayIntoChunks(arr, n) ⇒
+## arrayIntoChunks(arr, n) ⇒ <code>Array</code>
 Convert an array into given chunk(s).
 
 **Kind**: global function  
-**Returns**: Array of array[s].  
+**Returns**: <code>Array</code> - Array of array[s].  
 **Output**: [[1,2],[3,4],[5,6]]  
 
 | Param | Type | Description |
@@ -87,7 +110,7 @@ arrayIntoChunks([1,2,3,4,5,6], 3);
 ```
 <a name="camelCase"></a>
 
-## camelCase(str)
+## camelCase(str) ⇒ <code>string</code>
 Converts each word's first letter into uppercase.
 
 **Kind**: global function  
@@ -98,16 +121,15 @@ Converts each word's first letter into uppercase.
 
 <a name="compareObject"></a>
 
-## compareObject(obj1, obj2) ⇒
+## compareObject(obj1, obj2) ⇒ <code>boolean</code>
 This method compares both key and value of given objects. This even works for nested objects.
 
 **Kind**: global function  
-**Returns**: boolean  
 
 | Param | Type |
 | --- | --- |
-| obj1 | <code>Object</code> | 
-| obj2 | <code>Object</code> | 
+| obj1 | <code>object</code> | 
+| obj2 | <code>object</code> | 
 
 **Example**  
 ```js
@@ -123,11 +145,10 @@ compareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
-## toNumber(s) ⇒
+## toNumber(s) ⇒ <code>number</code>
 Converts given string formatted value into number.
 
 **Kind**: global function  
-**Returns**: number  
 
 | Param | Type |
 | --- | --- |
@@ -139,11 +160,10 @@ console.log(toNumber("-23.32"))
 ```
 <a name="strToNum"></a>
 
-## strToNum(data, str) ⇒
+## strToNum(data, str) ⇒ <code>Array</code> \| <code>object</code>
 Checks the provided array or an object's string formatted value into number.
 
 **Kind**: global function  
-**Returns**: array or object  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -158,13 +178,51 @@ strToNum(["3","4",3,"7",8])
 ```js
 strToNum({ a:2, b:"4", c:"5" }, "c,b")
 ```
+<a name="createTable"></a>
+
+## createTable(tableData) ⇒
+Creates table with custom data.
+
+**Kind**: global function  
+**Returns**: [object HTMLArrayElement]  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tableData | <code>object</code> |  |
+| tableData.data | <code>Array.&lt;Object&gt;</code> | Array of objects |
+| tableData.fields | <code>Array.&lt;string&gt;</code> | Fields to be shown |
+| tableData.fieldTitles | <code>Array.&lt;string&gt;</code> | Field Names |
+| tableData.tableProps | <code>object</code> | Field Names |
+| tableData.tableProps.id | <code>string</code> | Table id |
+| tableData.tableProps.classList | <code>Array.&lt;string&gt;</code> | Table custom class list |
+| tableData.tableProps.style | <code>Array.&lt;string&gt;</code> | Table custom styles |
+
+<a name="currencyFormatter"></a>
+
+## currencyFormatter(val, options) ⇒ <code>string</code>
+Converts number into formatted currency value.
+
+**Kind**: global function  
+**Returns**: <code>string</code> - formatted value.  
+**Link**: Reference - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| val | <code>Number</code> | Integer value |
+| options | <code>Intl.NumberFormatOptions</code> | An object with some or all of the properties of Intl.NumberFormatOptions |
+
+**Example**  
+```js
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+```
 <a name="dataFormatter"></a>
 
-## dataFormatter(obj, formatter, options) ⇒
+## dataFormatter(obj, formatter, options) ⇒ <code>object</code>
 Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.
 
 **Kind**: global function  
-**Returns**: return modified object along with the provided object  
+**Returns**: <code>object</code> - return modified object along with the provided object  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -245,11 +303,11 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 ```
 <a name="getNestedValue"></a>
 
-## getNestedValue(d, k) ⇒
+## getNestedValue(d, k) ⇒ <code>any</code>
 Get nested value from the given object.
 
 **Kind**: global function  
-**Returns**: value, If nothing found null will be returned.  
+**Returns**: <code>any</code> - value, If nothing found null will be returned.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -273,7 +331,7 @@ Determines whether an object has a property with the specified name.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| obj | <code>Object</code> |  |  |
+| obj | <code>object</code> |  |  |
 | keys | <code>string</code> |  | seperated by comma |
 | returnType | <code>boolean</code> | <code>false</code> |  |
 
@@ -283,16 +341,20 @@ console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
 ```
 <a name="isEmpty"></a>
 
-## isEmpty(data)
+## isEmpty(data) ⇒ <code>boolean</code>
+Check's the provided input is valid.
+
 **Kind**: global function  
 
-| Param | Description |
+| Param | Type |
 | --- | --- |
-| data | any datatype value. |
+| data | <code>any</code> | 
 
 <a name="isStrHasSpecialChar"></a>
 
-## isStrHasSpecialChar(str, pattern)
+## isStrHasSpecialChar(str, pattern) ⇒ <code>boolean</code>
+Check's the special characters in the provided string.
+
 **Kind**: global function  
 
 | Param | Type | Default | Description |
@@ -302,18 +364,20 @@ console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
 
 **Example**  
 ```js
-console.log(isStrHasSpecialChar("hello h@rry"))
+console.log(isStrHasSpecialChar("hello h@rry"));
 ```
 <a name="mergeObjects"></a>
 
-## mergeObjects(obj1, obj2) ⇒
+## mergeObjects(obj1, obj2) ⇒ <code>object</code>
+Uses deep merge way to merge objects.
+
 **Kind**: global function  
-**Returns**: merged object  
+**Returns**: <code>object</code> - merged object  
 
 | Param | Type |
 | --- | --- |
-| obj1 | <code>Object</code> | 
-| obj2 | <code>Object</code> | 
+| obj1 | <code>object</code> | 
+| obj2 | <code>object</code> | 
 
 <a name="objectToQueryParams"></a>
 
@@ -322,7 +386,7 @@ console.log(isStrHasSpecialChar("hello h@rry"))
 
 | Param | Type |
 | --- | --- |
-| o | <code>Object</code> | 
+| o | <code>object</code> | 
 
 <a name="printPretty"></a>
 
@@ -347,7 +411,7 @@ Removes all the key's for which the value is empty.
 
 | Param | Type |
 | --- | --- |
-| obj | <code>Object</code> | 
+| obj | <code>object</code> | 
 
 <a name="reverseStr"></a>
 

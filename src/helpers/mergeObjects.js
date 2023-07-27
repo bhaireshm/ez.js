@@ -1,7 +1,9 @@
 /**
- * @param {Object} obj1
- * @param {Object} obj2
- * @returns merged object
+ * Uses deep merge way to merge objects. 
+ * 
+ * @param {object} obj1
+ * @param {object} obj2
+ * @returns {object} merged object
  */
 function mergeObjects(obj1, obj2) {
   for (const key in obj1) {
