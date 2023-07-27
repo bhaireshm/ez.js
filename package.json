@@ -1,6 +1,6 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "0.0.1-01",
+  "version": "0.0.1",
   "description": "Helper functions.",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
@@ -9,7 +9,8 @@
     "start": "node ./index.js",
     "test": "node ./src/tests/",
     "build": "rollup -c",
-    "prepublishOnly": "rimraf dist && npm run build && npm test"
+    "prepublishOnly": "rimraf dist && npm run build && npm test",
+    "documents": "jsdoc src/helpers/ -d docs"
   },
   "keywords": [
     "helper",
