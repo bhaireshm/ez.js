@@ -1,7 +1,3 @@
-### Document
-
-[Link](https://bhaireshm.github.io/ez.js/global.html)
-
 ## Functions
 
 <dl>
@@ -67,132 +63,109 @@
 <a name="arrayIntoChunks"></a>
 
 ## arrayIntoChunks(arr, n) ⇒
-
 Convert an array into given chunk(s).
 
 **Kind**: global function  
 **Returns**: Array of array[s].  
-**Output**: [[1,2],[3,4],[5,6]]
+**Output**: [[1,2],[3,4],[5,6]]  
 
-| Param | Type                           | Description       |
-| ----- | ------------------------------ | ----------------- |
-| arr   | <code>Array.&lt;any&gt;</code> | Any type of array |
-| n     | <code>number</code>            | Number of chunks  |
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array.&lt;any&gt;</code> | Any type of array |
+| n | <code>number</code> | Number of chunks |
 
-**Example**
-
+**Example**  
 ```js
-arrayIntoChunks([1, 2, 3, 4, 5, 6], 3);
+arrayIntoChunks([1,2,3,4,5,6], 3);
 ```
-
 <a name="camelCase"></a>
 
 ## camelCase(str)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type                |
-| ----- | ------------------- |
-| str   | <code>string</code> |
+| Param | Type |
+| --- | --- |
+| str | <code>string</code> | 
 
 <a name="compareObject"></a>
 
 ## compareObject(obj1, obj2) ⇒
-
 This method compares both key and value of given objects. This even works for nested objects.
 
 **Kind**: global function  
-**Returns**: boolean
+**Returns**: boolean  
 
-| Param | Type                |
-| ----- | ------------------- |
-| obj1  | <code>Object</code> |
-| obj2  | <code>Object</code> |
+| Param | Type |
+| --- | --- |
+| obj1 | <code>Object</code> | 
+| obj2 | <code>Object</code> | 
 
-**Example**
-
+**Example**  
 ```js
-compareObject({ a: 2 }, { a: 2 }); // true
+compareObject({a: 2}, {a: 2}); // true
 ```
-
-**Example**
-
+**Example**  
 ```js
-compareObject({ a: 2 }, { a: 23 }); // false
+compareObject({a: 2}, {a: 23}); // false
 ```
-
-**Example**
-
+**Example**  
 ```js
-compareObject({ a: { b: 2 } }, { a: { b: 2 } }); // true
+compareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
-
 <a name="toNumber"></a>
 
 ## toNumber(s) ⇒
-
 **Kind**: global function  
-**Returns**: number
+**Returns**: number  
 
-| Param | Type                |
-| ----- | ------------------- |
-| s     | <code>string</code> |
+| Param | Type |
+| --- | --- |
+| s | <code>string</code> | 
 
-**Example**
-
+**Example**  
 ```js
-console.log(toNumber("-23.32"));
+console.log(toNumber("-23.32"))
 ```
-
 <a name="strToNum"></a>
 
 ## strToNum(data, str) ⇒
-
 **Kind**: global function  
-**Returns**: array or object
+**Returns**: array or object  
 
-| Param | Type                                      | Description                             |
-| ----- | ----------------------------------------- | --------------------------------------- |
-| data  | <code>Array</code> \| <code>Object</code> | required                                |
-| str   | <code>string</code>                       | key names separated by comma (optional) |
+| Param | Type | Description |
+| --- | --- | --- |
+| data | <code>Array</code> \| <code>Object</code> | required |
+| str | <code>string</code> | key names separated by comma (optional) |
 
-**Example**
-
+**Example**  
 ```js
-strToNum(["3", "4", 3, "7", 8]);
+strToNum(["3","4",3,"7",8])
 ```
-
-**Example**
-
+**Example**  
 ```js
-strToNum({ a: 2, b: "4", c: "5" }, "c,b");
+strToNum({ a:2, b:"4", c:"5" }, "c,b")
 ```
-
 <a name="dataFormatter"></a>
 
 ## dataFormatter(obj, formatter, options) ⇒
-
 Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.
 
 **Kind**: global function  
-**Returns**: return modified object along with the provided object
+**Returns**: return modified object along with the provided object  
 
-| Param           | Type                | Description                                                          |
-| --------------- | ------------------- | -------------------------------------------------------------------- |
-| obj             | <code>object</code> | data to be formateted                                                |
-| formatter       | <code>string</code> | key:valuePath, each key value is separated by comma                  |
-| options         | <code>object</code> |                                                                      |
-| options.error   | <code>object</code> | default true, returns error content if any key or value is not found |
-| options.oldData | <code>object</code> | default true, returns object                                         |
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>object</code> | data to be formateted |
+| formatter | <code>string</code> | key:valuePath, each key value is separated by comma |
+| options | <code>object</code> |  |
+| options.error | <code>object</code> | default true, returns error content if any key or value is not found |
+| options.oldData | <code>object</code> | default true, returns object |
 
-**Example**
-
+**Example**  
 ```js
 "alterName:key" or "alterName:nested.key" or "nested.alterName:key" or "nested.alterName:nested.key"
 ```
-
-**Example**
-
+**Example**  
 ```js
 const payload = {
     id: "some-id",
@@ -205,280 +178,239 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};
-const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
-
-console.log(a);
-output:
-{
+};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
   ERRORS: { block: 'not found' }
 }
 ```
-
 <a name="dateDiff"></a>
 
 ## dateDiff(from, to)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type              |
-| ----- | ----------------- |
-| from  | <code>Date</code> |
-| to    | <code>Date</code> |
+| Param | Type |
+| --- | --- |
+| from | <code>Date</code> | 
+| to | <code>Date</code> | 
 
 <a name="generateRandomString"></a>
 
 ## generateRandomString(length)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param  | Type                | Default         | Description   |
-| ------ | ------------------- | --------------- | ------------- |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
 | length | <code>number</code> | <code>13</code> | default is 13 |
 
 <a name="getDiffInHrs"></a>
 
 ## getDiffInHrs(from, to)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type              |
-| ----- | ----------------- |
-| from  | <code>Date</code> |
-| to    | <code>Date</code> |
+| Param | Type |
+| --- | --- |
+| from | <code>Date</code> | 
+| to | <code>Date</code> | 
 
 <a name="getNestedValue"></a>
 
 ## getNestedValue(d, k) ⇒
-
 Get nested value from the given object.
 
 **Kind**: global function  
-**Returns**: value, If nothing found null will be returned.
+**Returns**: value, If nothing found null will be returned.  
 
-| Param | Type                | Description                         |
-| ----- | ------------------- | ----------------------------------- |
-| d     | <code>object</code> |                                     |
-| k     | <code>string</code> | key name separated by dot character |
+| Param | Type | Description |
+| --- | --- | --- |
+| d | <code>object</code> |  |
+| k | <code>string</code> | key name separated by dot character |
 
-**Example**
-
+**Example**  
 ```js
 const data = {
-  pid: "some-id",
-  portions: { name: "section" },
-};
-console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+    pid: 'some-id',
+    portions: { name: 'section' }
+}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
-
 <a name="hasOwnProperty"></a>
 
 ## hasOwnProperty(obj, keys)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type                | Description                                                                                      |
-| ----- | ------------------- | ------------------------------------------------------------------------------------------------ |
-| obj   | <code>Object</code> |                                                                                                  |
-| keys  | <code>string</code> | : keys seperated by comma Example : console.log( hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d") ); |
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> |  |
+| keys | <code>string</code> | : keys seperated by comma Example : console.log( hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d") ); |
 
 <a name="isEmpty"></a>
 
 ## isEmpty(data)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Description         |
-| ----- | ------------------- |
-| data  | any datatype value. |
+| Param | Description |
+| --- | --- |
+| data | any datatype value. |
 
 <a name="isStrHasSpecialChar"></a>
 
 ## isStrHasSpecialChar(str, pattern)
+**Kind**: global function  
 
-**Kind**: global function
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| str | <code>string</code> |  |  |
+| pattern | <code>string</code> | <code>&quot;&lt;&gt;@!#$%^&amp;*()_+[]{}?:;|&#x27;\&quot;\\,./~&#x60;-&#x3D;&quot;</code> | regexp pattern. |
 
-| Param   | Type                | Default                                       | Description                                   |
-| ------- | ------------------- | --------------------------------------------- | --------------------------------------------- | --------------- |
-| str     | <code>string</code> |                                               |                                               |
-| pattern | <code>string</code> | <code>&quot;&lt;&gt;@!#$%^&amp;\*()\_+[]{}?:; | &#x27;\&quot;\\,./~&#x60;-&#x3D;&quot;</code> | regexp pattern. |
-
-**Example**
-
+**Example**  
 ```js
-console.log(isStrHasSpecialChar("hello h@rry"));
+console.log(isStrHasSpecialChar("hello h@rry"))
 ```
-
 <a name="mergeObjects"></a>
 
 ## mergeObjects(obj1, obj2) ⇒
-
 **Kind**: global function  
-**Returns**: merged object
+**Returns**: merged object  
 
-| Param | Type                |
-| ----- | ------------------- |
-| obj1  | <code>Object</code> |
-| obj2  | <code>Object</code> |
+| Param | Type |
+| --- | --- |
+| obj1 | <code>Object</code> | 
+| obj2 | <code>Object</code> | 
 
 <a name="objectToQueryParams"></a>
 
 ## objectToQueryParams(o)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type                |
-| ----- | ------------------- |
-| o     | <code>Object</code> |
+| Param | Type |
+| --- | --- |
+| o | <code>Object</code> | 
 
 <a name="printPretty"></a>
 
 ## printPretty(obj)
+**Kind**: global function  
 
-**Kind**: global function
+| Param | Description |
+| --- | --- |
+| obj | accepts only object |
 
-| Param | Description         |
-| ----- | ------------------- |
-| obj   | accepts only object |
-
-**Example**
-
+**Example**  
 ```js
 let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
 printPretty(obj);
 ```
-
 <a name="removeEmptyProperty"></a>
 
 ## removeEmptyProperty(obj)
-
 Removes all the key's for which the value is empty.
 
-**Kind**: global function
+**Kind**: global function  
 
-| Param | Type                |
-| ----- | ------------------- |
-| obj   | <code>Object</code> |
+| Param | Type |
+| --- | --- |
+| obj | <code>Object</code> | 
 
 <a name="reverseStr"></a>
 
 ## reverseStr(str:)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type                | Description          |
-| ----- | ------------------- | -------------------- |
-| str:  | <code>string</code> | string without space |
+| Param | Type | Description |
+| --- | --- | --- |
+| str: | <code>string</code> | string without space |
 
 <a name="reverseEachWordInSentence"></a>
 
 ## reverseEachWordInSentence(sentence:)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param     | Type                | Description      |
-| --------- | ------------------- | ---------------- |
+| Param | Type | Description |
+| --- | --- | --- |
 | sentence: | <code>string</code> | pass a sentence. |
 
 <a name="reverseSentence"></a>
 
 ## reverseSentence(sentence)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param    | Type                | Description      |
-| -------- | ------------------- | ---------------- |
+| Param | Type | Description |
+| --- | --- | --- |
 | sentence | <code>string</code> | pass a sentence. |
 
 <a name="shortenString"></a>
 
 ## shortenString(str, len)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type                | Default         | Description   |
-| ----- | ------------------- | --------------- | ------------- |
-| str   | <code>string</code> |                 |               |
-| len   | <code>number</code> | <code>50</code> | default is 50 |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| str | <code>string</code> |  |  |
+| len | <code>number</code> | <code>50</code> | default is 50 |
 
 <a name="shuffleString"></a>
 
 ## shuffleString()
+**Kind**: global function  
 
-**Kind**: global function
-
-| Type                | Description |
-| ------------------- | ----------- |
-| <code>string</code> | str         |
+| Type | Description |
+| --- | --- |
+| <code>string</code> | str |
 
 <a name="sortObjectByKey"></a>
 
 ## sortObjectByKey(obj, key, ord)
+**Kind**: global function  
 
-**Kind**: global function
-
-| Param | Type                                       | Default        | Description                               |
-| ----- | ------------------------------------------ | -------------- | ----------------------------------------- |
-| obj   | <code>Array</code> \| <code>Objects</code> |                |                                           |
-| key   | <code>string</code>                        |                |                                           |
-| ord   | <code>Number</code>                        | <code>1</code> | : 1 = Ascending(Default), -1 = Descending |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| obj | <code>Array</code> \| <code>Objects</code> |  |  |
+| key | <code>string</code> |  |  |
+| ord | <code>Number</code> | <code>1</code> | : 1 = Ascending(Default), -1 = Descending |
 
 <a name="sortObjectByMultipleKeys"></a>
 
 ## sortObjectByMultipleKeys(arr, keys) ⇒
-
 Sort array of objects by key(s)
 
 **Kind**: global function  
-**Returns**: Sorted array of objects.
+**Returns**: Sorted array of objects.  
 
-| Param | Type                              | Description                                                                    |
-| ----- | --------------------------------- | ------------------------------------------------------------------------------ |
-| arr   | <code>Array.&lt;Object&gt;</code> | Array of Objects                                                               |
-| keys  | <code>Array.&lt;String&gt;</code> | Key's to be sorted. [pass hyphen(-) in front of string to order in descending] |
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array.&lt;Object&gt;</code> | Array of Objects |
+| keys | <code>Array.&lt;String&gt;</code> | Key's to be sorted. [pass hyphen(-) in front of string to order in descending] |
 
-**Example**
-
+**Example**  
 ```js
-sortObjectByMultipleKeys(object, ["name", "-date"]);
+sortObjectByMultipleKeys(object, ["name", "-date"])
 ```
-
-**Example**
-
+**Example**  
 ```js
-sortObjectByMultipleKeys(object, ["-name", "date"]);
+sortObjectByMultipleKeys(object, ["-name", "date"])
 ```
-
 <a name="uniqueArrayOfObjects"></a>
 
 ## uniqueArrayOfObjects(arr) ⇒
-
 Compares all the objects(both key and value) in the given array and returns the unique array.
 
 **Kind**: global function  
-**Returns**: unique array of object(s).
+**Returns**: unique array of object(s).  
 
-| Param | Type                              | Description          |
-| ----- | --------------------------------- | -------------------- |
-| arr   | <code>Array.&lt;Object&gt;</code> | An array of objects. |
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array.&lt;Object&gt;</code> | An array of objects. |
 
-**Example**
-
+**Example**  
 ```js
-uniqueArrayOfObjects([{ a: 2 }, { a: 2 }]); // [{"a":  2}]
+uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
 ```
-
-**Example**
-
+**Example**  
 ```js
-uniqueArrayOfObjects([{ a: { b: 2 } }, { a: { b: 2 } }]); // [{"a": {"b": 2}}]
+uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
 ```
-
-**Example**
-
+**Example**  
 ```js
-uniqueArrayOfObjects([{ a: 2 }, { a: 2, b: 3 }]); // [{a: 2}, {a: 2, b: 3}]
+uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
