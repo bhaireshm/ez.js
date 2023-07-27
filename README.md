@@ -1,1 +1,3 @@
-* write test file to check all the methods which are imported.
+### Document
+
+[Link](https://bhaireshm.github.io/ez.js/global.html)
