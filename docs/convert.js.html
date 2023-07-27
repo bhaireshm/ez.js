@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: shuffleString.js</title>
+    <title>JSDoc: Source: convert.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: shuffleString.js</h1>
+    <h1 class="page-title">Source: convert.js</h1>
 
     
 
@@ -27,17 +27,38 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
-* @param {string} - str
-*/
-const shuffleString = (str) => {
-  str = str.trim().replace(/ /g, "");
-  let res = "";
-  const getRandomChar = (c) => c.charAt(Math.floor(Math.random() * c.length));
-  for (const s of str) res += getRandomChar(s);
-  return res;
+ * @param {string} s
+ * @returns number
+ * @example console.log(toNumber("-23.32"))
+ */
+const toNumber = (s, returnStrings = false) =>
+  isNaN(Number(s)) ? (returnStrings ? s : console.error(`${s} NaN`)) : Number(s);
+
+/**
+ * @param {Array | Object} data - required
+ * @param {string} str - key names separated by comma (optional)
+ * @returns array or object
+ * @example strToNum(["3","4",3,"7",8])
+ * @example strToNum({ a:2, b:"4", c:"5" }, "c,b")
+ */
+const strToNum = (data, str) => {
+  if (typeof data == "object") {
+    if (!str &amp;&amp; data.length > 0) return data.map((d) => toNumber(d, true));
+    if (str &amp;&amp; data.length == undefined) {
+      const out = {};
+      Object.entries(data)
+        .map((d) => {
+          if (str.split(",").some((s) => s == d[0])) d[1] = toNumber(d[1], true);
+          return d;
+        })
+        .forEach((a) => (out[a[0]] = a[1]));
+      return out;
+    }
+  }
 };
 
-module.exports = shuffleString;</code></pre>
+
+module.exports = { toNumber, strToNum };</code></pre>
         </article>
     </section>
 

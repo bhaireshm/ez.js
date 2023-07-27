@@ -11,7 +11,7 @@
     "build": "rollup -c",
     "prepublishOnly": "rimraf dist && npm run build && npm test",
     "docs:html": "jsdoc src/helpers/ -d docs",
-    "docs:md": "jsdoc2md src/helpers/*.js --out docs2"
+    "docs:md": "jsdoc2md src/helpers/*.js >> README.md"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.0",

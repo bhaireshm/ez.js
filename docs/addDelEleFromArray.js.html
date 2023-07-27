@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: shuffleString.js</title>
+    <title>JSDoc: Source: addDelEleFromArray.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: shuffleString.js</h1>
+    <h1 class="page-title">Source: addDelEleFromArray.js</h1>
 
     
 
@@ -27,17 +27,15 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
-* @param {string} - str
+ * @param arr: Array 
+ * @param ele: element to be added
+ * @param remEle: element to be deleted
 */
-const shuffleString = (str) => {
-  str = str.trim().replace(/ /g, "");
-  let res = "";
-  const getRandomChar = (c) => c.charAt(Math.floor(Math.random() * c.length));
-  for (const s of str) res += getRandomChar(s);
-  return res;
-};
-
-module.exports = shuffleString;</code></pre>
+module.exports = function addDelEleFromArray(arr = [], ele = "", remEle = "") {
+    if (ele &amp;&amp; !arr.some((a) => a == ele)) arr.push(ele);
+    if (remEle) return arr.filter((a) => a != remEle);
+    return arr;
+}</code></pre>
         </article>
     </section>
 
