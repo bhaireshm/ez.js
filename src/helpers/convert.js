@@ -1,4 +1,6 @@
 /**
+ * Converts given string formatted value into number.
+ * 
  * @param {string} s
  * @returns number
  * @example console.log(toNumber("-23.32"))
@@ -7,6 +9,8 @@ const toNumber = (s, returnStrings = false) =>
   isNaN(Number(s)) ? (returnStrings ? s : console.error(`${s} NaN`)) : Number(s);
 
 /**
+ * Checks the provided array or an object's string formatted value into number.
+ * 
  * @param {Array | Object} data - required
  * @param {string} str - key names separated by comma (optional)
  * @returns array or object
