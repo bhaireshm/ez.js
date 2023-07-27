@@ -1,5 +1,5 @@
 /**
-* @param {String} - str
+* @param {string} - str
 */
 const shuffleString = (str) => {
   str = str.trim().replace(/ /g, "");

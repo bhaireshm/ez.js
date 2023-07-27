@@ -6,7 +6,7 @@
  * @param {String[]} tableData.fields - Fields to be shown
  * @param {String[]} tableData.fieldTitles - Field Names
  * @param {Object} tableData.tableProps - Field Names
- * @param {String} tableData.tableProps.id - Table id
+ * @param {string} tableData.tableProps.id - Table id
  * @param {String[]} tableData.tableProps.classList - Table custom class list
  * @param {String[]} tableData.tableProps.style - Table custom styles
  * @returns [object HTMLArrayElement]

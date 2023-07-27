@@ -1,6 +1,6 @@
 /**
- * @param {Array of objects} obj 
- * @param {String} key 
+ * @param {Array | Objects} obj 
+ * @param {string} key 
  * @param {Number} ord : 1 = Ascending(Default), -1 = Descending
  */
 const sortObjectByKey = (obj = [], key = "", ord = 1) =>
