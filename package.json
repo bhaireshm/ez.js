@@ -1,8 +1,9 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "0.0.20-00",
+  "version": "0.0.1-01",
   "description": "Helper functions.",
   "main": "dist/index.js",
+  "types": "dist/index.d.js",
   "private": false,
   "scripts": {
     "start": "node ./index.js",
@@ -27,17 +28,17 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "publishConfig": {},
   "files": [
     "dist",
-    "READMR.md",
+    "README.md",
     "src/helper/*"
   ],
-  "engineStrict": true,
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "jsdoc": "^4.0.2",
+    "license-report": "^6.4.0",
     "nodemon": "^2.0.21",
     "rimraf": "^4.4.0",
     "rollup": "^2.79.1",
