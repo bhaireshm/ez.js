@@ -24,6 +24,10 @@
     "README.md",
     "package.json"
   ],
+  "keywords": [
+    "javascript",
+    "utils"
+  ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
