@@ -3,13 +3,13 @@
  * @param {object} obj
  */
 function removeEmptyProperty(obj = {}) {
-  const data = { ...obj };
-  if (!data) return data;
-  Object.keys(data).forEach((key) => {
-    if (typeof data[key] === "object") data[key] = removeEmptyProperty(data[key]);
-    if (!data[key]) delete data[key];
-  });
-  return data;
+	const data = { ...obj };
+	if (!data) return data;
+	Object.keys(data).forEach((key) => {
+		if (typeof data[key] === "object") data[key] = removeEmptyProperty(data[key]);
+		if (!data[key]) delete data[key];
+	});
+	return data;
 }
 
 module.exports = removeEmptyProperty;

@@ -12,14 +12,14 @@
  * @link Reference - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options
  */
 function currencyFormatter(val, options = {}) {
-  options = {
-    currency: "INR",
-    style: "currency",
-    maximumFractionDigits: 2,
-    locales: options?.locales || "en-IN",
-    ...options,
-  }
-  return new Intl.NumberFormat(options.locales, options).format(val);
+	options = {
+		currency: "INR",
+		style: "currency",
+		maximumFractionDigits: 2,
+		locales: options?.locales || "en-IN",
+		...options,
+	};
+	return new Intl.NumberFormat(options.locales, options).format(val);
 }
 
 module.exports = currencyFormatter;

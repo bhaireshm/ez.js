@@ -14,9 +14,9 @@
  * @returns {any} value, If nothing found null will be returned.
  */
 function getNestedValue(d = {}, k = "") {
-    const keys = String(k).split(".");
-    if (!keys.length) return null;
-    return keys.reduce((p, c) => Object(p).hasOwnProperty(c) ? p[c] : null, d);
+	const keys = String(k).split(".");
+	if (!keys.length) return null;
+	return keys.reduce((p, c) => Object(p).hasOwn(c) ? p[c] : null, d);
 }
 
 module.exports = getNestedValue;

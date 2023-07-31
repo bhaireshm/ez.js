@@ -1,4 +1,4 @@
-const compareObjects = require('./compareObjects.js');
+const compareObjects = require("./compareObjects.js");
 
 /**
  * Compares all the objects(both key and value) in the given array and returns the unique array.
@@ -11,14 +11,14 @@ const compareObjects = require('./compareObjects.js');
  * @example uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
  */
 function uniqueArrayOfObjects(arr) {
-    return arr.reduce((acc, curr) => {
-        if (acc.length > 0) {
-            acc.forEach((a) => {
-                if (a && !compareObjects(a, curr)) acc.push(curr);
-            });
-        } else acc.push(curr);
-        return acc;
-    }, []);
+	return arr.reduce((acc, curr) => {
+		if (acc.length > 0) {
+			acc.forEach((a) => {
+				if (a && !compareObjects(a, curr)) acc.push(curr);
+			});
+		} else acc.push(curr);
+		return acc;
+	}, []);
 }
 
 module.exports = uniqueArrayOfObjects;

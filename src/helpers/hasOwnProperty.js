@@ -13,14 +13,14 @@
  * @return {string | boolean}
  */
 function hasOwnProperty(obj, keys, returnType = false) {
-  if (Object.entries(obj).length == 0 || keys.length == 0) return returnType ? false : "false";
-  else {
-    const res = keys.split(",").map((k) => {
-      if (k != "" && !Object.hasOwnProperty.call(obj, k)) return returnType ? false : `${k} not found`;
-    }).filter(a => typeof a == 'string')[0];
-    if (returnType) return !res ? true : false;
-    return !res ? "All key(s) found" : false;
-  }
-};
+	if (Object.entries(obj).length == 0 || keys.length == 0) return returnType ? false : "false";
+	else {
+		const res = keys.split(",").map((k) => {
+			if (k != "" && !Object.hasOwn.call(obj, k)) return returnType ? false : `${k} not found`;
+		}).filter(a => typeof a == "string")[0];
+		if (returnType) return !res ? true : false;
+		return !res ? "All key(s) found" : false;
+	}
+}
 
 module.exports = hasOwnProperty;
