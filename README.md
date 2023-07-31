@@ -1,6 +1,10 @@
 # ez.js
 
-The `es.js` library exported as  cjs, esm and umd modules.
+<div id="badges">
+ <img alt="npm" src="https://img.shields.io/npm/dm/@bhairesh/ez.js">
+</div>
+
+The `ez.js` library exported as cjs, esm and umd modules.
 
 ## Installation
 
@@ -10,10 +14,14 @@ npm i -g @bhairesh/ez.js
 npm i @bhairesh/ez.js
 ```
 
-In Node.js:
+Imports:
 ```js
 // Load the package.
 const ezjs = require("@bhairesh/ez.js");
+
+// or
+
+import ezjs from "@bhairesh/ez.js";
 ```
 
 ## Why ez.js?
@@ -276,8 +284,7 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
-console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -457,8 +464,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
-printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -717,8 +723,7 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
-console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -912,8 +917,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
-printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
