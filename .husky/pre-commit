@@ -8,7 +8,7 @@ echo
 # lint check
 npm run eslint && echo "Formated all staged files." && echo || (
   echo "eslint check Failed."
-  echo "Run 'npm run style', add changes and try commit again."
+  echo "Run 'npm run eslint:fix', add changes and try commit again."
   false
 )
 
