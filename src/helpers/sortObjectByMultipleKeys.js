@@ -25,4 +25,4 @@ const sortObjectByMultipleKeys = (arr = [], keys = []) => {
 	});
 };
 
-module.exports = sortObjectByMultipleKeys;
+export default sortObjectByMultipleKeys;

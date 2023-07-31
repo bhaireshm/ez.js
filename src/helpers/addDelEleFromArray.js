@@ -11,4 +11,4 @@ function addDelEleFromArray(arr = [], ele = "", remEle = "") {
 	return arr;
 }
 
-module.exports = addDelEleFromArray;
+export default addDelEleFromArray;

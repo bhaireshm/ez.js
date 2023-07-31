@@ -22,6 +22,7 @@ export default [
 				sourcemap: true,
 			},
 			{
+				name: "@bhairesh/ez.js",
 				file: "dist/index.umd.js",
 				format: "umd",
 				sourcemap: true,

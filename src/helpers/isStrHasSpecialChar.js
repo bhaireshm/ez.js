@@ -12,4 +12,4 @@ function isStrHasSpecialChar(str, pattern = "<>@!#$%^&*()_+[]{}?:;\\|'\"\\,./~`-
 	return pattern.split("").map(s => str.indexOf(s) > -1).includes(true);
 }
 
-module.exports = isStrHasSpecialChar;
+export default isStrHasSpecialChar;

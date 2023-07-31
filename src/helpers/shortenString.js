@@ -7,4 +7,4 @@ const shortenString = (str = "", len = 50) => {
 	return str;
 };
 
-module.exports = shortenString;
+export default shortenString;

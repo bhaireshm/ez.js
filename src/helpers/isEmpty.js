@@ -13,4 +13,4 @@ function isEmpty(data) {
 	return count == 0;
 }
 
-module.exports = isEmpty;
+export default isEmpty;

@@ -7,4 +7,4 @@ const objectToQueryParams = (o = {}) =>
 		.join("&");
 
 
-module.exports = objectToQueryParams;
+export default objectToQueryParams;

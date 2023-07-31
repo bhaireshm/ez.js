@@ -25,4 +25,4 @@ function compareObject(obj1, obj2) {
 	return true;
 }
 
-module.exports = compareObject;
+export default compareObject;

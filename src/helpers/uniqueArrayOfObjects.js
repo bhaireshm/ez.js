@@ -21,4 +21,4 @@ function uniqueArrayOfObjects(arr) {
 	}, []);
 }
 
-module.exports = uniqueArrayOfObjects;
+export default uniqueArrayOfObjects;

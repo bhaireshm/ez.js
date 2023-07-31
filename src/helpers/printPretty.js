@@ -28,4 +28,4 @@ function printPretty(obj) {
 	}
 }
 
-module.exports = printPretty;
+export default printPretty;

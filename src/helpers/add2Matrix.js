@@ -10,4 +10,4 @@ function add2Matrix(matrices) {
 	return result;
 }
 
-module.exports = add2Matrix;
+export default add2Matrix;

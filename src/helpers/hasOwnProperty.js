@@ -23,4 +23,4 @@ function hasOwnProperty(obj, keys, returnType = false) {
 	}
 }
 
-module.exports = hasOwnProperty;
+export default hasOwnProperty;

@@ -81,4 +81,4 @@ function dataFormatter(obj = {}, formatter = "", options = {}) {
 	return newData;
 }
 
-module.exports = dataFormatter;
+export default dataFormatter;

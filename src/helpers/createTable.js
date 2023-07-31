@@ -58,4 +58,4 @@ function createTable(tableData) {
 	return tbl;
 }
 
-module.exports = createTable;
+export default createTable;

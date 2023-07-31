@@ -20,4 +20,4 @@ function reverseSentence(sentence) {
 }
 
 
-module.exports = { reverseStr, reverseEachWordInSentence, reverseSentence };
+export { reverseStr, reverseEachWordInSentence, reverseSentence };

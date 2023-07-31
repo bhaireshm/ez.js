@@ -9,4 +9,4 @@ const shuffleString = (str) => {
 	return res;
 };
 
-module.exports = shuffleString;
+export default shuffleString;

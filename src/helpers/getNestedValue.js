@@ -6,8 +6,8 @@
  * @param {string} k - key name separated by dot character
  * @example 
  * const data = {
-    pid: 'some-id',
-    portions: { name: 'section' }
+	pid: 'some-id',
+	portions: { name: 'section' }
 }
  * console.log(getNestedKeyValue(data, "portions.name")); // 'section'
  * 
@@ -19,4 +19,4 @@ function getNestedValue(d = {}, k = "") {
 	return keys.reduce((p, c) => Object(p).hasOwn(c) ? p[c] : null, d);
 }
 
-module.exports = getNestedValue;
+export default getNestedValue;
