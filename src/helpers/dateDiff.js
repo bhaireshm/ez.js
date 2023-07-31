@@ -29,4 +29,4 @@ function dateDiff(from, to) {
   };
 }
 
-export default dateDiff;
+module.exports = dateDiff;

@@ -24,4 +24,4 @@ function mergeObjects(obj1, obj2) {
   return o2;
 }
 
-export default mergeObjects;
+module.exports = mergeObjects;

@@ -309,7 +309,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -345,7 +346,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -419,7 +425,8 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 const data = {
 	pid: 'some-id',
 	portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -489,7 +496,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
+printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -763,7 +771,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -799,7 +808,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -873,7 +887,8 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 const data = {
 	pid: 'some-id',
 	portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -957,7 +972,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
+printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 

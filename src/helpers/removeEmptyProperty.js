@@ -12,4 +12,4 @@ function removeEmptyProperty(obj = {}) {
   return data;
 }
 
-export default removeEmptyProperty;
+module.exports = removeEmptyProperty;

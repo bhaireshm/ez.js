@@ -4,7 +4,6 @@
   "description": "Helper functions.",
   "main": "dist/index.js",
   "private": false,
-  "type": "module",
   "scripts": {
     "dev": "nodemon ./index.js",
     "test": "node ./src/tests/",

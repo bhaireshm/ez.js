@@ -13,4 +13,4 @@ function arrayIntoChunks(arr, n) {
   return [arr.slice(0, n)].concat(arrayIntoChunks(arr.slice(n), n));
 }
 
-export default arrayIntoChunks;
+module.exports = arrayIntoChunks;

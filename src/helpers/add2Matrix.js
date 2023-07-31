@@ -16,4 +16,4 @@ function add2Matrix(matrices = []) {
   return result;
 }
 
-export default add2Matrix;
+module.exports = add2Matrix;

@@ -1,8 +1,7 @@
-/* eslint-disable no-undef */
-import { resolve } from "path";
-import { ESLint } from "eslint";
+const { resolve } = require("path");
+const { ESLint } = require("eslint");
 
-export default {
+module.exports = {
   "**/*.{js,json}": (fileNames) => {
     const escapedFileNames = fileNames.map((fileName) => escape(fileName)).join(" ");
     const eslint = new ESLint();

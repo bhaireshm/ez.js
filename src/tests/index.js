@@ -1,3 +1,3 @@
-import { toNumber } from "../helpers/convert.js";
+const { toNumber } = require("../../dist");
 
 console.log(toNumber("asd"));
