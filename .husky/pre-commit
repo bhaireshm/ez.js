@@ -6,29 +6,54 @@ echo "Styling, testing and building project before committing..."
 echo
 
 # Prettier check
-npm run lint-staged && echo "Formated all staged files." && echo || (
+npm run lint-staged
+OUT=$?
+
+if [ $OUT -eq 0 ]; then
+  echo "Formated all staged files."
+  echo
+else
   echo "lint-staged check Failed."
   echo "Run 'npm run lint-staged', add changes and try commit again."
   false
-)
+fi
 
 # Build check
-npm run dist && echo "Distribution creation successful." || (
+npm run dist
+OUT=$?
+
+if [ $OUT -eq 0 ]; then
+  echo "Distribution creation successful."
+  echo
+else
   echo "Distribution creation failed !!!"
   false
-)
+fi
 
 # Test
-npm test && echo "All tests successful." || (
+npm test
+OUT=$?
+
+if [ $OUT -eq 0 ]; then
+  echo "All tests successful."
+  echo
+else
   echo "test failed !!!"
   false
-)
+fi
 
 # Documents creation
-npm run docs:md && git add ./docs/* ./README.md && echo "Documents updated and added to git staging." || (
+npm run docs:md
+OUT=$?
+
+if [ $OUT -eq 0 ]; then
+  git add ./docs/* ./README.md
+  echo "Documents updated and added to git staging."
+  echo
+else
   echo "Document creation failed !!!"
   false
-)
+fi
 
 echo "All checks completed."
 echo
