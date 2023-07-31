@@ -1,4 +1,11 @@
-function add2Matrix(matrices) {
+/**
+ * Calculates the sum of corresponding elements from an array of matrices.
+ * Note: The function assumes all matrices have the same dimensions.
+ *
+ * @param {number[][][]} matrices - An array of matrices where each matrix is a 2D array of numbers.
+ * @returns {number[]} An array containing the sum of corresponding elements from all matrices.
+ */
+function add2Matrix(matrices = []) {
   const result = [];
   for (let i = 0; i < matrices.length; i++) {
     for (let j = 0; j < matrices[i].length; j++) {
