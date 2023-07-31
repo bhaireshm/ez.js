@@ -50,7 +50,7 @@ function dataFormatter(obj = {}, formatter = "", options = {}) {
     if (!keys.length) return null;
     else
       return keys.reduce((p, c) => {
-        if (Object(p).hasOwn(c)) return p[c];
+        if (Object(p).hasOwnProperty(c)) return p[c];
         errors[c] = "not found";
         return null;
       }, d);
@@ -73,7 +73,7 @@ function dataFormatter(obj = {}, formatter = "", options = {}) {
       });
 
       // * Nested key's data check
-      if (Object(newData).hasOwn(nestedKeys[0])) {
+      if (Object(newData).hasOwnProperty(nestedKeys[0])) {
         newData[nestedKeys[0]] = { ...newData[nestedKeys[0]], ...nestedKeysData };
       } else newData[nestedKeys[0]] = nestedKeysData;
     }

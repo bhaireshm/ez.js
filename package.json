@@ -28,6 +28,7 @@
     "utils"
   ],
   "devDependencies": {
+    "@bhairesh/ez.js": "^0.0.10",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
