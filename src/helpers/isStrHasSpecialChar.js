@@ -8,7 +8,7 @@
  * @example 
  * console.log(isStrHasSpecialChar("hello h@rry"));
  */
-function isStrHasSpecialChar(str, pattern = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=") {
+function isStrHasSpecialChar(str, pattern = "<>@!#$%^&*()_+[]{}?:;\|'\"\\,./~`-=") {
     return pattern.split("").map(s => str.indexOf(s) > -1).includes(true);
 }
 

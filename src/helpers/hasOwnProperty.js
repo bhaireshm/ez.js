@@ -12,7 +12,7 @@
  * 
  * @return {string | boolean}
  */
-const hasOwnProperty = (obj, keys, returnType = false) => {
+function hasOwnProperty(obj, keys, returnType = false) {
   if (Object.entries(obj).length == 0 || keys.length == 0) return returnType ? false : "false";
   else {
     const res = keys.split(",").map((k) => {
