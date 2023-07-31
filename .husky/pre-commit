@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo
+echo "Styling, testing and building project before committing..."
+echo
+
+# lint check
+npm run eslint && echo "Formated all staged files." && echo || (
+  echo "eslint check Failed."
+  echo "Run 'npm run style', add changes and try commit again."
+  false
+)
+
+# Build check
+npm run dist && echo "Distribution creation successful." || (
+  echo "Distribution creation failed !!!"
+  false
+)
+
+# Test
+npm test && echo "All tests successful." || (
+  echo "test failed !!!"
+  false
+)
+
+echo "All checks completed."
+echo
