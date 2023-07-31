@@ -35,4 +35,4 @@ const strToNum = (data, str) => {
   }
 };
 
-export { toNumber, strToNum };
+module.exports = { toNumber, strToNum };

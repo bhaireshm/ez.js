@@ -9,4 +9,4 @@ function isStr(str) {
   return str && typeof str === "string";
 }
 
-export default isStr;
+module.exports = isStr;

@@ -31,6 +31,9 @@ import ezjs from "@bhairesh/ez.js";
 ## Functions
 
 <dl>
+<dt><a href="#add2Matrix">add2Matrix(matrices)</a> ⇒ <code>Array.&lt;number&gt;</code></dt>
+<dd><p>Calculates the sum of corresponding elements from an array of matrices.
+Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dt><a href="#addDelEleFromArray">addDelEleFromArray(arr, ele, remEle:)</a> ⇒ <code>Array</code></dt>
 <dd></dd>
 <dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒ <code>Array</code></dt>
@@ -85,6 +88,9 @@ import ezjs from "@bhairesh/ez.js";
 <dd><p>Sort array of objects by key(s)</p></dd>
 <dt><a href="#uniqueArrayOfObjects">uniqueArrayOfObjects(arr)</a> ⇒</dt>
 <dd><p>Compares all the objects(both key and value) in the given array and returns the unique array.</p></dd>
+<dt><a href="#add2Matrix">add2Matrix(matrices)</a> ⇒ <code>Array.&lt;number&gt;</code></dt>
+<dd><p>Calculates the sum of corresponding elements from an array of matrices.
+Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dt><a href="#addDelEleFromArray">addDelEleFromArray(arr, ele, remEle:)</a> ⇒ <code>Array</code></dt>
 <dd></dd>
 <dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒ <code>Array</code></dt>
@@ -146,6 +152,20 @@ import ezjs from "@bhairesh/ez.js";
 <dt><a href="#isStr">isStr(str)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Checks if <code>str</code> is a <code>String</code> type.</p></dd>
 </dl>
+
+<a name="add2Matrix"></a>
+
+## add2Matrix(matrices) ⇒ <code>Array.&lt;number&gt;</code>
+<p>Calculates the sum of corresponding elements from an array of matrices.
+Note: The function assumes all matrices have the same dimensions.</p>
+
+**Kind**: global function  
+**Summary**: Calculates the sum of corresponding elements from an array of matrices.  
+**Returns**: <code>Array.&lt;number&gt;</code> - <p>An array containing the sum of corresponding elements from all matrices.</p>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| matrices | <code>Array.&lt;Array.&lt;Array.&lt;number&gt;&gt;&gt;</code> | <p>An array of matrices where each matrix is a 2D array of numbers.</p> |
 
 <a name="addDelEleFromArray"></a>
 
@@ -289,7 +309,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -325,7 +346,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -399,7 +425,8 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 const data = {
 	pid: 'some-id',
 	portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -469,7 +496,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
+printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -587,6 +615,20 @@ uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
 ```js
 uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
+<a name="add2Matrix"></a>
+
+## add2Matrix(matrices) ⇒ <code>Array.&lt;number&gt;</code>
+<p>Calculates the sum of corresponding elements from an array of matrices.
+Note: The function assumes all matrices have the same dimensions.</p>
+
+**Kind**: global function  
+**Summary**: Calculates the sum of corresponding elements from an array of matrices.  
+**Returns**: <code>Array.&lt;number&gt;</code> - <p>An array containing the sum of corresponding elements from all matrices.</p>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| matrices | <code>Array.&lt;Array.&lt;Array.&lt;number&gt;&gt;&gt;</code> | <p>An array of matrices where each matrix is a 2D array of numbers.</p> |
+
 <a name="addDelEleFromArray"></a>
 
 ## addDelEleFromArray(arr, ele, remEle:) ⇒ <code>Array</code>
@@ -729,7 +771,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -765,7 +808,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -839,7 +887,8 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 const data = {
 	pid: 'some-id',
 	portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -923,7 +972,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
+printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 

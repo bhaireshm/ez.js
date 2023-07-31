@@ -7,7 +7,7 @@ import cleaner from "rollup-plugin-cleaner";
 import nodePolyfills from "rollup-plugin-node-polyfills";
 import json from "@rollup/plugin-json";
 
-export default [
+module.exports = [
   {
     input: "./index.js",
     output: [

@@ -13,4 +13,4 @@ function generateRandomString(length = 13) {
   return res;
 }
 
-export default generateRandomString;
+module.exports = generateRandomString;

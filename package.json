@@ -1,10 +1,9 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "Helper functions.",
   "main": "dist/index.js",
   "private": false,
-  "type": "module",
   "scripts": {
     "dev": "nodemon ./index.js",
     "test": "node ./src/tests/",
@@ -29,7 +28,7 @@
     "utils"
   ],
   "devDependencies": {
-    "@bhairesh/ez.js": "^0.0.9",
+    "@bhairesh/ez.js": "^0.0.10",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",

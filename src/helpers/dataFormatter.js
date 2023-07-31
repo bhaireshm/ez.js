@@ -1,14 +1,14 @@
 /**
  * Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.
- * 
+ *
  * @param {object} obj - data to be formateted
  * @param {string} formatter - key:valuePath, each key value is separated by comma
  * @example "alterName:key" or "alterName:nested.key" or "nested.alterName:key" or "nested.alterName:nested.key"
  * @param {object} options
- * @param {object} options.error - default true, returns error content if any key or value is not found 
- * @param {object} options.oldData - default true, returns object 
+ * @param {object} options.error - default true, returns error content if any key or value is not found
+ * @param {object} options.oldData - default true, returns object
  * @returns {object} return modified object along with the provided object
- * 
+ *
  * @example
  * const payload = {
     id: "some-id",
@@ -23,7 +23,7 @@
     }
 };
  * const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
- * 
+ *
  * console.log(a);
  * output:
  * {
@@ -50,7 +50,7 @@ function dataFormatter(obj = {}, formatter = "", options = {}) {
     if (!keys.length) return null;
     else
       return keys.reduce((p, c) => {
-        if (Object(p).hasOwn(c)) return p[c];
+        if (Object(p).hasOwnProperty(c)) return p[c];
         errors[c] = "not found";
         return null;
       }, d);
@@ -73,7 +73,7 @@ function dataFormatter(obj = {}, formatter = "", options = {}) {
       });
 
       // * Nested key's data check
-      if (Object(newData).hasOwn(nestedKeys[0])) {
+      if (Object(newData).hasOwnProperty(nestedKeys[0])) {
         newData[nestedKeys[0]] = { ...newData[nestedKeys[0]], ...nestedKeysData };
       } else newData[nestedKeys[0]] = nestedKeysData;
     }
@@ -85,4 +85,4 @@ function dataFormatter(obj = {}, formatter = "", options = {}) {
   return newData;
 }
 
-export default dataFormatter;
+module.exports = dataFormatter;

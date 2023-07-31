@@ -9,7 +9,7 @@ function mergeObjects(obj1, obj2) {
   const o1 = { ...obj1 },
     o2 = { ...obj2 };
   for (const key in o1) {
-    if (o1.hasOwn(key)) {
+    if (o1.hasOwnProperty(key)) {
       if (Array.isArray(o2[key]) && Array.isArray(o1[key])) {
         o2[key] = [...o1[key], ...o2[key]];
         continue;
@@ -24,4 +24,4 @@ function mergeObjects(obj1, obj2) {
   return o2;
 }
 
-export default mergeObjects;
+module.exports = mergeObjects;

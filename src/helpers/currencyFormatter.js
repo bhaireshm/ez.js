@@ -22,4 +22,4 @@ function currencyFormatter(val, options = {}) {
   return new Intl.NumberFormat(options.locales, options).format(val);
 }
 
-export default currencyFormatter;
+module.exports = currencyFormatter;

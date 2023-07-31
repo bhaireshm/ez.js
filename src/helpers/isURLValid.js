@@ -1,7 +1,7 @@
 /**
  * @param {string} url
  */
-export default function isURLValid(url) {
+module.exports = function isURLValid(url) {
   return new RegExp(
     "^(https?:\\/\\/)?" + // protocol
       "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|" + // domain name
@@ -9,6 +9,6 @@ export default function isURLValid(url) {
       "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
       "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
       "(\\#[-a-z\\d_]*)?$", // fragment locator
-    "i" // ignore case
+    "i", // ignore case
   ).test(url);
-}
+};
