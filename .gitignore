@@ -2,7 +2,6 @@
 node_modules
 output
 dist
-docs
 package-lock.json
 
 # IDEs
