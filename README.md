@@ -39,7 +39,7 @@ import ezjs from "@bhairesh/ez.js";
 <dd><p>Converts each word's first letter into uppercase.</p></dd>
 <dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
 <dd><p>This method compares both key and value of given objects. This even works for nested objects.</p></dd>
-<dt><a href="#toNumber">toNumber(s)</a> ⇒ <code>number</code></dt>
+<dt><a href="#toNumber">toNumber(str, returnStrings)</a> ⇒ <code>number</code> | <code>boolean</code></dt>
 <dd><p>Converts given string formatted value into number.</p></dd>
 <dt><a href="#strToNum">strToNum(data, str)</a> ⇒ <code>Array</code> | <code>object</code></dt>
 <dd><p>Checks the provided array or an object's string formatted value into number.</p></dd>
@@ -93,7 +93,7 @@ import ezjs from "@bhairesh/ez.js";
 <dd><p>Converts each word's first letter into uppercase.</p></dd>
 <dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
 <dd><p>This method compares both key and value of given objects. This even works for nested objects.</p></dd>
-<dt><a href="#toNumber">toNumber(s)</a> ⇒ <code>number</code></dt>
+<dt><a href="#toNumber">toNumber(str, returnStrings)</a> ⇒ <code>number</code> | <code>boolean</code></dt>
 <dd><p>Converts given string formatted value into number.</p></dd>
 <dt><a href="#strToNum">strToNum(data, str)</a> ⇒ <code>Array</code> | <code>object</code></dt>
 <dd><p>Checks the provided array or an object's string formatted value into number.</p></dd>
@@ -141,6 +141,10 @@ import ezjs from "@bhairesh/ez.js";
 <dd><p>Sort array of objects by key(s)</p></dd>
 <dt><a href="#uniqueArrayOfObjects">uniqueArrayOfObjects(arr)</a> ⇒</dt>
 <dd><p>Compares all the objects(both key and value) in the given array and returns the unique array.</p></dd>
+<dt><a href="#isStr">isStr(str)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Checks if <code>str</code> is a <code>String</code> type.</p></dd>
+<dt><a href="#isStr">isStr(str)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Checks if <code>str</code> is a <code>String</code> type.</p></dd>
 </dl>
 
 <a name="addDelEleFromArray"></a>
@@ -212,15 +216,16 @@ compareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
-## toNumber(s) ⇒ <code>number</code>
+## toNumber(str, returnStrings) ⇒ <code>number</code> \| <code>boolean</code>
 <p>Converts given string formatted value into number.</p>
 
 **Kind**: global function  
 **Summary**: Converts given string formatted value into number.  
 
-| Param | Type |
-| --- | --- |
-| s | <code>string</code> | 
+| Param | Type | Default |
+| --- | --- | --- |
+| str | <code>string</code> |  | 
+| returnStrings | <code>boolean</code> | <code>false</code> | 
 
 **Example**  
 ```js
@@ -237,7 +242,7 @@ console.log(toNumber("-23.32"))
 | Param | Type | Description |
 | --- | --- | --- |
 | data | <code>Array</code> \| <code>Object</code> | <p>required</p> |
-| str | <code>string</code> | <p>key names separated by comma (optional)</p> |
+| str | <code>string</code> \| <code>Array.&lt;string&gt;</code> | <p>key names separated by comma (optional)</p> |
 
 **Example**  
 ```js
@@ -284,7 +289,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -320,7 +326,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -392,9 +403,10 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 **Example**  
 ```js
 const data = {
-    pid: 'some-id',
-    portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+	pid: 'some-id',
+	portions: { name: 'section' }
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -438,7 +450,7 @@ console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | str | <code>string</code> |  |  |
-| pattern | <code>string</code> | <code>&quot;&lt;&gt;@!#$%^&amp;*()_+[]{}?:;|&#x27;\&quot;\\,./~&#x60;-&#x3D;&quot;</code> | <p>regexp pattern.</p> |
+| pattern | <code>string</code> | <code>&quot;&lt;&gt;@!#$%^&amp;*()_+[]{}?:;\\|&#x27;\&quot;\\,./~&#x60;-&#x3D;&quot;</code> | <p>regexp pattern.</p> |
 
 **Example**  
 ```js
@@ -464,7 +476,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
+printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -651,15 +664,16 @@ compareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
-## toNumber(s) ⇒ <code>number</code>
+## toNumber(str, returnStrings) ⇒ <code>number</code> \| <code>boolean</code>
 <p>Converts given string formatted value into number.</p>
 
 **Kind**: global function  
 **Summary**: Converts given string formatted value into number.  
 
-| Param | Type |
-| --- | --- |
-| s | <code>string</code> | 
+| Param | Type | Default |
+| --- | --- | --- |
+| str | <code>string</code> |  | 
+| returnStrings | <code>boolean</code> | <code>false</code> | 
 
 **Example**  
 ```js
@@ -676,7 +690,7 @@ console.log(toNumber("-23.32"))
 | Param | Type | Description |
 | --- | --- | --- |
 | data | <code>Array</code> \| <code>Object</code> | <p>required</p> |
-| str | <code>string</code> | <p>key names separated by comma (optional)</p> |
+| str | <code>string</code> \| <code>Array.&lt;string&gt;</code> | <p>key names separated by comma (optional)</p> |
 
 **Example**  
 ```js
@@ -723,7 +737,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -759,7 +774,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -831,9 +851,10 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 **Example**  
 ```js
 const data = {
-    pid: 'some-id',
-    portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+	pid: 'some-id',
+	portions: { name: 'section' }
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -877,7 +898,7 @@ console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | str | <code>string</code> |  |  |
-| pattern | <code>string</code> | <code>&quot;&lt;&gt;@!#$%^&amp;*()_+[]{}?:;|&#x27;\&quot;\\,./~&#x60;-&#x3D;&quot;</code> | <p>regexp pattern.</p> |
+| pattern | <code>string</code> | <code>&quot;&lt;&gt;@!#$%^&amp;*()_+[]{}?:;\\|&#x27;\&quot;\\,./~&#x60;-&#x3D;&quot;</code> | <p>regexp pattern.</p> |
 
 **Example**  
 ```js
@@ -917,7 +938,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
+printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -1035,3 +1057,29 @@ uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
 ```js
 uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
+<a name="isStr"></a>
+
+## isStr(str) ⇒ <code>boolean</code>
+<p>Checks if <code>str</code> is a <code>String</code> type.</p>
+
+**Kind**: global function  
+**Summary**: Checks if <code>str</code> is a <code>String</code> type.  
+**Category**: String  
+
+| Param | Type |
+| --- | --- |
+| str | <code>string</code> | 
+
+<a name="isStr"></a>
+
+## isStr(str) ⇒ <code>boolean</code>
+<p>Checks if <code>str</code> is a <code>String</code> type.</p>
+
+**Kind**: global function  
+**Summary**: Checks if <code>str</code> is a <code>String</code> type.  
+**Category**: String  
+
+| Param | Type |
+| --- | --- |
+| str | <code>string</code> | 
+

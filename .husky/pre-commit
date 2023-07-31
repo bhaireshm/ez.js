@@ -5,10 +5,10 @@ echo
 echo "Styling, testing and building project before committing..."
 echo
 
-# lint check
-npm run eslint && echo "Formated all staged files." && echo || (
-  echo "eslint check Failed."
-  echo "Run 'npm run eslint:fix', add changes and try commit again."
+# Prettier check
+npm run lint-staged && echo "Formated all staged files." && echo || (
+  echo "lint-staged check Failed."
+  echo "Run 'npm run lint-staged', add changes and try commit again."
   false
 )
 
@@ -21,6 +21,12 @@ npm run dist && echo "Distribution creation successful." || (
 # Test
 npm test && echo "All tests successful." || (
   echo "test failed !!!"
+  false
+)
+
+# Documents creation
+npm run docs:md && git add ./docs/* ./README.md && echo "Documents updated and added to git staging." || (
+  echo "Document creation failed !!!"
   false
 )
 
