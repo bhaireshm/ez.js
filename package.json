@@ -12,6 +12,7 @@
     "prepublishOnly": "npm run dist && npm test && npm run docs:md",
     "eslint": "eslint *.js src/**/*.js",
     "eslint:fix": "eslint --fix *.js src/**/*.js",
+    "lint-staged": "lint-staged",
     "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > README.md"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
@@ -33,7 +34,9 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "eslint": "^8.46.0",
     "jsdoc-to-markdown": "^8.0.0",
+    "lint-staged": "^13.2.3",
     "nodemon": "^2.0.21",
+    "prettier": "^3.0.0",
     "rollup": "^2.79.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-cleaner": "^1.0.0",

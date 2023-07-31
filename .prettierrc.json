@@ -1,0 +1,8 @@
+{
+  "semi": true,
+  "printWidth": 100,
+  "endOfLine": "lf",
+  "bracketSameLine": true,
+  "arrowParens": "always",
+  "trailingComma": "es5"
+}

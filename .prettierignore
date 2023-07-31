@@ -1,0 +1,11 @@
+.husky/*
+*.gitignore
+*.prettierignore
+
+node_modules
+public
+out
+dist
+build
+
+pnpm-lock.yaml
