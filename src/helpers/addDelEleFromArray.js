@@ -6,9 +6,9 @@
  * @returns {Array}
 */
 function addDelEleFromArray(arr = [], ele = "", remEle = "") {
-    if (ele && !arr.some((a) => a == ele)) arr.push(ele);
-    if (remEle) return arr.filter((a) => a != remEle);
-    return arr;
+	if (ele && !arr.some((a) => a == ele)) arr.push(ele);
+	if (remEle) return arr.filter((a) => a != remEle);
+	return arr;
 }
 
-module.exports = addDelEleFromArray;
+export default addDelEleFromArray;

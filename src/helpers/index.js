@@ -6,7 +6,6 @@ export { default as compareObjects } from "./compareObjects.js";
 export { default as arrayIntoChunks } from "./arrayIntoChunks.js";
 export { default as sortObjectByKey } from "./sortObjectByKey.js";
 export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys.js";
-// export * from "./objects/index.js";
 export { default as createTable } from "./createTable.js";
 export { default as removeEmptyProperty } from "./removeEmptyProperty.js";
 export { strToNum, toNumber } from "./convert.js";
@@ -25,4 +24,3 @@ export { reverseStr, reverseEachWordInSentence, reverseSentence } from "./revers
 export { default as isEmpty } from "./isEmpty.js";
 export { default as blockBrowserBackButton } from "./blockBrowserBackButton.js";
 export { default as printPretty } from "./printPretty.js";
-export { default as addBtnToDropdown } from "./addBtnToDropdown.js";

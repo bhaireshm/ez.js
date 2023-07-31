@@ -4,11 +4,13 @@
   "description": "Helper functions.",
   "main": "dist/index.js",
   "private": false,
+  "type": "module",
   "scripts": {
-    "start": "node ./index.js",
-    "test": "node ./src/tests/",
+    "start": "nodemon ./index.js",
+    "test": "nodemon ./src/tests/",
     "dist": "rollup -c",
     "prepublishOnly": "npm run dist && npm test && npm run docs:md",
+    "style": "eslint --fix *.js src/**/*.js",
     "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > README.md"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
@@ -28,6 +30,7 @@
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "eslint": "^8.46.0",
     "jsdoc-to-markdown": "^8.0.0",
     "nodemon": "^2.0.21",
     "rollup": "^2.79.1",

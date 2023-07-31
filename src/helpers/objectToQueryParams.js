@@ -2,9 +2,9 @@
  * @param {object} o
  */
 const objectToQueryParams = (o = {}) =>
-  Object.entries(o)
-    .map((p) => `${encodeURIComponent(p[0])}=${encodeURIComponent(p[1])}`)
-    .join("&");
+	Object.entries(o)
+		.map((p) => `${encodeURIComponent(p[0])}=${encodeURIComponent(p[1])}`)
+		.join("&");
 
 
-module.exports = objectToQueryParams;
+export default objectToQueryParams;
