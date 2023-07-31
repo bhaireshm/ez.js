@@ -29,10 +29,12 @@
     "utils"
   ],
   "devDependencies": {
+    "@bhairesh/ez.js": "^0.0.9",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "eslint": "^8.46.0",
+    "eslint-plugin-import": "^2.28.0",
     "jsdoc-to-markdown": "^8.0.0",
     "lint-staged": "^13.2.3",
     "nodemon": "^2.0.21",
