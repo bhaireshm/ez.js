@@ -1,20 +1,15 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Helper functions.",
   "main": "dist/index.js",
-  "types": "dist/index.d.js",
   "private": false,
   "scripts": {
     "start": "node ./index.js",
     "test": "node ./src/tests/",
-    "build": "rollup -c",
-    "prepublishOnly": "npm run build && npm test",
-    "docs:md": "echo '' > README.md && jsdoc2md --files src/helpers/*.js > README.md"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bhaireshm/ez.js.git"
+    "dist": "rollup -c",
+    "prepublishOnly": "npm run dist && npm test && npm run docs:md",
+    "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > README.md"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
   "engines": {
@@ -24,6 +19,10 @@
     "dist",
     "README.md",
     "package.json"
+  ],
+  "keywords": [
+    "javascript",
+    "utils"
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
