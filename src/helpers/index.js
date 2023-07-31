@@ -6,7 +6,7 @@ export { default as compareObjects } from "./compareObjects.js";
 export { default as arrayIntoChunks } from "./arrayIntoChunks.js";
 export { default as sortObjectByKey } from "./sortObjectByKey.js";
 export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys.js";
-export { default as mergeObjects } from "./mergeObjects.js";
+// export * from "./objects/index.js";
 export { default as createTable } from "./createTable.js";
 export { default as removeEmptyProperty } from "./removeEmptyProperty.js";
 export { strToNum, toNumber } from "./convert.js";

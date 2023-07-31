@@ -6,14 +6,14 @@
  * @example sortObjectByMultipleKeys(object, ["name", "-date"])
  * @example sortObjectByMultipleKeys(object, ["-name", "date"])
  *
- * @returns Sorted array of objects.
+ * @returns {object} Sorted array of objects.
  */
 const sortObjectByMultipleKeys = (arr = [], keys = []) => {
   return arr.sort((a, b) => {
     return keys
       .map((o) => {
         let dir = 1;
-        if (o[0] === "-") {
+        if (o.startsWith("-")) {
           dir = -1;
           o = o.substring(1);
         }
