@@ -34,51 +34,55 @@
 }
  */
 function dataFormatter(obj = {}, formatter = "", options = {}) {
-	const { error = true, oldData = true } = options;
-	const alterNames = String(formatter).split(",");
-	const newData = {};
-	const errors = {};
+  const { error = true, oldData = true } = options;
+  const alterNames = String(formatter).split(",");
+  const newData = {};
+  const errors = {};
 
-	if (!Object.keys(obj).length) {
-		newData["OLD_DATA"] = obj;
-		newData["ERRORS"] = "data/object cannot be empty.";
-		return newData;
-	}
+  if (!Object.keys(obj).length) {
+    newData["OLD_DATA"] = obj;
+    newData["ERRORS"] = "data/object cannot be empty.";
+    return newData;
+  }
 
-	function getNestedValue(d, k) {
-		const keys = String(k).split(".");
-		if (!keys.length) return null;
-		else return keys.reduce((p, c) => {
-			if (Object(p).hasOwn(c)) return p[c];
-			errors[c] = "not found";
-			return null;
-		}, d);
-	}
+  function getNestedValue(d, k) {
+    const keys = String(k).split(".");
+    if (!keys.length) return null;
+    else
+      return keys.reduce((p, c) => {
+        if (Object(p).hasOwn(c)) return p[c];
+        errors[c] = "not found";
+        return null;
+      }, d);
+  }
 
-	alterNames.forEach(an => {
-		const key = String(an).split(":")[0];
-		let value = String(an).split(":")[1];
+  alterNames.forEach((an) => {
+    const key = String(an).split(":")[0];
+    let value = String(an).split(":")[1];
 
-		if (key.split(".").length === 1) {
-			value = getNestedValue(obj, String(an).split(":")[1]);
-			if (value) newData[key] = value;
-		} else {
-			const nestedKeys = String(key).split(".");
+    if (key.split(".").length === 1) {
+      value = getNestedValue(obj, String(an).split(":")[1]);
+      if (value) newData[key] = value;
+    } else {
+      const nestedKeys = String(key).split(".");
 
-			// * Nested key's data mapping
-			const nestedKeysData = dataFormatter(obj, `${nestedKeys.slice(1).join(".")}:${value}`, { error: false, oldData: false });
+      // * Nested key's data mapping
+      const nestedKeysData = dataFormatter(obj, `${nestedKeys.slice(1).join(".")}:${value}`, {
+        error: false,
+        oldData: false,
+      });
 
-			// * Nested key's data check
-			if (Object(newData).hasOwn(nestedKeys[0])) {
-				newData[nestedKeys[0]] = { ...newData[nestedKeys[0]], ...nestedKeysData };
-			} else newData[nestedKeys[0]] = nestedKeysData;
-		}
-	});
+      // * Nested key's data check
+      if (Object(newData).hasOwn(nestedKeys[0])) {
+        newData[nestedKeys[0]] = { ...newData[nestedKeys[0]], ...nestedKeysData };
+      } else newData[nestedKeys[0]] = nestedKeysData;
+    }
+  });
 
-	if (oldData) newData["OLD_DATA"] = obj;
-	if (error && Object.keys(errors).length) newData["ERRORS"] = errors;
+  if (oldData) newData["OLD_DATA"] = obj;
+  if (error && Object.keys(errors).length) newData["ERRORS"] = errors;
 
-	return newData;
+  return newData;
 }
 
 export default dataFormatter;

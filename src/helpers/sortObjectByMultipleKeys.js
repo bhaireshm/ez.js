@@ -9,20 +9,20 @@
  * @returns {object} Sorted array of objects.
  */
 const sortObjectByMultipleKeys = (arr = [], keys = []) => {
-	return arr.sort((a, b) => {
-		return keys
-			.map((o) => {
-				let dir = 1;
-				if (o.startsWith("-")) {
-					dir = -1;
-					o = o.substring(1);
-				}
-				if (a[o] > b[o]) return dir;
-				if (a[o] < b[o]) return -dir;
-				return 0;
-			})
-			.reduce((p, n) => (p ? p : n), 0);
-	});
+  return arr.sort((a, b) => {
+    return keys
+      .map((o) => {
+        let dir = 1;
+        if (o.startsWith("-")) {
+          dir = -1;
+          o = o.substring(1);
+        }
+        if (a[o] > b[o]) return dir;
+        if (a[o] < b[o]) return -dir;
+        return 0;
+      })
+      .reduce((p, n) => (p ? p : n), 0);
+  });
 };
 
 export default sortObjectByMultipleKeys;
