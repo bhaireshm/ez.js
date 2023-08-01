@@ -29,7 +29,8 @@ fi
 
 # Perform distribution, testing and docs creation only if the 'src' folder contents are modified.
 IS_SRC_MODIFIED=$(git status -s src)
-echo "IS_SRC_MODIFIED: $IS_SRC_MODIFIED"
+echo "Git status:"
+echo $IS_SRC_MODIFIED
 echo
 
 if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then

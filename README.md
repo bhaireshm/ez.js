@@ -60,7 +60,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Generate random string of 13(default) characters, which includes all uppercase alphabets, lowercase alphabets, and 0-9 numbers.</p></dd>
 <dt><a href="#getDiffInHrs">getDiffInHrs(from, to)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculates the difference between provided two dates.</p></dd>
-<dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>any</code></dt>
+<dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>*</code></dt>
 <dd><p>Get nested value from the given object.</p></dd>
 <dt><a href="#hasOwnProperty">hasOwnProperty(obj, keys, returnType)</a> ⇒ <code>string</code> | <code>boolean</code></dt>
 <dd><p>Determines whether an object has a property with the specified name.</p></dd>
@@ -117,7 +117,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Generate random string of 13(default) characters, which includes all uppercase alphabets, lowercase alphabets, and 0-9 numbers.</p></dd>
 <dt><a href="#getDiffInHrs">getDiffInHrs(from, to)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculates the difference between provided two dates.</p></dd>
-<dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>any</code></dt>
+<dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>*</code></dt>
 <dd><p>Get nested value from the given object.</p></dd>
 <dt><a href="#hasOwnProperty">hasOwnProperty(obj, keys, returnType)</a> ⇒ <code>string</code> | <code>boolean</code></dt>
 <dd><p>Determines whether an object has a property with the specified name.</p></dd>
@@ -410,12 +410,12 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 ```
 <a name="getNestedValue"></a>
 
-## getNestedValue(d, k) ⇒ <code>any</code>
+## getNestedValue(d, k) ⇒ <code>\*</code>
 <p>Get nested value from the given object.</p>
 
 **Kind**: global function  
 **Summary**: Get nested value from the given object.  
-**Returns**: <code>any</code> - <p>value, If nothing found null will be returned.</p>  
+**Returns**: <code>\*</code> - <p>value, If nothing found null will be returned.</p>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -425,9 +425,11 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 **Example**  
 ```js
 const data = {
-	pid: 'some-id',
-	portions: { name: 'section' }
-}
+ pid: 'some-id',
+ portions: {
+   name: 'section'
+ }
+};
 console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
@@ -872,12 +874,12 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 ```
 <a name="getNestedValue"></a>
 
-## getNestedValue(d, k) ⇒ <code>any</code>
+## getNestedValue(d, k) ⇒ <code>\*</code>
 <p>Get nested value from the given object.</p>
 
 **Kind**: global function  
 **Summary**: Get nested value from the given object.  
-**Returns**: <code>any</code> - <p>value, If nothing found null will be returned.</p>  
+**Returns**: <code>\*</code> - <p>value, If nothing found null will be returned.</p>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -887,9 +889,11 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 **Example**  
 ```js
 const data = {
-	pid: 'some-id',
-	portions: { name: 'section' }
-}
+ pid: 'some-id',
+ portions: {
+   name: 'section'
+ }
+};
 console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
