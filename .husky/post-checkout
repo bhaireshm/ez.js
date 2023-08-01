@@ -15,8 +15,8 @@ CURR_BRANCH=$(git branch --show-current)
 
 echo
 echo "Fetching origin and all branchs from remote"
-git fetch --all
-git fetch origin $DEFAULT_BRANCH
+git fetch --all -q
+git fetch origin $DEFAULT_BRANCH -q
 
 HAS_CHANGES=$(git rev-list HEAD...origin/master --count)
 
