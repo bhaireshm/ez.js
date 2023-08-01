@@ -2,15 +2,17 @@
  * Get nested value from the given object.
  *
  * @param {object} d
- * @param {string} k - key name separated by dot character
+ * @param {string} k key name separated by dot character
  * @example
  * const data = {
-	pid: 'some-id',
-	portions: { name: 'section' }
-}
+ *  pid: 'some-id',
+ *  portions: {
+ *    name: 'section'
+ *  }
+ * };
  * console.log(getNestedKeyValue(data, "portions.name")); // 'section'
  *
- * @returns {any} value, If nothing found null will be returned.
+ * @returns {*} value, If nothing found null will be returned.
  */
 function getNestedValue(d = {}, k = "") {
   const keys = String(k).split(".");

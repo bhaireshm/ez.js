@@ -4,8 +4,5 @@ output
 dist
 package-lock.json
 
-# IDEs
-.vscode
-
 # Environments
 *.env
