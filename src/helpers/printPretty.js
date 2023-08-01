@@ -1,7 +1,21 @@
 /**
  * @param obj - accepts only object
- * @example let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
+ * @returns {o}
+ *
+ * @example
+ * let obj = {
+ *  id: "PS10140",
+ *  sdid: "SD13112",
+ *  disableCrud: "false",
+ *  newQueryParameter: "true"
+ * };
  * printPretty(obj);
+ *
+ * // Output
+ * id                : PS10140
+ * sdid              : SD13112
+ * disableCrud       : false
+ * newQueryParameter : true
  */
 function printPretty(obj) {
   const l = ((o) => {
@@ -15,8 +29,6 @@ function printPretty(obj) {
 
   for (let k in obj) {
     let s = " ".repeat(l - `${k}`.length);
-
-    // todo: implement nested logging
     // if (typeof obj[k] === "object") {
     //   s = "";
     //   console.log(k);
