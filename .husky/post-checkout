@@ -17,14 +17,18 @@ echo "DEFAULT_BRANCH: $DEFAULT_BRANCH, CURR_BRANCH: $CURR_BRANCH"
 echo
 echo "Fetching origin and all branchs from remote"
 git fetch --all
-git fetch origin
+git fetch origin $DEFAULT_BRANCH
 
-echo
-echo "Pulling '$DEFAULT_BRANCH' branch data"
-# ------------------------------------------------------------
-# --autostash (Automatically create a temporary stash entry before the operation begins)
-# ------------------------------------------------------------
-git pull origin $DEFAULT_BRANCH --no-commit --verbose --ff-only --autostash
+HAS_CHANGES=$(git rev-list HEAD...origin/master --count)
 
-echo
-echo "Auto merged '$CURR_BRANCH' with '$DEFAULT_BRANCH'."
+if [ $HAS_CHANGES != 0 ]; then
+  echo
+  echo "Pulling '$DEFAULT_BRANCH' branch data"
+  # ------------------------------------------------------------
+  # --autostash (Automatically create a temporary stash entry before the operation begins)
+  # ------------------------------------------------------------
+  git pull origin $DEFAULT_BRANCH --no-commit --verbose --ff-only --autostash
+
+  echo
+  echo "Auto merged '$CURR_BRANCH' with '$DEFAULT_BRANCH'."
+fi
