@@ -1,11 +1,37 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "Fetching all"
-git fetch --all
+# Stop the process and return false to
+ctrl_c() {
+  echo Stoping checks...
+  false
+}
 
-echo "Fetching origin"
-git fetch origin
+# ctrl_c is the name of the signal ctrl_c function for SIGINT signal
+trap 'ctrl_c' SIGINT
 
-echo "Pulling default branch data"
-git pull origin master
+DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | sed 's/.*: //')
+CURR_BRANCH=$(git branch --show-current)
+
+echo
+echo "Fetching origin and all branchs from remote"
+git fetch --all -q
+git fetch origin $DEFAULT_BRANCH -q
+
+HAS_CHANGES=$(git rev-list HEAD...origin/master --count)
+
+if [ $HAS_CHANGES != 0 ]; then
+  echo
+  echo "DEFAULT_BRANCH: '$DEFAULT_BRANCH', CURR_BRANCH: '$CURR_BRANCH'"
+  echo "Pulling '$DEFAULT_BRANCH' branch data"
+  # ------------------------------------------------------------
+  # --autostash (Automatically create a temporary stash entry before the operation begins)
+  # ------------------------------------------------------------
+  git pull origin $DEFAULT_BRANCH --no-commit --verbose --ff-only --autostash
+
+  echo
+  echo "Auto merged '$CURR_BRANCH' with '$DEFAULT_BRANCH'."
+else
+  echo
+  echo "Already up to date."
+fi
