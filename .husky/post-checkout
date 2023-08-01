@@ -27,7 +27,7 @@ if [ $HAS_CHANGES != 0 ]; then
   # ------------------------------------------------------------
   # --autostash (Automatically create a temporary stash entry before the operation begins)
   # ------------------------------------------------------------
-  git pull origin $DEFAULT_BRANCH --no-commit --verbose --ff-only --autostash
+  git pull origin $DEFAULT_BRANCH --no-commit --ff-only --autostash
 
   echo
   echo "Auto merged '$CURR_BRANCH' with '$DEFAULT_BRANCH'."
