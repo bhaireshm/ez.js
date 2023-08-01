@@ -12,8 +12,7 @@
     "eslint": "eslint *.js src/**/*.js",
     "eslint:fix": "eslint --fix *.js src/**/*.js",
     "lint-staged": "lint-staged",
-    "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > README.md",
-    "commit": "cz"
+    "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > README.md"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
   "engines": {
