@@ -1,6 +1,15 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Stop the process and return false to
+ctrl_c() {
+  echo Stoping checks...
+  false
+}
+
+# ctrl_c is the name of the signal ctrl_c function for SIGINT signal
+trap 'ctrl_c' SIGINT
+
 echo "Fetching all"
 git fetch --all
 
