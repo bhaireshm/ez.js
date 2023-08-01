@@ -13,7 +13,6 @@ trap 'ctrl_c' SIGINT
 DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | sed 's/.*: //')
 CURR_BRANCH=$(git branch --show-current)
 
-echo "DEFAULT_BRANCH: $DEFAULT_BRANCH, CURR_BRANCH: $CURR_BRANCH"
 echo
 echo "Fetching origin and all branchs from remote"
 git fetch --all
@@ -23,6 +22,7 @@ HAS_CHANGES=$(git rev-list HEAD...origin/master --count)
 
 if [ $HAS_CHANGES != 0 ]; then
   echo
+  echo "DEFAULT_BRANCH: '$DEFAULT_BRANCH', CURR_BRANCH: '$CURR_BRANCH'"
   echo "Pulling '$DEFAULT_BRANCH' branch data"
   # ------------------------------------------------------------
   # --autostash (Automatically create a temporary stash entry before the operation begins)
@@ -31,4 +31,7 @@ if [ $HAS_CHANGES != 0 ]; then
 
   echo
   echo "Auto merged '$CURR_BRANCH' with '$DEFAULT_BRANCH'."
+else
+  echo
+  echo "Already up to date."
 fi
