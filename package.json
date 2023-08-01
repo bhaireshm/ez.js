@@ -8,7 +8,7 @@
     "dev": "nodemon ./index.js",
     "test": "node ./src/tests/",
     "dist": "rollup -c",
-    "prepare": "husky install",
+    "prepare": "npx husky install",
     "prepublishOnly": "npm run dist && npm test && npm run docs:md",
     "eslint": "eslint *.js src/**/*.js",
     "eslint:fix": "eslint --fix *.js src/**/*.js",
