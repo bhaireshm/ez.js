@@ -1,11 +1,11 @@
 .husky/*
 *.gitignore
 *.prettierignore
+*.hbs
+package-lock.json
 
 node_modules
 public
 out
 dist
 build
-
-pnpm-lock.yaml

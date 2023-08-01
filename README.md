@@ -70,7 +70,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Check's the special characters in the provided string.</p></dd>
 <dt><a href="#objectToQueryParams">objectToQueryParams(o)</a></dt>
 <dd></dd>
-<dt><a href="#printPretty">printPretty(obj)</a> ⇒ <code>o</code></dt>
+<dt><a href="#printPretty">printPretty(obj)</a></dt>
 <dd></dd>
 <dt><a href="#removeEmptyProperty">removeEmptyProperty(obj)</a></dt>
 <dd><p>Removes all the key's for which the value is empty.</p></dd>
@@ -129,7 +129,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Uses deep merge way to merge objects.</p></dd>
 <dt><a href="#objectToQueryParams">objectToQueryParams(o)</a></dt>
 <dd></dd>
-<dt><a href="#printPretty">printPretty(obj)</a> ⇒ <code>o</code></dt>
+<dt><a href="#printPretty">printPretty(obj)</a></dt>
 <dd></dd>
 <dt><a href="#removeEmptyProperty">removeEmptyProperty(obj)</a></dt>
 <dd><p>Removes all the key's for which the value is empty.</p></dd>
@@ -311,7 +311,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -347,7 +348,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -421,7 +427,8 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 const data = {
 	pid: 'some-id',
 	portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -482,7 +489,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 <a name="printPretty"></a>
 
-## printPretty(obj) ⇒ <code>o</code>
+## printPretty(obj)
 **Kind**: global function  
 
 | Param | Description |
@@ -491,19 +498,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
- id: "PS10140",
- sdid: "SD13112",
- disableCrud: "false",
- newQueryParameter: "true"
-};
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
 printPretty(obj);
-
-// Output
-id                : PS10140
-sdid              : SD13112
-disableCrud       : false
-newQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -777,7 +773,8 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b")
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
+console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -813,7 +810,12 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
+};
+const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
+
+console.log(a);
+output:
+{
   pid: 'some-id',
   theme: 'dark',
   prtn: { id: 'portion-id', name: 'section' },
@@ -887,7 +889,8 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 const data = {
 	pid: 'some-id',
 	portions: { name: 'section' }
-}console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+}
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -962,7 +965,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 <a name="printPretty"></a>
 
-## printPretty(obj) ⇒ <code>o</code>
+## printPretty(obj)
 **Kind**: global function  
 
 | Param | Description |
@@ -971,19 +974,8 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
- id: "PS10140",
- sdid: "SD13112",
- disableCrud: "false",
- newQueryParameter: "true"
-};
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
 printPretty(obj);
-
-// Output
-id                : PS10140
-sdid              : SD13112
-disableCrud       : false
-newQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 

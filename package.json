@@ -11,6 +11,8 @@
     "prepublishOnly": "npm run dist && npm test && npm run docs:md",
     "eslint": "eslint *.js src/**/*.js",
     "eslint:fix": "eslint --fix *.js src/**/*.js",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier  --write .",
     "lint-staged": "lint-staged",
     "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > README.md"
   },
