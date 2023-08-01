@@ -27,41 +27,48 @@ else
   false
 fi
 
-# Build check
-npm run dist
-OUT=$?
+# Perform distribution, testing and docs creation only if the 'src' folder contents are modified.
+IS_SRC_MODIFIED=$(git status -s src)
+echo "IS_SRC_MODIFIED: $IS_SRC_MODIFIED"
+echo
 
-if [ $OUT -eq 0 ]; then
-  echo "Distribution creation successful."
-  echo
-else
-  echo "Distribution creation failed !!!"
-  false
-fi
+if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
+  # Build check
+  npm run dist
+  OUT=$?
 
-# Test
-npm test
-OUT=$?
+  if [ $OUT -eq 0 ]; then
+    echo "Distribution creation successful."
+    echo
+  else
+    echo "Distribution creation failed !!!"
+    false
+  fi
 
-if [ $OUT -eq 0 ]; then
-  echo "All tests successful."
-  echo
-else
-  echo "test failed !!!"
-  false
-fi
+  # Test
+  npm test
+  OUT=$?
 
-# Documents creation
-npm run docs:md
-OUT=$?
+  if [ $OUT -eq 0 ]; then
+    echo "All tests successful."
+    echo
+  else
+    echo "test failed !!!"
+    false
+  fi
 
-if [ $OUT -eq 0 ]; then
-  git add ./docs/* ./README.md
-  echo "Documents updated and added to git staging."
-  echo
-else
-  echo "Document creation failed !!!"
-  false
+  # Documents creation
+  npm run docs:md
+  OUT=$?
+
+  if [ $OUT -eq 0 ]; then
+    git add ./docs/* ./README.md
+    echo "Documents updated and added to git staging."
+    echo
+  else
+    echo "Document creation failed !!!"
+    false
+  fi
 fi
 
 echo "All checks completed."
