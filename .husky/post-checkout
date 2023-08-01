@@ -10,11 +10,21 @@ ctrl_c() {
 # ctrl_c is the name of the signal ctrl_c function for SIGINT signal
 trap 'ctrl_c' SIGINT
 
-echo "Fetching all"
-git fetch --all
+DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | sed 's/.*: //')
+CURR_BRANCH=$(git branch --show-current)
 
-echo "Fetching origin"
+echo "DEFAULT_BRANCH: $DEFAULT_BRANCH, CURR_BRANCH: $CURR_BRANCH"
+echo
+echo "Fetching origin and all branchs from remote"
+git fetch --all
 git fetch origin
 
-echo "Pulling default branch data"
-git pull origin master
+echo
+echo "Pulling '$DEFAULT_BRANCH' branch data"
+# ------------------------------------------------------------
+# --autostash (Automatically create a temporary stash entry before the operation begins)
+# ------------------------------------------------------------
+git pull origin $DEFAULT_BRANCH --no-commit --verbose --ff-only --autostash
+
+echo
+echo "Auto merged '$CURR_BRANCH' with '$DEFAULT_BRANCH'."
