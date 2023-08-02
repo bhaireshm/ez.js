@@ -28,6 +28,10 @@ import ezjs from "@bhairesh/ez.js";
 
 `ez.js` makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects, strings, etc.
 
+## Links
+
+[Contribution](./docs/CONTRIBUTION.md)
+
 ## Documentation
 
 ## Functions
@@ -226,11 +230,7 @@ arrayIntoChunks([1,2,3,4,5,6], 3);
 
 **Example**  
 ```js
-compareObject({a: 2}, {a: 2}); // true
-
-compareObject({a: 2}, {a: 23}); // false
-
-ompareObject({a: {b: 2}}, {a: {b: 2}}); // true
+compareObject({a: 2}, {a: 2}); // truecompareObject({a: 2}, {a: 23}); // falseompareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
@@ -371,9 +371,7 @@ output:
 
 **Example**  
 ```js
-console.log(getDateDifference(new Date("12/12/2012"), new Date()));
-// Output
-{
+console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
     "short": "3885d 15h 39m",
     "full": "3885 day(s) 15 hours, 39 minutes",
     "days": 3885,
@@ -504,19 +502,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
- id: "PS10140",
- sdid: "SD13112",
- disableCrud: "false",
- newQueryParameter: "true"
-};
-printPretty(obj);
-
-// Output
-id                : PS10140
-sdid              : SD13112
-disableCrud       : false
-newQueryParameter : true
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true"};printPretty(obj);// Outputid                : PS10140sdid              : SD13112disableCrud       : falsenewQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -705,11 +691,7 @@ arrayIntoChunks([1,2,3,4,5,6], 3);
 
 **Example**  
 ```js
-compareObject({a: 2}, {a: 2}); // true
-
-compareObject({a: 2}, {a: 23}); // false
-
-ompareObject({a: {b: 2}}, {a: {b: 2}}); // true
+compareObject({a: 2}, {a: 2}); // truecompareObject({a: 2}, {a: 23}); // falseompareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
@@ -850,9 +832,7 @@ output:
 
 **Example**  
 ```js
-console.log(getDateDifference(new Date("12/12/2012"), new Date()));
-// Output
-{
+console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
     "short": "3885d 15h 39m",
     "full": "3885 day(s) 15 hours, 39 minutes",
     "days": 3885,
@@ -997,19 +977,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
- id: "PS10140",
- sdid: "SD13112",
- disableCrud: "false",
- newQueryParameter: "true"
-};
-printPretty(obj);
-
-// Output
-id                : PS10140
-sdid              : SD13112
-disableCrud       : false
-newQueryParameter : true
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true"};printPretty(obj);// Outputid                : PS10140sdid              : SD13112disableCrud       : falsenewQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
