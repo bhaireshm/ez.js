@@ -5,9 +5,12 @@
  * @param {object} obj2
  * @returns {boolean}
  *
- * @example compareObject({a: 2}, {a: 2}); // true
- * @example compareObject({a: 2}, {a: 23}); // false
- * @example compareObject({a: {b: 2}}, {a: {b: 2}}); // true
+ * @example
+ * compareObject({a: 2}, {a: 2}); // true
+ *
+ * compareObject({a: 2}, {a: 23}); // false
+ *
+ * ompareObject({a: {b: 2}}, {a: {b: 2}}); // true
  */
 function compareObject(obj1, obj2) {
   const keys1 = Object.keys(obj1);
