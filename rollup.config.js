@@ -12,18 +12,14 @@ module.exports = [
     input: "./index.js",
     output: [
       {
-        file: "dist/index.js",
-        format: "cjs",
-        // sourcemap: true,
-      },
-      {
-        file: "dist/index.esm.js",
-        format: "esm",
-        // sourcemap: true,
-      },
-      {
+        /**
+         * ESM is the best module format thanks to its simple syntax, async nature, and tree-shakeability.
+         * UMD works everywhere and usually used as a fallback in case ESM does not work.
+         * CJS is synchronous and good for back end.
+         * AMD is asynchronous and good for front end.
+         */
         name: "@bhairesh/ez.js",
-        file: "dist/index.umd.js",
+        file: "dist/index.js",
         format: "umd",
         // sourcemap: true,
       },
