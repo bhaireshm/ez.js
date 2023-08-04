@@ -1,6 +1,7 @@
 /**
  * Removes all the key's for which the value is empty.
  * @param {object} obj
+ * @returns {object}
  */
 function removeEmptyProperty(obj = {}) {
   const data = { ...obj };

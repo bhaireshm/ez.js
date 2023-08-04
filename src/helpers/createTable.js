@@ -14,7 +14,7 @@
 function createTable(tableData) {
   const { data = [], fields = [], fieldTitles = [], tableProps = {} } = tableData;
 
-  // TODO: Check for DOM access
+  if (!document) throw new Error("`document` is not accessible.");
 
   const tbl = document.createElement("table");
   tbl.id = tableProps.id || "generic-table";

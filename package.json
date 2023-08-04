@@ -15,9 +15,18 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier  --write .",
     "lint-staged": "lint-staged",
-    "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > README.md"
+    "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > ./docs/DOCUMENTATION.md"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
+  "homepage": "https://github.com/bhaireshm/ez.js",
+  "bugs": {
+    "url": "https://github.com/bhaireshm/ez.js/issues",
+    "email": "bhairesh@arithaconsulting.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhaireshm/ez.js.git"
+  },
   "engines": {
     "node": ">=6.0.0"
   },

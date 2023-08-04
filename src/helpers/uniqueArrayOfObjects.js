@@ -1,10 +1,8 @@
-const compareObjects = require("./compareObjects.js");
-
 /**
  * Compares all the objects(both key and value) in the given array and returns the unique array.
  *
- * @param {Object[]} arr - An array of objects.
- * @returns unique array of object(s).
+ * @param {object[]} arr - An array of objects.
+ * @returns {object[]} unique array of object(s).
  *
  * @example uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
  * @example uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
@@ -14,7 +12,7 @@ function uniqueArrayOfObjects(arr) {
   return arr.reduce((acc, curr) => {
     if (acc.length > 0) {
       acc.forEach((a) => {
-        if (a && !compareObjects(a, curr)) acc.push(curr);
+        if (a && !require("./compareObjects.js")(a, curr)) acc.push(curr);
       });
     } else acc.push(curr);
     return acc;
