@@ -28,6 +28,10 @@ import ezjs from "@bhairesh/ez.js";
 
 `ez.js` makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects, strings, etc.
 
+## Links
+
+[Contribution](./docs/CONTRIBUTION.md)
+
 ## Documentation
 
 ## Functions
@@ -70,7 +74,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Check's the special characters in the provided string.</p></dd>
 <dt><a href="#objectToQueryParams">objectToQueryParams(o)</a></dt>
 <dd></dd>
-<dt><a href="#printPretty">printPretty(obj)</a></dt>
+<dt><a href="#printPretty">printPretty(obj)</a> ⇒ <code>o</code></dt>
 <dd></dd>
 <dt><a href="#removeEmptyProperty">removeEmptyProperty(obj)</a></dt>
 <dd><p>Removes all the key's for which the value is empty.</p></dd>
@@ -129,7 +133,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Uses deep merge way to merge objects.</p></dd>
 <dt><a href="#objectToQueryParams">objectToQueryParams(o)</a></dt>
 <dd></dd>
-<dt><a href="#printPretty">printPretty(obj)</a></dt>
+<dt><a href="#printPretty">printPretty(obj)</a> ⇒ <code>o</code></dt>
 <dd></dd>
 <dt><a href="#removeEmptyProperty">removeEmptyProperty(obj)</a></dt>
 <dd><p>Removes all the key's for which the value is empty.</p></dd>
@@ -226,15 +230,7 @@ arrayIntoChunks([1,2,3,4,5,6], 3);
 
 **Example**  
 ```js
-compareObject({a: 2}, {a: 2}); // true
-```
-**Example**  
-```js
-compareObject({a: 2}, {a: 23}); // false
-```
-**Example**  
-```js
-compareObject({a: {b: 2}}, {a: {b: 2}}); // true
+compareObject({a: 2}, {a: 2}); // truecompareObject({a: 2}, {a: 23}); // falseompareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
@@ -375,7 +371,13 @@ output:
 
 **Example**  
 ```js
-console.log(getDateDifference(new Date("12/12/2012"), new Date()));
+console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
+    "short": "3885d 15h 39m",
+    "full": "3885 day(s) 15 hours, 39 minutes",
+    "days": 3885,
+    "hours": 15,
+    "minutes": 39
+  }
 ```
 <a name="generateRandomString"></a>
 
@@ -424,7 +426,13 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = {
+ pid: 'some-id',
+ portions: {
+   name: 'section'
+ }
+};
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -485,7 +493,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 <a name="printPretty"></a>
 
-## printPretty(obj)
+## printPretty(obj) ⇒ <code>o</code>
 **Kind**: global function  
 
 | Param | Description |
@@ -494,7 +502,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true"};printPretty(obj);// Outputid                : PS10140sdid              : SD13112disableCrud       : falsenewQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -683,15 +691,7 @@ arrayIntoChunks([1,2,3,4,5,6], 3);
 
 **Example**  
 ```js
-compareObject({a: 2}, {a: 2}); // true
-```
-**Example**  
-```js
-compareObject({a: 2}, {a: 23}); // false
-```
-**Example**  
-```js
-compareObject({a: {b: 2}}, {a: {b: 2}}); // true
+compareObject({a: 2}, {a: 2}); // truecompareObject({a: 2}, {a: 23}); // falseompareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
@@ -832,7 +832,13 @@ output:
 
 **Example**  
 ```js
-console.log(getDateDifference(new Date("12/12/2012"), new Date()));
+console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
+    "short": "3885d 15h 39m",
+    "full": "3885 day(s) 15 hours, 39 minutes",
+    "days": 3885,
+    "hours": 15,
+    "minutes": 39
+  }
 ```
 <a name="generateRandomString"></a>
 
@@ -881,7 +887,13 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = {
+ pid: 'some-id',
+ portions: {
+   name: 'section'
+ }
+};
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -956,7 +968,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 <a name="printPretty"></a>
 
-## printPretty(obj)
+## printPretty(obj) ⇒ <code>o</code>
 **Kind**: global function  
 
 | Param | Description |
@@ -965,7 +977,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true"};printPretty(obj);// Outputid                : PS10140sdid              : SD13112disableCrud       : falsenewQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 

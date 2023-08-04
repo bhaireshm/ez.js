@@ -6,7 +6,14 @@
  *
  * @example
  * console.log(getDateDifference(new Date("12/12/2012"), new Date()));
- *
+ * // Output
+ * {
+    "short": "3885d 15h 39m",
+    "full": "3885 day(s) 15 hours, 39 minutes",
+    "days": 3885,
+    "hours": 15,
+    "minutes": 39
+  }
  * @return {{ short: string, full: string, days: number, hours: number, minutes: number }}
  */
 function dateDiff(from, to) {
