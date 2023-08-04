@@ -424,13 +424,7 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = {
- pid: 'some-id',
- portions: {
-   name: 'section'
- }
-};
-console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -500,8 +494,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
-printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -888,13 +881,7 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = {
- pid: 'some-id',
- portions: {
-   name: 'section'
- }
-};
-console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="hasOwnProperty"></a>
 
@@ -978,8 +965,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };
-printPretty(obj);
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true" };printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
