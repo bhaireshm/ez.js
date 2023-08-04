@@ -1,6 +1,6 @@
 /**
  * @param obj - accepts only object
- * @returns {o}
+ * @returns {void}
  *
  * @example
  * let obj = {

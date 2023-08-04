@@ -1,7 +1,9 @@
 /**
  * @param {string} url
+ *
+ * @returns {boolean}
  */
-module.exports = function isURLValid(url) {
+function isURLValid(url) {
   return new RegExp(
     "^(https?:\\/\\/)?" + // protocol
       "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|" + // domain name
@@ -11,4 +13,6 @@ module.exports = function isURLValid(url) {
       "(\\#[-a-z\\d_]*)?$", // fragment locator
     "i", // ignore case
   ).test(url);
-};
+}
+
+module.exports = isURLValid;
