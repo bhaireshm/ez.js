@@ -1,9 +1,7 @@
 import babel from "rollup-plugin-babel";
 import resolve, { nodeResolve } from "@rollup/plugin-node-resolve";
-import external from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
 import commonjs from "@rollup/plugin-commonjs";
-import cleaner from "rollup-plugin-cleaner";
 import nodePolyfills from "rollup-plugin-node-polyfills";
 import json from "@rollup/plugin-json";
 
@@ -21,13 +19,10 @@ module.exports = [
         name: "@bhairesh/ez.js",
         file: "dist/index.js",
         format: "umd",
-        // sourcemap: true,
       },
     ],
     plugins: [
-      cleaner({ targets: ["./dist/"] }),
-      babel({ exclude: "node_modules/**" }),
-      external(),
+      babel({ exclude: "./node_modules/**" }),
       terser({
         format: { comments: false },
         compress: false,
@@ -37,7 +32,7 @@ module.exports = [
       nodePolyfills(),
       json(),
       resolve({
-        extensions: [".js", ".json"],
+        extensions: [".js"],
         browser: true,
       }),
     ],
