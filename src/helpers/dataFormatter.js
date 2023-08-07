@@ -27,11 +27,11 @@
  * console.log(a);
  * output:
  * {
-  pid: 'some-id',
-  theme: 'dark',
-  prtn: { id: 'portion-id', name: 'section' },
-  ERRORS: { block: 'not found' }
-}
+    pid: 'some-id',
+    theme: 'dark',
+    prtn: { id: 'portion-id', name: 'section' },
+    ERRORS: { block: 'not found' }
+  }
  */
 function dataFormatter(obj = {}, formatter = "", options = {}) {
   const { error = true, oldData = true } = options;

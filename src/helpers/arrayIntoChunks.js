@@ -1,10 +1,10 @@
 /**
  * Convert an array into given chunk(s).
  *
- * @param {any[]} arr - Any type of array
- * @param {number} n - Number of chunks
- * @example arrayIntoChunks([1,2,3,4,5,6], 3);
- * @output [[1,2],[3,4],[5,6]]
+ * @param {any[]} arr Any type of array
+ * @param {number} n Number of chunks
+ * @example
+ * arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
  *
  * @returns {Array} Array of array[s].
  */
