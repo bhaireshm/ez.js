@@ -167,7 +167,6 @@ Note: The function assumes all matrices have the same dimensions.</p>
 **Kind**: global function  
 **Summary**: Convert an array into given chunk(s).  
 **Returns**: <code>Array</code> - <p>Array of array[s].</p>  
-**Output**: [[1,2],[3,4],[5,6]]  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -176,7 +175,7 @@ Note: The function assumes all matrices have the same dimensions.</p>
 
 **Example**  
 ```js
-arrayIntoChunks([1,2,3,4,5,6], 3);
+arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
 ```
 <a name="camelCase"></a>
 
@@ -240,9 +239,7 @@ console.log(toNumber("-23.32"))
 **Example**  
 ```js
 strToNum(["3","4",3,"7",8])
-```
-**Example**  
-```js
+
 strToNum({ a:2, b:"4", c:"5" }, "c,b")
 ```
 <a name="createTable"></a>
@@ -325,11 +322,11 @@ const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prt
 console.log(a);
 output:
 {
-  pid: 'some-id',
-  theme: 'dark',
-  prtn: { id: 'portion-id', name: 'section' },
-  ERRORS: { block: 'not found' }
-}
+    pid: 'some-id',
+    theme: 'dark',
+    prtn: { id: 'portion-id', name: 'section' },
+    ERRORS: { block: 'not found' }
+  }
 ```
 <a name="dateDiff"></a>
 
@@ -591,9 +588,7 @@ let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryPa
 **Example**  
 ```js
 sortObjectByMultipleKeys(object, ["name", "-date"])
-```
-**Example**  
-```js
+
 sortObjectByMultipleKeys(object, ["-name", "date"])
 ```
 <a name="uniqueArrayOfObjects"></a>
@@ -612,13 +607,9 @@ sortObjectByMultipleKeys(object, ["-name", "date"])
 **Example**  
 ```js
 uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
-```
-**Example**  
-```js
+
 uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
-```
-**Example**  
-```js
+
 uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
 <a name="add2Matrix"></a>
@@ -654,7 +645,6 @@ Note: The function assumes all matrices have the same dimensions.</p>
 **Kind**: global function  
 **Summary**: Convert an array into given chunk(s).  
 **Returns**: <code>Array</code> - <p>Array of array[s].</p>  
-**Output**: [[1,2],[3,4],[5,6]]  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -663,7 +653,7 @@ Note: The function assumes all matrices have the same dimensions.</p>
 
 **Example**  
 ```js
-arrayIntoChunks([1,2,3,4,5,6], 3);
+arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
 ```
 <a name="camelCase"></a>
 
@@ -727,9 +717,7 @@ console.log(toNumber("-23.32"))
 **Example**  
 ```js
 strToNum(["3","4",3,"7",8])
-```
-**Example**  
-```js
+
 strToNum({ a:2, b:"4", c:"5" }, "c,b")
 ```
 <a name="createTable"></a>
@@ -812,11 +800,11 @@ const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prt
 console.log(a);
 output:
 {
-  pid: 'some-id',
-  theme: 'dark',
-  prtn: { id: 'portion-id', name: 'section' },
-  ERRORS: { block: 'not found' }
-}
+    pid: 'some-id',
+    theme: 'dark',
+    prtn: { id: 'portion-id', name: 'section' },
+    ERRORS: { block: 'not found' }
+  }
 ```
 <a name="dateDiff"></a>
 
@@ -1078,9 +1066,7 @@ let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryPa
 **Example**  
 ```js
 sortObjectByMultipleKeys(object, ["name", "-date"])
-```
-**Example**  
-```js
+
 sortObjectByMultipleKeys(object, ["-name", "date"])
 ```
 <a name="uniqueArrayOfObjects"></a>
@@ -1099,13 +1085,9 @@ sortObjectByMultipleKeys(object, ["-name", "date"])
 **Example**  
 ```js
 uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
-```
-**Example**  
-```js
+
 uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
-```
-**Example**  
-```js
+
 uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
 <a name="isStr"></a>

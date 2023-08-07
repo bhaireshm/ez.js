@@ -4,9 +4,12 @@
  * @param {object[]} arr - An array of objects.
  * @returns {object[]} unique array of object(s).
  *
- * @example uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
- * @example uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
- * @example uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
+ * @example
+ * uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
+ *
+ * uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
+ *
+ * uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
  */
 function uniqueArrayOfObjects(arr) {
   return arr.reduce((acc, curr) => {
