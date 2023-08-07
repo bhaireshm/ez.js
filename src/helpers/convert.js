@@ -19,10 +19,10 @@ const toNumber = (str, returnStrings = false) =>
  * @example strToNum(["3","4",3,"7",8])
  * @example strToNum({ a:2, b:"4", c:"5" }, "c,b")
  */
-const strToNum = (data, str) => {
+const strToNum = (data, str = "") => {
   if (typeof data == "object") {
     if (Array.isArray(data)) return data.map((d) => toNumber(d, true));
-    if (typeof data === "object") {
+    if (typeof data === "object" && str) {
       const out = {};
       Object.entries(data)
         .map((d) => {
@@ -31,7 +31,7 @@ const strToNum = (data, str) => {
         })
         .forEach((a) => (out[a[0]] = a[1]));
       return out;
-    }
+    } else return data;
   }
 };
 

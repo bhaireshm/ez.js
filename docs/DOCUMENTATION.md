@@ -401,13 +401,7 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = {
- pid: 'some-id',
- portions: {
-   name: 'section'
- }
-};
-console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="getUniqueArray"></a>
 
@@ -509,19 +503,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
- id: "PS10140",
- sdid: "SD13112",
- disableCrud: "false",
- newQueryParameter: "true"
-};
-printPretty(obj);
-
-// Output
-id                : PS10140
-sdid              : SD13112
-disableCrud       : false
-newQueryParameter : true
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true"};printPretty(obj);// Outputid                : PS10140sdid              : SD13112disableCrud       : falsenewQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -906,13 +888,7 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = {
- pid: 'some-id',
- portions: {
-   name: 'section'
- }
-};
-console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="getUniqueArray"></a>
 
@@ -1014,19 +990,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
- id: "PS10140",
- sdid: "SD13112",
- disableCrud: "false",
- newQueryParameter: "true"
-};
-printPretty(obj);
-
-// Output
-id                : PS10140
-sdid              : SD13112
-disableCrud       : false
-newQueryParameter : true
+let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryParameter: "true"};printPretty(obj);// Outputid                : PS10140sdid              : SD13112disableCrud       : falsenewQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
