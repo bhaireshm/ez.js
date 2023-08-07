@@ -10,6 +10,7 @@ export { default as currencyFormatter } from "./currencyFormatter.js";
 export { default as dataFormatter } from "./dataFormatter.js";
 export { default as dateDiff } from "./dateDiff.js";
 export { default as generateRandomString } from "./generateRandomString.js";
+export { default as getDates } from "./getDates.js";
 export { default as getDiffInHrs } from "./getDiffInHrs.js";
 export { default as getNestedValue } from "./getNestedValue.js";
 export { default as getUniqueArray } from "./getUniqueArray.js";

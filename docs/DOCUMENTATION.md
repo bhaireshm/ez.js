@@ -27,6 +27,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Calculates the difference between provided two dates.</p></dd>
 <dt><a href="#generateRandomString">generateRandomString(length)</a> ⇒ <code>string</code></dt>
 <dd><p>Generate random string of 13(default) characters, which includes all uppercase alphabets, lowercase alphabets, and 0-9 numbers.</p></dd>
+<dt><a href="#getDates">getDates(startDate, endDate)</a> ⇒ <code>Array.&lt;Date&gt;</code></dt>
+<dd><p>Returns all the dates between the start date and end date, including both.</p></dd>
 <dt><a href="#getDiffInHrs">getDiffInHrs(from, to)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculates the difference between provided two dates.</p></dd>
 <dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>any</code></dt>
@@ -90,6 +92,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Calculates the difference between provided two dates.</p></dd>
 <dt><a href="#generateRandomString">generateRandomString(length)</a> ⇒ <code>string</code></dt>
 <dd><p>Generate random string of 13(default) characters, which includes all uppercase alphabets, lowercase alphabets, and 0-9 numbers.</p></dd>
+<dt><a href="#getDates">getDates(startDate, endDate)</a> ⇒ <code>Array.&lt;Date&gt;</code></dt>
+<dd><p>Returns all the dates between the start date and end date, including both.</p></dd>
 <dt><a href="#getDiffInHrs">getDiffInHrs(from, to)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculates the difference between provided two dates.</p></dd>
 <dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>any</code></dt>
@@ -238,9 +242,7 @@ console.log(toNumber("-23.32"))
 
 **Example**  
 ```js
-strToNum(["3","4",3,"7",8])
-
-strToNum({ a:2, b:"4", c:"5" }, "c,b")
+strToNum(["3","4",3,"7",8])strToNum({ a:2, b:"4", c:"5" }, "c,b")
 ```
 <a name="createTable"></a>
 
@@ -316,12 +318,7 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};
-const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
-
-console.log(a);
-output:
-{
+};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
     pid: 'some-id',
     theme: 'dark',
     prtn: { id: 'portion-id', name: 'section' },
@@ -364,6 +361,29 @@ console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
 | --- | --- | --- |
 | length | <code>number</code> | <code>13</code> | 
 
+<a name="getDates"></a>
+
+## getDates(startDate, endDate) ⇒ <code>Array.&lt;Date&gt;</code>
+<p>Returns all the dates between the start date and end date, including both.</p>
+
+**Kind**: global function  
+**Summary**: Returns all the dates between the start date and end date, including both.  
+
+| Param | Type |
+| --- | --- |
+| startDate | <code>Date</code> | 
+| endDate | <code>Date</code> | 
+
+**Example**  
+```js
+getDates(new Date("07-07-2023"), new Date("07-10-2023"));
+[
+    "2023-07-06T18:30:00.000Z",
+    "2023-07-07T18:30:00.000Z",
+    "2023-07-08T18:30:00.000Z",
+    "2023-07-09T18:30:00.000Z"
+  ]
+```
 <a name="getDiffInHrs"></a>
 
 ## getDiffInHrs(from, to) ⇒ <code>number</code>
@@ -587,9 +607,7 @@ let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryPa
 
 **Example**  
 ```js
-sortObjectByMultipleKeys(object, ["name", "-date"])
-
-sortObjectByMultipleKeys(object, ["-name", "date"])
+sortObjectByMultipleKeys(object, ["name", "-date"])sortObjectByMultipleKeys(object, ["-name", "date"])
 ```
 <a name="uniqueArrayOfObjects"></a>
 
@@ -606,11 +624,7 @@ sortObjectByMultipleKeys(object, ["-name", "date"])
 
 **Example**  
 ```js
-uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
-
-uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
-
-uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
+uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
 <a name="add2Matrix"></a>
 
@@ -716,9 +730,7 @@ console.log(toNumber("-23.32"))
 
 **Example**  
 ```js
-strToNum(["3","4",3,"7",8])
-
-strToNum({ a:2, b:"4", c:"5" }, "c,b")
+strToNum(["3","4",3,"7",8])strToNum({ a:2, b:"4", c:"5" }, "c,b")
 ```
 <a name="createTable"></a>
 
@@ -794,12 +806,7 @@ const payload = {
             name: "section-wrapper"
         }
     }
-};
-const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });
-
-console.log(a);
-output:
-{
+};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
     pid: 'some-id',
     theme: 'dark',
     prtn: { id: 'portion-id', name: 'section' },
@@ -842,6 +849,29 @@ console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
 | --- | --- | --- |
 | length | <code>number</code> | <code>13</code> | 
 
+<a name="getDates"></a>
+
+## getDates(startDate, endDate) ⇒ <code>Array.&lt;Date&gt;</code>
+<p>Returns all the dates between the start date and end date, including both.</p>
+
+**Kind**: global function  
+**Summary**: Returns all the dates between the start date and end date, including both.  
+
+| Param | Type |
+| --- | --- |
+| startDate | <code>Date</code> | 
+| endDate | <code>Date</code> | 
+
+**Example**  
+```js
+getDates(new Date("07-07-2023"), new Date("07-10-2023"));
+[
+    "2023-07-06T18:30:00.000Z",
+    "2023-07-07T18:30:00.000Z",
+    "2023-07-08T18:30:00.000Z",
+    "2023-07-09T18:30:00.000Z"
+  ]
+```
 <a name="getDiffInHrs"></a>
 
 ## getDiffInHrs(from, to) ⇒ <code>number</code>
@@ -1065,9 +1095,7 @@ let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryPa
 
 **Example**  
 ```js
-sortObjectByMultipleKeys(object, ["name", "-date"])
-
-sortObjectByMultipleKeys(object, ["-name", "date"])
+sortObjectByMultipleKeys(object, ["name", "-date"])sortObjectByMultipleKeys(object, ["-name", "date"])
 ```
 <a name="uniqueArrayOfObjects"></a>
 
@@ -1084,11 +1112,7 @@ sortObjectByMultipleKeys(object, ["-name", "date"])
 
 **Example**  
 ```js
-uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
-
-uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
-
-uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
+uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
 <a name="isStr"></a>
 
