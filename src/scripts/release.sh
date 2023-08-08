@@ -44,7 +44,6 @@ vi CHANGELOG.md
 
 # Create the release
 git add CHANGELOG.md package.json
-[[ -f package-lock.json ]] && git add package-lock.json
 git commit -am "$msg"
 
 # Merge the release branch into master, create a tag and push
