@@ -1,5 +1,5 @@
 /**
- * @param {string} str: string without space
+ * @param {string} str string without space.
  * @returns {string}
  */
 function reverseStr(str) {
@@ -7,7 +7,7 @@ function reverseStr(str) {
 }
 
 /**
- * @param {string} sentence: pass a sentence.
+ * @param {string} sentence pass a sentence.
  * @returns {string}
  */
 function reverseEachWordInSentence(sentence) {
@@ -15,7 +15,7 @@ function reverseEachWordInSentence(sentence) {
 }
 
 /**
- * @param {string} sentence - pass a sentence.
+ * @param {string} sentence pass a sentence.
  * @returns {string}
  */
 function reverseSentence(sentence) {

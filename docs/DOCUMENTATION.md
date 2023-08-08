@@ -53,9 +53,9 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd></dd>
 <dt><a href="#removeEmptyProperty">removeEmptyProperty(obj)</a> ⇒ <code>object</code></dt>
 <dd><p>Removes all the key's for which the value is empty.</p></dd>
-<dt><a href="#reverseStr">reverseStr(str:)</a> ⇒ <code>string</code></dt>
+<dt><a href="#reverseStr">reverseStr(str)</a> ⇒ <code>string</code></dt>
 <dd></dd>
-<dt><a href="#reverseEachWordInSentence">reverseEachWordInSentence(sentence:)</a> ⇒ <code>string</code></dt>
+<dt><a href="#reverseEachWordInSentence">reverseEachWordInSentence(sentence)</a> ⇒ <code>string</code></dt>
 <dd></dd>
 <dt><a href="#reverseSentence">reverseSentence(sentence)</a> ⇒ <code>string</code></dt>
 <dd></dd>
@@ -120,9 +120,9 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd></dd>
 <dt><a href="#removeEmptyProperty">removeEmptyProperty(obj)</a> ⇒ <code>object</code></dt>
 <dd><p>Removes all the key's for which the value is empty.</p></dd>
-<dt><a href="#reverseStr">reverseStr(str:)</a> ⇒ <code>string</code></dt>
+<dt><a href="#reverseStr">reverseStr(str)</a> ⇒ <code>string</code></dt>
 <dd></dd>
-<dt><a href="#reverseEachWordInSentence">reverseEachWordInSentence(sentence:)</a> ⇒ <code>string</code></dt>
+<dt><a href="#reverseEachWordInSentence">reverseEachWordInSentence(sentence)</a> ⇒ <code>string</code></dt>
 <dd></dd>
 <dt><a href="#reverseSentence">reverseSentence(sentence)</a> ⇒ <code>string</code></dt>
 <dd></dd>
@@ -562,21 +562,21 @@ let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryPa
 
 <a name="reverseStr"></a>
 
-## reverseStr(str:) ⇒ <code>string</code>
+## reverseStr(str) ⇒ <code>string</code>
 **Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| str: | <code>string</code> | <p>string without space</p> |
+| str | <code>string</code> | <p>string without space.</p> |
 
 <a name="reverseEachWordInSentence"></a>
 
-## reverseEachWordInSentence(sentence:) ⇒ <code>string</code>
+## reverseEachWordInSentence(sentence) ⇒ <code>string</code>
 **Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| sentence: | <code>string</code> | <p>pass a sentence.</p> |
+| sentence | <code>string</code> | <p>pass a sentence.</p> |
 
 <a name="reverseSentence"></a>
 
@@ -1072,21 +1072,21 @@ let obj = { id: "PS10140", sdid: "SD13112", disableCrud: "false", newQueryPa
 
 <a name="reverseStr"></a>
 
-## reverseStr(str:) ⇒ <code>string</code>
+## reverseStr(str) ⇒ <code>string</code>
 **Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| str: | <code>string</code> | <p>string without space</p> |
+| str | <code>string</code> | <p>string without space.</p> |
 
 <a name="reverseEachWordInSentence"></a>
 
-## reverseEachWordInSentence(sentence:) ⇒ <code>string</code>
+## reverseEachWordInSentence(sentence) ⇒ <code>string</code>
 **Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| sentence: | <code>string</code> | <p>pass a sentence.</p> |
+| sentence | <code>string</code> | <p>pass a sentence.</p> |
 
 <a name="reverseSentence"></a>
 
