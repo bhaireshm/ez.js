@@ -11,6 +11,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts each word's first letter into uppercase.</p></dd>
+<dt><a href="#checkObject">checkObject(data, keys)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Checks the object, if any one key's value is empty it returns false.</p></dd>
 <dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
 <dd><p>This method compares both key and value of given objects. This even works for nested objects.</p></dd>
 <dt><a href="#toNumber">toNumber(str, returnStrings)</a> ⇒ <code>number</code> | <code>boolean</code></dt>
@@ -76,6 +78,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts each word's first letter into uppercase.</p></dd>
+<dt><a href="#checkObject">checkObject(data, keys)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Checks the object, if any one key's value is empty it returns false.</p></dd>
 <dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
 <dd><p>This method compares both key and value of given objects. This even works for nested objects.</p></dd>
 <dt><a href="#toNumber">toNumber(str, returnStrings)</a> ⇒ <code>number</code> | <code>boolean</code></dt>
@@ -193,6 +197,26 @@ arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
 | --- | --- |
 | str | <code>string</code> | 
 
+<a name="checkObject"></a>
+
+## checkObject(data, keys) ⇒ <code>boolean</code>
+<p>Checks the object, if any one key's value is empty it returns false.</p>
+
+**Kind**: global function  
+**Summary**: Checks the object, if any one key's value is empty it returns false.  
+
+| Param | Type |
+| --- | --- |
+| data | <code>object</code> | 
+| keys | <code>Array.&lt;string&gt;</code> | 
+
+**Example**  
+```js
+const payload = { id: 2, name: "John", address: { city: "bangalore" } }
+console.log(checkObject(payload, ["iddas"]));// false
+console.log(checkObject(payload, ["name"]));// true
+console.log(checkObject(payload, ["address.city"]));// true
+```
 <a name="compareObject"></a>
 
 ## compareObject(obj1, obj2) ⇒ <code>boolean</code>
@@ -418,7 +442,13 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = {
+ pid: 'some-id',
+ portions: {
+   name: 'section'
+ }
+};
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="getUniqueArray"></a>
 
@@ -681,6 +711,26 @@ arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
 | --- | --- |
 | str | <code>string</code> | 
 
+<a name="checkObject"></a>
+
+## checkObject(data, keys) ⇒ <code>boolean</code>
+<p>Checks the object, if any one key's value is empty it returns false.</p>
+
+**Kind**: global function  
+**Summary**: Checks the object, if any one key's value is empty it returns false.  
+
+| Param | Type |
+| --- | --- |
+| data | <code>object</code> | 
+| keys | <code>Array.&lt;string&gt;</code> | 
+
+**Example**  
+```js
+const payload = { id: 2, name: "John", address: { city: "bangalore" } }
+console.log(checkObject(payload, ["iddas"]));// false
+console.log(checkObject(payload, ["name"]));// true
+console.log(checkObject(payload, ["address.city"]));// true
+```
 <a name="compareObject"></a>
 
 ## compareObject(obj1, obj2) ⇒ <code>boolean</code>
@@ -906,7 +956,13 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = { pid: 'some-id', portions: {   name: 'section' }};console.log(getNestedKeyValue(data, "portions.name")); // 'section'
+const data = {
+ pid: 'some-id',
+ portions: {
+   name: 'section'
+ }
+};
+console.log(getNestedKeyValue(data, "portions.name")); // 'section'
 ```
 <a name="getUniqueArray"></a>
 
