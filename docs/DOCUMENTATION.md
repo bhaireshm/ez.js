@@ -212,10 +212,7 @@ arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
 
 **Example**  
 ```js
-const payload = { id: 2, name: "John", address: { city: "bangalore" } }
-console.log(checkObject(payload, ["iddas"]));// false
-console.log(checkObject(payload, ["name"]));// true
-console.log(checkObject(payload, ["address.city"]));// true
+const payload = { id: 2, name: "John", address: { city: "bangalore" } }console.log(checkObject(payload, ["iddas"]));// falseconsole.log(checkObject(payload, ["name"]));// trueconsole.log(checkObject(payload, ["address.city"]));// true
 ```
 <a name="compareObject"></a>
 
@@ -400,8 +397,7 @@ console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
 
 **Example**  
 ```js
-getDates(new Date("07-07-2023"), new Date("07-10-2023"));
-[
+getDates(new Date("07-07-2023"), new Date("07-10-2023"));[
     "2023-07-06T18:30:00.000Z",
     "2023-07-07T18:30:00.000Z",
     "2023-07-08T18:30:00.000Z",
@@ -726,10 +722,7 @@ arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
 
 **Example**  
 ```js
-const payload = { id: 2, name: "John", address: { city: "bangalore" } }
-console.log(checkObject(payload, ["iddas"]));// false
-console.log(checkObject(payload, ["name"]));// true
-console.log(checkObject(payload, ["address.city"]));// true
+const payload = { id: 2, name: "John", address: { city: "bangalore" } }console.log(checkObject(payload, ["iddas"]));// falseconsole.log(checkObject(payload, ["name"]));// trueconsole.log(checkObject(payload, ["address.city"]));// true
 ```
 <a name="compareObject"></a>
 
@@ -914,8 +907,7 @@ console.log(getDateDifference(new Date("12/12/2012"), new Date()));// Output{
 
 **Example**  
 ```js
-getDates(new Date("07-07-2023"), new Date("07-10-2023"));
-[
+getDates(new Date("07-07-2023"), new Date("07-10-2023"));[
     "2023-07-06T18:30:00.000Z",
     "2023-07-07T18:30:00.000Z",
     "2023-07-08T18:30:00.000Z",
