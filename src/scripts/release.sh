@@ -5,7 +5,7 @@
 # with specified version and then bump up package version and commit them.
 # After that merge release branch into master with appropriate tags.
 #
-# Example: "pnpm run release 1.2.3"
+# Example: "pnpm release 1.2.3"
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Stop on first error
@@ -25,22 +25,25 @@ msg=$2
 # Update the master branch to the latest
 git checkout master
 
-# Update develop to the latest, and create a release brach off of it.
-# git checkout develop;
-# git pull origin develop;
+# Create a release brach off of it.
 git checkout -b release/$ver
 
 # Bump version in package.json, but do not create a git tag
 pnpm version $ver --no-git-tag-version
 
 # Inject the current release version and date into the CHANGELOG file
-# If changelog.md exists add updated version
+today=$(date +%d-%m-%Y\ %T)
+changelog="## $ver: $msg"
 
 # Find all commits between the HEAD on develop and the latest tag on master, and pipe their messages into the clipboard
-git log $(git describe --tags master --abbrev=0)..HEAD --merges --pretty=format:'* %s' | clip
+commits=$(git log $(git describe --tags master --abbrev=0)..HEAD --merges --pretty=format:'* %s')
 
-# Provision manual intervention for CHANGELOG.md
-vi CHANGELOG.md
+cat > $changelog << X
+$changelog
+$commits
+X
+
+echo "$changelog" | cat - CHANGELOG.md > temp && mv temp CHANGELOG.md
 
 # Create the release
 git add CHANGELOG.md package.json
