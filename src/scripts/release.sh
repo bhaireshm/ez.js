@@ -28,7 +28,7 @@ git checkout master
 # Update develop to the latest, and create a release brach off of it.
 # git checkout develop;
 # git pull origin develop;
-git checkout -b release/$ver --no-verify
+git checkout -b release/$ver
 
 # Bump version in package.json, but do not create a git tag
 pnpm version $ver --no-git-tag-version
