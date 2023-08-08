@@ -37,7 +37,7 @@ pnpm version $ver --no-git-tag-version
 # If changelog.md exists add updated version
 
 # Find all commits between the HEAD on develop and the latest tag on master, and pipe their messages into the clipboard
-git log $(git describe --tags master --abbrev=0)..HEAD --merges --pretty=format:'* %s' | pbcopy
+git log $(git describe --tags master --abbrev=0)..HEAD --merges --pretty=format:'* %s' | clip
 
 # Provision manual intervention for CHANGELOG.md
 vi CHANGELOG.md
