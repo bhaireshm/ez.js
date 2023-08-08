@@ -1,6 +1,6 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "0.0.13",
+  "version": "0.0.12",
   "description": "Helper and utility functions.",
   "main": "dist/index.js",
   "private": false,
@@ -15,6 +15,7 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier  --write .",
     "lint-staged": "lint-staged",
+    "release": "sh ./src/scripts/release.sh",
     "docs:md": "jsdoc2md --template ./docs/template.hbs --no-cache -c jsdoc2md.json --files ./src/helpers/* > ./docs/DOCUMENTATION.md"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
