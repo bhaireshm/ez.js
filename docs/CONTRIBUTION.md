@@ -20,3 +20,8 @@ chore: types updated.
 
 > Note:
 > - Title message should not contain more than 48 characters.
+
+### Release
+```
+pnpm release v1.2.3
+```
