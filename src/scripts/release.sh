@@ -38,7 +38,7 @@ changelog="## $ver: $msg"
 
 # Find all commits between the HEAD on master and the latest tag on master, and pipe their messages into the clipboard
 # commits=$(git log $(git describe --tags master --abbrev=0)..HEAD --merges --pretty=format:'* %s')
-commits=$(git log --pretty=format:"(%h) %s %d [%an]%n" --grep="fix:\|feat:\|update:")
+commits=$(git log --pretty=format:"(%h) %s %d [%cn]%n" --grep="fix:\|feat:\|update:")
 
 cat >$changelog <<X
 $changelog
