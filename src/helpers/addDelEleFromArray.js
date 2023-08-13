@@ -1,4 +1,6 @@
 /**
+ * Add or remove an element from an array.
+ *
  * @param {Array} arr
  * @param {any} ele element to be added
  * @param {any} remEle: element to be deleted

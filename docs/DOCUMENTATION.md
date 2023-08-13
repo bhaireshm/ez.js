@@ -6,7 +6,7 @@
 <dd><p>Calculates the sum of corresponding elements from an array of matrices.
 Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dt><a href="#addDelEleFromArray">addDelEleFromArray(arr, ele, remEle:)</a> ⇒ <code>Array</code></dt>
-<dd></dd>
+<dd><p>Add or remove an element from an array.</p></dd>
 <dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒ <code>Array</code></dt>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
@@ -73,7 +73,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Calculates the sum of corresponding elements from an array of matrices.
 Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dt><a href="#addDelEleFromArray">addDelEleFromArray(arr, ele, remEle:)</a> ⇒ <code>Array</code></dt>
-<dd></dd>
+<dd><p>Add or remove an element from an array.</p></dd>
 <dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒ <code>Array</code></dt>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
@@ -159,7 +159,10 @@ Note: The function assumes all matrices have the same dimensions.</p>
 <a name="addDelEleFromArray"></a>
 
 ## addDelEleFromArray(arr, ele, remEle:) ⇒ <code>Array</code>
+<p>Add or remove an element from an array.</p>
+
 **Kind**: global function  
+**Summary**: Add or remove an element from an array.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -669,7 +672,10 @@ Note: The function assumes all matrices have the same dimensions.</p>
 <a name="addDelEleFromArray"></a>
 
 ## addDelEleFromArray(arr, ele, remEle:) ⇒ <code>Array</code>
+<p>Add or remove an element from an array.</p>
+
 **Kind**: global function  
+**Summary**: Add or remove an element from an array.  
 
 | Param | Type | Description |
 | --- | --- | --- |
