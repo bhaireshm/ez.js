@@ -30,7 +30,7 @@ git checkout master
 git checkout -b release/$ver
 
 # Bump version in package.json, but do not create a git tag
-npm run version $ver --no-git-tag-version
+npm version $ver --no-git-tag-version
 
 # Inject the current release version and date into the CHANGELOG file
 today=$(date +%d-%m-%Y\ %T)
@@ -38,7 +38,7 @@ changelog="## $ver: $msg"
 
 # Find all commits between the HEAD on master and the latest tag on master, and pipe their messages into the clipboard
 # commits=$(git log $(git describe --tags master --abbrev=0)..HEAD --merges --pretty=format:'* %s')
-commits=$(git log $(git describe --tags master --abbrev=0)..HEAD --pretty=format:"(%h) %s %d [%cn]%n" --grep="fix:\|feat:\|update:")
+commits=$(git log $(git describe --tags master --abbrev=0)..HEAD --pretty=format:"(%h) %s %d [%cn]%n" --grep="fix:\|feat:\|update:\|docs:")
 
 changelog="$changelog\n$msg\n$commits\n"
 echo -e "$changelog" | cat - CHANGELOG.md >temp.md && mv temp.md CHANGELOG.md
