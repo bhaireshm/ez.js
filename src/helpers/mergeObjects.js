@@ -6,8 +6,9 @@
  * @returns {object} merged object
  */
 function mergeObjects(obj1, obj2) {
-  const o1 = { ...obj1 },
-    o2 = { ...obj2 };
+  const o1 = Object.assign({}, obj1),
+    o2 = Object.assign({}, obj2);
+
   for (const key in o1) {
     if (o1.hasOwnProperty(key)) {
       if (Array.isArray(o2[key]) && Array.isArray(o1[key])) {
@@ -15,7 +16,7 @@ function mergeObjects(obj1, obj2) {
         continue;
       }
       if (typeof o2[key] === "object" && typeof o1[key] === "object") {
-        mergeObjects(o1[key], o2[key]);
+        o2[key] = mergeObjects(o1[key], o2[key]);
         continue;
       }
       o2[key] = o1[key];
