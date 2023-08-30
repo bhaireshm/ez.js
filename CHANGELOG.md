@@ -1,3 +1,7 @@
+## 0.0.16: 
+
+(628a2fd) fix: `mergeObjects` nestedObject merge.  (HEAD -> release/0.0.16, origin/master, master) [Bhairesh M]
+
 ## 0.0.15: 
 
 (9a2d2f8) update: release script.  (HEAD -> release/0.0.15, origin/master, master) [Bhairesh M]
