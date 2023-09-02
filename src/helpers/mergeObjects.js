@@ -1,13 +1,13 @@
 /**
  * Uses deep merge way to merge objects.
  *
- * @param {object} obj1
- * @param {object} obj2
- * @returns {object} merged object
+ * @param {object} obj1 - The first object to be merged.
+ * @param {object} obj2 - The second object to be merged.
+ * @returns {object} - The merged object containing the combined properties of obj1 and obj2.
  */
 function mergeObjects(obj1, obj2) {
-  const o1 = Object.assign({}, obj1),
-    o2 = Object.assign({}, obj2);
+  const o1 = { ...obj1 },
+    o2 = { ...obj2 };
 
   for (const key in o1) {
     if (o1.hasOwnProperty(key)) {

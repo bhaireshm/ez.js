@@ -1,7 +1,8 @@
 /**
- * @param {object} o
+ * Converts an object into a query string format.
  *
- * @returns {string}
+ * @param {object} o - The object to be converted into query parameters.
+ * @returns {string} - The query parameters string.
  */
 function objectToQueryParams(o = {}) {
   return Object.entries(o)

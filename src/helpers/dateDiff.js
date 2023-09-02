@@ -1,20 +1,26 @@
 /**
- * Calculates the difference between provided two dates.
+ * Calculates the difference between two provided dates and returns the result in various formats.
  *
- * @param {Date} from
- * @param {Date} to
+ * @param {Date} from - The starting date.
+ * @param {Date} to - The ending date.
+ * @returns {{
+ *   short: string,
+ *   full: string,
+ *   days: number,
+ *   hours: number,
+ *   minutes: number
+ * }} - An object containing the short and full string representations of the difference, as well as the individual calculated values.
  *
  * @example
- * console.log(getDateDifference(new Date("12/12/2012"), new Date()));
+ * console.log(dateDiff(new Date("12/12/2012"), new Date()));
  * // Output
  * {
-    "short": "3885d 15h 39m",
-    "full": "3885 day(s) 15 hours, 39 minutes",
-    "days": 3885,
-    "hours": 15,
-    "minutes": 39
-  }
- * @return {{ short: string, full: string, days: number, hours: number, minutes: number }}
+ *   "short": "3885d 15h 39m",
+ *   "full": "3885 day(s) 15 hours, 39 minutes",
+ *   "days": 3885,
+ *   "hours": 15,
+ *   "minutes": 39
+ * }
  */
 function dateDiff(from, to) {
   from = new Date(from);

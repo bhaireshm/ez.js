@@ -1,18 +1,18 @@
 /**
  * Get nested value from the given object.
  *
- * @param {object} d
- * @param {string} k key name separated by dot character
+ * @param {object} d - The object from which the nested value will be retrieved.
+ * @param {string} k - The dot-separated key to access the nested value.
+ * @returns {any} - The nested value from the given object. If the nested value is not found, null is returned.
+ *
  * @example
  * const data = {
- *  pid: 'some-id',
- *  portions: {
- *    name: 'section'
- *  }
+ *   pid: 'some-id',
+ *   portions: {
+ *     name: 'section'
+ *   }
  * };
- * console.log(getNestedKeyValue(data, "portions.name")); // 'section'
- *
- * @returns {any} value, If nothing found null will be returned.
+ * console.log(getNestedValue(data, "portions.name")); // 'section'
  */
 function getNestedValue(d = {}, k = "") {
   const keys = String(k).split(".");

@@ -1,7 +1,7 @@
 /**
- * Removes all the key's for which the value is empty.
- * @param {object} obj
- * @returns {object}
+ * Removes all the keys from an object for which the value is empty.
+ * @param {object} obj - The object that may contain empty properties.
+ * @returns {object} - An object with all the empty properties removed.
  */
 function removeEmptyProperty(obj = {}) {
   const data = { ...obj };
