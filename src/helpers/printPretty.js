@@ -1,21 +1,23 @@
 /**
- * @param obj - accepts only object
+ * Prints the properties of an object in a formatted way.
+ *
+ * @param {object} obj - The object whose properties need to be printed.
  * @returns {void}
  *
  * @example
  * let obj = {
- *  id: "PS10140",
- *  sdid: "SD13112",
- *  disableCrud: "false",
- *  newQueryParameter: "true"
+ *   id: "PS10140",
+ *   sdid: "SD13112",
+ *   disableCrud: "false",
+ *   newQueryParameter: "true"
  * };
  * printPretty(obj);
  *
  * // Output
- * id                : PS10140
- * sdid              : SD13112
- * disableCrud       : false
- * newQueryParameter : true
+ * // id                : PS10140
+ * // sdid              : SD13112
+ * // disableCrud       : false
+ * // newQueryParameter : true
  */
 function printPretty(obj) {
   const l = ((o) => {

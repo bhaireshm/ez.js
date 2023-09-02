@@ -1,26 +1,28 @@
 /**
- * Converts given string formatted value into number.
+ * Converts a given string formatted value into a number.
  *
- * @param {string} str
- * @param {boolean} returnStrings
- *
- * @returns {number | boolean}
+ * @param {string} str - The string value to be converted into a number.
+ * @param {boolean} returnStrings - A flag indicating whether to return the input string if it is not a valid number. Default value is `false`.
+ * @returns {number | boolean} - The number value if the input string is a valid number. If the input string is not a valid number and `returnStrings` is `true`, the function returns the input string. If the input string is not a valid number and `returnStrings` is `false`, the function logs a warning message and returns `undefined`.
  * @example
- * console.log(toNumber("-23.32"))
+ * console.log(toNumber("-23.32")); // Output: -23.32
+ * console.log(toNumber("abc")); // Output: "abc NaN"
  */
 const toNumber = (str, returnStrings = false) =>
   isNaN(Number(str)) ? (returnStrings ? str : console.warn(`${str} NaN`)) : Number(str);
 
 /**
- * Checks the provided array or an object's string formatted value into number.
+ * Checks the provided array or object's string formatted values and converts them to numbers.
  *
- * @param {Array | Object} data - required
- * @param {string | string[]} str - key names separated by comma (optional)
- * @returns {Array | object}
+ * @param {Array | Object} data - The array or object to be converted.
+ * @param {string | string[]} str - The key names separated by commas indicating which values in the object should be converted to numbers. (optional)
+ * @returns {Array | Object} - The converted array or object.
  * @example
- * strToNum(["3","4",3,"7",8])
+ * strToNum(["3","4",3,"7",8]);
+ * // Output: [3, 4, 3, 7, 8]
  *
- * strToNum({ a:2, b:"4", c:"5" }, "c,b")
+ * strToNum({ a:2, b:"4", c:"5" }, "c,b");
+ * // Output: { a: 2, b: 4, c: 5 }
  */
 const strToNum = (data, str = "") => {
   if (typeof data == "object") {

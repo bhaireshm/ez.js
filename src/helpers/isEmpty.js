@@ -1,8 +1,8 @@
 /**
  * Check's the provided input is valid.
  *
- * @param {any} data
- * @returns {boolean}
+ * @param {any} data - The input data to be checked for emptiness.
+ * @returns {boolean} - Returns true if the input is empty, otherwise returns false.
  */
 function isEmpty(data) {
   if (typeof data == "number" || typeof data == "boolean") return false;

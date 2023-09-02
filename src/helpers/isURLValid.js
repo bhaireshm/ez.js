@@ -1,7 +1,8 @@
 /**
- * @param {string} url
+ * Checks if a given string is a valid URL.
  *
- * @returns {boolean}
+ * @param {string} url - The URL to be validated.
+ * @returns {boolean} - True if the URL is valid, false otherwise.
  */
 function isURLValid(url) {
   return new RegExp(

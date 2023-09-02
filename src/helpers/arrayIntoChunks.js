@@ -1,12 +1,13 @@
 /**
  * Convert an array into given chunk(s).
  *
- * @param {any[]} arr Any type of array
- * @param {number} n Number of chunks
+ * @param {Array} arr - The original array.
+ * @param {number} n - The number of elements to include in each subarray.
+ * @returns {Array} - Array of subarrays, where each subarray contains 'n' elements from the original array.
+ *
  * @example
  * arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
- *
- * @returns {Array} Array of array[s].
+ * Splits an array into subarrays of length 'n'.
  */
 function arrayIntoChunks(arr, n) {
   if (!arr.length) return [];

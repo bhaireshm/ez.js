@@ -1,15 +1,15 @@
 /**
- * Creates table with custom data.
+ * Creates a table element with custom data based on the provided input.
  *
- * @param {object} tableData
- * @param {Object[]} tableData.data - Array of objects
- * @param {string[]} tableData.fields - Fields to be shown
- * @param {string[]} tableData.fieldTitles - Field Names
- * @param {object} tableData.tableProps - Field Names
- * @param {string} tableData.tableProps.id - Table id
- * @param {string[]} tableData.tableProps.classList - Table custom class list
- * @param {string[]} tableData.tableProps.style - Table custom styles
- * @returns [object HTMLArrayElement]
+ * @param {object} tableData - An object containing the table data and properties.
+ * @param {Array<object>} tableData.data - An array of objects representing the data to be displayed in the table.
+ * @param {Array<string>} tableData.fields - An array of field names to be shown as columns in the table.
+ * @param {Array<string>} tableData.fieldTitles - An array of field titles to be displayed as column headers in the table.
+ * @param {object} tableData.tableProps - An object containing additional properties for the table.
+ * @param {string} [tableData.tableProps.id] - The id attribute of the table element. If not provided, a default id of "generic-table" is used.
+ * @param {Array<string>} [tableData.tableProps.classList] - An array of custom class names to be added to the table element.
+ * @param {string} [tableData.tableProps.style] - Custom CSS styles to be applied to the table element.
+ * @returns {object} - The dynamically created table element with the provided data and properties.
  */
 function createTable(tableData) {
   const { data = [], fields = [], fieldTitles = [], tableProps = {} } = tableData;

@@ -1,9 +1,9 @@
 /**
- * Converts number into formatted currency value.
+ * Converts a number into a formatted currency value.
  *
- * @param {Number} val - Integer value
- * @param {Intl.NumberFormatOptions} options - An object with some or all of the properties of Intl.NumberFormatOptions
- * @returns {string} formatted value.
+ * @param {Number} val - The number to be formatted as currency.
+ * @param {Intl.NumberFormatOptions} options - An object with some or all of the properties of Intl.NumberFormatOptions.
+ * @returns {string} - The formatted value as a string.
  *
  * @example
  * console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20

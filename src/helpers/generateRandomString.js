@@ -1,10 +1,8 @@
 /**
- * Generate random string of 13(default) characters, which includes all uppercase alphabets, lowercase alphabets, and 0-9 numbers.
+ * Generate a random string of characters.
  *
- * @default 13
- * @param {number} length
- *
- * @return {string}
+ * @param {number} [length=13] - The desired length of the random string. Default is 13.
+ * @returns {string} - The randomly generated string.
  */
 function generateRandomString(length = 13) {
   let res = "";

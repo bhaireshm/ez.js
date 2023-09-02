@@ -1,22 +1,23 @@
 /**
- * This method compares both key and value of given objects. This even works for nested objects.
+ * This function compares two objects by checking if their keys and values are equal. It can handle nested objects as well.
  *
- * @param {object} obj1
- * @param {object} obj2
- * @returns {boolean}
+ * @param {object} obj1 - The first object to compare.
+ * @param {object} obj2 - The second object to compare.
+ * @returns {boolean} - Returns true if the objects have the same keys and values, false otherwise.
  *
  * @example
  * compareObject({a: 2}, {a: 2}); // true
  *
  * compareObject({a: 2}, {a: 23}); // false
  *
- * ompareObject({a: {b: 2}}, {a: {b: 2}}); // true
+ * compareObject({a: {b: 2}}, {a: {b: 2}}); // true
  */
 function compareObject(obj1, obj2) {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
+
   if (keys1.length !== keys2.length) return false;
-  const isObject = (object) => object != null && typeof object === "object";
+  const isObject = (object) => object !== null && typeof object === "object";
 
   for (const key of keys1) {
     const val1 = obj1[key];

@@ -4,9 +4,9 @@ const isEmpty = require("./isEmpty.js");
 /**
  * Checks the object, if any one key's value is empty it returns false.
  *
- * @param {object} data
- * @param {string[]} keys
- * @returns {boolean}
+ * @param {object} data - The object to be checked for empty values.
+ * @param {string[]} keys - An optional array of keys to check for empty values. Default is an empty array.
+ * @returns {boolean} - Returns true if all values in the object are non-empty, otherwise returns false.
  *
  * @example
  * const payload = { id: 2, name: "John", address: { city: "bangalore" } }

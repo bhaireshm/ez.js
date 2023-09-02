@@ -1,8 +1,8 @@
 /**
- * Compares all the objects(both key and value) in the given array and returns the unique array.
+ * Compares all the objects (both key and value) in the given array and returns the unique array.
  *
  * @param {object[]} arr - An array of objects.
- * @returns {object[]} unique array of object(s).
+ * @returns {object[]} - The unique array of objects.
  *
  * @example
  * uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
