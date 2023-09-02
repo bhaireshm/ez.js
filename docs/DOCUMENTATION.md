@@ -192,8 +192,7 @@ Note: The function assumes all matrices have the same dimensions.</p>
 
 **Example**  
 ```js
-arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
-Splits an array into subarrays of length 'n'.
+arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]Splits an array into subarrays of length 'n'.
 ```
 <a name="blockBrowserBackButton"></a>
 
@@ -204,8 +203,7 @@ Splits an array into subarrays of length 'n'.
 **Summary**: Prevents the browser's back button from navigating to the previous page.  
 **Example**  
 ```js
-const blockBrowserBackButton = require('./blockBrowserBackButton');
-blockBrowserBackButton();
+const blockBrowserBackButton = require('./blockBrowserBackButton');blockBrowserBackButton();
 ```
 <a name="camelCase"></a>
 
@@ -240,10 +238,7 @@ blockBrowserBackButton();
 
 **Example**  
 ```js
-const payload = { id: 2, name: "John", address: { city: "bangalore" } }
-console.log(checkObject(payload, ["iddas"]));// false
-console.log(checkObject(payload, ["name"]));// true
-console.log(checkObject(payload, ["address.city"]));// true
+const payload = { id: 2, name: "John", address: { city: "bangalore" } }console.log(checkObject(payload, ["iddas"]));// falseconsole.log(checkObject(payload, ["name"]));// trueconsole.log(checkObject(payload, ["address.city"]));// true
 ```
 <a name="compareObject"></a>
 
@@ -263,11 +258,7 @@ console.log(checkObject(payload, ["address.city"]));// true
 
 **Example**  
 ```js
-compareObject({a: 2}, {a: 2}); // true
-
-compareObject({a: 2}, {a: 23}); // false
-
-compareObject({a: {b: 2}}, {a: {b: 2}}); // true
+compareObject({a: 2}, {a: 2}); // truecompareObject({a: 2}, {a: 23}); // falsecompareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
@@ -287,8 +278,7 @@ compareObject({a: {b: 2}}, {a: {b: 2}}); // true
 
 **Example**  
 ```js
-console.log(toNumber("-23.32")); // Output: -23.32
-console.log(toNumber("abc")); // Output: "abc NaN"
+console.log(toNumber("-23.32")); // Output: -23.32console.log(toNumber("abc")); // Output: "abc NaN"
 ```
 <a name="strToNum"></a>
 
@@ -308,11 +298,7 @@ console.log(toNumber("abc")); // Output: "abc NaN"
 
 **Example**  
 ```js
-strToNum(["3","4",3,"7",8]);
-// Output: [3, 4, 3, 7, 8]
-
-strToNum({ a:2, b:"4", c:"5" }, "c,b");
-// Output: { a: 2, b: 4, c: 5 }
+strToNum(["3","4",3,"7",8]);// Output: [3, 4, 3, 7, 8]strToNum({ a:2, b:"4", c:"5" }, "c,b");// Output: { a: 2, b: 4, c: 5 }
 ```
 <a name="createTable"></a>
 
@@ -355,8 +341,7 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b");
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
-console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -417,15 +402,7 @@ const payload = {
 
 **Example**  
 ```js
-console.log(dateDiff(new Date("12/12/2012"), new Date()));
-// Output
-{
-  "short": "3885d 15h 39m",
-  "full": "3885 day(s) 15 hours, 39 minutes",
-  "days": 3885,
-  "hours": 15,
-  "minutes": 39
-}
+console.log(dateDiff(new Date("12/12/2012"), new Date()));// Output{  "short": "3885d 15h 39m",  "full": "3885 day(s) 15 hours, 39 minutes",  "days": 3885,  "hours": 15,  "minutes": 39}
 ```
 <a name="generateRandomString"></a>
 
@@ -460,15 +437,7 @@ console.log(dateDiff(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-// Example usage:
-getDates(new Date("07-07-2023"), new Date("07-10-2023"));
-// Expected output:
-// [
-//   "2023-07-06T18:30:00.000Z",
-//   "2023-07-07T18:30:00.000Z",
-//   "2023-07-08T18:30:00.000Z",
-//   "2023-07-09T18:30:00.000Z"
-// ]
+// Example usage:getDates(new Date("07-07-2023"), new Date("07-10-2023"));// Expected output:// [//   "2023-07-06T18:30:00.000Z",//   "2023-07-07T18:30:00.000Z",//   "2023-07-08T18:30:00.000Z",//   "2023-07-09T18:30:00.000Z"// ]
 ```
 <a name="getDiffInHrs"></a>
 
@@ -506,13 +475,7 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = {
-  pid: 'some-id',
-  portions: {
-    name: 'section'
-  }
-};
-console.log(getNestedValue(data, "portions.name")); // 'section'
+const data = {  pid: 'some-id',  portions: {    name: 'section'  }};console.log(getNestedValue(data, "portions.name")); // 'section'
 ```
 <a name="getUniqueArray"></a>
 
@@ -548,8 +511,7 @@ console.log(getNestedValue(data, "portions.name")); // 'section'
 
 **Example**  
 ```js
-console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
-// Output: "d not found"
+console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));// Output: "d not found"
 ```
 <a name="isEmpty"></a>
 
@@ -583,9 +545,7 @@ console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
 
 **Example**  
 ```js
-const result1 = isStr("hello"); // true
-const result2 = isStr(123); // false
-const result3 = isStr(true); // false
+const result1 = isStr("hello"); // trueconst result2 = isStr(123); // falseconst result3 = isStr(true); // false
 ```
 <a name="isStrHasSpecialChar"></a>
 
@@ -667,19 +627,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
-  id: "PS10140",
-  sdid: "SD13112",
-  disableCrud: "false",
-  newQueryParameter: "true"
-};
-printPretty(obj);
-
-// Output
-// id                : PS10140
-// sdid              : SD13112
-// disableCrud       : false
-// newQueryParameter : true
+let obj = {  id: "PS10140",  sdid: "SD13112",  disableCrud: "false",  newQueryParameter: "true"};printPretty(obj);// Output// id                : PS10140// sdid              : SD13112// disableCrud       : false// newQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -794,19 +742,7 @@ printPretty(obj);
 
 **Example**  
 ```js
-const object = [
-  { name: 'John', date: '2021-01-01' },
-  { name: 'Alice', date: '2021-02-01' },
-  { name: 'Bob', date: '2021-01-15' }
-];
-
-const sortedArray = sortObjectByMultipleKeys(object, ['name', '-date']);
-console.log(sortedArray);
-// Output: [
-//   { name: 'Alice', date: '2021-02-01' },
-//   { name: 'Bob', date: '2021-01-15' },
-//   { name: 'John', date: '2021-01-01' }
-// ]
+const object = [  { name: 'John', date: '2021-01-01' },  { name: 'Alice', date: '2021-02-01' },  { name: 'Bob', date: '2021-01-15' }];const sortedArray = sortObjectByMultipleKeys(object, ['name', '-date']);console.log(sortedArray);// Output: [//   { name: 'Alice', date: '2021-02-01' },//   { name: 'Bob', date: '2021-01-15' },//   { name: 'John', date: '2021-01-01' }// ]
 ```
 <a name="uniqueArrayOfObjects"></a>
 
@@ -825,11 +761,7 @@ console.log(sortedArray);
 
 **Example**  
 ```js
-uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
-
-uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
-
-uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
+uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
 <a name="add2Matrix"></a>
 
@@ -877,8 +809,7 @@ Note: The function assumes all matrices have the same dimensions.</p>
 
 **Example**  
 ```js
-arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
-Splits an array into subarrays of length 'n'.
+arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]Splits an array into subarrays of length 'n'.
 ```
 <a name="blockBrowserBackButton"></a>
 
@@ -889,8 +820,7 @@ Splits an array into subarrays of length 'n'.
 **Summary**: Prevents the browser's back button from navigating to the previous page.  
 **Example**  
 ```js
-const blockBrowserBackButton = require('./blockBrowserBackButton');
-blockBrowserBackButton();
+const blockBrowserBackButton = require('./blockBrowserBackButton');blockBrowserBackButton();
 ```
 <a name="camelCase"></a>
 
@@ -925,10 +855,7 @@ blockBrowserBackButton();
 
 **Example**  
 ```js
-const payload = { id: 2, name: "John", address: { city: "bangalore" } }
-console.log(checkObject(payload, ["iddas"]));// false
-console.log(checkObject(payload, ["name"]));// true
-console.log(checkObject(payload, ["address.city"]));// true
+const payload = { id: 2, name: "John", address: { city: "bangalore" } }console.log(checkObject(payload, ["iddas"]));// falseconsole.log(checkObject(payload, ["name"]));// trueconsole.log(checkObject(payload, ["address.city"]));// true
 ```
 <a name="compareObject"></a>
 
@@ -948,11 +875,7 @@ console.log(checkObject(payload, ["address.city"]));// true
 
 **Example**  
 ```js
-compareObject({a: 2}, {a: 2}); // true
-
-compareObject({a: 2}, {a: 23}); // false
-
-compareObject({a: {b: 2}}, {a: {b: 2}}); // true
+compareObject({a: 2}, {a: 2}); // truecompareObject({a: 2}, {a: 23}); // falsecompareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
@@ -972,8 +895,7 @@ compareObject({a: {b: 2}}, {a: {b: 2}}); // true
 
 **Example**  
 ```js
-console.log(toNumber("-23.32")); // Output: -23.32
-console.log(toNumber("abc")); // Output: "abc NaN"
+console.log(toNumber("-23.32")); // Output: -23.32console.log(toNumber("abc")); // Output: "abc NaN"
 ```
 <a name="strToNum"></a>
 
@@ -993,11 +915,7 @@ console.log(toNumber("abc")); // Output: "abc NaN"
 
 **Example**  
 ```js
-strToNum(["3","4",3,"7",8]);
-// Output: [3, 4, 3, 7, 8]
-
-strToNum({ a:2, b:"4", c:"5" }, "c,b");
-// Output: { a: 2, b: 4, c: 5 }
+strToNum(["3","4",3,"7",8]);// Output: [3, 4, 3, 7, 8]strToNum({ a:2, b:"4", c:"5" }, "c,b");// Output: { a: 2, b: 4, c: 5 }
 ```
 <a name="createTable"></a>
 
@@ -1040,8 +958,7 @@ strToNum({ a:2, b:"4", c:"5" }, "c,b");
 
 **Example**  
 ```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20
-console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
 ```
 <a name="dataFormatter"></a>
 
@@ -1102,15 +1019,7 @@ const payload = {
 
 **Example**  
 ```js
-console.log(dateDiff(new Date("12/12/2012"), new Date()));
-// Output
-{
-  "short": "3885d 15h 39m",
-  "full": "3885 day(s) 15 hours, 39 minutes",
-  "days": 3885,
-  "hours": 15,
-  "minutes": 39
-}
+console.log(dateDiff(new Date("12/12/2012"), new Date()));// Output{  "short": "3885d 15h 39m",  "full": "3885 day(s) 15 hours, 39 minutes",  "days": 3885,  "hours": 15,  "minutes": 39}
 ```
 <a name="generateRandomString"></a>
 
@@ -1145,15 +1054,7 @@ console.log(dateDiff(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-// Example usage:
-getDates(new Date("07-07-2023"), new Date("07-10-2023"));
-// Expected output:
-// [
-//   "2023-07-06T18:30:00.000Z",
-//   "2023-07-07T18:30:00.000Z",
-//   "2023-07-08T18:30:00.000Z",
-//   "2023-07-09T18:30:00.000Z"
-// ]
+// Example usage:getDates(new Date("07-07-2023"), new Date("07-10-2023"));// Expected output:// [//   "2023-07-06T18:30:00.000Z",//   "2023-07-07T18:30:00.000Z",//   "2023-07-08T18:30:00.000Z",//   "2023-07-09T18:30:00.000Z"// ]
 ```
 <a name="getDiffInHrs"></a>
 
@@ -1191,13 +1092,7 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 
 **Example**  
 ```js
-const data = {
-  pid: 'some-id',
-  portions: {
-    name: 'section'
-  }
-};
-console.log(getNestedValue(data, "portions.name")); // 'section'
+const data = {  pid: 'some-id',  portions: {    name: 'section'  }};console.log(getNestedValue(data, "portions.name")); // 'section'
 ```
 <a name="getUniqueArray"></a>
 
@@ -1233,8 +1128,7 @@ console.log(getNestedValue(data, "portions.name")); // 'section'
 
 **Example**  
 ```js
-console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
-// Output: "d not found"
+console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));// Output: "d not found"
 ```
 <a name="isEmpty"></a>
 
@@ -1268,9 +1162,7 @@ console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
 
 **Example**  
 ```js
-const result1 = isStr("hello"); // true
-const result2 = isStr(123); // false
-const result3 = isStr(true); // false
+const result1 = isStr("hello"); // trueconst result2 = isStr(123); // falseconst result3 = isStr(true); // false
 ```
 <a name="isStrHasSpecialChar"></a>
 
@@ -1352,19 +1244,7 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {
-  id: "PS10140",
-  sdid: "SD13112",
-  disableCrud: "false",
-  newQueryParameter: "true"
-};
-printPretty(obj);
-
-// Output
-// id                : PS10140
-// sdid              : SD13112
-// disableCrud       : false
-// newQueryParameter : true
+let obj = {  id: "PS10140",  sdid: "SD13112",  disableCrud: "false",  newQueryParameter: "true"};printPretty(obj);// Output// id                : PS10140// sdid              : SD13112// disableCrud       : false// newQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 
@@ -1479,19 +1359,7 @@ printPretty(obj);
 
 **Example**  
 ```js
-const object = [
-  { name: 'John', date: '2021-01-01' },
-  { name: 'Alice', date: '2021-02-01' },
-  { name: 'Bob', date: '2021-01-15' }
-];
-
-const sortedArray = sortObjectByMultipleKeys(object, ['name', '-date']);
-console.log(sortedArray);
-// Output: [
-//   { name: 'Alice', date: '2021-02-01' },
-//   { name: 'Bob', date: '2021-01-15' },
-//   { name: 'John', date: '2021-01-01' }
-// ]
+const object = [  { name: 'John', date: '2021-01-01' },  { name: 'Alice', date: '2021-02-01' },  { name: 'Bob', date: '2021-01-15' }];const sortedArray = sortObjectByMultipleKeys(object, ['name', '-date']);console.log(sortedArray);// Output: [//   { name: 'Alice', date: '2021-02-01' },//   { name: 'Bob', date: '2021-01-15' },//   { name: 'John', date: '2021-01-01' }// ]
 ```
 <a name="uniqueArrayOfObjects"></a>
 
@@ -1510,9 +1378,5 @@ console.log(sortedArray);
 
 **Example**  
 ```js
-uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
-
-uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
-
-uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
+uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```

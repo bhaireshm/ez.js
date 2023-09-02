@@ -3,6 +3,7 @@ export { default as addDelEleFromArray } from "./addDelEleFromArray.js";
 export { default as arrayIntoChunks } from "./arrayIntoChunks.js";
 export { default as blockBrowserBackButton } from "./blockBrowserBackButton.js";
 export { default as camelCase } from "./camelCase.js";
+export { default as checkObject } from "./checkObject.js";
 export { default as compareObjects } from "./compareObjects.js";
 export { strToNum, toNumber } from "./convert.js";
 export { default as createTable } from "./createTable.js";
