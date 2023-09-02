@@ -3,8 +3,7 @@ Clean
 
 ### ✨ Features
 - [2b17d28](https://github.com/bhaireshm/ez.js/commit/2b17d282abba7fcff10fb63f3a4c0425ed58a6b5) feat: `checkObject()` => new function added.
-- [2150d09](https://github.com/bhaireshm/ez.js/commit/2150d096f577aff6dcef5de487fb2e144934d8ec) feat: getDates() => new function added.
-- [b62fa6e](https://github.com/bhaireshm/ez.js/commit/b62fa6ebe4e88975af6781fe79d815e8e14d7f8f) feat: docusaurus integration.
+- [2150d09](https://github.com/bhaireshm/ez.js/commit/2150d096f577aff6dcef5de487fb2e144934d8ec) feat: `getDates()` => new function added.
 
 ### 📃 Commits
 - [7b7736e](https://github.com/bhaireshm/ez.js/commit/7b7736eea730c55daa3706ae059dbd4c4eac2057) docs: all method's docstring modified.
@@ -16,16 +15,13 @@ Clean
 - [1e34607](https://github.com/bhaireshm/ez.js/commit/1e346079f273f328dcae44b2aa152c1700f19fdc) update: release script updated.
 - [c2ab04d](https://github.com/bhaireshm/ez.js/commit/c2ab04d54e1b02c143ab6d322c0809c8fbe16537) chore: release script
 - [454234e](https://github.com/bhaireshm/ez.js/commit/454234e7fd171a00db886869a996ed8bd7877359) update: release scripts updated.
-- [b562dd6](https://github.com/bhaireshm/ez.js/commit/b562dd6b69e4a40afefc7bb2700b957f29bb68e4) update: release scripts updated.
 - [bb7f951](https://github.com/bhaireshm/ez.js/commit/bb7f95186a527e82e68d2c5af35d5ee9e3c78e2c) docs: README.md updated.
 - [27cbb4d](https://github.com/bhaireshm/ez.js/commit/27cbb4da140047de2ef2f3f83cd87d89cd2c98fe) docs: reverseStr   - jsDoc updated.
 - [6305cf2](https://github.com/bhaireshm/ez.js/commit/6305cf24e464a75a04b65b6f309ca794a522fd90) docs: contribution.md release commands added.
 - [952e389](https://github.com/bhaireshm/ez.js/commit/952e3893280ea2a017f122c8604beb0166ca2f96) configs: release script updated.
-- [6a36580](https://github.com/bhaireshm/ez.js/commit/6a365801133f0e5a837b66faedc64125c5574682) configs: release script updated.
 - [8449c24](https://github.com/bhaireshm/ez.js/commit/8449c24c6b41db57fa9bcdd7319421fba4091cd1) fix: pbcopy command not found issue.
 - [7fac164](https://github.com/bhaireshm/ez.js/commit/7fac1642afaa4dd9b7f70e1d81045a0f81aef52f) chore: wrong version was updated
 - [3ddd353](https://github.com/bhaireshm/ez.js/commit/3ddd35384644993f62d93ebfd91883ec004794a0) configs: git `post-checkout` hook ognored for release branchs.
-- [bd7c220](https://github.com/bhaireshm/ez.js/commit/bd7c220dd48fb813e10595197870b9a280da0cad) configs: release script updated.
 - [0eb8da1](https://github.com/bhaireshm/ez.js/commit/0eb8da1be575d533e4b15470118cfb524d9f6b0c) configs: release scripts added.
 - [f8908a7](https://github.com/bhaireshm/ez.js/commit/f8908a7ebb8d37b11648b9ae89c4ebe03e7c1622) update: #23   - Generalize examples.
 - [c57162a](https://github.com/bhaireshm/ez.js/commit/c57162aa3202de87a054e45cdeda7ceb0c0bfa23) configs: unwanted pkgs and content removed.
@@ -46,16 +42,12 @@ Clean
 - [0acbe9a](https://github.com/bhaireshm/ez.js/commit/0acbe9a3de35b09a7a721cdb0a2615dc1c39d5fc) 0.0.12
 - [129f129](https://github.com/bhaireshm/ez.js/commit/129f129cccf9b933cdc781ce58691e7ebfcd6ed0) configs: `rollup` source mapping removed and comments removed from distribution.
 - [16ef444](https://github.com/bhaireshm/ez.js/commit/16ef44477a1067eb30e24d3a8aefd333a6da8dda) docs: contribution.md file updated.
-- [bbf90bb](https://github.com/bhaireshm/ez.js/commit/bbf90bbf387764ad271d8129268cbe7a516052b3) docs: contribution.md file updated.
-- [22cf0dd](https://github.com/bhaireshm/ez.js/commit/22cf0ddadb9be4f89b5d522f648f963c81dc878b) docs: contribution.md file updated.
 - [c3b1c2e](https://github.com/bhaireshm/ez.js/commit/c3b1c2e5a5a229fcc88f0aacdeed263e0dda018f) docs: compareObject, dateDiff jsDoc updated, contribution.md file added.
 - [f469840](https://github.com/bhaireshm/ez.js/commit/f469840c5e4db948ca827471cc733bf2c3e41593) chore: files moved to respective folders.
 - [5177b87](https://github.com/bhaireshm/ez.js/commit/5177b8736d071dfda48d878885468d81bcf93929) configs: git hook post-commit updated.
-- [a50a43e](https://github.com/bhaireshm/ez.js/commit/a50a43eb107a62a7c00f92ac24dd02ccf4c8edcd) configs: git hook post-commit updated.
 - [1bb1ccd](https://github.com/bhaireshm/ez.js/commit/1bb1ccdcfb80b6e48f9f6a97839c20abdaeb2911) chore: removed commitizen
 - [076ff58](https://github.com/bhaireshm/ez.js/commit/076ff58a772592f8cd463f10d3b74f0fb80c9aa8) chore: merge into master
 - [a3fc8bb](https://github.com/bhaireshm/ez.js/commit/a3fc8bb717142670a83292d8226955c83e388cd9) configs: git `post-checkout` hook updated.
-- [8cb7d47](https://github.com/bhaireshm/ez.js/commit/8cb7d4783d367cdc4c8520d0a7c8772d5f0d9597) configs: git `post-checkout` hook updated.
 - [2ebf55d](https://github.com/bhaireshm/ez.js/commit/2ebf55d3ce682a9842d5c6e8df3089b12a053e6e) configs: `post-checkout`   - conditional merge into default branch.
 - [169abcf](https://github.com/bhaireshm/ez.js/commit/169abcfdd1376a7f6755d4f3d9a40a5c73ec6d82) configs: git `pre-commit` hook modified.
 - [6e98fb5](https://github.com/bhaireshm/ez.js/commit/6e98fb5d685a5b9f29e5e80fb564a8595ed609b0) configs: git `pre-commit` hook.
@@ -104,10 +96,7 @@ update: scripts converted to modules.
 chore: jsdoc2md config updated.
 chore: cleanup.
 - [56f7ceb](https://github.com/bhaireshm/ez.js/commit/56f7ceb940abbc89e657a0760c7123a0750fc5ac) :package: version update.
-- [dc57b1f](https://github.com/bhaireshm/ez.js/commit/dc57b1f75a00e32a3a6f0aaf1356cfd3e15cfdad) :package: version update.
 - [d02764f](https://github.com/bhaireshm/ez.js/commit/d02764f31dd36062eebbe82bec612d98602dd373) docs: updated.
-- [746b4c0](https://github.com/bhaireshm/ez.js/commit/746b4c05a94c48fe3275bb5fb5e575b3d220ead1) docs: updated.
-- [138d3a3](https://github.com/bhaireshm/ez.js/commit/138d3a3a941f8a8344bda875a5b91a6dc0398fad) docs: updated.
 - [3d370d4](https://github.com/bhaireshm/ez.js/commit/3d370d484f3ce38e5dcebbc90592c31f0f62a9fc) docs: jsDocs added for functions.
 update: hasOwnProperty   - updated.
 - [7182735](https://github.com/bhaireshm/ez.js/commit/7182735182160d9092303290c74f163d21813cab) docs: jsDocs added for functions.
@@ -125,8 +114,7 @@ update: hasOwnProperty   - updated.
 - [a02dfc6](https://github.com/bhaireshm/ez.js/commit/a02dfc6701cb5fbf5e356f9942940cafd94cd5a4) chore: docs.
 - [e32e84a](https://github.com/bhaireshm/ez.js/commit/e32e84a0aff28b4dd457b9ad35614d0c32bd459a) chore: docs folder removed
 - [91b082b](https://github.com/bhaireshm/ez.js/commit/91b082bcb4d02ed2e5504d093810083be2d1a95f) docs: jsDocs implemented.
-- [14eadb8](https://github.com/bhaireshm/ez.js/commit/14eadb8df16a8196f2480ce30fbe70699b6f600f) update: rollup integration
-- [ebd3be8](https://github.com/bhaireshm/ez.js/commit/ebd3be891d98b7efcaadbf2e1d560e16484e906c) update: rollup integration
+- [14eadb8](https://github.com/bhaireshm/ez.js/commit/14eadb8df16a8196f2480ce30fbe70699b6f600f) update: rollup integration.
 - [04d02f3](https://github.com/bhaireshm/ez.js/commit/04d02f37f307e45999d6056ce03b8f8ffb46fbf4) update: files moved.
 - [0f49488](https://github.com/bhaireshm/ez.js/commit/0f494885b96dea53812e9ce57b74be5cdd1044bb) update: unsed files removed and required files added.
 update: exports separated.
@@ -137,34 +125,6 @@ update: exports separated.
 - [a7b96e6](https://github.com/bhaireshm/ez.js/commit/a7b96e64ab0628e8e195e4f122f24d596ee80d6f) update: getNestedKeyValue method added.
 - [cbcb86a](https://github.com/bhaireshm/ez.js/commit/cbcb86adabce7051f2845b09347fdac2c5b0ac3d) update: data checks added.
 - [5b9568c](https://github.com/bhaireshm/ez.js/commit/5b9568cc12fedf5607120d21c5633b8c599c43ea) update: data formatter method added.
-- [36abc9e](https://github.com/bhaireshm/ez.js/commit/36abc9e13e7b5e1ab275ab4b594e81b614d0a581) update: data formatter method added.
 - [c152ebd](https://github.com/bhaireshm/ez.js/commit/c152ebdcf0046a22ca81822a89e331825aa7ceaf) build: script added.
-- [869cd29](https://github.com/bhaireshm/ez.js/commit/869cd292e2d41619b95119a87e4fec06c7c6a56f) build: script added.
 - [cb1eaa4](https://github.com/bhaireshm/ez.js/commit/cb1eaa4b0e449a120e28e11cd4d33fb1f46cb1bb) 1.0.16-0
 - [1188aae](https://github.com/bhaireshm/ez.js/commit/1188aaea500b3086cf6ff4ab5cdf1c0dc9eab48f) 1.0.15
-
-## 0.0.16: 
-
-(628a2fd) fix: `mergeObjects` nestedObject merge.  (HEAD -> release/0.0.16, origin/master, master) [Bhairesh M]
-
-## 0.0.15: 
-
-(9a2d2f8) update: release script.  (HEAD -> release/0.0.15, origin/master, master) [Bhairesh M]
-
-(a393b4a) docs: `addDelEleFromArray` jsDoc updated.  [Bhairesh M]
-
-(1e34607) update: release script updated.  [Bhairesh M]
-
-(454234e) update: release scripts updated.  [Bhairesh M]
-
-(b562dd6) update: release scripts updated.  [Bhairesh M]
-
-(bb7f951) docs: README.md updated.  [Bhairesh M]
-
-## 0.0.14: Released.
-* Merge pull request #27 from bhaireshm/features/tasks
-* Merge pull request #26 from bhaireshm/configs
-* Merge pull request #25 from bhaireshm/issues/known
-* Merge branch 'issues/known' of https://github.com/bhaireshm/ez.js into issues/known
-* Merge branch 'configs' of https://github.com/bhaireshm/ez.js into issues/known
-* Merge pull request #17 from bhaireshm/docs
