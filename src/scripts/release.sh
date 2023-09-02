@@ -47,5 +47,8 @@ git push origin master --follow-tags
 
 git branch -d release/$ver
 
+# Publish to NPM
+npm publish --access public
+
 # clear variables
 unset msg ver
