@@ -9,12 +9,8 @@
     "allowUnknownTags": true,
     "dictionaries": ["jsdoc"]
   },
-  "source": {
-    "include": ["./src/helpers"]
-  },
   "opts": {
     "encoding": "utf8",
-    "destination": "docs/",
     "recurse": false
   }
 }
