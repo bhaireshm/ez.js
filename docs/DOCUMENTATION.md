@@ -1,12 +1,17 @@
 
+## Constants
+
+<dl>
+<dt><del><a href="#addDelEleFromArray">addDelEleFromArray</a> ⇒ <code>Array</code></del></dt>
+<dd><p>Add or remove an element from an array.</p></dd>
+</dl>
+
 ## Functions
 
 <dl>
 <dt><a href="#add2Matrix">add2Matrix(matrices)</a> ⇒ <code>Array.&lt;number&gt;</code></dt>
 <dd><p>Calculates the sum of corresponding elements from an array of matrices.
 Note: The function assumes all matrices have the same dimensions.</p></dd>
-<dt><a href="#addDelEleFromArray">addDelEleFromArray(arr, ele, remEle:)</a> ⇒ <code>Array</code></dt>
-<dd><p>Add or remove an element from an array.</p></dd>
 <dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒ <code>Array</code></dt>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#blockBrowserBackButton">blockBrowserBackButton()</a> ⇒ <code>void</code></dt>
@@ -51,6 +56,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Checks if a given string is a valid URL.</p></dd>
 <dt><a href="#mergeObjects">mergeObjects(obj1, obj2)</a> ⇒ <code>object</code></dt>
 <dd><p>Uses deep merge way to merge objects.</p></dd>
+<dt><a href="#modifyArray">modifyArray(arr, ele, remEle:)</a> ⇒ <code>Array</code></dt>
+<dd><p>Add or remove an element from an array.</p></dd>
 <dt><a href="#objectToQueryParams">objectToQueryParams(o)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts an object into a query string format.</p></dd>
 <dt><a href="#printPretty">printPretty(obj)</a> ⇒ <code>void</code></dt>
@@ -75,6 +82,22 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Compares all the objects (both key and value) in the given array and returns the unique array.</p></dd>
 </dl>
 
+<a name="addDelEleFromArray"></a>
+
+## ~~addDelEleFromArray ⇒ <code>Array</code>~~
+***Deprecated***
+
+<p>Add or remove an element from an array.</p>
+
+**Kind**: global constant  
+**Summary**: Add or remove an element from an array.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> |  |
+| ele | <code>any</code> | <p>element to be added</p> |
+| remEle: | <code>any</code> | <p>element to be deleted</p> |
+
 <a name="add2Matrix"></a>
 
 ## add2Matrix(matrices) ⇒ <code>Array.&lt;number&gt;</code>
@@ -88,20 +111,6 @@ Note: The function assumes all matrices have the same dimensions.</p>
 | Param | Type | Description |
 | --- | --- | --- |
 | matrices | <code>Array.&lt;Array.&lt;Array.&lt;number&gt;&gt;&gt;</code> | <p>An array of matrices where each matrix is a 2D array of numbers.</p> |
-
-<a name="addDelEleFromArray"></a>
-
-## addDelEleFromArray(arr, ele, remEle:) ⇒ <code>Array</code>
-<p>Add or remove an element from an array.</p>
-
-**Kind**: global function  
-**Summary**: Add or remove an element from an array.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| arr | <code>Array</code> |  |
-| ele | <code>any</code> | <p>element to be added</p> |
-| remEle: | <code>any</code> | <p>element to be deleted</p> |
 
 <a name="arrayIntoChunks"></a>
 
@@ -526,6 +535,20 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 | --- | --- | --- |
 | obj1 | <code>object</code> | <p>The first object to be merged.</p> |
 | obj2 | <code>object</code> | <p>The second object to be merged.</p> |
+
+<a name="modifyArray"></a>
+
+## modifyArray(arr, ele, remEle:) ⇒ <code>Array</code>
+<p>Add or remove an element from an array.</p>
+
+**Kind**: global function  
+**Summary**: Add or remove an element from an array.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> |  |
+| ele | <code>any</code> | <p>element to be added</p> |
+| remEle: | <code>any</code> | <p>element to be deleted</p> |
 
 <a name="objectToQueryParams"></a>
 

@@ -1,5 +1,4 @@
 export { default as add2Matrix } from "./add2Matrix.js";
-export { default as addDelEleFromArray } from "./addDelEleFromArray.js";
 export { default as arrayIntoChunks } from "./arrayIntoChunks.js";
 export { default as blockBrowserBackButton } from "./blockBrowserBackButton.js";
 export { default as camelCase } from "./camelCase.js";
@@ -21,6 +20,7 @@ export { default as isStr } from "./isStr.js";
 export { default as isStrHasSpecialChar } from "./isStrHasSpecialChar.js";
 export { default as isURLValid } from "./isURLValid.js";
 export { default as mergeObjects } from "./mergeObjects.js";
+export { addDelEleFromArray, modifyArray } from "./modifyArray.js";
 export { default as objectToQueryParams } from "./objectToQueryParams.js";
 export { default as printPretty } from "./printPretty.js";
 export { default as removeEmptyProperty } from "./removeEmptyProperty.js";
