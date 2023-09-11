@@ -20,7 +20,8 @@ function modifyArray(arr = [], ele = "", remEle = "") {
  * @param {any} ele element to be added
  * @param {any} remEle: element to be deleted
  *
- * @deprecated use `modifyArray` instead
+ * @deprecated
+ * @note use `modifyArray` instead
  *
  * @returns {Array}
  */

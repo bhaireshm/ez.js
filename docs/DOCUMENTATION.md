@@ -91,6 +91,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 
 **Kind**: global constant  
 **Summary**: Add or remove an element from an array.  
+**Note**: use `modifyArray` instead  
 
 | Param | Type | Description |
 | --- | --- | --- |
