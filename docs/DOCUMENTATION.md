@@ -556,7 +556,19 @@ console.log(isStrHasSpecialChar("hello h@rry"));
 
 **Example**  
 ```js
-let obj = {  id: "PS10140",  sdid: "SD13112",  disableCrud: "false",  newQueryParameter: "true"};printPretty(obj);// Output// id                : PS10140// sdid              : SD13112// disableCrud       : false// newQueryParameter : true
+let obj = {
+  id: "PS10140",
+  sdid: "SD13112",
+  disableCrud: "false",
+  newQueryParameter: "true"
+};
+printPretty(obj);
+
+// Output
+// id                : PS10140
+// sdid              : SD13112
+// disableCrud       : false
+// newQueryParameter : true
 ```
 <a name="removeEmptyProperty"></a>
 

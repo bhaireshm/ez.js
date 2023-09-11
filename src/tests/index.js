@@ -1,16 +1,16 @@
 // const { strToNum, dataFormatter } = require("../../dist");
-const checkObject = require("../helpers/checkObject.js");
+const printPretty = require("../helpers/printPretty.js");
 // const getNestedValue = require("../helpers/getNestedValue.js");
 
 const payload = {
   id: "some-id",
   fontSize: "12",
   data: {
-    theme: "",
+    theme: "dark",
     fontSize: "12",
   },
   portion: {
-    id: "portion-id",
+    id: "pid123",
     data: {
       name: "section",
     },
@@ -18,4 +18,6 @@ const payload = {
 };
 
 // console.log("getNestedValue", getNestedValue(payload, "data.theme"));
-console.log(checkObject(payload, ["data.theme"]));
+// console.log(checkObject(payload, ["data.theme"]));
+
+console.log(printPretty(payload));

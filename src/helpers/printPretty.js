@@ -19,7 +19,7 @@
  * // disableCrud       : false
  * // newQueryParameter : true
  */
-function printPretty(obj) {
+function printPretty(obj, indent = 0) {
   const l = ((o) => {
     let w = 0;
     for (let k in o) {
@@ -31,12 +31,12 @@ function printPretty(obj) {
 
   for (let k in obj) {
     let s = " ".repeat(l - `${k}`.length);
-    // if (typeof obj[k] === "object") {
-    //   s = "";
-    //   console.log(k);
-    //   printPretty(obj[k]);
-    // } else
-    console.log(`${k}${s} : ${obj[k]}`);
+    if (typeof obj[k] === "object" && obj[k] !== null) {
+      console.log(`${" ".repeat(indent)}${k}${s} :`);
+      printPretty(obj[k], indent + 2);
+    } else {
+      console.log(`${" ".repeat(indent)}${k}${s} : ${obj[k]}`);
+    }
   }
 }
 
