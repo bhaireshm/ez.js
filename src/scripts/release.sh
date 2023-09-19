@@ -1,9 +1,9 @@
 #!/bin/bash
 # ----------------------------------------------------------------------------------------------------------------------
 # This script is used to automate release process.
-# Explanation: This script will pull all latest changes from master and checkout release branch from master
+# Explanation: This script will pull all latest changes from $defaultBranch and checkout release branch from $defaultBranch
 # with specified version and then bump up package version and commit them.
-# After that merge release branch into master with appropriate tags.
+# After that merge release branch into $defaultBranch with appropriate tags.
 #
 # npm run release <version> <message>(optional)
 #
@@ -20,13 +20,12 @@ fi
 
 ver=${1/v/}
 msg=$2
+defaultBranch="master"
 
-# [[ -z $msg ]] && msg="Released"
+# Update the $defaultBranch branch to the latest
+git checkout $defaultBranch
 
-# Update the master branch to the latest
-git checkout master
-
-# Create a release brach off of it.
+# Create a release branch from $defaultBranch.
 git checkout -b release/$ver
 
 # Bump version in package.json, but do not create a git tag
@@ -39,16 +38,17 @@ node ./src/scripts/changelog.js $ver $msg
 git add CHANGELOG.md package.json
 git commit -am "release: v$ver"
 
-# Merge the release branch into master, create a tag and push
-git checkout master
-git merge --no-ff release/$ver # fast-forward
+# Merge the release branch into $defaultBranch, create a tag and push
+git checkout $defaultBranch
+git merge --no-ff release/$ver
 git tag -a "v$ver" -m "release-v$ver"
-git push origin master --follow-tags
+git push origin $defaultBranch --follow-tags
 
+# Remove release branch
 git branch -d release/$ver
+
+# clear variables
+unset msg ver defaultBranch
 
 # Publish to NPM
 npm publish --access public
-
-# clear variables
-unset msg ver

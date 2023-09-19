@@ -16,8 +16,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#blockBrowserBackButton">blockBrowserBackButton()</a> ⇒ <code>void</code></dt>
 <dd><p>Prevents the browser's back button from navigating to the previous page.</p></dd>
-<dt><a href="#camelCase">camelCase(str, options)</a> ⇒ <code>string</code></dt>
-<dd><p>Converts each word's first letter into uppercase and replaces special characters.</p></dd>
+<dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
+<dd><p>Converts each word's first letter into uppercase.</p></dd>
 <dt><a href="#checkObject">checkObject(data, keys)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Checks the object, if any one key's value is empty it returns false.</p></dd>
 <dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
@@ -148,20 +148,18 @@ const blockBrowserBackButton = require('./blockBrowserBackButton');blockBrowser
 ```
 <a name="camelCase"></a>
 
-## camelCase(str, options) ⇒ <code>string</code>
-<p>Converts each word's first letter into uppercase and replaces special characters.</p>
+## camelCase(str) ⇒ <code>string</code>
+<p>Converts each word's first letter into uppercase.</p>
 
 **Kind**: global function  
-**Summary**: Converts each word's first letter into uppercase and replaces special characters.  
+**Summary**: Converts each word's first letter into uppercase.  
 **Returns**: <code>string</code> - <ul>
-<li>Returns a new string where each word's first letter is converted to uppercase and special characters are replaced according to the specified options.</li>
+<li>Returns a new string where each word's first letter is converted to uppercase.</li>
 </ul>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | str | <code>string</code> | <p>The input string that needs to be converted to camel case.</p> |
-| options | <code>object</code> | <p>An optional object that can contain the <code>replaceSpecialCharsWith</code> property.</p> |
-| options.replaceSpecialCharsWith | <code>string</code> | <p>The string to replace special characters with. Default is an empty string.</p> |
 
 <a name="checkObject"></a>
 
