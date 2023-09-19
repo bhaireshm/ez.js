@@ -16,8 +16,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#blockBrowserBackButton">blockBrowserBackButton()</a> ⇒ <code>void</code></dt>
 <dd><p>Prevents the browser's back button from navigating to the previous page.</p></dd>
-<dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Converts each word's first letter into uppercase.</p></dd>
+<dt><a href="#camelCase">camelCase(str, options)</a> ⇒ <code>string</code></dt>
+<dd><p>Converts each word's first letter into uppercase and replaces special characters.</p></dd>
 <dt><a href="#checkObject">checkObject(data, keys)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Checks the object, if any one key's value is empty it returns false.</p></dd>
 <dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
@@ -62,7 +62,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Converts an object into a query string format.</p></dd>
 <dt><a href="#printPretty">printPretty(obj)</a> ⇒ <code>void</code></dt>
 <dd><p>Prints the properties of an object in a formatted way.</p></dd>
-<dt><a href="#removeEmptyProperty">removeEmptyProperty(obj)</a> ⇒ <code>object</code></dt>
+<dt><a href="#removeEmptyProperty">removeEmptyProperty(out)</a> ⇒ <code>object</code></dt>
 <dd><p>Removes all the keys from an object for which the value is empty.</p></dd>
 <dt><a href="#reverseStr">reverseStr(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Reverses a given string.</p></dd>
@@ -78,6 +78,8 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Sorts an array of objects based on a specified key in ascending or descending order.</p></dd>
 <dt><a href="#sortObjectByMultipleKeys">sortObjectByMultipleKeys(arr, keys)</a> ⇒ <code>Array.&lt;Object&gt;</code></dt>
 <dd><p>Sorts an array of objects based on multiple keys.</p></dd>
+<dt><a href="#toPascalCase">toPascalCase(str, [removeSpecialChars])</a> ⇒ <code>string</code></dt>
+<dd><p>Converts a string to PascalCase format.</p></dd>
 <dt><a href="#uniqueArrayOfObjects">uniqueArrayOfObjects(arr)</a> ⇒ <code>Array.&lt;object&gt;</code></dt>
 <dd><p>Compares all the objects (both key and value) in the given array and returns the unique array.</p></dd>
 </dl>
@@ -146,18 +148,20 @@ const blockBrowserBackButton = require('./blockBrowserBackButton');blockBrowser
 ```
 <a name="camelCase"></a>
 
-## camelCase(str) ⇒ <code>string</code>
-<p>Converts each word's first letter into uppercase.</p>
+## camelCase(str, options) ⇒ <code>string</code>
+<p>Converts each word's first letter into uppercase and replaces special characters.</p>
 
 **Kind**: global function  
-**Summary**: Converts each word's first letter into uppercase.  
+**Summary**: Converts each word's first letter into uppercase and replaces special characters.  
 **Returns**: <code>string</code> - <ul>
-<li>Returns a new string where each word's first letter is converted to uppercase.</li>
+<li>Returns a new string where each word's first letter is converted to uppercase and special characters are replaced according to the specified options.</li>
 </ul>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | str | <code>string</code> | <p>The input string that needs to be converted to camel case.</p> |
+| options | <code>object</code> | <p>An optional object that can contain the <code>replaceSpecialCharsWith</code> property.</p> |
+| options.replaceSpecialCharsWith | <code>string</code> | <p>The string to replace special characters with. Default is an empty string.</p> |
 
 <a name="checkObject"></a>
 
@@ -596,7 +600,7 @@ printPretty(obj);
 ```
 <a name="removeEmptyProperty"></a>
 
-## removeEmptyProperty(obj) ⇒ <code>object</code>
+## removeEmptyProperty(out) ⇒ <code>object</code>
 <p>Removes all the keys from an object for which the value is empty.</p>
 
 **Kind**: global function  
@@ -607,7 +611,7 @@ printPretty(obj);
 
 | Param | Type | Description |
 | --- | --- | --- |
-| obj | <code>object</code> | <p>The object that may contain empty properties.</p> |
+| out | <code>object</code> | <p>The object that may contain empty properties.</p> |
 
 <a name="reverseStr"></a>
 
@@ -709,6 +713,20 @@ printPretty(obj);
 ```js
 const object = [  { name: 'John', date: '2021-01-01' },  { name: 'Alice', date: '2021-02-01' },  { name: 'Bob', date: '2021-01-15' }];const sortedArray = sortObjectByMultipleKeys(object, ['name', '-date']);console.log(sortedArray);// Output: [//   { name: 'Alice', date: '2021-02-01' },//   { name: 'Bob', date: '2021-01-15' },//   { name: 'John', date: '2021-01-01' }// ]
 ```
+<a name="toPascalCase"></a>
+
+## toPascalCase(str, [removeSpecialChars]) ⇒ <code>string</code>
+<p>Converts a string to PascalCase format.</p>
+
+**Kind**: global function  
+**Summary**: Converts a string to PascalCase format.  
+**Returns**: <code>string</code> - <p>The input string converted to PascalCase format.</p>  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| str | <code>string</code> |  | <p>The input string to be converted to PascalCase.</p> |
+| [removeSpecialChars] | <code>boolean</code> | <code>false</code> | <p>If set to true, any special characters in the string will be removed before conversion.</p> |
+
 <a name="uniqueArrayOfObjects"></a>
 
 ## uniqueArrayOfObjects(arr) ⇒ <code>Array.&lt;object&gt;</code>
