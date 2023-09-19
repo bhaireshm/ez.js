@@ -1,3 +1,9 @@
+## v0.0.22 (9-20-2023, 12:38:39)
+
+### 📃 Commits
+- [b3ba52b](https://github.com/bhaireshm/ez.js/commit/b3ba52bf595d4487f9a7cc0385cf98c68bd1f435) configs: rollup updated.
+- [82a10d4](https://github.com/bhaireshm/ez.js/commit/82a10d4c102b62496934aa92ddb9edeec8299bf8) CHANGELOG.md updated.
+
 ## v0.0.21 (9-19-2023, 11:48:08)
 
 ### 📃 Commits
