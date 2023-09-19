@@ -28,4 +28,5 @@ export { reverseEachWordInSentence, reverseSentence, reverseStr } from "./revers
 export { default as shortenString } from "./shortenString.js";
 export { default as sortObjectByKey } from "./sortObjectByKey.js";
 export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys.js";
+export { default as toPascalCase } from "./toPascalCase.js";
 export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects.js";
