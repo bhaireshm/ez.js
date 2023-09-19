@@ -1,9 +1,10 @@
-import babel from "rollup-plugin-babel";
-import resolve, { nodeResolve } from "@rollup/plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
 import commonjs from "@rollup/plugin-commonjs";
-import nodePolyfills from "rollup-plugin-node-polyfills";
 import json from "@rollup/plugin-json";
+import resolve, { nodeResolve } from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
+import babel from "rollup-plugin-babel";
+import nodePolyfills from "rollup-plugin-node-polyfills";
+import { terser } from "rollup-plugin-terser";
 
 module.exports = [
   {
@@ -34,6 +35,7 @@ module.exports = [
       nodePolyfills(),
       json(),
       resolve({ extensions: [".js"], browser: true }),
+      typescript(),
     ],
   },
 ];
