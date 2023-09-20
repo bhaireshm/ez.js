@@ -6,3 +6,6 @@ package-lock.json
 
 # Environments
 *.env
+
+# Compiled test files
+src/tests/*.js

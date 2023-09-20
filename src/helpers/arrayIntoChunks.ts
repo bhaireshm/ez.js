@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Convert an array into given chunk(s).
  *
@@ -11,8 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
  * Splits an array into subarrays of length 'n'.
  */
-function arrayIntoChunks(arr, n) {
+export default function arrayIntoChunks<T>(arr: T[], n: number): T[][] {
   if (!arr.length) return [];
   return [arr.slice(0, n)].concat(arrayIntoChunks(arr.slice(n), n));
 }
-exports.default = arrayIntoChunks;

@@ -15,7 +15,7 @@ echo "Styling, testing and building project before committing..."
 echo
 
 # Prettier check
-npm run lint-staged
+pnpm lint-staged
 OUT=$?
 
 if [ $OUT -eq 0 ]; then
@@ -23,7 +23,7 @@ if [ $OUT -eq 0 ]; then
   echo
 else
   echo "lint-staged check Failed."
-  echo "Run 'npm run lint-staged', add changes and try commit again."
+  echo "Run 'pnpm lint-staged', add changes and try commit again."
   false
 fi
 
@@ -35,7 +35,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   echo $IS_SRC_MODIFIED
   echo
   # Build check
-  npm run dist
+  pnpm build
   OUT=$?
 
   if [ $OUT -eq 0 ]; then
@@ -47,7 +47,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   fi
 
   # Test
-  npm test
+  pnpm test
   OUT=$?
 
   if [ $OUT -eq 0 ]; then
@@ -59,7 +59,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   fi
 
   # Documents creation
-  npm run docs:md
+  pnpm docs:md
   OUT=$?
 
   if [ $OUT -eq 0 ]; then

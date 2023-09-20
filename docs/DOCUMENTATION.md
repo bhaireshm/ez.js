@@ -12,7 +12,7 @@
 <dt><a href="#add2Matrix">add2Matrix(matrices)</a> ⇒ <code>Array.&lt;number&gt;</code></dt>
 <dd><p>Calculates the sum of corresponding elements from an array of matrices.
 Note: The function assumes all matrices have the same dimensions.</p></dd>
-<dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒ <code>Array</code></dt>
+<dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒</dt>
 <dd><p>Convert an array into given chunk(s).</p></dd>
 <dt><a href="#blockBrowserBackButton">blockBrowserBackButton()</a> ⇒ <code>void</code></dt>
 <dd><p>Prevents the browser's back button from navigating to the previous page.</p></dd>
@@ -117,23 +117,22 @@ Note: The function assumes all matrices have the same dimensions.</p>
 
 <a name="arrayIntoChunks"></a>
 
-## arrayIntoChunks(arr, n) ⇒ <code>Array</code>
+## arrayIntoChunks(arr, n) ⇒
 <p>Convert an array into given chunk(s).</p>
 
 **Kind**: global function  
 **Summary**: Convert an array into given chunk(s).  
-**Returns**: <code>Array</code> - <ul>
-<li>Array of subarrays, where each subarray contains 'n' elements from the original array.</li>
-</ul>  
+**Returns**: <p>Array of subarrays, where each subarray contains 'n' elements from the original array.</p>  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| arr | <code>Array</code> | <p>The original array.</p> |
-| n | <code>number</code> | <p>The number of elements to include in each subarray.</p> |
+| Param | Description |
+| --- | --- |
+| arr | <p>The original array.</p> |
+| n | <p>The number of elements to include in each subarray.</p> |
 
 **Example**  
 ```js
-arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]Splits an array into subarrays of length 'n'.
+arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
+Splits an array into subarrays of length 'n'.
 ```
 <a name="blockBrowserBackButton"></a>
 
