@@ -37,3 +37,6 @@ import ezjs from "@bhairesh/ez.js";
 [Documentation](https://github.com/bhaireshm/ez.js/blob/master/docs/DOCUMENTATION.md)
 
 [Contribution](https://github.com/bhaireshm/ez.js/blob/master/docs/CONTRIBUTION.md)
+
+> **Currently working on converting the project to typescript**
+
