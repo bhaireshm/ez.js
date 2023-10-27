@@ -199,7 +199,11 @@ const payload = { id: 2, name: "John", address: { city: "bangalore" } }console.
 
 **Example**  
 ```js
-compareObject({a: 2}, {a: 2}); // truecompareObject({a: 2}, {a: 23}); // falsecompareObject({a: {b: 2}}, {a: {b: 2}}); // true
+compareObject({a: 2}, {a: 2}); // true
+
+compareObject({a: 2}, {a: 23}); // false
+
+compareObject({a: {b: 2}}, {a: {b: 2}}); // true
 ```
 <a name="toNumber"></a>
 
@@ -730,5 +734,9 @@ const object = [  { name: 'John', date: '2021-01-01' },  { name: 'Alice', date
 
 **Example**  
 ```js
-uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
+uniqueArrayOfObjects([{a: 2}, {a: 2}]); // [{"a":  2}]
+
+uniqueArrayOfObjects([{a: {b: 2}}, {a: {b: 2}}]); // [{"a": {"b": 2}}]
+
+uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
 ```
