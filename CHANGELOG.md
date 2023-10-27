@@ -1,3 +1,9 @@
+## v0.0.23 (10-27-2023, 6:22:09)
+
+### 📃 Commits
+- [e412011](https://github.com/bhaireshm/ez.js/commit/e41201180d26a4af1b5111957619841c399ad6bf) fix: uniqueArrayOfObjects more than 3 getting replicated.
+- [2d1cf1f](https://github.com/bhaireshm/ez.js/commit/2d1cf1faf5f67bd3de7fdd0b4df3c46739e80c36) Update README.md- [79c40ec](https://github.com/bhaireshm/ez.js/commit/79c40ec50a10f4f72752422569f0f7d6ca3381c6) Update CONTRIBUTION.md- [7ae30b0](https://github.com/bhaireshm/ez.js/commit/7ae30b0ae85e75949c121024bf85924353ef5202) CHANGELOG.md updated.
+
 ## v0.0.22 (9-20-2023, 12:38:39)
 
 ### 📃 Commits
