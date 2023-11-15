@@ -14,10 +14,10 @@
  * };
  * console.log(getNestedValue(data, "portions.name")); // 'section'
  */
-function getNestedValue(d = {}, k = "") {
-  const keys = String(k).split(".");
+function getNestedValue(d: object = {}, k: string = ""): any {
+  const keys: string[] = String(k).split(".");
   if (!keys.length) return null;
-  return keys.reduce((p, c) => (Object(p).hasOwnProperty(c) ? p[c] : null), d);
+  return keys.reduce((p: any, c: any) => (Object(p).hasOwnProperty(c) ? p[c] : null), d);
 }
 
-module.exports = getNestedValue;
+export default getNestedValue;

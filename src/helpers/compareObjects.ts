@@ -12,13 +12,11 @@
  *
  * compareObject({a: {b: 2}}, {a: {b: 2}}); // true
  */
-function compareObject(obj1, obj2) {
+function compareObject(obj1: { [k: string]: any }, obj2: { [k: string]: any }): boolean {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
-
   if (keys1.length !== keys2.length) return false;
-  const isObject = (object) => object !== null && typeof object === "object";
-
+  const isObject = (object: any): boolean => object !== null && typeof object === "object";
   for (const key of keys1) {
     const val1 = obj1[key];
     const val2 = obj2[key];
@@ -27,5 +25,4 @@ function compareObject(obj1, obj2) {
   }
   return true;
 }
-
-module.exports = compareObject;
+export default compareObject;

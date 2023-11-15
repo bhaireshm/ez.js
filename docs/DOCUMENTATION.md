@@ -14,20 +14,6 @@
 Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒</dt>
 <dd><p>Convert an array into given chunk(s).</p></dd>
-<dt><a href="#blockBrowserBackButton">blockBrowserBackButton()</a> ⇒ <code>void</code></dt>
-<dd><p>Prevents the browser's back button from navigating to the previous page.</p></dd>
-<dt><a href="#camelCase">camelCase(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Converts each word's first letter into uppercase.</p></dd>
-<dt><a href="#checkObject">checkObject(data, keys)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Checks the object, if any one key's value is empty it returns false.</p></dd>
-<dt><a href="#compareObject">compareObject(obj1, obj2)</a> ⇒ <code>boolean</code></dt>
-<dd><p>This function compares two objects by checking if their keys and values are equal. It can handle nested objects as well.</p></dd>
-<dt><a href="#toNumber">toNumber(str, returnStrings)</a> ⇒ <code>number</code> | <code>boolean</code></dt>
-<dd><p>Converts a given string formatted value into a number.</p></dd>
-<dt><a href="#strToNum">strToNum(data, str)</a> ⇒ <code>Array</code> | <code>Object</code></dt>
-<dd><p>Checks the provided array or object's string formatted values and converts them to numbers.</p></dd>
-<dt><a href="#createTable">createTable(tableData)</a> ⇒ <code>object</code></dt>
-<dd><p>Creates a table element with custom data based on the provided input.</p></dd>
 <dt><a href="#currencyFormatter">currencyFormatter(val, options)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts a number into a formatted currency value.</p></dd>
 <dt><a href="#dataFormatter">dataFormatter(obj, formatter, options)</a> ⇒ <code>object</code></dt>
@@ -40,14 +26,10 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Returns all the dates between the start date and end date, including both.</p></dd>
 <dt><a href="#getDiffInHrs">getDiffInHrs(from, to)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculates the difference in hours between two provided dates.</p></dd>
-<dt><a href="#getNestedValue">getNestedValue(d, k)</a> ⇒ <code>any</code></dt>
-<dd><p>Get nested value from the given object.</p></dd>
 <dt><a href="#getUniqueArray">getUniqueArray(arr)</a> ⇒ <code>Array</code></dt>
 <dd><p>Returns a new array with only the unique elements from the input array.</p></dd>
 <dt><a href="#hasOwnProperty">hasOwnProperty(obj, keys, [returnType])</a> ⇒ <code>string</code> | <code>boolean</code></dt>
 <dd><p>Determines whether an object has a property with the specified name.</p></dd>
-<dt><a href="#isEmpty">isEmpty(data)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check's the provided input is valid.</p></dd>
 <dt><a href="#isStr">isStr(str)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Checks if <code>str</code> is a <code>String</code> type.</p></dd>
 <dt><a href="#isStrHasSpecialChar">isStrHasSpecialChar(str, pattern)</a> ⇒ <code>boolean</code></dt>
@@ -134,138 +116,6 @@ Note: The function assumes all matrices have the same dimensions.</p>
 arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
 Splits an array into subarrays of length 'n'.
 ```
-<a name="blockBrowserBackButton"></a>
-
-## blockBrowserBackButton() ⇒ <code>void</code>
-<p>Prevents the browser's back button from navigating to the previous page.</p>
-
-**Kind**: global function  
-**Summary**: Prevents the browser's back button from navigating to the previous page.  
-**Example**  
-```js
-const blockBrowserBackButton = require('./blockBrowserBackButton');blockBrowserBackButton();
-```
-<a name="camelCase"></a>
-
-## camelCase(str) ⇒ <code>string</code>
-<p>Converts each word's first letter into uppercase.</p>
-
-**Kind**: global function  
-**Summary**: Converts each word's first letter into uppercase.  
-**Returns**: <code>string</code> - <ul>
-<li>Returns a new string where each word's first letter is converted to uppercase.</li>
-</ul>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| str | <code>string</code> | <p>The input string that needs to be converted to camel case.</p> |
-
-<a name="checkObject"></a>
-
-## checkObject(data, keys) ⇒ <code>boolean</code>
-<p>Checks the object, if any one key's value is empty it returns false.</p>
-
-**Kind**: global function  
-**Summary**: Checks the object, if any one key's value is empty it returns false.  
-**Returns**: <code>boolean</code> - <ul>
-<li>Returns true if all values in the object are non-empty, otherwise returns false.</li>
-</ul>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| data | <code>object</code> | <p>The object to be checked for empty values.</p> |
-| keys | <code>Array.&lt;string&gt;</code> | <p>An optional array of keys to check for empty values. Default is an empty array.</p> |
-
-**Example**  
-```js
-const payload = { id: 2, name: "John", address: { city: "bangalore" } }console.log(checkObject(payload, ["iddas"]));// falseconsole.log(checkObject(payload, ["name"]));// trueconsole.log(checkObject(payload, ["address.city"]));// true
-```
-<a name="compareObject"></a>
-
-## compareObject(obj1, obj2) ⇒ <code>boolean</code>
-<p>This function compares two objects by checking if their keys and values are equal. It can handle nested objects as well.</p>
-
-**Kind**: global function  
-**Summary**: This function compares two objects by checking if their keys and values are equal.  
-**Returns**: <code>boolean</code> - <ul>
-<li>Returns true if the objects have the same keys and values, false otherwise.</li>
-</ul>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| obj1 | <code>object</code> | <p>The first object to compare.</p> |
-| obj2 | <code>object</code> | <p>The second object to compare.</p> |
-
-**Example**  
-```js
-compareObject({a: 2}, {a: 2}); // true
-
-compareObject({a: 2}, {a: 23}); // false
-
-compareObject({a: {b: 2}}, {a: {b: 2}}); // true
-```
-<a name="toNumber"></a>
-
-## toNumber(str, returnStrings) ⇒ <code>number</code> \| <code>boolean</code>
-<p>Converts a given string formatted value into a number.</p>
-
-**Kind**: global function  
-**Summary**: Converts a given string formatted value into a number.  
-**Returns**: <code>number</code> \| <code>boolean</code> - <ul>
-<li>The number value if the input string is a valid number. If the input string is not a valid number and <code>returnStrings</code> is <code>true</code>, the function returns the input string. If the input string is not a valid number and <code>returnStrings</code> is <code>false</code>, the function logs a warning message and returns <code>undefined</code>.</li>
-</ul>  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| str | <code>string</code> |  | <p>The string value to be converted into a number.</p> |
-| returnStrings | <code>boolean</code> | <code>false</code> | <p>A flag indicating whether to return the input string if it is not a valid number. Default value is <code>false</code>.</p> |
-
-**Example**  
-```js
-console.log(toNumber("-23.32")); // Output: -23.32console.log(toNumber("abc")); // Output: "abc NaN"
-```
-<a name="strToNum"></a>
-
-## strToNum(data, str) ⇒ <code>Array</code> \| <code>Object</code>
-<p>Checks the provided array or object's string formatted values and converts them to numbers.</p>
-
-**Kind**: global function  
-**Summary**: Checks the provided array or object's string formatted values and converts them to numbers.  
-**Returns**: <code>Array</code> \| <code>Object</code> - <ul>
-<li>The converted array or object.</li>
-</ul>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| data | <code>Array</code> \| <code>Object</code> | <p>The array or object to be converted.</p> |
-| str | <code>string</code> \| <code>Array.&lt;string&gt;</code> | <p>The key names separated by commas indicating which values in the object should be converted to numbers. (optional)</p> |
-
-**Example**  
-```js
-strToNum(["3","4",3,"7",8]);// Output: [3, 4, 3, 7, 8]strToNum({ a:2, b:"4", c:"5" }, "c,b");// Output: { a: 2, b: 4, c: 5 }
-```
-<a name="createTable"></a>
-
-## createTable(tableData) ⇒ <code>object</code>
-<p>Creates a table element with custom data based on the provided input.</p>
-
-**Kind**: global function  
-**Summary**: Creates a table element with custom data based on the provided input.  
-**Returns**: <code>object</code> - <ul>
-<li>The dynamically created table element with the provided data and properties.</li>
-</ul>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| tableData | <code>object</code> | <p>An object containing the table data and properties.</p> |
-| tableData.data | <code>Array.&lt;object&gt;</code> | <p>An array of objects representing the data to be displayed in the table.</p> |
-| tableData.fields | <code>Array.&lt;string&gt;</code> | <p>An array of field names to be shown as columns in the table.</p> |
-| tableData.fieldTitles | <code>Array.&lt;string&gt;</code> | <p>An array of field titles to be displayed as column headers in the table.</p> |
-| tableData.tableProps | <code>object</code> | <p>An object containing additional properties for the table.</p> |
-| [tableData.tableProps.id] | <code>string</code> | <p>The id attribute of the table element. If not provided, a default id of &quot;generic-table&quot; is used.</p> |
-| [tableData.tableProps.classList] | <code>Array.&lt;string&gt;</code> | <p>An array of custom class names to be added to the table element.</p> |
-| [tableData.tableProps.style] | <code>string</code> | <p>Custom CSS styles to be applied to the table element.</p> |
-
 <a name="currencyFormatter"></a>
 
 ## currencyFormatter(val, options) ⇒ <code>string</code>
@@ -401,26 +251,6 @@ console.log(dateDiff(new Date("12/12/2012"), new Date()));// Output{  "short"
 ```js
 console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 ```
-<a name="getNestedValue"></a>
-
-## getNestedValue(d, k) ⇒ <code>any</code>
-<p>Get nested value from the given object.</p>
-
-**Kind**: global function  
-**Summary**: Get nested value from the given object.  
-**Returns**: <code>any</code> - <ul>
-<li>The nested value from the given object. If the nested value is not found, null is returned.</li>
-</ul>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| d | <code>object</code> | <p>The object from which the nested value will be retrieved.</p> |
-| k | <code>string</code> | <p>The dot-separated key to access the nested value.</p> |
-
-**Example**  
-```js
-const data = {  pid: 'some-id',  portions: {    name: 'section'  }};console.log(getNestedValue(data, "portions.name")); // 'section'
-```
 <a name="getUniqueArray"></a>
 
 ## getUniqueArray(arr) ⇒ <code>Array</code>
@@ -457,21 +287,6 @@ const data = {  pid: 'some-id',  portions: {    name: 'section'  }};consol
 ```js
 console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));// Output: "d not found"
 ```
-<a name="isEmpty"></a>
-
-## isEmpty(data) ⇒ <code>boolean</code>
-<p>Check's the provided input is valid.</p>
-
-**Kind**: global function  
-**Summary**: Check's the provided input is valid.  
-**Returns**: <code>boolean</code> - <ul>
-<li>Returns true if the input is empty, otherwise returns false.</li>
-</ul>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| data | <code>any</code> | <p>The input data to be checked for emptiness.</p> |
-
 <a name="isStr"></a>
 
 ## isStr(str) ⇒ <code>boolean</code>
