@@ -13,11 +13,8 @@
  */
 function uniqueArrayOfObjects(arr) {
   return arr.reduce((acc, curr) => {
-    if (acc.length > 0) {
-      acc.forEach((a) => {
-        if (a && !require("./compareObjects.js")(a, curr)) acc.push(curr);
-      });
-    } else acc.push(curr);
+    if (acc.length === 0) acc.push(curr);
+    if (!acc.some((a) => require("./compareObjects.js")(a, curr))) acc.push(curr);
     return acc;
   }, []);
 }

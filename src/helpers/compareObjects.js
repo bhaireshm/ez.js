@@ -23,8 +23,7 @@ function compareObject(obj1, obj2) {
     const val1 = obj1[key];
     const val2 = obj2[key];
     const areObjects = isObject(val1) && isObject(val2);
-    if ((areObjects && !this.compareObject(val1, val2)) || (!areObjects && val1 !== val2))
-      return false;
+    if ((areObjects && !compareObject(val1, val2)) || (!areObjects && val1 !== val2)) return false;
   }
   return true;
 }
