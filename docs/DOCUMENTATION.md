@@ -12,12 +12,12 @@
 <dt><a href="#add2Matrix">add2Matrix(matrices)</a> ⇒ <code>Array.&lt;number&gt;</code></dt>
 <dd><p>Calculates the sum of corresponding elements from an array of matrices.
 Note: The function assumes all matrices have the same dimensions.</p></dd>
-<dt><a href="#arrayIntoChunks">arrayIntoChunks(arr, n)</a> ⇒</dt>
-<dd><p>Convert an array into given chunk(s).</p></dd>
-<dt><a href="#currencyFormatter">currencyFormatter(val, options)</a> ⇒ <code>string</code></dt>
-<dd><p>Converts a number into a formatted currency value.</p></dd>
-<dt><a href="#dataFormatter">dataFormatter(obj, formatter, options)</a> ⇒ <code>object</code></dt>
-<dd><p>Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.</p></dd>
+<dt><a href="#dataFormatter">dataFormatter()</a></dt>
+<dd><p>TODO: Listed below</p>
+<ul>
+<li>Schema based modification</li>
+<li>New key-value pair insertion</li>
+</ul></dd>
 <dt><a href="#dateDiff">dateDiff(from, to)</a> ⇒ <code>Object</code></dt>
 <dd><p>Calculates the difference between two provided dates and returns the result in various formats.</p></dd>
 <dt><a href="#generateRandomString">generateRandomString([length])</a> ⇒ <code>string</code></dt>
@@ -56,7 +56,7 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd></dd>
 <dt><a href="#shuffleString">shuffleString(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Shuffles the characters of a given string and returns the shuffled string.</p></dd>
-<dt><a href="#sortObjectByKey">sortObjectByKey(obj, key, order)</a> ⇒ <code>Array</code></dt>
+<dt><a href="#sortObjectByKey">sortObjectByKey(arr, key, order)</a> ⇒ <code>Array</code></dt>
 <dd><p>Sorts an array of objects based on a specified key in ascending or descending order.</p></dd>
 <dt><a href="#sortObjectByMultipleKeys">sortObjectByMultipleKeys(arr, keys)</a> ⇒ <code>Array.&lt;Object&gt;</code></dt>
 <dd><p>Sorts an array of objects based on multiple keys.</p></dd>
@@ -97,87 +97,21 @@ Note: The function assumes all matrices have the same dimensions.</p>
 | --- | --- | --- |
 | matrices | <code>Array.&lt;Array.&lt;Array.&lt;number&gt;&gt;&gt;</code> | <p>An array of matrices where each matrix is a 2D array of numbers.</p> |
 
-<a name="arrayIntoChunks"></a>
-
-## arrayIntoChunks(arr, n) ⇒
-<p>Convert an array into given chunk(s).</p>
-
-**Kind**: global function  
-**Summary**: Convert an array into given chunk(s).  
-**Returns**: <p>Array of subarrays, where each subarray contains 'n' elements from the original array.</p>  
-
-| Param | Description |
-| --- | --- |
-| arr | <p>The original array.</p> |
-| n | <p>The number of elements to include in each subarray.</p> |
-
-**Example**  
-```js
-arrayIntoChunks([1,2,3,4,5,6], 3); // [[1,2],[3,4],[5,6]]
-Splits an array into subarrays of length 'n'.
-```
-<a name="currencyFormatter"></a>
-
-## currencyFormatter(val, options) ⇒ <code>string</code>
-<p>Converts a number into a formatted currency value.</p>
-
-**Kind**: global function  
-**Summary**: Converts a number into a formatted currency value.  
-**Returns**: <code>string</code> - <ul>
-<li>The formatted value as a string.</li>
-</ul>  
-**Link**: Reference - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| val | <code>Number</code> | <p>The number to be formatted as currency.</p> |
-| options | <code>Intl.NumberFormatOptions</code> | <p>An object with some or all of the properties of Intl.NumberFormatOptions.</p> |
-
-**Example**  
-```js
-console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
-```
 <a name="dataFormatter"></a>
 
-## dataFormatter(obj, formatter, options) ⇒ <code>object</code>
-<p>Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.</p>
+## dataFormatter()
+<p>TODO: Listed below</p>
+<ul>
+<li>Schema based modification</li>
+<li>New key-value pair insertion</li>
+</ul>
 
 **Kind**: global function  
-**Summary**: Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.  
-**Returns**: <code>object</code> - <p>return modified object along with the provided object</p>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| obj | <code>object</code> | <p>data to be formateted</p> |
-| formatter | <code>string</code> | <p>key:valuePath, each key value is separated by comma</p> |
-| options | <code>object</code> |  |
-| options.error | <code>object</code> | <p>default true, returns error content if any key or value is not found</p> |
-| options.oldData | <code>object</code> | <p>default true, returns object</p> |
-
-**Example**  
-```js
-"alterName:key" or "alterName:nested.key" or "nested.alterName:key" or "nested.alterName:nested.key"
-```
-**Example**  
-```js
-const payload = {
-    id: "some-id",
-    data: {
-        theme: "dark"
-    },
-    portion: {
-        id: "portion-id",
-        data: {
-            name: "section-wrapper"
-        }
-    }
-};const a = dataFormatter(payload, "pid:id,theme:data.theme,prtn.id:portion.id,prtn.name:portion.data.name,something:block", { oldData: false });console.log(a);output:{
-    pid: 'some-id',
-    theme: 'dark',
-    prtn: { id: 'portion-id', name: 'section' },
-    ERRORS: { block: 'not found' }
-  }
-```
+**Summary**: <p>TODO: Listed below</p>
+<ul>
+<li>Schema based modification</li>
+<li>New key-value pair insertion</li>
+</ul>.  
 <a name="dateDiff"></a>
 
 ## dateDiff(from, to) ⇒ <code>Object</code>
@@ -484,7 +418,7 @@ let obj = {  id: "PS10140",  sdid: "SD13112",  disableCrud: "false",  newQue
 
 <a name="sortObjectByKey"></a>
 
-## sortObjectByKey(obj, key, order) ⇒ <code>Array</code>
+## sortObjectByKey(arr, key, order) ⇒ <code>Array</code>
 <p>Sorts an array of objects based on a specified key in ascending or descending order.</p>
 
 **Kind**: global function  
@@ -495,7 +429,7 @@ let obj = {  id: "PS10140",  sdid: "SD13112",  disableCrud: "false",  newQue
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| obj | <code>Array</code> |  | <p>An array of objects to be sorted. Default value is an empty array.</p> |
+| arr | <code>Array</code> |  | <p>An array of objects to be sorted. Default value is an empty array.</p> |
 | key | <code>string</code> |  | <p>The key based on which the objects should be sorted.</p> |
 | order | <code>number</code> | <code>1</code> | <p>The sorting order. Default value is 1 (ascending), but can be set to -1 for descending order.</p> |
 

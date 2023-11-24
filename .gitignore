@@ -9,3 +9,7 @@ package-lock.json
 
 # Compiled test files
 src/tests/*.js
+
+# Logs
+
+*.log*
