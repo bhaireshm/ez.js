@@ -12,7 +12,7 @@
  *
  * compareObject({a: {b: 2}}, {a: {b: 2}}); // true
  */
-function compareObject(obj1: { [k: string]: any }, obj2: { [k: string]: any }): boolean {
+export default function compareObject(obj1: { [k: string]: any }, obj2: { [k: string]: any }): boolean {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
   if (keys1.length !== keys2.length) return false;
@@ -25,4 +25,3 @@ function compareObject(obj1: { [k: string]: any }, obj2: { [k: string]: any }): 
   }
   return true;
 }
-export default compareObject;
