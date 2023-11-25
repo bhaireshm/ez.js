@@ -11,6 +11,7 @@
     "dev": "nodemon ./src/tests/index.ts",
     "test": "pnpm build && nodemon ./src/tests/index.js",
     "test:all": "jest",
+    "test:watch": "jest --watch",
     "prepare:husky": "npx husky install",
     "prepublishOnly": "npm run dist && npm test && npm run docs:md",
     "eslint": "eslint *.js src/**/*.js",
