@@ -1,3 +1,6 @@
+import hasOwnProperty from "./hasOwnProperty";
+import isEmpty from "./isEmpty";
+
 /**
  * Get nested value from the given object.
  *
@@ -14,10 +17,9 @@
  * };
  * console.log(getNestedValue(data, "portions.name")); // 'section'
  */
-function getNestedValue(d: object = {}, k: string = ""): any {
+export default function getNestedValue(d: object = {}, k: string = ""): any {
+  if (isEmpty(d)) return null;
   const keys: string[] = String(k).split(".");
   if (!keys.length) return null;
-  return keys.reduce((p: any, c: any) => (Object(p).hasOwnProperty(c) ? p[c] : null), d);
+  return keys.reduce((p: any, c: any) => (hasOwnProperty(p, c, true) ? p[c] : null), d) ?? null;
 }
-
-export default getNestedValue;

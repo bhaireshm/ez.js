@@ -28,8 +28,6 @@ Note: The function assumes all matrices have the same dimensions.</p></dd>
 <dd><p>Calculates the difference in hours between two provided dates.</p></dd>
 <dt><a href="#getUniqueArray">getUniqueArray(arr)</a> ⇒ <code>Array</code></dt>
 <dd><p>Returns a new array with only the unique elements from the input array.</p></dd>
-<dt><a href="#hasOwnProperty">hasOwnProperty(obj, keys, [returnType])</a> ⇒ <code>string</code> | <code>boolean</code></dt>
-<dd><p>Determines whether an object has a property with the specified name.</p></dd>
 <dt><a href="#isStr">isStr(str)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Checks if <code>str</code> is a <code>String</code> type.</p></dd>
 <dt><a href="#isStrHasSpecialChar">isStrHasSpecialChar(str, pattern)</a> ⇒ <code>boolean</code></dt>
@@ -200,27 +198,6 @@ console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
 | --- | --- | --- |
 | arr | <code>Array</code> | <p>An array of elements. Default value is an empty array.</p> |
 
-<a name="hasOwnProperty"></a>
-
-## hasOwnProperty(obj, keys, [returnType]) ⇒ <code>string</code> \| <code>boolean</code>
-<p>Determines whether an object has a property with the specified name.</p>
-
-**Kind**: global function  
-**Summary**: Determines whether an object has a property with the specified name.  
-**Returns**: <code>string</code> \| <code>boolean</code> - <ul>
-<li>If returnType is true, returns a boolean value indicating whether all keys were found in the object. If returnType is false, returns a string indicating whether all keys were found or which keys were not found.</li>
-</ul>  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| obj | <code>object</code> |  | <p>The object to check for properties.</p> |
-| keys | <code>string</code> |  | <p>The keys to check for in the object, separated by commas.</p> |
-| [returnType] | <code>boolean</code> | <code>false</code> | <p>Determines the return type of the function. Defaults to false.</p> |
-
-**Example**  
-```js
-console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));// Output: "d not found"
-```
 <a name="isStr"></a>
 
 ## isStr(str) ⇒ <code>boolean</code>
