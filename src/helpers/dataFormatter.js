@@ -33,15 +33,24 @@
     ERRORS: { block: 'not found' }
   }
  */
+
+/**
+ * TODO: Listed below
+ * * Schema based modification
+ * * New key-value pair insertion
+ */
+
 function dataFormatter(obj = {}, formatter = "", options = {}) {
   const { error = true, oldData = true } = options;
   const alterNames = String(formatter).split(",");
   const newData = {};
   const errors = {};
+  const OLD_DATA = "_OLD_DATA_";
+  const ERRORS = "_ERRORS_";
 
   if (!Object.keys(obj).length) {
-    newData["OLD_DATA"] = obj;
-    newData["ERRORS"] = "data/object cannot be empty.";
+    newData[OLD_DATA] = obj;
+    newData[ERRORS] = "data/object cannot be empty.";
     return newData;
   }
 
@@ -79,8 +88,8 @@ function dataFormatter(obj = {}, formatter = "", options = {}) {
     }
   });
 
-  if (oldData) newData["OLD_DATA"] = obj;
-  if (error && Object.keys(errors).length) newData["ERRORS"] = errors;
+  if (oldData) newData[OLD_DATA] = obj;
+  if (error && Object.keys(errors).length) newData[ERRORS] = errors;
 
   return newData;
 }
