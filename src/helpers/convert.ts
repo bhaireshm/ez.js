@@ -20,8 +20,6 @@ const toNumber = (str: string, returnStrings: boolean = false): number | string 
   return result;
 };
 
-export default toNumber;
-
 /**
  * Checks the provided array or object's string formatted values and converts them to numbers.
  *
