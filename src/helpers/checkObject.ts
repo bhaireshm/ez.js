@@ -14,10 +14,8 @@ import isEmpty from "./isEmpty";
  * console.log(checkObject(payload, ["name"]));// true
  * console.log(checkObject(payload, ["address.city"]));// true
  */
-function checkObject(data: { [k: string]: any }, keys: string[] = []): boolean {
+export default function checkObject(data: { [k: string]: any }, keys: string[] = []): boolean {
   if (keys.length) return keys.map((key) => getNestedValue(data, key)).some((v) => !isEmpty(v));
   for (const key in data) return !isEmpty(data[key]);
   return true;
 }
-
-export default checkObject;
