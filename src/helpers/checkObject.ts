@@ -16,7 +16,7 @@ import isEmpty from "./isEmpty";
  */
 function checkObject(data: { [k: string]: any }, keys: string[] = []): boolean {
   if (keys.length) return keys.map((key) => getNestedValue(data, key)).some((v) => !isEmpty(v));
-  for (const key in data) if (!isEmpty(data[key])) return false;
+  for (const key in data) return !isEmpty(data[key]);
   return true;
 }
 
