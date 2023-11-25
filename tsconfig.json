@@ -6,13 +6,13 @@
     "baseUrl": "./",
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
-    "module": "Node16",
+    "module": "CommonJS",
     "target": "es6",
     "sourceMap": false,
     "allowJs": true,
     "checkJs": true,
     "outDir": "dist",
-    "moduleResolution": "Node16",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -20,6 +20,6 @@
     "skipLibCheck": true,
     "types": ["./src/types", "node", "jest"]
   },
-  "include": ["./src/**/*.ts", "./index.ts", "./package.json"],
+  "include": ["./index.ts", "./package.json"],
   "exclude": ["node_modules", "dist", "./src/tests/*", "./src/helpers/browser/*"]
 }
