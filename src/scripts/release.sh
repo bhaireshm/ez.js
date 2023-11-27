@@ -13,8 +13,11 @@
 # Stop on first error
 set -e
 
-if [[ ! $1 =~ ^v?[0-9]+(\.[0-9]+){2}(-[a-z]+\.\d+)?$ ]]; then
-  echo "A valid version must be provided as the first argument."
+version=$1
+semver_pattern="^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?(\+([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?$"
+
+if [[ ! $version =~ $semver_pattern ]]; then
+  echo "Invalid Semantic Version: $version, a valid version must be provided as the first argument."
   exit 1
 fi
 

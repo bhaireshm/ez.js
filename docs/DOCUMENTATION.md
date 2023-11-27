@@ -12,6 +12,8 @@
 <dt><a href="#add2Matrix">add2Matrix(matrices)</a> ⇒ <code>Array.&lt;number&gt;</code></dt>
 <dd><p>Calculates the sum of corresponding elements from an array of matrices.
 Note: The function assumes all matrices have the same dimensions.</p></dd>
+<dt><a href="#currencyFormatter">currencyFormatter(val, options)</a> ⇒ <code>string</code></dt>
+<dd><p>Converts a number into a formatted currency value.</p></dd>
 <dt><a href="#dataFormatter">dataFormatter()</a></dt>
 <dd><p>TODO: Listed below</p>
 <ul>
@@ -95,6 +97,27 @@ Note: The function assumes all matrices have the same dimensions.</p>
 | --- | --- | --- |
 | matrices | <code>Array.&lt;Array.&lt;Array.&lt;number&gt;&gt;&gt;</code> | <p>An array of matrices where each matrix is a 2D array of numbers.</p> |
 
+<a name="currencyFormatter"></a>
+
+## currencyFormatter(val, options) ⇒ <code>string</code>
+<p>Converts a number into a formatted currency value.</p>
+
+**Kind**: global function  
+**Summary**: Converts a number into a formatted currency value.  
+**Returns**: <code>string</code> - <ul>
+<li>The formatted value as a string.</li>
+</ul>  
+**Link**: Reference - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| val | <code>Number</code> | <p>The number to be formatted as currency.</p> |
+| options | <code>Intl.NumberFormatOptions</code> | <p>An object with some or all of the properties of Intl.NumberFormatOptions.</p> |
+
+**Example**  
+```js
+console.log(currencyFormatter(1234567890.1997)); // ₹1,23,45,67,890.20console.log(currencyFormatter(1234567890, {locales: "en-US", currency: "USD", maximumFractionDigits: 0})); // $1,234,567,890
+```
 <a name="dataFormatter"></a>
 
 ## dataFormatter()
