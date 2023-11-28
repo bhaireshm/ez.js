@@ -1,3 +1,6 @@
+import getNestedValue from "./getNestedValue";
+import isEmpty from "./isEmpty";
+
 /**
  * Determines whether an object has a property with the specified name.
  *
@@ -10,19 +13,28 @@
  * console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
  * // Output: "d not found"
  */
-function hasOwnProperty(obj: object, keys: string, returnType: boolean = false): string | boolean {
-  if (Object.entries(obj).length === 0 || keys.length === 0) return returnType ? false : "false";
-  else {
-    const res = keys
-      .split(",")
-      .map((k) => {
-        if (k !== "" && !Object.prototype.hasOwnProperty.call(obj, k))
-          return returnType ? false : `${k} not found`;
-      })
-      .filter((a) => typeof a === "string")[0];
-    if (returnType) return !res;
-    return !res ? "All key(s) found" : false;
-  }
-}
+export default function hasOwnProperty(
+  obj: object,
+  keys: string,
+  returnType: boolean = false,
+): string | boolean {
+  if (isEmpty(obj) || isEmpty(keys)) return returnType ? false : "false";
 
-export = hasOwnProperty;
+  const _keys = keys.split(",");
+  let isFound = false;
+  let error = "";
+
+  function checkProperty(k: string) {
+    if (isEmpty(k)) return;
+    else if (k.split(".").length > 1 && getNestedValue(obj, k)) isFound = true;
+    else if (Object.hasOwn(obj, k)) isFound = true;
+    else isFound = false;
+    if (!isFound) error += `${k} `;
+  }
+
+  if (_keys.length > 1) for (const k of _keys) checkProperty(k);
+  else checkProperty(_keys[0]);
+
+  if (isFound) return returnType ? isFound : "All key(s) found";
+  else return returnType ? isFound : `${error}not found`;
+}
