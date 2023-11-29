@@ -8,8 +8,6 @@
  * @example
  * console.log(getDiffInHrs(new Date("12/12/2012"), new Date()));
  */
-function getDiffInHrs(from, to) {
-  return Math.floor(Math.abs((new Date(from) - new Date(to)) / 36e5));
+export default function getDiffInHrs(from: Date, to: Date): number {
+  return Math.floor(Math.abs(((new Date(from) as any) - (new Date(to) as any)) / 36e5));
 }
-
-module.exports = getDiffInHrs;
