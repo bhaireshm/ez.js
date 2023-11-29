@@ -1,8 +1,10 @@
+type NumberFormatOptions = Intl.NumberFormatOptions & { locales?: string };
+
 /**
  * Converts a number into a formatted currency value.
  *
- * @param {Number} val - The number to be formatted as currency.
- * @param {Intl.NumberFormatOptions} options - An object with some or all of the properties of Intl.NumberFormatOptions.
+ * @param {number} val - The number to be formatted as currency.
+ * @param {NumberFormatOptions} options - An object with some or all of the properties of Intl.NumberFormatOptions.
  * @returns {string} - The formatted value as a string.
  *
  * @example
@@ -11,7 +13,7 @@
  *
  * @link Reference - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options
  */
-function currencyFormatter(val, options = {}) {
+export default function currencyFormatter(val: number, options: NumberFormatOptions = {}): string {
   options = {
     currency: "INR",
     style: "currency",
@@ -21,5 +23,3 @@ function currencyFormatter(val, options = {}) {
   };
   return new Intl.NumberFormat(options.locales, options).format(val);
 }
-
-module.exports = currencyFormatter;
