@@ -47,7 +47,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   fi
 
   # Test
-  pnpm test:all
+  pnpm test
   OUT=$?
 
   if [ $OUT -eq 0 ]; then

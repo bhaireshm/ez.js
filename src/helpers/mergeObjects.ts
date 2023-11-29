@@ -1,3 +1,5 @@
+import hasOwnProperty from "./hasOwnProperty";
+
 /**
  * Uses deep merge way to merge objects.
  *
@@ -5,12 +7,15 @@
  * @param {object} obj2 - The second object to be merged.
  * @returns {object} - The merged object containing the combined properties of obj1 and obj2.
  */
-function mergeObjects(obj1, obj2) {
-  const o1 = { ...obj1 },
-    o2 = { ...obj2 };
+export default function mergeObjects(
+  obj1: Record<string, any>,
+  obj2: Record<string, any>,
+): Record<string, any> {
+  const o1 = { ...obj1 };
+  const o2 = { ...obj2 };
 
   for (const key in o1) {
-    if (o1.hasOwnProperty(key)) {
+    if (hasOwnProperty(o1, key, true)) {
       if (Array.isArray(o2[key]) && Array.isArray(o1[key])) {
         o2[key] = [...o1[key], ...o2[key]];
         continue;
@@ -22,7 +27,6 @@ function mergeObjects(obj1, obj2) {
       o2[key] = o1[key];
     }
   }
+
   return o2;
 }
-
-module.exports = mergeObjects;
