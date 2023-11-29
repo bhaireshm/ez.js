@@ -38,6 +38,8 @@
  * TODO: Listed below
  * * Schema based modification
  * * New key-value pair insertion
+ * * change the getNestedValue
+ * * line 86: hasOwnProperty
  */
 
 function dataFormatter(obj = {}, formatter = "", options = {}) {

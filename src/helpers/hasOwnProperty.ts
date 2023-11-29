@@ -16,7 +16,7 @@ import isEmpty from "./isEmpty";
 export default function hasOwnProperty(
   obj: object,
   keys: string,
-  returnType: boolean = false,
+  returnType: boolean = false, // todo: make boolean return as true
 ): string | boolean {
   if (isEmpty(obj) || isEmpty(keys)) return returnType ? false : "false";
 
