@@ -32,4 +32,4 @@ export { default as mergeObjects } from "./mergeObjects";
 // export { default as sortObjectByKey } from "./sortObjectByKey";
 // export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys";
 // export { default as toPascalCase } from "./toPascalCase";
-// export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects";
+export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects";

@@ -1,3 +1,5 @@
+import compareObjects from "../helpers/compareObjects";
+
 /**
  * Compares all the objects (both key and value) in the given array and returns the unique array.
  *
@@ -11,12 +13,10 @@
  *
  * uniqueArrayOfObjects([{a: 2}, {a: 2, b: 3}]); // [{a: 2}, {a: 2, b: 3}]
  */
-function uniqueArrayOfObjects(arr) {
-  return arr.reduce((acc, curr) => {
+export default function uniqueArrayOfObjects(arr: object[]): object[] {
+  return arr.reduce((acc: object[], curr: object) => {
     if (acc.length === 0) acc.push(curr);
-    if (!acc.some((a) => require("./compareObjects.js")(a, curr))) acc.push(curr);
+    if (!acc.some((a) => compareObjects(a, curr))) acc.push(curr);
     return acc;
   }, []);
 }
-
-module.exports = uniqueArrayOfObjects;
