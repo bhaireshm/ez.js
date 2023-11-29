@@ -6,7 +6,9 @@ const jestConfig: JestConfigWithTsJest = {
   verbose: true,
   bail: 1,
   rootDir: "./src/tests",
-  // testMatch: ["./src/**/*.test.ts"]
+  cache: false,
+  clearMocks: true,
+  // detectLeaks: true,
 };
 
 export default jestConfig;
