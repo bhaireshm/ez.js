@@ -5,10 +5,10 @@
  * @returns {boolean} - Returns true if the input is empty, otherwise returns false.
  */
 export default function isEmpty(data: any): boolean {
-  if (typeof data === "number" || typeof data == "boolean") return false;
+  if (typeof data === "number" || typeof data === "boolean") return false;
   if (data === "" || data === null) return true;
-  if (Array.isArray(data)) return data.length == 0;
+  if (Array.isArray(data)) return data.length === 0;
   let count = 0;
-  for (let i in data) if (data.hasOwnProperty(i)) count++;
-  return count == 0;
+  for (const i in data) if (data.hasOwnProperty(i)) count++;
+  return count === 0;
 }
