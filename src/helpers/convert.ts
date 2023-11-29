@@ -1,3 +1,5 @@
+import isObj from "./isObj";
+
 /**
  * Converts a given string formatted value into a number.
  *
@@ -36,7 +38,7 @@ const toNumber = (str: string, returnStrings: boolean = false): number | string 
 const strToNum = (data: Array<any> | Object, str: string[]): Array<any> | Object => {
   if (Array.isArray(data)) return data.map((d) => toNumber(d, true));
 
-  if (typeof data === "object" && str.length) {
+  if (isObj(data) && str.length) {
     const out: any = {};
     Object.entries(data)
       .map((d) => {

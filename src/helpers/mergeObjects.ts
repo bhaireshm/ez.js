@@ -1,4 +1,5 @@
 import hasOwnProperty from "./hasOwnProperty";
+import isObj from "./isObj";
 
 /**
  * Uses deep merge way to merge objects.
@@ -20,7 +21,7 @@ export default function mergeObjects(
         o2[key] = [...o1[key], ...o2[key]];
         continue;
       }
-      if (typeof o2[key] === "object" && typeof o1[key] === "object") {
+      if (isObj(o2[key]) && isObj(o1[key])) {
         o2[key] = mergeObjects(o1[key], o2[key]);
         continue;
       }

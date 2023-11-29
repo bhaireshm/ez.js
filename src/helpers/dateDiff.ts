@@ -22,24 +22,34 @@
  *   "minutes": 39
  * }
  */
-function dateDiff(from, to) {
+export default function dateDiff(
+  from: Date,
+  to: Date,
+  showNegative: boolean = true,
+): {
+  short: string;
+  full: string;
+  days: number;
+  hours: number;
+  minutes: number;
+} {
   from = new Date(from);
   to = new Date(to);
-  let diffMs = to - from; // milliseconds between from & to
-  let diffDays = Math.floor(diffMs / 86400000); // days
-  let diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
-  let diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+  const checkPrevDay = Math[showNegative ? "floor" : "abs"];
+  const diffMs = to.getTime() - from.getTime(); // milliseconds between from & to
+  const diffDays = checkPrevDay(diffMs / 86400000); // days
+  const diffHrs = checkPrevDay((diffMs % 86400000) / 3600000); // hours
+  const diffMins = checkPrevDay(Math.round(((diffMs % 86400000) % 3600000) / 60000)); // minutes
   let str = "";
   str += diffDays ? diffDays + "d " : "";
   str += diffHrs ? diffHrs + "h" : "";
   str += diffMins ? " " + diffMins + "m" : "";
+  const sign = str && diffDays + diffHrs + diffMins < 0 && showNegative ? "-" : "";
   return {
-    short: str.trimEnd().trimStart().replace(/ {2}/g, " "),
+    short: `${sign}${str.trimEnd().trimStart().replace(/ {2}/g, " ")}`,
     full: `${diffDays} day(s) ${diffHrs} hours, ${diffMins} minutes`,
     days: diffDays,
     hours: diffHrs,
     minutes: diffMins,
   };
 }
-
-module.exports = dateDiff;

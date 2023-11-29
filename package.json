@@ -10,7 +10,7 @@
     "build": "rm -rf dist && tsc --build",
     "watch": "tsc --build --watch",
     "clean": "tsc --build --clean",
-    "dev": "nodemon ./src/tests/test.ts",
+    "dev": "nodemon ./src/tests/index.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare:husky": "npx husky install",

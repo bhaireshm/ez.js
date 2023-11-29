@@ -1,4 +1,4 @@
-import isEmpty from '../helpers/isEmpty';
+import isEmpty from "./isEmpty";
 
 /**
  * Checks if `str` is a `String` type.
@@ -12,5 +12,5 @@ import isEmpty from '../helpers/isEmpty';
  * const result3 = isStr(true); // false
  */
 export default function isStr(str: any): boolean {
-  return !isEmpty(str) && typeof str === "string";
+  return !isEmpty(str) && str.__proto__.constructor.name === "String";
 }
