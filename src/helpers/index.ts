@@ -11,7 +11,7 @@ export { default as currencyFormatter } from "./currencyFormatter";
 // export { default as dataFormatter } from "./dataFormatter";
 // export { default as dateDiff } from "./dateDiff";
 export { default as generateRandomString } from "./generateRandomString";
-// export { default as getDates } from "./getDates";
+export { default as getDates } from "./getDates";
 // export { default as getDiffInHrs } from "./getDiffInHrs";
 export { default as getNestedValue } from "./getNestedValue";
 // export { default as getUniqueArray } from "./getUniqueArray";

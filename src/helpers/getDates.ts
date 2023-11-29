@@ -16,13 +16,13 @@
  * //   "2023-07-09T18:30:00.000Z"
  * // ]
  */
-function getDates(startDate, endDate) {
+export default function getDates(startDate: Date, endDate: Date): Date[] {
   if (!startDate || !endDate) return [];
 
   startDate = new Date(startDate);
   endDate = new Date(endDate);
   const date = new Date(startDate.getTime());
-  const dates = [];
+  const dates: Date[] = [];
 
   while (date <= endDate) {
     dates.push(new Date(date));
@@ -31,5 +31,3 @@ function getDates(startDate, endDate) {
 
   return dates;
 }
-
-module.exports = getDates;
