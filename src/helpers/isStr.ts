@@ -1,3 +1,5 @@
+import isEmpty from '../helpers/isEmpty';
+
 /**
  * Checks if `str` is a `String` type.
  *
@@ -9,8 +11,6 @@
  * const result2 = isStr(123); // false
  * const result3 = isStr(true); // false
  */
-function isStr(str) {
-  return str && typeof str === "string";
+export default function isStr(str: any): boolean {
+  return !isEmpty(str) && typeof str === "string";
 }
-
-module.exports = isStr;
