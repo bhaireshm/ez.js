@@ -28,6 +28,4 @@ describe("currencyFormatter function", () => {
     });
     expect(result).toBe("-$987,654.32");
   });
-
-  // Add more test cases as needed
 });
