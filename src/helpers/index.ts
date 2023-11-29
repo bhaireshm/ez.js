@@ -23,7 +23,7 @@ export { default as isStr } from "./isStr";
 // export { default as isStrHasSpecialChar } from "./isStrHasSpecialChar";
 // export { default as isURLValid } from "./isURLValid";
 export { default as mergeObjects } from "./mergeObjects";
-// export { addDelEleFromArray, modifyArray } from "./modifyArray";
+export { default as modifyArray } from "./modifyArray";
 // export { default as objectToQueryParams } from "./objectToQueryParams";
 // export { default as printPretty } from "./printPretty";
 // export { default as removeEmptyProperty } from "./removeEmptyProperty";
