@@ -4,7 +4,7 @@
  * @param {string} url - The URL to be validated.
  * @returns {boolean} - True if the URL is valid, false otherwise.
  */
-function isURLValid(url) {
+export default function isURLValid(url: string): boolean {
   return new RegExp(
     "^(https?:\\/\\/)?" + // protocol
       "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|" + // domain name
@@ -15,5 +15,3 @@ function isURLValid(url) {
     "i", // ignore case
   ).test(url);
 }
-
-module.exports = isURLValid;
