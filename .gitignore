@@ -11,5 +11,4 @@ package-lock.json
 src/tests/*.js
 
 # Logs
-
 *.log*

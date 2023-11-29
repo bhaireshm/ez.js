@@ -59,7 +59,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   fi
 
   # Documents creation
-  pnpm docs:md
+  pnpm docs:ts
   OUT=$?
 
   if [ $OUT -eq 0 ]; then
