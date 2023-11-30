@@ -1,12 +1,12 @@
-import isEmpty from "./isEmpty";
+import { AnyObject } from "../types";
 import hasOwnProperty from "./hasOwnProperty";
+import isEmpty from "./isEmpty";
 
 interface FormatterOptions {
   error?: boolean;
   oldData?: boolean;
 }
 
-type AnyObject = Record<string, any>;
 type DataFormatterResult = AnyObject;
 
 /**
@@ -98,7 +98,7 @@ export default function dataFormatter(
   return newData;
 
   // Private function
-  function _getNestedValue(d: Record<string, any> = {}, k: string = ""): any {
+  function _getNestedValue(d: AnyObject = {}, k: string = ""): any {
     if (isEmpty(d)) return null;
     const keys: string[] = String(k).split(".");
     if (!keys.length) return null;

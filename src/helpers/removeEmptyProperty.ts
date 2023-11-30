@@ -1,3 +1,4 @@
+import { AnyObject } from "../types";
 import isEmpty from "./isEmpty";
 import isObj from "./isObj";
 
@@ -6,7 +7,7 @@ import isObj from "./isObj";
  * @param {object} data - The object that may contain empty properties.
  * @returns {object} - An object with all the empty properties removed.
  */
-export default function removeEmptyProperty(data: Record<string, any> = {}) {
+export default function removeEmptyProperty(data: AnyObject = {}) {
   function removeEmptyProperties(obj: any): any {
     if (Array.isArray(obj))
       return obj.filter((element) => !isEmpty(removeEmptyProperties(element)));

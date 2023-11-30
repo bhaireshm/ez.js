@@ -21,8 +21,7 @@
     "prettier:fix": "prettier  --write .",
     "lint-staged": "lint-staged",
     "release": "sh ./src/scripts/release.sh",
-    "docs:ts": "echo 'typedoc not working check!!!!!'",
-    "docs:tsc": "typedoc ./src/helpers/* --out ./docs --exclude *.js"
+    "docs:ts": "typedoc "
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
   "repository": {

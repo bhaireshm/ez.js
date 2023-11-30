@@ -1,4 +1,5 @@
 import isObj from "../helpers/isObj";
+import { AnyObject } from "../types";
 
 /**
  * This function compares two objects by checking if their keys and values are equal. It can handle nested objects as well.
@@ -14,10 +15,7 @@ import isObj from "../helpers/isObj";
  *
  * compareObject({a: {b: 2}}, {a: {b: 2}}); // true
  */
-export default function compareObject(
-  obj1: { [k: string]: any },
-  obj2: { [k: string]: any },
-): boolean {
+export default function compareObject(obj1: AnyObject, obj2: AnyObject): boolean {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
   if (keys1.length !== keys2.length) return false;

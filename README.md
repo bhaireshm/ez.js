@@ -36,6 +36,6 @@ import ezjs from "@bhairesh/ez.js";
 
 ## Links
 
-[Documentation](https://github.com/bhaireshm/ez.js/blob/master/docs/DOCUMENTATION.md)
+[Documentation](https://github.com/bhaireshm/ez.js/blob/master/DOCUMENTATION.md)
 
-[Contribution](https://github.com/bhaireshm/ez.js/blob/master/docs/CONTRIBUTION.md)
+[Contribution](https://github.com/bhaireshm/ez.js/blob/master/CONTRIBUTION.md)

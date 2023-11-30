@@ -1,4 +1,6 @@
-type SortableObj = Record<string, any>;
+import { AnyObject } from "../types";
+
+type SortableObj = AnyObject;
 
 /**
  * Sorts an array of objects based on a specified key in ascending or descending order.

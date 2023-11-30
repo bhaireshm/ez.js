@@ -1,3 +1,4 @@
+import { AnyObject } from "../types";
 import getNestedValue from "./getNestedValue";
 import isEmpty from "./isEmpty";
 
@@ -14,7 +15,7 @@ import isEmpty from "./isEmpty";
  * console.log(checkObject(payload, ["name"]));// true
  * console.log(checkObject(payload, ["address.city"]));// true
  */
-export default function checkObject(data: { [k: string]: any }, keys: string[] = []): boolean {
+export default function checkObject(data: AnyObject, keys: string[] = []): boolean {
   if (keys.length) return keys.map((key) => getNestedValue(data, key)).some((v) => !isEmpty(v));
   for (const key in data) return !isEmpty(data[key]);
   return true;

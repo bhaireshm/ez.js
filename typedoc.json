@@ -1,15 +1,12 @@
 {
-  "out": "docs",
-  "mode": "modules",
-  "includeDeclarations": true,
-  "excludeExternals": true,
-  "excludeNotExported": true,
+  "$schema": "https://typedoc.org/schema.json",
+  "disableSources": true,
+  "entryPoints": ["./src/helpers/"],
   "excludePrivate": true,
   "excludeProtected": true,
-  "target": "ES6",
-  "module": "CommonJS",
-  "plugins": ["typedoc-plugin-markdown", "typedoc-plugin-summary"],
-  "theme": "default",
-  "ignoreCompilerErrors": true,
-  "tsconfig": "./tsconfig.json" // Replace with the actual path to your tsconfig.json file
+  "githubPages": true,
+  "name": "@bhairesh/ez.js",
+  "out": "docs",
+  "sort": ["kind", "instance-first", "source-order"],
+  "tsconfig": "./tsconfig.json"
 }

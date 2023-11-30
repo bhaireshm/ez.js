@@ -1,3 +1,4 @@
+import { AnyObject } from "../types";
 import hasOwnProperty from "./hasOwnProperty";
 import isObj from "./isObj";
 
@@ -8,10 +9,7 @@ import isObj from "./isObj";
  * @param {object} obj2 - The second object to be merged.
  * @returns {object} - The merged object containing the combined properties of obj1 and obj2.
  */
-export default function mergeObjects(
-  obj1: Record<string, any>,
-  obj2: Record<string, any>,
-): Record<string, any> {
+export default function mergeObjects(obj1: AnyObject, obj2: AnyObject): AnyObject {
   const o1 = { ...obj1 };
   const o2 = { ...obj2 };
 
