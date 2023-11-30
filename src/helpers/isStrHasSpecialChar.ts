@@ -1,3 +1,5 @@
+import { SPECIAL_CHARACTERS } from "../constants/regExpPatterns";
+
 /**
  * Checks the special characters in the provided string.
  *
@@ -8,6 +10,9 @@
  * @example
  * console.log(isStrHasSpecialChar("hello h@rry"));
  */
-export default function isStrHasSpecialChar(str: string, pattern: string = "<>@!#$%^&*()_+[]{}?:;\\|'\"\\,./~`-="): boolean {
+export default function isStrHasSpecialChar(
+  str: string,
+  pattern: string = SPECIAL_CHARACTERS,
+): boolean {
   return pattern.split("").some((s) => str.includes(s));
 }
