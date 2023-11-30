@@ -1,0 +1,12 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "disableSources": true,
+  "entryPoints": ["./src/helpers/"],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "githubPages": true,
+  "name": "@bhairesh/ez.js",
+  "out": "docs",
+  "sort": ["kind", "instance-first", "source-order"],
+  "tsconfig": "./tsconfig.json"
+}
