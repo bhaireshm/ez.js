@@ -1,3 +1,3 @@
-import arrayIntoChunks from "../helpers/arrayIntoChunks";
+import toPascalCase from "../helpers/toPascalCase";
 
-console.log(arrayIntoChunks([1, 2, 3, 4, 5, 5], 3));
+console.log(toPascalCase("hello-world!", true));
