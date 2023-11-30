@@ -2,7 +2,7 @@ const { resolve } = require("path");
 const { ESLint } = require("eslint");
 
 module.exports = {
-  "**/*.{ts,js,json}": (fileNames) => {
+  "**/*.{ts,json}": (fileNames) => {
     const escapedFileNames = fileNames.map((fileName) => escape(fileName)).join(" ");
     const eslint = new ESLint();
 
