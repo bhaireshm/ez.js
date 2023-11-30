@@ -17,9 +17,9 @@ import isEmpty from "./isEmpty";
  * };
  * console.log(getNestedValue(data, "portions.name")); // 'section'
  */
-export default function getNestedValue(d: object = {}, k: string = ""): any {
+export default function getNestedValue(d: Record<string, any> = {}, k: string = ""): any {
   if (isEmpty(d)) return null;
   const keys: string[] = String(k).split(".");
   if (!keys.length) return null;
-  return keys.reduce((p: any, c: any) => (hasOwnProperty(p, c, true) ? p[c] : null), d) ?? null;
+  return keys.reduce((p, c) => (hasOwnProperty(p, c, true) ? p[c] : null), d) ?? null;
 }
