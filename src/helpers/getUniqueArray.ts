@@ -4,12 +4,10 @@
  * @param {Array} arr - An array of elements. Default value is an empty array.
  * @returns {Array} - An array containing only the unique elements from the input array.
  */
-function getUniqueArray(arr = []) {
-  const uArr = [];
+export default function getUniqueArray<T>(arr: T[] = []): T[] {
+  const uArr: T[] = [];
   arr.forEach((a) => {
     if (uArr.indexOf(a) === -1) uArr.push(a);
   });
   return uArr;
 }
-
-module.exports = getUniqueArray;
