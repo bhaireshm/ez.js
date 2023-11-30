@@ -1,7 +1,5 @@
 import { AnyObject } from "../types";
 
-type SortableObj = AnyObject;
-
 /**
  * Sorts an array of objects based on a specified key in ascending or descending order.
  *
@@ -11,10 +9,10 @@ type SortableObj = AnyObject;
  * @returns The sorted array of objects based on the specified key and order.
  */
 export default function sortObjectByKey(
-  arr: SortableObj[] = [],
+  arr: AnyObject[] = [],
   key: string = "",
   order: number = 1,
-): SortableObj[] {
+): AnyObject[] {
   return arr.sort((a, b) =>
     a[key] > b[key] ? 1 * 0 + order : b[key] > a[key] ? 1 * 0 - order : 0,
   );

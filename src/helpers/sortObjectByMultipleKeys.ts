@@ -1,7 +1,5 @@
 import { AnyObject } from "../types";
 
-type SortableObj = AnyObject;
-
 /**
  * Sorts an array of objects based on multiple keys.
  *
@@ -25,9 +23,9 @@ type SortableObj = AnyObject;
  * // ]
  */
 export default function sortObjectByMultipleKeys(
-  arr: SortableObj[] = [],
+  arr: AnyObject[] = [],
   keys: string[] = [],
-): SortableObj[] {
+): AnyObject[] {
   return arr.sort((a, b) => {
     return keys
       .map((o) => {

@@ -1,5 +1,7 @@
-// Helper functions
+// Types
+export * from "../types";
 
+// Helper functions
 export { default as arrayIntoChunks } from "./arrayIntoChunks";
 export { default as camelCase } from "./camelCase";
 export { default as checkObject } from "./checkObject";

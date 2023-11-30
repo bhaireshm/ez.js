@@ -7,8 +7,6 @@ interface FormatterOptions {
   oldData?: boolean;
 }
 
-type DataFormatterResult = AnyObject;
-
 /**
  * Data formatter - rename/customise keyname and values as you require, even nested keys and nested values can be defined.
  *
@@ -48,11 +46,11 @@ export default function dataFormatter(
   obj: AnyObject = {},
   formatter: string = "",
   options: FormatterOptions = {},
-): DataFormatterResult {
+): AnyObject {
   const { error = true, oldData = false } = options;
   const alterNames = String(formatter).split(",");
-  const newData: DataFormatterResult = {};
-  const errors: DataFormatterResult = {};
+  const newData: AnyObject = {};
+  const errors: AnyObject = {};
   const OLD_DATA = "_DATA";
   const ERRORS = "_ERROR";
 

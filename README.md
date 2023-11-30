@@ -8,8 +8,6 @@
 
 The `ez.js` library exported as cjs, esm and umd modules.
 
-> **NOTE - Currently working on converting the project to typescript.**
-
 ## Installation
 
 Using npm:
@@ -36,6 +34,6 @@ import ezjs from "@bhairesh/ez.js";
 
 ## Links
 
-[Documentation](https://github.com/bhaireshm/ez.js/blob/master/DOCUMENTATION.md)
+[Documentation](https://bhaireshm.github.io/ez.js/)
 
 [Contribution](https://github.com/bhaireshm/ez.js/blob/master/CONTRIBUTION.md)
