@@ -1,8 +1,3 @@
-## v1.0.0 (11-30-2023, 11:18:21)
-
-### 📃 Commits
-- [376bf43](https://github.com/bhaireshm/ez.js/commit/376bf4344fa603750fdeb6424c3f99c9dd42aba1) docs: modified.
-
 ## v1.0.0-rc.1 (11-30-2023, 6:34:41)
 
 ### ✨ Features
