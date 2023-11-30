@@ -4,7 +4,7 @@
  * @param {string} str - The input string without any spaces.
  * @returns {string} The reversed version of the input string.
  */
-function reverseStr(str) {
+function reverseStr(str: string): string {
   return str.split("").reverse().join("");
 }
 
@@ -14,7 +14,7 @@ function reverseStr(str) {
  * @param {string} sentence - The sentence to be reversed.
  * @returns {string} The reversed sentence where each word is reversed.
  */
-function reverseEachWordInSentence(sentence) {
+function reverseEachWordInSentence(sentence: string): string {
   return sentence.split(" ").map(reverseStr).join(" ");
 }
 
@@ -24,8 +24,9 @@ function reverseEachWordInSentence(sentence) {
  * @param {string} sentence - The sentence to be reversed.
  * @returns {string} The reversed sentence.
  */
-function reverseSentence(sentence) {
+function reverseSentence(sentence: string): string {
   return sentence.split(" ").reverse().join(" ");
 }
 
-export { reverseStr, reverseEachWordInSentence, reverseSentence };
+export { reverseEachWordInSentence, reverseSentence, reverseStr };
+
