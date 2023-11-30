@@ -27,7 +27,7 @@ export { default as objectToQueryParams } from "./objectToQueryParams";
 export { default as printPretty } from "./printPretty";
 // export { default as removeEmptyProperty } from "./removeEmptyProperty";
 export { reverseEachWordInSentence, reverseSentence, reverseStr } from "./reverseStr";
-// export { default as shortenString } from "./shortenString";
+export { default as shortenString } from "./shortenString";
 // export { default as sortObjectByKey } from "./sortObjectByKey";
 // export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys";
 // export { default as toPascalCase } from "./toPascalCase";
