@@ -6,7 +6,7 @@ export { default as checkObject } from "./checkObject";
 export { default as compareObjects } from "./compareObjects";
 export { strToNum, toNumber } from "./convert";
 export { default as currencyFormatter } from "./currencyFormatter";
-// export { default as dataFormatter } from "./dataFormatter";
+export { default as dataFormatter } from "./dataFormatter";
 export { default as dateDiff } from "./dateDiff";
 export { default as generateRandomString } from "./generateRandomString";
 export { default as getDates } from "./getDates";
