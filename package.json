@@ -1,6 +1,6 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "description": "Helper and utility functions.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.js",
@@ -14,7 +14,7 @@
     "test": "jest --runInBand",
     "test:watch": "jest --watch --runInBand",
     "prepare:husky": "npx husky install",
-    "prepublishOnly": "pnpm build && pnpm test && pnpm docs",
+    "prepublishOnly": "pnpm build && pnpm test",
     "eslint": "eslint *.js src/**/*.js",
     "eslint:fix": "eslint --fix *.js src/**/*.js",
     "prettier": "prettier --check .",
