@@ -1,3 +1,122 @@
+## v1.0.0-rc.1 (11-30-2023, 6:34:41)
+
+### ✨ Features
+- [e51ec74](https://github.com/bhaireshm/ez.js/commit/e51ec74c32397ded01375dbcb6cc2a59cb19b585) feat: migrate to typescript, basic configurations.
+
+### 📃 Commits
+- [63075a3](https://github.com/bhaireshm/ez.js/commit/63075a3e476c550c22159c8883a82225b79b8422) types: AnyObject added to required files.
+docs: configuration changed to typedoc.
+- [a46dbd1](https://github.com/bhaireshm/ez.js/commit/a46dbd133aa7ee8c3ef251cc87a2f64f6102e0a8) config: lint-staged, pre-commit updated.
+- [f67d3aa](https://github.com/bhaireshm/ez.js/commit/f67d3aa539f090ba280a79f32aaf3520d4582724) update: dataFormatter.
+  - converted to typescript.
+  - test cases added.
+- [95b180c](https://github.com/bhaireshm/ez.js/commit/95b180caa578846239072bee231218f539b9f749) types: getNestedValue updated.
+- [405b459](https://github.com/bhaireshm/ez.js/commit/405b45919097eb8055d2761399d39b5016769a2d) update: removeEmptyProperty.
+  - converted to typescript.
+  - test cases added.
+- [de65a3b](https://github.com/bhaireshm/ez.js/commit/de65a3b746320e7799952cf083698f62b78138d9) update: sortObjectByMultipleKeys.
+  - converted to typescript.
+  - test cases added.
+- [f30b135](https://github.com/bhaireshm/ez.js/commit/f30b135a81451e0006beb9f7841e7a4475c6eb57) update: sortObjectByKey.
+  - converted to typescript.
+  - test cases added.
+- [12d1ab6](https://github.com/bhaireshm/ez.js/commit/12d1ab696627193a07d850b7499e67acadce79d0) update: toPascalCase.
+  - converted to typescript.
+  - test cases added.
+- [90df8fb](https://github.com/bhaireshm/ez.js/commit/90df8fbc9d1c769db2d682aee2fbadc731689802) update: shuffleString.
+  - converted to typescript.
+  - test cases added.
+- [22cabf7](https://github.com/bhaireshm/ez.js/commit/22cabf74bb2a0fed6e7990cc2e93cf8ef8987779) update: shortenString.
+  - converted to typescript.
+  - test cases added.
+- [6e90f54](https://github.com/bhaireshm/ez.js/commit/6e90f541fdb75371a77daa954476d207b3e8e2d2) update: reverseStr.
+  - converted to typescript.
+  - test cases added.
+- [070d2a4](https://github.com/bhaireshm/ez.js/commit/070d2a4086448f10f4f6abe3e8454f7dd8de0355) update: printPretty.
+  - converted to typescript.
+  - test cases added.
+- [d78638f](https://github.com/bhaireshm/ez.js/commit/d78638f2867a4734fb5653928cf391292e018a24) update: objectToQueryParams.
+  - converted to typescript.
+  - test cases added.
+- [dce68f0](https://github.com/bhaireshm/ez.js/commit/dce68f004de2463cbfdf09897829e87d23280e1d) config: jest updated.
+- [a882687](https://github.com/bhaireshm/ez.js/commit/a882687df71958b348a0d025166e3005f2fdf329) update: getUniqueArray.
+  - converted to typescript.
+  - test cases added.
+- [df22e1d](https://github.com/bhaireshm/ez.js/commit/df22e1d8e7305cce2352807a1611202b30818a6e) update: constant patterns added.
+- [3062742](https://github.com/bhaireshm/ez.js/commit/3062742345cdc1b59e7e8ddb8464c6fd9db7e4f9) update: getDiffInHrs.
+  - converted to typescript.
+  - test cases added.
+- [2d4c28e](https://github.com/bhaireshm/ez.js/commit/2d4c28ec02a16324a4e4a1e7a49f40e4ce42f092) update: getDates.
+  - converted to typescript.
+  - test cases added.
+- [05fc23c](https://github.com/bhaireshm/ez.js/commit/05fc23cdee2179347aa381358ceced9415960bcd) update: isURLValid.
+  - converted to typescript.
+  - test cases added.
+- [d17579f](https://github.com/bhaireshm/ez.js/commit/d17579f9a262e614931ad9c2c6fd16b64ec41f9e) update: modifyArray.
+  - converted to typescript.
+  - test cases added.
+- [9cce68a](https://github.com/bhaireshm/ez.js/commit/9cce68afd74b489527a8cdc1e53e2c3aadfdb0f6) update: uniqueArrayOfObjects.
+  - converted to typescript.
+  - test cases added.
+- [2fc3df6](https://github.com/bhaireshm/ez.js/commit/2fc3df6c50a7ffec6190d2e7a64840a42aade7d4) update: generateRandomString.
+  - converted to typescript.
+  - test cases added.
+- [bfa927f](https://github.com/bhaireshm/ez.js/commit/bfa927f30a7eb498119631139075dd3bf5d6e44c) update: currencyFormatter.
+  - converted to typescript.
+  - test cases added.
+- [d7cad57](https://github.com/bhaireshm/ez.js/commit/d7cad5772e09a579a15cfb5a7885b3752c80d40c) config: jest updated.
+- [af8f166](https://github.com/bhaireshm/ez.js/commit/af8f16689d3630cb58a786a35384f0d4bccd2030) update: isStr, isNum, isObj, dateDiff.
+  - converted to typescript.
+  - test cases added.
+  - compareObjects, isStrHasSpecialChar.test, convert change type checks to respected methods.
+- [db254f9](https://github.com/bhaireshm/ez.js/commit/db254f9558bd327373939625a997a36d6ddc4789) update: isStr, isStrHasSpecialChar.
+  - converted to typescript.
+  - test cases added.
+- [b32858e](https://github.com/bhaireshm/ez.js/commit/b32858e1e42527716e7e352af214a37400618131) chore: todolist added
+- [7f8d0d6](https://github.com/bhaireshm/ez.js/commit/7f8d0d622fb5620e963df6028e884f3f10b3359f) chore: pre-commit command updated.
+chore: script updted.
+- [0feab4c](https://github.com/bhaireshm/ez.js/commit/0feab4c33a823ee1512a3755c70b476fda79ccae) update: mergeObjects.
+  - converted to typescript.
+  - test cases added.
+- [049c42f](https://github.com/bhaireshm/ez.js/commit/049c42f6f4b9508b7431e0c968448a7c029dd152) fix: isEmpty checks.
+- [2483935](https://github.com/bhaireshm/ez.js/commit/248393593ee687770cf4cadc589ded3287360120) update: hasOwnProperty.
+  - changed the logic.
+  - test cases added.
+- [91e63f0](https://github.com/bhaireshm/ez.js/commit/91e63f0078bd9c7efc7fe2a2bda250d48ceb084f) config: jsDoc to typeDoc.
+- [0ddaf97](https://github.com/bhaireshm/ez.js/commit/0ddaf97a4c7a991b382f9b823f7efaf2803979a4) update: add2Matrix ts conversion.
+- [f910ed6](https://github.com/bhaireshm/ez.js/commit/f910ed6dbea1e55ef9bf8ec3a71c5bd5a28b6b8a) chore: version check pattern updated in release script.
+- [d94cc78](https://github.com/bhaireshm/ez.js/commit/d94cc784567e9bf04a92db28aece9a258bae05bd) chore: dataFormatter todo list added.
+chore: sortObjectByKey var rename.
+- [dc7b4e7](https://github.com/bhaireshm/ez.js/commit/dc7b4e7eda343d09679ab58e6f234d32dd39993a) update: convert.
+  - converted to typescript.
+  - test cases added.
+- [038b54b](https://github.com/bhaireshm/ez.js/commit/038b54b3ecd5413f157c722945bb6fb0fc3aacfd) config: tscnofig, package.json updated.
+  - exports updated.
+- [e40ad85](https://github.com/bhaireshm/ez.js/commit/e40ad857ba50ccf873ce107e0246a313fdf60a82) config: tscnofig, package.json updated.
+  - exports updated.
+- [02e4f96](https://github.com/bhaireshm/ez.js/commit/02e4f9689cb77b10838fde4b41e137163ae0a518) update: compareObject.
+  - converted to typescript.
+  - test cases added.
+- [24bbb0f](https://github.com/bhaireshm/ez.js/commit/24bbb0fa5aa62a27a9d989a7f4def9ca58398aa3) update: isEmpty.
+  - converted to typescript.
+  - test cases added.
+- [5cb3ad2](https://github.com/bhaireshm/ez.js/commit/5cb3ad204a686efdb826e581340a1baa0689f2a7) update: checkObject.
+  - object check changes.
+  - converted to typescript.
+  - test cases added.
+- [50e2d88](https://github.com/bhaireshm/ez.js/commit/50e2d8876f11125d915a4112a6b5b12bd9efdff9) update: getNestedValue.
+  - using own methods for checks.
+  - converted to typescript.
+  - test cases added.
+- [f422ee0](https://github.com/bhaireshm/ez.js/commit/f422ee0762ac82c3a04d122442d1af4cbda7a1ca) update: camelCase.
+  - converted to typescript.
+  - test cases added.
+- [85e6d94](https://github.com/bhaireshm/ez.js/commit/85e6d940e6782bec6b539b83c1ab127299abd929) update: tsc and test cases.
+  - arrayIntoChunks.
+  - config changes.
+- [e4194a1](https://github.com/bhaireshm/ez.js/commit/e4194a1d76b5a1ada9eddf3e27645946f6d8b412) update: some functions converted to ts.
+- [7ad8804](https://github.com/bhaireshm/ez.js/commit/7ad8804c3648c9490680c1385aae85d9a23f3015) CONTRIBUTION.md updated.
+
 ## v0.0.23 (10-27-2023, 6:22:09)
 
 ### 📃 Commits
