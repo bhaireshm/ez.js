@@ -8,7 +8,6 @@ const jestConfig: JestConfigWithTsJest = {
   rootDir: "./src/tests",
   cache: false,
   clearMocks: true,
-  // detectLeaks: true,
 };
 
 export default jestConfig;
