@@ -5,7 +5,7 @@ export { default as arrayIntoChunks } from "./arrayIntoChunks";
 export { default as camelCase } from "./camelCase";
 export { default as checkObject } from "./checkObject";
 export { default as compareObjects } from "./compareObjects";
-// export { strToNum, toNumber } from "./convert";
+export { strToNum, toNumber } from "./convert";
 export { default as currencyFormatter } from "./currencyFormatter";
 // export { default as dataFormatter } from "./dataFormatter";
 export { default as dateDiff } from "./dateDiff";
@@ -30,6 +30,6 @@ export { reverseEachWordInSentence, reverseSentence, reverseStr } from "./revers
 export { default as shortenString } from "./shortenString";
 export { default as shuffleString } from "./shuffleString";
 export { default as sortObjectByKey } from "./sortObjectByKey";
-// export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys";
+export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys";
 export { default as toPascalCase } from "./toPascalCase";
 export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects";

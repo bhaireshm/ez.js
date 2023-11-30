@@ -1,9 +1,11 @@
+type SortableObj = Record<string, any>;
+
 /**
  * Sorts an array of objects based on multiple keys.
  *
- * @param {Object[]} arr - The array of objects to be sorted.
- * @param {String[]} keys - The keys to sort the objects. Prefix a key with a hyphen (-) to sort in descending order.
- * @returns {Object[]} The sorted array of objects.
+ * @param arr - The array of objects to be sorted.
+ * @param keys - The keys to sort the objects. Prefix a key with a hyphen (-) to sort in descending order.
+ * @returns The sorted array of objects.
  *
  * @example
  * const object = [
@@ -20,7 +22,10 @@
  * //   { name: 'John', date: '2021-01-01' }
  * // ]
  */
-function sortObjectByMultipleKeys(arr = [], keys = []) {
+export default function sortObjectByMultipleKeys(
+  arr: SortableObj[] = [],
+  keys: string[] = [],
+): SortableObj[] {
   return arr.sort((a, b) => {
     return keys
       .map((o) => {
@@ -36,5 +41,3 @@ function sortObjectByMultipleKeys(arr = [], keys = []) {
       .reduce((p, n) => (p ? p : n), 0);
   });
 }
-
-module.exports = sortObjectByMultipleKeys;
