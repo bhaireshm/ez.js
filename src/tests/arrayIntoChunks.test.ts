@@ -53,7 +53,7 @@ describe("arrayIntoChunks", () => {
   test("returns single-element arrays for chunk size 1", () => {
     const inputArray = ["a", "b", "c"];
     const chunkSize = 1;
-    const result = arrayIntoChunks<String>(inputArray, chunkSize);
+    const result = arrayIntoChunks<string>(inputArray, chunkSize);
     expect(result).toEqual([["a"], ["b"], ["c"]]);
   });
 

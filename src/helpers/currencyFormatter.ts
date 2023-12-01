@@ -18,7 +18,7 @@ export default function currencyFormatter(val: number, options: NumberFormatOpti
     currency: "INR",
     style: "currency",
     maximumFractionDigits: 2,
-    locales: options?.locales || "en-IN",
+    locales: options?.locales ?? "en-IN",
     ...options,
   };
   return new Intl.NumberFormat(options.locales, options).format(val);

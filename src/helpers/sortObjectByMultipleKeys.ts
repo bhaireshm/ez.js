@@ -38,6 +38,6 @@ export default function sortObjectByMultipleKeys(
         if (a[o] < b[o]) return -dir;
         return 0;
       })
-      .reduce((p, n) => (p ? p : n), 0);
+      .reduce((p, n) => p || n, 0);
   });
 }
