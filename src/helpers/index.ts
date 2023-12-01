@@ -3,7 +3,6 @@ export * from "../types";
 
 // Helper functions
 export { default as arrayIntoChunks } from "./arrayIntoChunks";
-export { default as camelCase } from "./camelCase";
 export { default as checkObject } from "./checkObject";
 export { default as compareObjects } from "./compareObjects";
 export { strToNum, toNumber } from "./convert";
@@ -25,6 +24,7 @@ export { default as isURLValid } from "./isURLValid";
 export { default as mergeObjects } from "./mergeObjects";
 export { default as modifyArray } from "./modifyArray";
 export { default as objectToQueryParams } from "./objectToQueryParams";
+export { default as toPascalCase } from "./toPascalCase";
 export { default as printPretty } from "./printPretty";
 export { default as removeEmptyProperty } from "./removeEmptyProperty";
 export { reverseEachWordInSentence, reverseSentence, reverseStr } from "./reverseStr";
@@ -32,5 +32,5 @@ export { default as shortenString } from "./shortenString";
 export { default as shuffleString } from "./shuffleString";
 export { default as sortObjectByKey } from "./sortObjectByKey";
 export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys";
-export { default as pascalCase } from "./pascalCase";
+export { default as toCamelCase } from "./toCamelCase";
 export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects";

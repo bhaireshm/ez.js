@@ -4,7 +4,7 @@
  * @param removeSpecialChars - If set to true, any special characters in the string will be removed before conversion.
  * @returns The input string converted to PascalCase format.
  */
-export default function pascalCase(str: string, removeSpecialChars: boolean = false): string {
+export default function toPascalCase(str: string, removeSpecialChars: boolean = false): string {
   // Handle empty string
   if (!str.trim()) return str;
 
