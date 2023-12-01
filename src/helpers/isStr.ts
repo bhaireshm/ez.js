@@ -12,5 +12,5 @@ import isEmpty from "./isEmpty";
  * const result3 = isStr(true); // false
  */
 export default function isStr(str: any): boolean {
-  return !isEmpty(str) && str.__proto__.constructor.name === "String";
+  return !isEmpty(str) && Object.prototype.toString.call(str) === "[object String]";
 }

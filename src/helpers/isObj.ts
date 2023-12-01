@@ -14,5 +14,5 @@ import isEmpty from "./isEmpty";
  * console.log(result); // true
  */
 export default function isObj(obj: any): boolean {
-  return !isEmpty(obj) && obj.__proto__.constructor.name === "Object";
+  return !isEmpty(obj) && Object.prototype.toString.call(obj) === "[object Object]";
 }
