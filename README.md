@@ -6,21 +6,23 @@
 <img alt="total-downloads" src="https://img.shields.io/npm/dt/%40bhairesh/ez.js?color=blue">
 </div>
 
-The `ez.js` library exported as cjs, esm and umd modules.
+**ez.js** is more than just a library; it's a coding companion that simplifies complex tasks. Whether you're dealing with arrays, numbers, objects, or strings, **ez.js** has got your back! Say goodbye to coding hassles and hello to streamlined JavaScript magic. 💻✨
 
-## Installation
+🔗 **Key Details:**
 
-Using npm:
+- 📦 Explore ez.js on npm: [ez.js on npm](https://www.npmjs.com/package/@bhairesh/ez.js)
 
-```shell
+- 🛠️ Easy installation with npm:
+
+```bash
 npm i -g @bhairesh/ez.js
-npm i @bhairesh/ez.js
 ```
 
-Imports:
+- 🔄 Seamless imports:
 
-```js
+```javascript
 // Load the package.
+
 const ezjs = require("@bhairesh/ez.js");
 
 // or
@@ -28,12 +30,16 @@ const ezjs = require("@bhairesh/ez.js");
 import ezjs from "@bhairesh/ez.js";
 ```
 
-## Why ez.js?
+💡 **Why Choose ez.js?**
 
-`ez.js` makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects, strings, etc.
+- Effortlessly handle JavaScript intricacies.
 
-## Links
+- Boost productivity with simplified coding.
 
-[Documentation](https://bhaireshm.github.io/ez.js/)
+- Enjoy a versatile library for arrays, numbers, objects, strings, and more!
 
-[Contribution](https://github.com/bhaireshm/ez.js/blob/master/CONTRIBUTION.md)
+📚 **Learn More:**
+
+- 📘 Dive into the documentation: [Documentation](https://bhaireshm.github.io/ez.js/)
+
+- 🤝 Ready to contribute? Check out our guidelines: [Contribution Guidelines](https://github.com/bhaireshm/ez.js/blob/master/CONTRIBUTION.md)
