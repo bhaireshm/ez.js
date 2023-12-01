@@ -2,5 +2,9 @@
   "liveServer.settings.port": 5501,
   "prettier.useEditorConfig": true,
   "prettier.ignorePath": ".prettierignore",
-  "prettier.configPath": ".prettierrc"
+  "prettier.configPath": ".prettierrc",
+  "sonarlint.connectedMode.project": {
+    "connectionId": "PersonalToken",
+    "projectKey": "bhaireshm_ez.js"
+  }
 }
