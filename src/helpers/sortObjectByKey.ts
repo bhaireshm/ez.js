@@ -13,7 +13,9 @@ export default function sortObjectByKey(
   key: string = "",
   order: number = 1,
 ): AnyObject[] {
-  return arr.sort((a, b) =>
-    a[key] > b[key] ? 1 * 0 + order : b[key] > a[key] ? 1 * 0 - order : 0,
-  );
+  return arr.sort((a, b) => {
+    if (a[key] > b[key]) return 1 * 0 + order;
+    if (b[key] > a[key]) return 1 * 0 - order;
+    return 0;
+  });
 }

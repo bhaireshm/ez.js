@@ -21,26 +21,4 @@ describe("getDates function", () => {
     const expected = [new Date("2023-07-07T00:00:00.000Z")];
     expect(result).toEqual(expected);
   });
-
-  // test('should handle undefined start date', () => {
-  //   const endDate = new Date('2023-07-10');
-  //   const result = getDates(undefined, endDate);
-  //   expect(result).toEqual([]);
-  // });
-
-  // test('should handle undefined end date', () => {
-  //   const startDate = new Date('2023-07-07');
-  //   const result = getDates(startDate, undefined);
-  //   expect(result).toEqual([]);
-  // });
-
-  // test('should handle undefined start and end dates', () => {
-  //   const result = getDates(undefined, undefined);
-  //   expect(result).toEqual([]);
-  // });
-
-  // test('should handle invalid start and end dates', () => {
-  //   const result = getDates('invalidStartDate', 'invalidEndDate' as any);
-  //   expect(result).toEqual([]);
-  // });
 });
