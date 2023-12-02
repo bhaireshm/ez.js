@@ -58,9 +58,10 @@ describe("mergeObjects function", () => {
   });
 
   test("should handle objects with non-plain object properties", () => {
-    const obj1 = { a: new Date() };
+    const date = new Date();
+    const obj1 = { a: date };
     const obj2 = { b: [1, 2, 3] };
     const result = mergeObjects(obj1, obj2);
-    expect(result).toEqual({ a: new Date(), b: [1, 2, 3] });
+    expect(result).toEqual({ a: date, b: [1, 2, 3] });
   });
 });
