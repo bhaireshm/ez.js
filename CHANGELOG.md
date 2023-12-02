@@ -1,3 +1,17 @@
+## v1.1.0 (12-2-2023, 10:38:04)
+
+### 📃 Commits
+- [3e292bf](https://github.com/bhaireshm/ez.js/commit/3e292bffaabddd201eb42755961069efe0d83ede) chore: case method rename.
+- [a7b4936](https://github.com/bhaireshm/ez.js/commit/a7b4936315b43c66889074f82826c12252fed76d) chore: case method rename.
+- [c148f69](https://github.com/bhaireshm/ez.js/commit/c148f69d3bd6f94d31892c01b9201e69d0d9f362) update: toPascalCase -> pascalCase
+- [84c6644](https://github.com/bhaireshm/ez.js/commit/84c66440209f25feb80747ea0eaa3332912c2c7b) fix: sonarlint-severity-low
+- [af2f7c5](https://github.com/bhaireshm/ez.js/commit/af2f7c544aff78e295750b4a393adfa1d8a27fc5) fix: sonarlint-severity-medium
+- [b2d7396](https://github.com/bhaireshm/ez.js/commit/b2d73968e4b7c318583b7fb5b5ddf4e28983cb4b) configs: sonar-cloud properties updated.
+- [cf73d20](https://github.com/bhaireshm/ez.js/commit/cf73d2080dc387cda0d78da0762ff97cca416fde) configs: sonar-cloud properties file added.
+- [bd4bec8](https://github.com/bhaireshm/ez.js/commit/bd4bec83dfa2ed24cd7d3416ce45ca7520fe934c) docs: README.md updated.
+- [a1140a9](https://github.com/bhaireshm/ez.js/commit/a1140a9699e252e4948e6367cf97ed10fde144a4) docs: README.md updated.
+- [376bf43](https://github.com/bhaireshm/ez.js/commit/376bf4344fa603750fdeb6424c3f99c9dd42aba1) docs: modified.
+
 ## v1.0.0-rc.1 (11-30-2023, 6:34:41)
 
 ### ✨ Features
