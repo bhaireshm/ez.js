@@ -1,3 +1,9 @@
+## v1.1.1 (12-3-2023, 7:27:24)
+
+### 📃 Commits
+- [b80bb5b](https://github.com/bhaireshm/ez.js/commit/b80bb5b135dbd20b47d83110d1c61c0379723ca6) config: tsconfig reverted to v1.0.0-rc.1
+- [205ca83](https://github.com/bhaireshm/ez.js/commit/205ca838c070c98a6e7eebfc33790851a561d07b) chore: unicode file added.
+
 ## v1.1.0 (12-2-2023, 10:38:04)
 
 ### 📃 Commits
