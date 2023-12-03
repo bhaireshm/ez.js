@@ -12,5 +12,5 @@ import isEmpty from "./isEmpty";
  * const result3 = isNum("abc"); // false
  */
 export default function isNum(n: any): boolean {
-  return !isEmpty(n) && n.__proto__.constructor.name === "Number";
+  return !isEmpty(n) && Object.prototype.toString.call(n) === "[object Number]";
 }
