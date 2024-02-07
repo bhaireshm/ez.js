@@ -1,10 +1,8 @@
-import { SPECIAL_CHARACTERS } from "../constants/regExpPatterns";
-
 /**
  * Checks the special characters in the provided string.
  *
- * @param {string} str - The input string to check for special characters.
- * @param {string} pattern - The pattern of special characters to check against. Default value is "<>@!#$%^&*()_+[]{}?:;\\|'\"\\,./~`-=".
+ * @param str - The input string to check for special characters.
+ * @param pattern - string | RegExp can be passed. The pattern of special characters to check against. Default value is "<>@!#$%^&*()_+[]{}?:;\\|'\"\\,./~`-=".
  * @returns {boolean} - Returns true if the `str` contains at least one special character from the `pattern`, false otherwise.
  *
  * @example
@@ -12,7 +10,10 @@ import { SPECIAL_CHARACTERS } from "../constants/regExpPatterns";
  */
 export default function isStrHasSpecialChar(
   str: string,
-  pattern: string = SPECIAL_CHARACTERS,
+  pattern = "<>@!#$%^&*()_+[]{}?:;\\|'\"\\,./~`-="
+  ,
 ): boolean {
-  return pattern.split("").some((s) => str.includes(s));
+  // if (isNum(pattern) || isObj(pattern)) return false;
+  // if (isRegExp(pattern)) pattern = pattern?.source;
+  return pattern.split("").some((s: string) => str.includes(s));
 }

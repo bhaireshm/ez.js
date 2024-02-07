@@ -1,11 +1,11 @@
-export const SPECIAL_CHARACTERS = "<>@!#$%^&*()_+[]{}?:;\\|'\"\\,./~`-=";
+export const SPECIAL_CHARACTERS = /[!@#%^&*()_+-=[]{}|;':\\",.\/<>?~`]/g;
 
-export const NUMBERS = "[0-9]";
+export const NUMBERS = /[\\d]/g;
 
-export const ALPHABETS = "[a-zA-Z]";
+export const ALPHABETS = /[a-zA-Z]/g;
 
-export const CAPITAL_LETTERS = "[A-Z]";
+export const CAPITAL_LETTERS = /[A-Z]/g;
 
-export const SMALL_LETTERS = "[a-z]";
+export const SMALL_LETTERS = /[a-z]/g;
 
-export const ALPHANUMERIC = "[^a-zA-Z0-9]";
+export const ALPHANUMERIC = /[^a-zA-Z0-9]/g;

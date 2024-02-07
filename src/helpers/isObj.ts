@@ -1,5 +1,3 @@
-import isEmpty from "./isEmpty";
-
 /**
  * Checks if a given input is an object.
  *
@@ -13,6 +11,6 @@ import isEmpty from "./isEmpty";
  * const result = isObj(obj);
  * console.log(result); // true
  */
-export default function isObj(obj: any): boolean {
-  return !isEmpty(obj) && Object.prototype.toString.call(obj) === "[object Object]";
+export default function isObj(obj: unknown): boolean {
+  return typeof obj === 'object' || Object.prototype.toString.call(obj) === "[object Object]";
 }

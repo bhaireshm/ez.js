@@ -3,16 +3,15 @@
   "version": "1.1.1",
   "description": "Helper and utility functions.",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.js",
+  "types": "./dist/index.d.ts",
   "private": false,
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "build": "rm -rf dist && tsc --build",
     "watch": "tsc --build --watch",
     "clean": "tsc --build --clean",
     "dev": "nodemon ./src/tests/index.ts",
     "test": "jest --runInBand",
-    "test:watch": "jest --watch --runInBand",
+    "test:w": "jest --watch --runInBand",
     "prepare:husky": "npx husky install",
     "prepublishOnly": "pnpm build && pnpm test",
     "eslint": "eslint *.js src/**/*.js",
@@ -21,7 +20,7 @@
     "prettier:fix": "prettier  --write .",
     "lint-staged": "lint-staged",
     "release": "sh ./src/scripts/release.sh",
-    "docs:ts": "typedoc "
+    "docs:ts": "typedoc"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
   "repository": {
@@ -34,7 +33,9 @@
   ],
   "keywords": [
     "javascript",
-    "utils"
+    "utils",
+    "ez.js",
+    "bhaireshm"
   ],
   "devDependencies": {
     "@types/jest": "^29.5.8",
@@ -49,5 +50,6 @@
     "ts-node": "^10.9.1",
     "typedoc": "^0.25.4",
     "typescript": "^5.2.2"
-  }
+  },
+  "packageManager": "pnpm@8.15.1"
 }

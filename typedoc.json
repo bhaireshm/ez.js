@@ -7,6 +7,6 @@
   "githubPages": true,
   "name": "@bhairesh/ez.js",
   "out": "docs",
-  "sort": ["kind", "instance-first", "source-order"],
+  "sort": ["alphabetical"],
   "tsconfig": "./tsconfig.json"
 }
