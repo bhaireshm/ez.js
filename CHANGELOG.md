@@ -1,3 +1,9 @@
+## v1.2.0 (2-7-2024, 11:56:30)
+
+### 📃 Commits
+- [a5dfbbe](https://github.com/bhaireshm/ez.js/commit/a5dfbbed316265526efcb745d188c59dd9f88b6a) fix: sonar-lint.
+  - The '__proto__' property is deprecated.
+
 ## v1.1.1 (12-3-2023, 7:27:24)
 
 ### 📃 Commits
