@@ -6,11 +6,9 @@
  * // Returns 'HelloWorld'
  * titleCase('hello world');
  *
- * @example
  * // Returns 'Hello-world'
  * titleCase('hello-world');
  *
- * @example
  * // Returns 'HelloWorld'
  * titleCase('  hello world  ');
  */
