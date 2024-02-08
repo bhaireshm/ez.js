@@ -1,3 +1,17 @@
+## v1.2.3 (2-8-2024, 8:25:41)
+
+### ✨ Features
+- [4fd96f8](https://github.com/bhaireshm/ez.js/commit/4fd96f8634c35189d9b86f5cacdb933dbcafc84b) feat: titleCase.
+  - implemented.
+  - test cases added.
+
+### 📃 Commits
+- [ac416a8](https://github.com/bhaireshm/ez.js/commit/ac416a8c02f497bdcf7446260c02fdf5def5f54d) scripts: release.sh updated.
+- [33f0461](https://github.com/bhaireshm/ez.js/commit/33f0461c785b579455146a57e367693785b395a9) docs: titleCase updated.
+- [900255a](https://github.com/bhaireshm/ez.js/commit/900255a1e4c89615263d1f13d26791ad375e78ec) docs: titleCase updated.
+- [53748d1](https://github.com/bhaireshm/ez.js/commit/53748d1127f06d3c1ffdef0a04e742d74dc23993) docs: Updated documentation
+- [a16f98d](https://github.com/bhaireshm/ez.js/commit/a16f98d0823e8dbe1418d4d91d1b92afa90a5c91) configs: :wrench: sonarcloud.properties updated
+
 ## v1.2.2 (2-8-2024, 1:28:48)
 
 ### 📃 Commits
