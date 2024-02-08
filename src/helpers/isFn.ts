@@ -12,5 +12,5 @@
  * console.log(isFn(obj));  // false
  */
 export default function isFn(instance: unknown): boolean {
-  return typeof instance === "function";
+  return instance != null && typeof instance === "function";
 }

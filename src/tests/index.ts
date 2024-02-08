@@ -1,4 +1,4 @@
-import { removeEmptyProperty, isClass, isEmpty, } from "../helpers";
+import { removeEmptyProperty } from "../helpers";
 
 const inputObject = {
   id: [],
@@ -24,9 +24,3 @@ const inputObject = {
 
 const result = removeEmptyProperty(inputObject);
 console.log("result", result);
-
-function a(b?: string) {
-  // if (!isEmpty(b)) return b.replace("/", "")
-}
-
-console.log('isClass(null)', isClass(null))
