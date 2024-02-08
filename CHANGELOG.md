@@ -1,3 +1,13 @@
+## v1.2.1 (2-8-2024, 10:11:06)
+
+### 📃 Commits
+- [895b53b](https://github.com/bhaireshm/ez.js/commit/895b53b8e973fd99c5d607941a2898c902cef1f7) script: pre-commit hook.
+- [ddafcc0](https://github.com/bhaireshm/ez.js/commit/ddafcc0a5a972c3612e31fbaaec09b8121a69bd3) update: listed below.
+  - isArray, isBool, isFn, isNull, isNum, isRegExp new functions added.
+  - isStr, isObj modified.
+  - docs updated.
+- [0db6de3](https://github.com/bhaireshm/ez.js/commit/0db6de3b5f687627856fc386eb837bd976f4c112) update: __proto__ to prototype check.
+
 ## v1.2.0 (2-7-2024, 11:56:30)
 
 ### 📃 Commits

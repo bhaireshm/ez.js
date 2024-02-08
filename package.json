@@ -1,6 +1,6 @@
 {
   "name": "@bhairesh/ez.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Helper and utility functions.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
