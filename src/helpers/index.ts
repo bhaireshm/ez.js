@@ -37,6 +37,7 @@ export { default as shortenString } from "./shortenString";
 export { default as shuffleString } from "./shuffleString";
 export { default as sortObjectByKey } from "./sortObjectByKey";
 export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys";
+export { default as titleCase } from "./titleCase";
 export { default as toCamelCase } from "./toCamelCase";
 export { default as toPascalCase } from "./toPascalCase";
 export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects";
