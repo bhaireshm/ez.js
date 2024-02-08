@@ -22,7 +22,7 @@
     "lint-staged": "lint-staged",
     "release": "sh ./src/scripts/release.sh",
     "update:branches": "sh ./src/scripts/update-all-branchs-to-default.sh",
-    "docs:ts": "typedoc"
+    "docs:ts": "sh ./src/scripts/generate-docs.sh"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
   "repository": {
