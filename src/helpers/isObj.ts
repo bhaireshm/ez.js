@@ -12,5 +12,5 @@
  * console.log(result); // true
  */
 export default function isObj(obj: unknown): boolean {
-  return typeof obj === 'object' || Object.prototype.toString.call(obj) === "[object Object]";
+  return obj != null && (typeof obj === 'object' || typeof obj === "function" || Object.prototype.toString.call(obj) === "[object Object]");
 }
