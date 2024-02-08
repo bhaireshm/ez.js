@@ -1,3 +1,16 @@
+## v1.2.2 (2-8-2024, 1:28:48)
+
+### 📃 Commits
+- [e31ffe1](https://github.com/bhaireshm/ez.js/commit/e31ffe1f8aceb76fa08a6a1cb02c2bbf406102b0) fix: isFn null check.
+- [e05522a](https://github.com/bhaireshm/ez.js/commit/e05522a83e13a5caf2e253bc8e9726be454173d8) fix: removeEmptyProperty   - array's nested values.
+- [2673531](https://github.com/bhaireshm/ez.js/commit/2673531685dc39df2cf786cc433f037a29b5ee0e) fix: isEmpty updated.
+- [5326a71](https://github.com/bhaireshm/ez.js/commit/5326a71099964d82e9032afe5af6ca4fd9ef2a39) fix: isObj test cases.
+- [c14e89c](https://github.com/bhaireshm/ez.js/commit/c14e89cb6f2dc355af65e2baaa8780493a25363e) script: updated.
+- [ff1bf99](https://github.com/bhaireshm/ez.js/commit/ff1bf996c527bda4590e2f16ab138dbd7f394a12) script: updated.
+- [9609952](https://github.com/bhaireshm/ez.js/commit/9609952ec55242430dec4d3eedd60002005d38c9) script: update branches.
+- [9e2ac52](https://github.com/bhaireshm/ez.js/commit/9e2ac522a599a123413893ce9861c76611c88b26) script: release.sh.
+- [b1a9ce4](https://github.com/bhaireshm/ez.js/commit/b1a9ce455bbe5345324a5cd0c4f020361f26b473) script: release.sh.
+
 ## v1.2.1 (2-8-2024, 10:11:06)
 
 ### 📃 Commits
