@@ -20,6 +20,7 @@
     "prettier:fix": "prettier  --write .",
     "lint-staged": "lint-staged",
     "release": "sh ./src/scripts/release.sh",
+    "update:branches": "sh ./src/scripts/update-all-branchs-to-default.sh",
     "docs:ts": "typedoc"
   },
   "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
