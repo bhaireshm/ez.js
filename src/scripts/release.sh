@@ -33,8 +33,8 @@ if [ $curr_branch -ne $defaultBranch ]; then
   exit 1
 fi
 
-# Update the $defaultBranch branch to the latest
-git checkout $defaultBranch
+# Update documentation
+pnpm docs:ts true
 
 # Create a release branch from $defaultBranch.
 git checkout -b release/$ver
