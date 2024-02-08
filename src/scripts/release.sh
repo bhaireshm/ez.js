@@ -28,6 +28,7 @@ curr_branch=$(git branch --show-current)
 
 if [ $curr_branch -ne $defaultBranch ]; then
   echo "Not in '$defaultBranch' branch, please checkout '$defaultBranch' first, and take all the latest code."
+  echo "Executing git checkin..."
   git push origin $curr_branch
   exit 1
 fi
