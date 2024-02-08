@@ -16,7 +16,7 @@ export default function isEmpty(data: unknown): boolean {
   if (isObj(data)) {
     let count = 0;
     for (const i in data) if (data.hasOwnProperty(i)) count++;
-    return !count;
+    return count === 0;
   }
 
   return !isRegExp(data);

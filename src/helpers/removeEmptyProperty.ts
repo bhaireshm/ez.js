@@ -1,6 +1,5 @@
+import { isEmpty, isObj } from ".";
 import { AnyObject } from "../types";
-import isEmpty from "./isEmpty";
-import isObj from "./isObj";
 
 /**
  * Removes all the keys from an object for which the value is empty.
@@ -9,14 +8,23 @@ import isObj from "./isObj";
  */
 export default function removeEmptyProperty(data: AnyObject = {}) {
   function removeEmptyProperties(obj: any): any {
-    if (Array.isArray(obj))
-      return obj.filter((element) => !isEmpty(removeEmptyProperties(element)));
-    if (isObj(obj)) {
-      const result: any = {};
-      for (const key in obj) if (!isEmpty(obj[key])) result[key] = removeEmptyProperties(obj[key]);
+    let result: any;
+    if (Array.isArray(obj)) {
+      result = [];
+      for (const ele of obj) {
+        const d = removeEmptyProperties(ele);
+        if (!isEmpty(d)) result.push(d);
+      }
       return result;
-    }
-    return obj;
+    } else if (isObj(obj)) {
+      result = {};
+      for (const key in obj) {
+        if (!isEmpty(obj[key])) {
+          result[key] = removeEmptyProperties(obj[key]);
+        }
+      }
+      return isEmpty(result) ? null : result;
+    } else return obj;
   }
 
   // Create a deep copy of the data object
