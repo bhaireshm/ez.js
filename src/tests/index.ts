@@ -1,4 +1,4 @@
-import { removeEmptyProperty } from "../helpers";
+import { isRegExp, removeEmptyProperty } from "../helpers";
 
 const inputObject = {
   id: [],
@@ -22,5 +22,14 @@ const inputObject = {
   ],
 };
 
-const result = removeEmptyProperty(inputObject);
-console.log("result", result);
+function isObj(obj: unknown): boolean {
+  return obj != null && (typeof obj === 'object' || typeof obj === "function" || Object.prototype.toString.call(obj) === "[object Object]");
+}
+
+let a = {};
+
+if (isObj(a)) log(a.b);
+
+function log(n: string) {
+  console.log("result", n);
+}
