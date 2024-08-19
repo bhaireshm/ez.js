@@ -5,7 +5,7 @@
   "excludePrivate": true,
   "excludeProtected": true,
   "githubPages": true,
-  "name": "@bhairesh/ez.js",
+  "name": "ez.js",
   "out": "docs",
   "sort": ["alphabetical"],
   "tsconfig": "./tsconfig.json"

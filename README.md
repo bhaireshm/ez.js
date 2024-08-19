@@ -12,12 +12,12 @@
 
 🔗 **Key Details:**
 
-- 📦 Explore ez.js on npm: [ez.js on npm](https://www.npmjs.com/package/@bhairesh/ez.js)
+- 📦 Explore ez.js on npm: [ez.js on npm](https://www.npmjs.com/package/@bhaireshm/ez.js)
 
 - 🛠️ Easy installation with npm:
 
 ```bash
-npm i -g @bhairesh/ez.js
+npm i -g @bhaireshm/ez.js
 ```
 
 - 🔄 Seamless imports:
@@ -25,11 +25,11 @@ npm i -g @bhairesh/ez.js
 ```javascript
 // Load the package.
 
-const ezjs = require("@bhairesh/ez.js");
+const ezjs = require("@bhaireshm/ez.js");
 
 // or
 
-import ezjs from "@bhairesh/ez.js";
+import ezjs from "@bhaireshm/ez.js";
 ```
 
 💡 **Why Choose ez.js?**
