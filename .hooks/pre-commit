@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
 # Stop the process and return false to
 ctrl_c() {
@@ -15,7 +14,7 @@ echo "Styling, testing and building project before committing..."
 echo
 
 # Prettier check
-pnpm lint-staged
+npm run lint-staged
 OUT=$?
 
 if [ $OUT -eq 0 ]; then
@@ -23,7 +22,7 @@ if [ $OUT -eq 0 ]; then
   echo
 else
   echo "lint-staged check Failed."
-  echo "Run 'pnpm lint-staged', add changes and try commit again."
+  echo "Run 'npm run lint-staged', add changes and try commit again."
   false
 fi
 
@@ -35,7 +34,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   echo $IS_SRC_MODIFIED
   echo
   # Build check
-  pnpm build
+  npm run build
   OUT=$?
 
   if [ $OUT -eq 0 ]; then
@@ -47,7 +46,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   fi
 
   # Test
-  pnpm test
+  npm run test
   OUT=$?
 
   if [ $OUT -eq 0 ]; then
@@ -59,7 +58,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
   fi
 
   # Documents creation
-  pnpm docs:ts
+  npm run docs:ts
   OUT=$?
 
   if [ $OUT -eq 0 ]; then
@@ -70,6 +69,7 @@ if [ ! -z "$IS_SRC_MODIFIED" -a "$IS_SRC_MODIFIED" != " " ]; then
     echo "Document creation failed !!!"
     false
   fi
+
 fi
 
 echo "All checks completed."

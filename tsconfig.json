@@ -20,6 +20,6 @@
     "skipLibCheck": true,
     "types": ["./src/types", "node", "jest"]
   },
-  "include": ["./index.ts", "./package.json"],
+  "include": ["src/index.ts", "./package.json"],
   "exclude": ["node_modules", "dist", "./src/tests/*", "./src/helpers/browser/*"]
 }
