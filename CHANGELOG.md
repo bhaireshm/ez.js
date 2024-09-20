@@ -1,3 +1,11 @@
+## v1.2.5 (9-20-2024, 4:05:22)
+
+### 📃 Commits
+- [1989a01](https://github.com/bhaireshm/ez.js/commit/1989a011b3535d87174bf6197648bacd76e0f348) scripts: husky replaced with custom hooks path.
+- [19e7682](https://github.com/bhaireshm/ez.js/commit/19e7682ce315b4be6067eb57588081400bcb1729) update: sortObjectByKey custom type acceptance.
+- [e182377](https://github.com/bhaireshm/ez.js/commit/e18237756b4628c48a8dd45e7e6f1fa780d15578) docs: mergeObjects docstring updated.
+- [cd28a44](https://github.com/bhaireshm/ez.js/commit/cd28a441937dd66af701a2c8fff2cc5b30686618) chore: package moved to @bhaireshm/ez.js
+
 ## v1.2.3 (2-8-2024, 8:25:41)
 
 ### ✨ Features
