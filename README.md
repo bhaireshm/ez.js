@@ -1,9 +1,9 @@
 # ez.js
 
 <div id="badges">
-<img alt="npm-link" src="https://img.shields.io/npm/v/%40bhairesh%2Fez.js?link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40bhairesh%2Fez.js&color=blue">
-<img alt="npm-package-size" src="https://img.shields.io/bundlephobia/min/%40bhairesh%2Fez.js?label=pkg%20size">
-<img alt="total-downloads" src="https://img.shields.io/npm/dt/%40bhairesh/ez.js?color=blue">
+<img alt="npm-link" src="https://img.shields.io/npm/v/%40bhaireshm%2Fez.js?link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40bhaireshm%2Fez.js&color=blue">
+<img alt="npm-package-size" src="https://img.shields.io/bundlephobia/min/%40bhaireshm%2Fez.js?label=pkg%20size">
+<img alt="total-downloads" src="https://img.shields.io/npm/dt/%40bhaireshm/ez.js?color=blue">
 <img alt="scale-rating" src="https://sonarcloud.io/api/project_badges/measure?project=bhaireshm_ez.js&metric=sqale_rating">
 <img alt="scale-rating" src="https://sonarcloud.io/api/project_badges/measure?project=bhaireshm_ez.js&metric=security_rating">
 </div>
@@ -45,3 +45,5 @@ import ezjs from "@bhaireshm/ez.js";
 - 📘 Dive into the documentation: [Documentation](https://bhaireshm.github.io/ez.js/)
 
 - 🤝 Ready to contribute? Check out our guidelines: [Contribution Guidelines](https://github.com/bhaireshm/ez.js/blob/master/CONTRIBUTION.md)
+
+> Old package - <https://www.npmjs.com/package/@bhairesh/ez.js>
