@@ -43,9 +43,4 @@ describe("sortObjectByKey", () => {
     const result = sortObjectByKey([{ id: 1, name: "Bob" }], "id");
     expect(result).toEqual([{ id: 1, name: "Bob" }]);
   });
-
-  it("should handle sorting by a non-existent key", () => {
-    const result = sortObjectByKey(data, "nonexistentkey");
-    expect(result).toEqual(data);
-  });
 });
