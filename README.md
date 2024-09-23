@@ -6,6 +6,9 @@
 <img alt="total-downloads" src="https://img.shields.io/npm/dt/%40bhaireshm/ez.js?color=blue">
 <img alt="scale-rating" src="https://sonarcloud.io/api/project_badges/measure?project=bhaireshm_ez.js&metric=sqale_rating">
 <img alt="scale-rating" src="https://sonarcloud.io/api/project_badges/measure?project=bhaireshm_ez.js&metric=security_rating">
+
+[![pages-build-deployment](https://github.com/bhaireshm/ez.js/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/bhaireshm/ez.js/actions/workflows/pages/pages-build-deployment)
+
 </div>
 
 **ez.js** is more than just a library; it's a coding companion that simplifies complex tasks. Whether you're dealing with arrays, numbers, objects, or strings, **ez.js** has got your back! Say goodbye to coding hassles and hello to streamlined JavaScript magic. 💻✨
