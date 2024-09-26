@@ -1,3 +1,13 @@
+## v1.2.6 (9-26-2024, 4:12:57)
+
+### 📃 Commits
+- [45e8cf9](https://github.com/bhaireshm/ez.js/commit/45e8cf927836cc567cfc20d0b1bcd86aa0cd06a0) update: arrayIntoChunks refactor.
+  - odd length input check and decimal value check.
+  - mergeObjects docstring update.
+- [03c6626](https://github.com/bhaireshm/ez.js/commit/03c66264db2632a52edc13970b8c8a769f9ba482) docs: documentation updated.
+- [a9252fc](https://github.com/bhaireshm/ez.js/commit/a9252fc6b3f220c398a959bc880a603512c4790d) docs: README.md updated.
+- [b0af41d](https://github.com/bhaireshm/ez.js/commit/b0af41d8d78093a26e1d03ad64f907de289e1ec3) docs: README.md updated
+
 ## v1.2.5 (9-20-2024, 4:05:22)
 
 ### 📃 Commits
