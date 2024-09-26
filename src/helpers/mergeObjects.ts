@@ -4,6 +4,7 @@ import isObj from "./isObj";
 
 /**
  * Uses deep merge way to merge objects.
+ * Source will be merged with target.
  *
  * @param {object} source - The first object to be merged.
  * @param {object} target - The second object to be merged.
@@ -47,4 +48,3 @@ export default function mergeObjects(source: AnyObject, target: AnyObject): AnyO
 
   return t;
 }
-

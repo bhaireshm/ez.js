@@ -12,6 +12,13 @@ describe("arrayIntoChunks", () => {
     ]);
   });
 
+  test("splits array into chunks of size 2 for odd number of elements", () => {
+    const inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const chunkSize = 2;
+    const result = arrayIntoChunks(inputArray, chunkSize);
+    expect(result).toEqual([[1, 2], [3, 4], [5, 6], [7, 8], [9]]);
+  });
+
   test("splits array into chunks of size 3", () => {
     const inputArray = ["a", "b", "c", "d", "e", "f"];
     const chunkSize = 3;

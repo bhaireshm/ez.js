@@ -10,7 +10,18 @@
  * Splits an array into subarrays of length 'n'.
  */
 export default function arrayIntoChunks<T>(arr: T[], n: number): T[][] {
-  if (!arr.length || n <= 0 || n > arr.length) return [];
-  n = Math.floor(n);
-  return [arr.slice(0, n)].concat(arrayIntoChunks(arr.slice(n), n));
+  if (!arr.length || n <= 0) return [];
+
+  const out = [];
+  let j = 0;
+
+  for (let i = 0; i < Math.ceil(arr.length / Math.floor(n)); i++) {
+    const temp = [];
+    while (j < arr.length && temp.length < Math.floor(n)) {
+      temp.push(arr[j]);
+      j++;
+    }
+    out.push(temp);
+  }
+  return out;
 }
