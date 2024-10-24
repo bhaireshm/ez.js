@@ -25,8 +25,8 @@ export { default as isNum } from "./isNum";
 export { default as isObj } from "./isObj";
 export { default as isRegExp } from "./isRegExp";
 export { default as isStr } from "./isStr";
-export { default as isURLValid } from "./isURLValid";
 export { default as isUndefined } from "./isUndefined";
+export { default as isURLValid } from "./isURLValid";
 export { default as mergeObjects } from "./mergeObjects";
 export { default as modifyArray } from "./modifyArray";
 export { default as objectToQueryParams } from "./objectToQueryParams";
@@ -40,6 +40,7 @@ export { default as sortObjectByMultipleKeys } from "./sortObjectByMultipleKeys"
 export { default as titleCase } from "./titleCase";
 export { default as toCamelCase } from "./toCamelCase";
 export { default as toPascalCase } from "./toPascalCase";
+export { default as toPromise } from "./toPromise";
 export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects";
 
 // TODO: check test cases
