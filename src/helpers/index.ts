@@ -21,6 +21,7 @@ export { default as isBool } from "./isBool";
 export { default as isClass } from "./isClass";
 export { default as isEmpty } from "./isEmpty";
 export { default as isFn } from "./isFn";
+export { default as isNotNull } from "./isNotNull";
 export { default as isNull } from "./isNull";
 export { default as isNum } from "./isNum";
 export { default as isObj } from "./isObj";
