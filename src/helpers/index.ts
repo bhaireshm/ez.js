@@ -14,6 +14,7 @@ export { default as getDates } from "./getDates";
 export { default as getDiffInHrs } from "./getDiffInHrs";
 export { default as getNestedValue } from "./getNestedValue";
 export { default as getUniqueArray } from "./getUniqueArray";
+export { default as hasObj } from "./hasObj";
 export { default as hasOwnProperty } from "./hasOwnProperty";
 export { default as isArray } from "./isArray";
 export { default as isBool } from "./isBool";
