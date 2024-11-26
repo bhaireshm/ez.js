@@ -1,3 +1,5 @@
+import isUndefined from "./isUndefined";
+
 /**
  * Add or remove an element from an array.
  *
@@ -7,8 +9,8 @@
  *
  * @returns {Array<any>} - The modified array.
  */
-export default function modifyArray(arr: any[] = [], ele?: any, remEle?: any): any[] {
-  if (ele !== undefined && !arr.some((a) => a === ele)) arr.push(ele);
-  if (remEle !== undefined) return arr.filter((a) => a !== remEle);
+export default function modifyArray(arr: any[], ele?: any, remEle?: any): any[] {
+  if (!isUndefined(ele) && !arr.some((a) => a === ele)) arr.push(ele);
+  if (!isUndefined(remEle)) return arr.filter((a) => a !== remEle);
   return arr;
 }
