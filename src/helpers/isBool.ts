@@ -13,6 +13,6 @@
  * console.log(isBool(value2)); // true
  * console.log(isBool(value3)); // false
  */
-export default function isBool(val: unknown): boolean {
-  return typeof val === 'boolean' || Object.prototype.toString.call(val) === "[object Boolean]";
+export default function isBool(val: unknown): val is boolean {
+  return typeof val === "boolean" || Object.prototype.toString.call(val) === "[object Boolean]";
 }

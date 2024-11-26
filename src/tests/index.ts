@@ -1,4 +1,4 @@
-import { mergeObjects } from "../helpers";
+import { isRegExp, removeEmptyProperty } from "../helpers";
 
 const inputObject = {
   id: [],
@@ -22,41 +22,17 @@ const inputObject = {
   ],
 };
 
-const projectJSON = {
-  $schema: "https://brikcase.s3.amazonaws.com/apf/project.schema.json",
-  template: {
-    id: "",
-    name: "",
-    category: "",
-    description: "",
-  },
-  pages: [
-    {
-      pageName: "Home",
-      pageData: [
-        {
-          type: "grid",
-          style: {},
-          cols: [
-            {
-              colspan: "12",
-              style: {},
-              colData: [
-                {
-                  type: "unset",
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ],
-  config: {
-    theme: {},
-    redux: {},
-  },
-};
+function isObj(obj: unknown): boolean {
+  return (
+    obj != null &&
+    (typeof obj === "object" ||
+      typeof obj === "function" ||
+      Object.prototype.toString.call(obj) === "[object Object]")
+  );
+}
 
-const result = mergeObjects({ template: { name: "test" } }, projectJSON);
-console.log("result", result);
+let a = {};
+
+function log(n: string) {
+  console.log("result", n);
+}
