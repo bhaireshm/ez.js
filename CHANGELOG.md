@@ -1,3 +1,18 @@
+## v1.2.7 (27-11-2024, 12:05:21 am)
+
+### ✨ Features
+- [490fabd](https://github.com/bhaireshm/ez.js/commit/490fabdabbded874d63ae2c08b14b69a4dbde578) feat: isNotNull implemented, tests added.
+- [e2d2d5d](https://github.com/bhaireshm/ez.js/commit/e2d2d5d62b49b12abd5d22cee124cdc2fd4d6970) feat: hasObj.
+  - implemented.
+  - tests added.
+- [f54c2f6](https://github.com/bhaireshm/ez.js/commit/f54c2f6da684301af737f3b9e31bf1bec9511622) feat: toPromise.
+  - implemented.
+  - test cases added.
+
+### 📃 Commits
+- [1b48853](https://github.com/bhaireshm/ez.js/commit/1b4885308e78e16a954ac16f647c4a99fae027eb) update: release script   - semver check removed.
+- [c08bf75](https://github.com/bhaireshm/ez.js/commit/c08bf759769609b82d748bbc04d3bfe5d18abecc) chore: isBool, modifyArray
+
 ## v1.2.6 (9-26-2024, 4:12:57)
 
 ### 📃 Commits
