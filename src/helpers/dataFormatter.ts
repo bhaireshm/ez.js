@@ -1,6 +1,8 @@
 import { AnyObject } from "../types";
 import hasOwnProperty from "./hasOwnProperty";
 import isEmpty from "./isEmpty";
+import isNotNull from "./isNotNull";
+import isStr from "./isStr";
 
 interface FormatterOptions {
   error?: boolean;
@@ -44,56 +46,68 @@ interface FormatterOptions {
  */
 export default function dataFormatter(
   obj: AnyObject = {},
-  formatter: string = "",
+  formatter: string | object = "",
   options: FormatterOptions = {},
 ): AnyObject {
   const { error = true, oldData = false } = options;
-  const alterNames = String(formatter).split(",");
+
+  const alterNames = isStr(formatter)
+    ? String(formatter).split(",")
+    : Object.entries(formatter).map(([k, v]) => `${k}:${v}`);
+
   const newData: AnyObject = {};
   const errors: AnyObject = {};
   const OLD_DATA = "_DATA";
   const ERRORS = "_ERROR";
 
-  /**
-   * TODO: Listed below
-   * * Schema based modification
-   * * New key-value pair insertion
-   */
-
   if (isEmpty(formatter)) return obj;
   if (isEmpty(obj)) {
-    newData[OLD_DATA] = obj;
-    newData[ERRORS] = "data/object cannot be empty.";
-    return newData;
+    return {
+      [OLD_DATA]: obj,
+      [ERRORS]: "data/object cannot be empty.",
+    };
   }
 
   alterNames.forEach((an) => {
-    const key = String(an).split(":")[0];
-    let value: any = String(an).split(":")[1];
+    const [key, valuePath] = an.split(":");
+    const nestedKeys = key.split(".");
 
-    if (key.split(".").length === 1) {
-      value = _getNestedValue(obj, String(an).split(":")[1]);
-      if (value) newData[key] = value;
+    if (nestedKeys.length === 1) {
+      const value = _getNestedValue(obj, valuePath);
+      if (isNotNull(value)) {
+        newData[key] = value;
+      } else if (valuePath.includes(":")) {
+        // New key-value pair insertion
+        const [_, newValue] = valuePath.split(":");
+        newData[key] = newValue;
+      }
     } else {
-      const nestedKeys = String(key).split(".");
+      let currentObj = newData;
 
       // Nested key's data mapping
-      const nestedKeysData = dataFormatter(obj, `${nestedKeys.slice(1).join(".")}:${value}`, {
-        error: false,
-        oldData: false,
-      });
-
-      // Nested key's data check
-      if (hasOwnProperty(newData, nestedKeys[0], true)) {
-        newData[nestedKeys[0]] = { ...newData[nestedKeys[0]], ...nestedKeysData };
-      } else newData[nestedKeys[0]] = nestedKeysData;
+      for (let i = 0; i < nestedKeys.length - 1; i++) {
+        if (!currentObj[nestedKeys[i]]) {
+          currentObj[nestedKeys[i]] = {};
+        }
+        currentObj = currentObj[nestedKeys[i]];
+      }
+      const value = _getNestedValue(obj, valuePath);
+      if (isNotNull(value)) {
+        currentObj[nestedKeys[nestedKeys.length - 1]] = value;
+      } else if (valuePath.includes(":")) {
+        // New key-value pair insertion for nested objects
+        const [_, newValue] = valuePath.split(":");
+        currentObj[nestedKeys[nestedKeys.length - 1]] = newValue;
+      }
     }
   });
 
-  if (oldData) newData[OLD_DATA] = obj;
-  if (error && !isEmpty(errors)) newData[ERRORS] = errors;
+  const result: AnyObject = { ...newData };
 
-  return newData;
+  if (oldData) result[OLD_DATA] = obj;
+  if (error && !isEmpty(errors)) result[ERRORS] = errors;
+
+  return result;
 
   // Private function
   function _getNestedValue(d: AnyObject = {}, k: string = ""): any {
@@ -103,9 +117,42 @@ export default function dataFormatter(
     return (
       keys.reduce((p, c) => {
         if (hasOwnProperty(p, c, true)) return p[c];
-        errors[c] = "not found";
+        if (!k.includes(":")) {
+          errors[k] = "not found";
+        }
         return null;
       }, d) ?? null
     );
   }
 }
+
+// Example usage:
+/*
+const payload = {
+  id: "user-123",
+  profile: {
+    name: "John Doe",
+    age: 30
+  },
+  settings: {
+    theme: "dark",
+    notifications: true
+  }
+};
+
+const formattedData = dataFormatter(
+  payload,
+  "userId:id,fullName:profile.name,userTheme:settings.theme,email:contact.email",
+  { error: true, oldData: true }
+);
+
+console.log(formattedData);
+// Output:
+// {
+//   userId: "user-123",
+//   fullName: "John Doe",
+//   userTheme: "dark",
+//   _DATA: { ... }, // Original payload
+//   _ERROR: { email: "not found" }
+// }
+*/
