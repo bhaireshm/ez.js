@@ -14,10 +14,10 @@
 set -e
 
 version=$1
-# semver_pattern="^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?(\+([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?$"
+semver_pattern="^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?(\+([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?$"
 
-if [ -z "$version" ]; then
-  echo "Error: Version is empty. Please provide a valid version as the first argument."
+if [[ ! $version =~ $semver_pattern ]]; then
+  echo "Invalid Semantic Version: $version, a valid version must be provided as the first argument."
   exit 1
 fi
 
