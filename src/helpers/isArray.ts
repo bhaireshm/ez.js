@@ -12,5 +12,5 @@
  * console.log(isArray(arr2)); // false
  */
 export default function isArray(arr: unknown): boolean {
-  return typeof arr === 'object' && Array.isArray(arr);
+  return (typeof arr === "object" && Array.isArray(arr)) || arr instanceof Array;
 }

@@ -8,16 +8,14 @@ export { default as compareObjects } from "./compareObjects";
 export { strToNum, toNumber } from "./convert";
 export { default as currencyFormatter } from "./currencyFormatter";
 export { default as dataFormatter } from "./dataFormatter";
-export { default as dateDiff } from "./dateDiff";
 export { default as generateRandomString } from "./generateRandomString";
-export { default as getDates } from "./getDates";
-export { default as getDiffInHrs } from "./getDiffInHrs";
 export { default as getNestedValue } from "./getNestedValue";
 export { default as getUniqueArray } from "./getUniqueArray";
 export { default as hasObj } from "./hasObj";
 export { default as hasOwnProperty } from "./hasOwnProperty";
 export { default as isArray } from "./isArray";
 export { default as isBool } from "./isBool";
+export { default as isBuffer } from "./isBuffer";
 export { default as isClass } from "./isClass";
 export { default as isEmpty } from "./isEmpty";
 export { default as isFn } from "./isFn";
@@ -44,6 +42,9 @@ export { default as toCamelCase } from "./toCamelCase";
 export { default as toPascalCase } from "./toPascalCase";
 export { default as toPromise } from "./toPromise";
 export { default as uniqueArrayOfObjects } from "./uniqueArrayOfObjects";
+
+export * from "./date";
+export * from "./math";
 
 // TODO: check test cases
 // export { default as toSnakeCase } from "./toSnakeCase";

@@ -1,4 +1,4 @@
-import getDiffInHrs from "../helpers/getDiffInHrs";
+import getDiffInHrs from "../helpers/date/getDiffInHrs";
 
 describe("getDiffInHrs function", () => {
   test("should return the difference in hours between two dates", () => {

@@ -5,6 +5,10 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "private": false,
+  "exports": {
+    "./date": "./dist/src/date/index.js",
+    "./math": "./dist/src/math/index.js"
+  },
   "scripts": {
     "build": "rm -rf dist && tsc --build",
     "watch": "tsc --build --watch",
@@ -24,7 +28,8 @@
     "update:branches": "sh ./src/scripts/update-all-branchs-to-default.sh",
     "docs:ts": "sh ./src/scripts/generate-docs.sh"
   },
-  "author": "Bhairesh M <bhairesh@arithaconsulting.com>",
+  "author": "Bhairesh M <bhairesh@koadz.ai>",
+  "homepage": "https://bhaireshm.github.io/ez.js/",
   "repository": {
     "type": "git",
     "url": "https://github.com/bhaireshm/ez.js.git"
