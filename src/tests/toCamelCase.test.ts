@@ -1,4 +1,4 @@
-import toCamelCase from "../helpers/toCamelCase";
+import { toCamelCase } from "../";
 
 describe("toCamelCase", () => {
   test("converts a sentence to camel case", () => {

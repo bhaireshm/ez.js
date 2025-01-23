@@ -1,4 +1,4 @@
-import toPromise from "../helpers/toPromise";
+import { toPromise } from "../";
 
 describe("toPromise", () => {
   it("should resolve the promise with the result when the callback is called with no error", async () => {

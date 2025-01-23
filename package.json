@@ -6,8 +6,15 @@
   "types": "./dist/index.d.ts",
   "private": false,
   "exports": {
-    "./date": "./dist/src/date/index.js",
-    "./math": "./dist/src/math/index.js"
+    "./array": "./src/array/index.ts",
+    "./common": "./src/common/index.ts",
+    "./constants": "./src/constants/index.ts",
+    "./date": "./src/date/index.ts",
+    "./number": "./src/number/index.ts",
+    "./object": "./src/object/index.ts",
+    "./string": "./src/string/index.ts",
+    "./types": "./src/types/index.ts",
+    "./utils": "./src/utils/index.ts"
   },
   "scripts": {
     "build": "rm -rf dist && tsc --build",

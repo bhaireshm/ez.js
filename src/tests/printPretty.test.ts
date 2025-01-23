@@ -1,4 +1,4 @@
-import printPretty from "../helpers/printPretty";
+import { printPretty } from "../";
 
 describe("printPretty function", () => {
   test("should print properties of a simple object", () => {

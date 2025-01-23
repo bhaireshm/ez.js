@@ -1,4 +1,4 @@
-import { isBuffer } from "../helpers";
+import { isBuffer } from "../";
 
 describe("isBuffer function", () => {
   it("returns true for a Buffer object", () => {

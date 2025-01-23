@@ -1,4 +1,4 @@
-import dateDiff from "../helpers/date/dateDiff";
+import { dateDiff } from "../";
 
 describe("dateDiff function", () => {
   test("should calculate the difference between two dates", () => {

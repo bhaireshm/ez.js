@@ -1,4 +1,4 @@
-import { hasObj } from "../helpers";
+import { hasObj } from "../";
 
 describe("hasObj function", () => {
   it("should return true for an array of objects with matching data", () => {

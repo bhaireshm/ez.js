@@ -1,4 +1,4 @@
-import mergeObjects from "../helpers/mergeObjects";
+import { mergeObjects } from "../";
 
 describe("mergeObjects function", () => {
   test("should merge two objects with unique properties", () => {

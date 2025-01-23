@@ -1,4 +1,4 @@
-import { toNumber, strToNum } from "../helpers/convert";
+import { strToNum, toNumber } from "../";
 
 describe("toNumber function", () => {
   test("should convert a valid number string to a number", () => {

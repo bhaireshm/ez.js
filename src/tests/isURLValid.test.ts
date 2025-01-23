@@ -1,4 +1,4 @@
-import isURLValid from "../helpers/isURLValid";
+import { isURLValid } from "../";
 
 describe("isURLValid function", () => {
   test("should return true for a valid URL with https", () => {

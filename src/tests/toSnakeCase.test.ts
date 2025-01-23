@@ -1,6 +1,6 @@
-import toSnakeCase from '../helpers/toSnakeCase';
+import toSnakeCase from "../string/toSnakeCase";
 
-describe('toSnakeCase function', () => {
+describe("toSnakeCase function", () => {
   // test('converts camelCase to snake_case', () => {
   //   const result = toSnakeCase('camel CaseString');
   //   expect(result).toBe('camel_casestring');
@@ -16,9 +16,9 @@ describe('toSnakeCase function', () => {
   //   expect(result).toBe('');
   // });
 
-  test('handles already snake_case string', () => {
-    const result = toSnakeCase('already_snake_case');
-    expect(result).toBe('already_snake_case');
+  test("handles already snake_case string", () => {
+    const result = toSnakeCase("already_snake_case");
+    expect(result).toBe("already_snake_case");
   });
 
   // test('handles single character string', () => {

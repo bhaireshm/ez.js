@@ -1,4 +1,4 @@
-import objectToQueryParams from "../helpers/objectToQueryParams";
+import { objectToQueryParams } from "../";
 
 describe("objectToQueryParams function", () => {
   test("should convert an object into a query string", () => {

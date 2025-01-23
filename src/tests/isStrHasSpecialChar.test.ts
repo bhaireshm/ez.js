@@ -1,4 +1,4 @@
-import isStrHasSpecialChar from "../helpers/isStrHasSpecialChar";
+import { isStrHasSpecialChar } from "../";
 
 describe("isStrHasSpecialChar function", () => {
   test("should return true if the string contains a special character", () => {

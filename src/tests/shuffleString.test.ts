@@ -1,4 +1,4 @@
-import shuffleString from "../helpers/shuffleString";
+import { shuffleString } from "../";
 
 describe("shuffleString function", () => {
   test("should shuffle characters of the input string", () => {

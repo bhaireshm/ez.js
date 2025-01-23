@@ -1,4 +1,4 @@
-import { DateFormatter } from "../helpers/date";
+import { DateFormatter } from "../";
 
 describe("DateFormatter", () => {
   it("should format a date in the default format", () => {

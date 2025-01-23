@@ -1,12 +1,28 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "disableSources": true,
-  "entryPoints": ["./src/helpers/"],
   "excludePrivate": true,
   "excludeProtected": true,
   "githubPages": true,
   "name": "ez.js",
   "out": "docs",
   "sort": ["alphabetical"],
-  "tsconfig": "./tsconfig.json"
+  "includeVersion": true,
+  "entryPointStrategy": "expand",
+  "sortEntryPoints": true,
+  "hideGenerator": true,
+  "readme": "README.md",
+  "logLevel": "Error",
+  "tsconfig": "./tsconfig.json",
+  "entryPoints": [
+    "./src/array/index.ts",
+    "./src/common/index.ts",
+    "./src/constants/index.ts",
+    "./src/date/index.ts",
+    "./src/number/index.ts",
+    "./src/object/index.ts",
+    "./src/string/index.ts",
+    "./src/types/index.ts",
+    "./src/utils/index.ts"
+  ]
 }

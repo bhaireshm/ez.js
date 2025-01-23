@@ -1,4 +1,4 @@
-import generateRandomString from "../helpers/generateRandomString";
+import { generateRandomString } from "../";
 
 describe("generateRandomString function", () => {
   test("should generate a random string with default length", () => {

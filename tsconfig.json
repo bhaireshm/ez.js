@@ -18,8 +18,8 @@
     "esModuleInterop": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
-    "types": ["./src/types", "node", "jest"]
+    "types": ["node", "jest"]
   },
-  "include": ["./index.ts", "./package.json"],
-  "exclude": ["node_modules", "dist", "./src/tests/*", "./src/helpers/browser/*"]
+  "include": ["./src/**/*", "./package.json", "src/index.ts"],
+  "exclude": ["node_modules", "dist", "./src/tests/*", "./src/scripts/*", "./src/utils/browser/*"]
 }

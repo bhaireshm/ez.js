@@ -1,4 +1,4 @@
-import isStr from "../helpers/isStr";
+import { isStr } from "../";
 
 describe("isStr function", () => {
   it("should return true for string values", () => {

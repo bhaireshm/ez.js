@@ -1,4 +1,4 @@
-import isEmpty from "../helpers/isEmpty";
+import { isEmpty } from "../";
 
 describe("isEmpty function", () => {
   test("should return true for an empty string", () => {

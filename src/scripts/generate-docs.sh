@@ -18,7 +18,7 @@ if [ "$checkInToGit" = "true" ]; then
   git add docs
 
   # Commit changes
-  git commit -m "docs: Updated documentation"
+  git commit -m "docs: :memo: Updated documentation"
 
   # Check-in file to git
   git push
