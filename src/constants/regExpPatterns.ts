@@ -4,7 +4,7 @@
  * @constant
  * @type {RegExp}
  */
-export const SPECIAL_CHARACTERS: RegExp = /[!@#%^&*()_+-=[]{}|;':\\",.\/<>?~`]/g;
+export const SPECIAL_CHARACTERS: RegExp = /[!@#%^&*()_+\-=[\]{}|;':"\\,./<>?~`]/g;
 
 /**
  * Regular expression to match numbers.
