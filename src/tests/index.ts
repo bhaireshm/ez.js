@@ -1,4 +1,3 @@
-
 // const inputObject = {
 //   id: [],
 //   sdid: "",
@@ -123,7 +122,7 @@
 // const result = mergeObjects({ template: { name: "test" } }, projectJSON);
 // console.log("result", result);
 
-import { getUniqueArray } from "../../dist";
+import { getUniqueArray } from "../../dist/src";
 // import { chmod } from "fs";
 
 // type NewType<T> = {
@@ -143,7 +142,6 @@ console.time("test");
 const arr = [1, 3, 5, 7, 9, 3, 2, 5, 7, 8, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(getUniqueArray(arr));
 console.timeEnd("test");
-
 
 console.time("test2");
 console.log(Array.from(new Set(arr)));
