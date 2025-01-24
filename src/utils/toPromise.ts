@@ -40,7 +40,7 @@ export default function toPromise<T, E = any>(
   return function (...args: any[]): Promise<T> {
     return new Promise((resolve, reject) => {
       const callback: Callback<T, E> = (error, result) => {
-        if (error) reject(error);
+        if (error) reject(error as E);
         else resolve(result as T);
       };
       fn(...args, callback);

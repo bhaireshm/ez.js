@@ -16,7 +16,7 @@ import getNestedValue from "./getNestedValue";
 export default function hasOwnProperty(
   obj: object,
   keys: string,
-  returnType: boolean = false, // todo: make boolean return as true
+  returnType: boolean = false,
 ): string | boolean {
   if (isEmpty(obj) || isEmpty(keys)) return returnType ? false : "false";
 

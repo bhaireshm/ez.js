@@ -125,34 +125,3 @@ export default function dataFormatter(
     );
   }
 }
-
-// Example usage:
-/*
-const payload = {
-  id: "user-123",
-  profile: {
-    name: "John Doe",
-    age: 30
-  },
-  settings: {
-    theme: "dark",
-    notifications: true
-  }
-};
-
-const formattedData = dataFormatter(
-  payload,
-  "userId:id,fullName:profile.name,userTheme:settings.theme,email:contact.email",
-  { error: true, oldData: true }
-);
-
-console.log(formattedData);
-// Output:
-// {
-//   userId: "user-123",
-//   fullName: "John Doe",
-//   userTheme: "dark",
-//   _DATA: { ... }, // Original payload
-//   _ERROR: { email: "not found" }
-// }
-*/

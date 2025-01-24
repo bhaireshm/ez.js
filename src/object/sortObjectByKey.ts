@@ -7,7 +7,7 @@
  * @returns The sorted array of objects based on the specified key and order.
  */
 export default function sortObjectByKey<T, K extends keyof T>(
-  arr: T[] = [],
+  arr: T[],
   key: K,
   order: number = 1,
 ): T[] {
