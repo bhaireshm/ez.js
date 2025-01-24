@@ -122,7 +122,7 @@
 // const result = mergeObjects({ template: { name: "test" } }, projectJSON);
 // console.log("result", result);
 
-import { getUniqueArray } from "../../dist/src";
+import { dateDiff } from "../../dist/src";
 // import { chmod } from "fs";
 
 // type NewType<T> = {
@@ -139,10 +139,14 @@ import { getUniqueArray } from "../../dist/src";
 //   .catch(console.error);
 
 console.time("test");
-const arr = [1, 3, 5, 7, 9, 3, 2, 5, 7, 8, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(getUniqueArray(arr));
+// const arr = [1, 3, 5, 7, 9, 3, 2, 5, 7, 8, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(getUniqueArray(arr));
+
+const result = dateDiff(new Date("12/12/2012 12:00:00"), new Date("12/12/2012 13:45:00"));
+console.log("file: dateDiff.test.ts:45  result", result);
+
 console.timeEnd("test");
 
-console.time("test2");
-console.log(Array.from(new Set(arr)));
-console.timeEnd("test2");
+// console.time("test2");
+// console.log(Array.from(new Set(arr)));
+// console.timeEnd("test2");

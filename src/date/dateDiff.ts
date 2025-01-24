@@ -28,10 +28,12 @@ export default function dateDiff(
   showNegative: boolean = true,
 ): {
   short: string;
+  medium: string;
   full: string;
   days: number;
   hours: number;
   minutes: number;
+  seconds: number;
 } {
   from = new Date(from);
   to = new Date(to);
@@ -39,17 +41,23 @@ export default function dateDiff(
   const diffMs = to.getTime() - from.getTime(); // milliseconds between from & to
   const diffDays = checkPrevDay(diffMs / 86400000); // days
   const diffHrs = checkPrevDay((diffMs % 86400000) / 3600000); // hours
-  const diffMins = checkPrevDay(Math.round(((diffMs % 86400000) % 3600000) / 60000)); // minutes
+  const diffMins = checkPrevDay(Math.floor(((diffMs % 86400000) % 3600000) / 60000)); // minutes
+  const diffSec = checkPrevDay(Math.floor(((diffMs % 86400000) % 3600000) % 60000) / 1000); // seconds
+
   let str = "";
-  str += diffDays ? diffDays + "d " : "";
-  str += diffHrs ? diffHrs + "h" : "";
-  str += diffMins ? " " + diffMins + "m" : "";
+  str += diffDays ? `${diffDays}d` : "";
+  str += diffHrs ? ` ${diffHrs}h` : "";
+  str += diffMins ? ` ${diffMins}m` : "";
+  str += diffSec ? ` ${diffSec}s` : "";
+
   const sign = str && diffDays + diffHrs + diffMins < 0 && showNegative ? "-" : "";
   return {
     short: `${sign}${str.trimEnd().trimStart().replace(/ {2}/g, " ")}`,
-    full: `${diffDays} day(s) ${diffHrs} hours, ${diffMins} minutes`,
+    medium: `${diffDays}d, ${diffHrs}hrs, ${diffMins}mins, ${diffSec}s`,
+    full: `${diffDays} day(s), ${diffHrs} hours, ${diffMins} minutes, ${diffSec} seconds`,
     days: diffDays,
     hours: diffHrs,
     minutes: diffMins,
+    seconds: diffSec,
   };
 }
