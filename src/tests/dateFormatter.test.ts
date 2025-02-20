@@ -1,4 +1,4 @@
-import { DateFormatter } from "../";
+import { DateFormatter } from "../date/formatter";
 
 describe("DateFormatter", () => {
   it("should format a date in the default format", () => {
