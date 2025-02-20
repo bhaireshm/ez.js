@@ -1,3 +1,32 @@
+## v1.2.8 (20-2-2025, 3:01:42 pm)
+
+### ✨ Features
+- [ed1dcf8](https://github.com/bhaireshm/ez.js/commit/ed1dcf84453b954dbd6ec8f10f835477c9dc75ee) feat: DateFormatter class implementation.
+
+### 📃 Commits
+- [e806a44](https://github.com/bhaireshm/ez.js/commit/e806a446750032e4d348e89060fbb0652db83aea) update: pre-commit hook updated.
+- [dda1258](https://github.com/bhaireshm/ez.js/commit/dda1258e01a6391e0658fd645157d3b2a643a663) fix: release script version pattern issue.
+- [e82806c](https://github.com/bhaireshm/ez.js/commit/e82806c792b0381fb0bb10c7ccf9c6b23794170d) fix: date-formatter.test import issue.
+- [01c9578](https://github.com/bhaireshm/ez.js/commit/01c957850fe6ad91c13cfc30831e9f6006b3a6ae) chore: dateFormatter WIP, so export removed.
+- [2545c45](https://github.com/bhaireshm/ez.js/commit/2545c459ce5a1af7273b46b7ef706642ed7a7edc) fix: mergeObjects   - merged array values in Set
+  - uniqueArrayOfObjects alias getUniqueArrayOfObjects added.
+- [ed9b35e](https://github.com/bhaireshm/ez.js/commit/ed9b35ec2a2c64f0d427e758f2800e3c1a793e05) fix: isStrHasSpecialChar pattern issue.
+- [39961da](https://github.com/bhaireshm/ez.js/commit/39961dabdd22ea807797be20ec98668d22933416) update: dateDiff   - seconds, medium formatted diff added.
+- [f03b856](https://github.com/bhaireshm/ez.js/commit/f03b8569014ead546a3df5c08a44ca72fc4ec5c5) fix: sonarlint issues.
+- [a2192f8](https://github.com/bhaireshm/ez.js/commit/a2192f8c68f3a437f1d792884b936cc1184774d9) fix: export and declaration issue.
+- [f242b48](https://github.com/bhaireshm/ez.js/commit/f242b4811ba221dab4df39becba1e21da644bf7c) refactor: proper folder structure impl.
+  - jsDoc added for constants.
+  - typedoc config modified.
+- [cbdcc88](https://github.com/bhaireshm/ez.js/commit/cbdcc8834cad874f1c3e000dcf81660cb865aa50) update: listed below.
+  - getUniqueArray is using Array and Set class.
+  - All date related functions moved to date folder.
+  - All math related functions moved to math folder.
+- [036dac5](https://github.com/bhaireshm/ez.js/commit/036dac5670a08eda33bc787beb911b78c4c10a39) update: isBuffer.
+  - implementation.
+  - test cases added.
+- [f722cb1](https://github.com/bhaireshm/ez.js/commit/f722cb1a0346e2d9a186b482907c198a1e6131b8) update: pre-commit hook, release script modified.
+- [dca1cc6](https://github.com/bhaireshm/ez.js/commit/dca1cc6c12e2342253cab5915c76672895b0fb13) docs: jsDoc updated for toPromise fn.
+
 ## v1.2.7 (27-11-2024, 12:05:21 am)
 
 ### ✨ Features
