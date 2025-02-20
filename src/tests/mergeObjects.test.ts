@@ -64,4 +64,11 @@ describe("mergeObjects function", () => {
     const result = mergeObjects(obj1, obj2);
     expect(result).toEqual({ a: date, b: [1, 2, 3] });
   });
+
+  test("should handle objects with nested arrays and return unique values", () => {
+    const obj1 = { a: { b: [1, 2, 3] } };
+    const obj2 = { a: { b: [2, 3, 4] }, e: 5 };
+    const result = mergeObjects(obj1, obj2);
+    expect(result).toEqual({ a: { b: [1, 2, 3, 4] }, e: 5 });
+  });
 });
