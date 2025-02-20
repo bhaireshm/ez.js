@@ -35,7 +35,7 @@ export default function mergeObjects(source: AnyObject, target: AnyObject): AnyO
   for (const key in s) {
     if (hasOwnProperty(s, key, true)) {
       if (Array.isArray(t[key]) && Array.isArray(s[key])) {
-        t[key] = [...s[key], ...t[key]];
+        t[key] = Array.from(new Set([...s[key], ...t[key]]));
         continue;
       }
       if (isObj(t[key]) && isObj(s[key])) {

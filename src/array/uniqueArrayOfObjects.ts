@@ -3,6 +3,7 @@ import compareObjects from "../object/compareObjects";
 /**
  * Compares all the objects (both key and value) in the given array and returns the unique array.
  *
+ * @alias getUniqueArrayOfObjects
  * @param {object[]} arr - An array of objects.
  * @returns {object[]} - The unique array of objects.
  *
