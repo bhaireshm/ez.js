@@ -1,4 +1,4 @@
-import getUniqueArray from "../helpers/getUniqueArray";
+import { getUniqueArray } from "../";
 
 describe("getUniqueArray function", () => {
   test("should return an array with unique elements", () => {

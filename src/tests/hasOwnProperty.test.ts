@@ -1,4 +1,4 @@
-import hasOwnProperty from "../helpers/hasOwnProperty";
+import { hasOwnProperty } from "../";
 
 describe("hasOwnProperty function", () => {
   test("should return true for existing keys in the object", () => {

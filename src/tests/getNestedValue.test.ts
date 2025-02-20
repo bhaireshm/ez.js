@@ -1,4 +1,4 @@
-import getNestedValue from "../helpers/getNestedValue";
+import { getNestedValue } from "../";
 
 describe("getNestedValue", () => {
   const data = {

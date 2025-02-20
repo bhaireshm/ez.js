@@ -1,4 +1,4 @@
-import sortObjectByMultipleKeys from "../helpers/sortObjectByMultipleKeys";
+import { sortObjectByMultipleKeys } from "../";
 
 describe("sortObjectByMultipleKeys", () => {
   const data = [

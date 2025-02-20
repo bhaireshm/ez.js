@@ -1,4 +1,4 @@
-import modifyArray from "../helpers/modifyArray";
+import { modifyArray } from "../";
 
 describe("modifyArray function", () => {
   test("should add an element to the array", () => {

@@ -1,4 +1,4 @@
-import shortenString from "../helpers/shortenString";
+import { shortenString } from "../";
 
 describe("shortenString function", () => {
   test("should not shorten string if length is less than or equal to specified length", () => {

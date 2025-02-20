@@ -1,10 +1,10 @@
-import { isClass } from '../helpers';
+import { isClass } from "../";
 
-describe('isClass', () => {
-  it('returns true for class instances', () => {
-    class MyClass { }
+describe("isClass", () => {
+  it("returns true for class instances", () => {
+    class MyClass {}
     expect(isClass(MyClass)).toBe(true);
-    expect(isClass(class { })).toBe(true);
+    expect(isClass(class {})).toBe(true);
   });
 
   // it('returns false for non-class instances', () => {

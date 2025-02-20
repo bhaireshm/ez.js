@@ -1,30 +1,42 @@
-import isStrHasSpecialChar from "../helpers/isStrHasSpecialChar";
+import { isStrHasSpecialChar } from "../";
 
 describe("isStrHasSpecialChar function", () => {
-  test("should return true if the string contains a special character", () => {
-    const str = "hello h@rry";
+  it("should return true with default pattern and special character", () => {
+    const str = "hello@world";
     expect(isStrHasSpecialChar(str)).toBe(true);
   });
 
-  test("should return true if the string contains a special character from the custom pattern", () => {
-    const str = "hello h@rry";
-    const customPattern = "@%$";
-    expect(isStrHasSpecialChar(str, customPattern)).toBe(true);
-  });
-
-  test("should return false if the string does not contain a special character", () => {
-    const str = "hello world";
+  it("should return false with default pattern and no special character", () => {
+    const str = "helloworld";
     expect(isStrHasSpecialChar(str)).toBe(false);
   });
 
-  test("should return false for an empty string", () => {
+  it("should return true with custom string pattern and matching special character", () => {
+    const str = "hello@world";
+    const pattern = "@";
+    expect(isStrHasSpecialChar(str, pattern)).toBe(true);
+  });
+
+  it("should return false with custom string pattern and non-matching special character", () => {
+    const str = "hello@world";
+    const pattern = "#";
+    expect(isStrHasSpecialChar(str, pattern)).toBe(false);
+  });
+
+  it("should return true with custom RegExp pattern and matching special character", () => {
+    const str = "hello@world";
+    const pattern = /@/;
+    expect(isStrHasSpecialChar(str, pattern)).toBe(true);
+  });
+
+  it("should return false with custom RegExp pattern and non-matching special character", () => {
+    const str = "hello@world";
+    const pattern = /#/;
+    expect(isStrHasSpecialChar(str, pattern)).toBe(false);
+  });
+
+  it("should return false with empty string", () => {
     const str = "";
     expect(isStrHasSpecialChar(str)).toBe(false);
-  });
-
-  test("should return false for an empty pattern", () => {
-    const str = "hello world";
-    const emptyPattern = "";
-    expect(isStrHasSpecialChar(str, emptyPattern)).toBe(false);
   });
 });

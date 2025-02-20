@@ -1,4 +1,4 @@
-import currencyFormatter from "../helpers/currencyFormatter";
+import { currencyFormatter } from "../";
 
 describe("currencyFormatter function", () => {
   test("should format number as currency using default options", () => {

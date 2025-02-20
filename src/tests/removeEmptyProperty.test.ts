@@ -1,4 +1,4 @@
-import removeEmptyProperty from "../helpers/removeEmptyProperty";
+import { removeEmptyProperty } from "../";
 
 describe("removeEmptyProperty function", () => {
   test("should remove empty properties from a simple object", () => {

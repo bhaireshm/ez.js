@@ -1,4 +1,4 @@
-import isNum from "../helpers/isNum";
+import { isNum } from "../";
 
 describe("isNum function", () => {
   test("should return true for a number", () => {

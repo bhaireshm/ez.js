@@ -1,4 +1,4 @@
-import checkObject from "../helpers/checkObject";
+import { checkObject } from "../";
 
 describe("checkObject function", () => {
   test("should return true for an empty object", () => {

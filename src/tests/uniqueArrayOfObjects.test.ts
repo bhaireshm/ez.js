@@ -1,4 +1,4 @@
-import uniqueArrayOfObjects from "../helpers/uniqueArrayOfObjects";
+import { uniqueArrayOfObjects } from "../";
 
 describe("uniqueArrayOfObjects function", () => {
   test("should return an array with unique objects", () => {

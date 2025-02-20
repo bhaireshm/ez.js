@@ -1,4 +1,4 @@
-import sortObjectByKey from "../helpers/sortObjectByKey";
+import { sortObjectByKey } from "../";
 
 describe("sortObjectByKey", () => {
   const data = [

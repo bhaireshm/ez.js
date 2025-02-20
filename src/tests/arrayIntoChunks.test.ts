@@ -1,4 +1,4 @@
-import arrayIntoChunks from "../helpers/arrayIntoChunks";
+import { arrayIntoChunks } from "../";
 
 describe("arrayIntoChunks", () => {
   test("splits array into chunks of size 2", () => {

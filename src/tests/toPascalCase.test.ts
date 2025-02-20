@@ -1,4 +1,4 @@
-import toPascalCase from "../helpers/toPascalCase";
+import { toPascalCase } from "../";
 
 describe("toPascalCase", () => {
   it("should convert a string to PascalCase", () => {

@@ -1,4 +1,4 @@
-import getDates from "../helpers/getDates";
+import { getDates } from "../";
 
 describe("getDates function", () => {
   test("should return an array of dates between the start and end dates", () => {
