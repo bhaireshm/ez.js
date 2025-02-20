@@ -14,9 +14,8 @@
 set -e
 
 version=$1
-semver_pattern="^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?(\+([0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?$"
 
-if [[ ! $version =~ $semver_pattern ]]; then
+if [[ ! $1 =~ ^v?[0-9]+(\.[0-9]+){2}(-[a-z]+\.\d+)?$ ]]; then
   echo "Invalid Semantic Version: $version, a valid version must be provided as the first argument."
   exit 1
 fi
@@ -26,7 +25,7 @@ msg=$2
 defaultBranch="master"
 curr_branch=$(git branch --show-current)
 
-if [ $curr_branch -ne $defaultBranch ]; then
+if [[ $curr_branch -ne $defaultBranch ]]; then
   echo "Not in '$defaultBranch' branch, please checkout '$defaultBranch' first, and take all the latest code."
   echo "Executing git checkin..."
   git push origin $curr_branch
