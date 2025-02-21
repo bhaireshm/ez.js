@@ -39,7 +39,7 @@ pnpm docs:ts true
 npm version $ver --no-git-tag-version
 
 # Inject the current release version and date into the CHANGELOG file
-node ./src/scripts/changelog.js $ver $msg
+node ./scripts/changelog.js $ver $msg
 
 # Create the release
 git add CHANGELOG.md package.json
