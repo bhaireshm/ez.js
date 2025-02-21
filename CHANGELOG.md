@@ -1,17 +1,19 @@
 ## v1.2.8 (20-2-2025, 3:01:42 pm)
 
 ### ✨ Features
+
 - [ed1dcf8](https://github.com/bhaireshm/ez.js/commit/ed1dcf84453b954dbd6ec8f10f835477c9dc75ee) feat: DateFormatter class implementation.
 
 ### 📃 Commits
+
 - [e806a44](https://github.com/bhaireshm/ez.js/commit/e806a446750032e4d348e89060fbb0652db83aea) update: pre-commit hook updated.
 - [dda1258](https://github.com/bhaireshm/ez.js/commit/dda1258e01a6391e0658fd645157d3b2a643a663) fix: release script version pattern issue.
 - [e82806c](https://github.com/bhaireshm/ez.js/commit/e82806c792b0381fb0bb10c7ccf9c6b23794170d) fix: date-formatter.test import issue.
 - [01c9578](https://github.com/bhaireshm/ez.js/commit/01c957850fe6ad91c13cfc30831e9f6006b3a6ae) chore: dateFormatter WIP, so export removed.
-- [2545c45](https://github.com/bhaireshm/ez.js/commit/2545c459ce5a1af7273b46b7ef706642ed7a7edc) fix: mergeObjects   - merged array values in Set
+- [2545c45](https://github.com/bhaireshm/ez.js/commit/2545c459ce5a1af7273b46b7ef706642ed7a7edc) fix: mergeObjects - merged array values in Set
   - uniqueArrayOfObjects alias getUniqueArrayOfObjects added.
 - [ed9b35e](https://github.com/bhaireshm/ez.js/commit/ed9b35ec2a2c64f0d427e758f2800e3c1a793e05) fix: isStrHasSpecialChar pattern issue.
-- [39961da](https://github.com/bhaireshm/ez.js/commit/39961dabdd22ea807797be20ec98668d22933416) update: dateDiff   - seconds, medium formatted diff added.
+- [39961da](https://github.com/bhaireshm/ez.js/commit/39961dabdd22ea807797be20ec98668d22933416) update: dateDiff - seconds, medium formatted diff added.
 - [f03b856](https://github.com/bhaireshm/ez.js/commit/f03b8569014ead546a3df5c08a44ca72fc4ec5c5) fix: sonarlint issues.
 - [a2192f8](https://github.com/bhaireshm/ez.js/commit/a2192f8c68f3a437f1d792884b936cc1184774d9) fix: export and declaration issue.
 - [f242b48](https://github.com/bhaireshm/ez.js/commit/f242b4811ba221dab4df39becba1e21da644bf7c) refactor: proper folder structure impl.
@@ -30,6 +32,7 @@
 ## v1.2.7 (27-11-2024, 12:05:21 am)
 
 ### ✨ Features
+
 - [490fabd](https://github.com/bhaireshm/ez.js/commit/490fabdabbded874d63ae2c08b14b69a4dbde578) feat: isNotNull implemented, tests added.
 - [e2d2d5d](https://github.com/bhaireshm/ez.js/commit/e2d2d5d62b49b12abd5d22cee124cdc2fd4d6970) feat: hasObj.
   - implemented.
@@ -39,12 +42,14 @@
   - test cases added.
 
 ### 📃 Commits
-- [1b48853](https://github.com/bhaireshm/ez.js/commit/1b4885308e78e16a954ac16f647c4a99fae027eb) update: release script   - semver check removed.
+
+- [1b48853](https://github.com/bhaireshm/ez.js/commit/1b4885308e78e16a954ac16f647c4a99fae027eb) update: release script - semver check removed.
 - [c08bf75](https://github.com/bhaireshm/ez.js/commit/c08bf759769609b82d748bbc04d3bfe5d18abecc) chore: isBool, modifyArray
 
 ## v1.2.6 (9-26-2024, 4:12:57)
 
 ### 📃 Commits
+
 - [45e8cf9](https://github.com/bhaireshm/ez.js/commit/45e8cf927836cc567cfc20d0b1bcd86aa0cd06a0) update: arrayIntoChunks refactor.
   - odd length input check and decimal value check.
   - mergeObjects docstring update.
@@ -55,6 +60,7 @@
 ## v1.2.5 (9-20-2024, 4:05:22)
 
 ### 📃 Commits
+
 - [1989a01](https://github.com/bhaireshm/ez.js/commit/1989a011b3535d87174bf6197648bacd76e0f348) scripts: husky replaced with custom hooks path.
 - [19e7682](https://github.com/bhaireshm/ez.js/commit/19e7682ce315b4be6067eb57588081400bcb1729) update: sortObjectByKey custom type acceptance.
 - [e182377](https://github.com/bhaireshm/ez.js/commit/e18237756b4628c48a8dd45e7e6f1fa780d15578) docs: mergeObjects docstring updated.
@@ -63,11 +69,13 @@
 ## v1.2.3 (2-8-2024, 8:25:41)
 
 ### ✨ Features
+
 - [4fd96f8](https://github.com/bhaireshm/ez.js/commit/4fd96f8634c35189d9b86f5cacdb933dbcafc84b) feat: titleCase.
   - implemented.
   - test cases added.
 
 ### 📃 Commits
+
 - [ac416a8](https://github.com/bhaireshm/ez.js/commit/ac416a8c02f497bdcf7446260c02fdf5def5f54d) scripts: release.sh updated.
 - [33f0461](https://github.com/bhaireshm/ez.js/commit/33f0461c785b579455146a57e367693785b395a9) docs: titleCase updated.
 - [900255a](https://github.com/bhaireshm/ez.js/commit/900255a1e4c89615263d1f13d26791ad375e78ec) docs: titleCase updated.
@@ -77,8 +85,9 @@
 ## v1.2.2 (2-8-2024, 1:28:48)
 
 ### 📃 Commits
+
 - [e31ffe1](https://github.com/bhaireshm/ez.js/commit/e31ffe1f8aceb76fa08a6a1cb02c2bbf406102b0) fix: isFn null check.
-- [e05522a](https://github.com/bhaireshm/ez.js/commit/e05522a83e13a5caf2e253bc8e9726be454173d8) fix: removeEmptyProperty   - array's nested values.
+- [e05522a](https://github.com/bhaireshm/ez.js/commit/e05522a83e13a5caf2e253bc8e9726be454173d8) fix: removeEmptyProperty - array's nested values.
 - [2673531](https://github.com/bhaireshm/ez.js/commit/2673531685dc39df2cf786cc433f037a29b5ee0e) fix: isEmpty updated.
 - [5326a71](https://github.com/bhaireshm/ez.js/commit/5326a71099964d82e9032afe5af6ca4fd9ef2a39) fix: isObj test cases.
 - [c14e89c](https://github.com/bhaireshm/ez.js/commit/c14e89cb6f2dc355af65e2baaa8780493a25363e) script: updated.
@@ -90,28 +99,32 @@
 ## v1.2.1 (2-8-2024, 10:11:06)
 
 ### 📃 Commits
+
 - [895b53b](https://github.com/bhaireshm/ez.js/commit/895b53b8e973fd99c5d607941a2898c902cef1f7) script: pre-commit hook.
 - [ddafcc0](https://github.com/bhaireshm/ez.js/commit/ddafcc0a5a972c3612e31fbaaec09b8121a69bd3) update: listed below.
   - isArray, isBool, isFn, isNull, isNum, isRegExp new functions added.
   - isStr, isObj modified.
   - docs updated.
-- [0db6de3](https://github.com/bhaireshm/ez.js/commit/0db6de3b5f687627856fc386eb837bd976f4c112) update: __proto__ to prototype check.
+- [0db6de3](https://github.com/bhaireshm/ez.js/commit/0db6de3b5f687627856fc386eb837bd976f4c112) update: **proto** to prototype check.
 
 ## v1.2.0 (2-7-2024, 11:56:30)
 
 ### 📃 Commits
+
 - [a5dfbbe](https://github.com/bhaireshm/ez.js/commit/a5dfbbed316265526efcb745d188c59dd9f88b6a) fix: sonar-lint.
-  - The '__proto__' property is deprecated.
+  - The '**proto**' property is deprecated.
 
 ## v1.1.1 (12-3-2023, 7:27:24)
 
 ### 📃 Commits
+
 - [b80bb5b](https://github.com/bhaireshm/ez.js/commit/b80bb5b135dbd20b47d83110d1c61c0379723ca6) config: tsconfig reverted to v1.0.0-rc.1
 - [205ca83](https://github.com/bhaireshm/ez.js/commit/205ca838c070c98a6e7eebfc33790851a561d07b) chore: unicode file added.
 
 ## v1.1.0 (12-2-2023, 10:38:04)
 
 ### 📃 Commits
+
 - [3e292bf](https://github.com/bhaireshm/ez.js/commit/3e292bffaabddd201eb42755961069efe0d83ede) chore: case method rename.
 - [a7b4936](https://github.com/bhaireshm/ez.js/commit/a7b4936315b43c66889074f82826c12252fed76d) chore: case method rename.
 - [c148f69](https://github.com/bhaireshm/ez.js/commit/c148f69d3bd6f94d31892c01b9201e69d0d9f362) update: toPascalCase -> pascalCase
@@ -126,11 +139,13 @@
 ## v1.0.0-rc.1 (11-30-2023, 6:34:41)
 
 ### ✨ Features
+
 - [e51ec74](https://github.com/bhaireshm/ez.js/commit/e51ec74c32397ded01375dbcb6cc2a59cb19b585) feat: migrate to typescript, basic configurations.
 
 ### 📃 Commits
+
 - [63075a3](https://github.com/bhaireshm/ez.js/commit/63075a3e476c550c22159c8883a82225b79b8422) types: AnyObject added to required files.
-docs: configuration changed to typedoc.
+  docs: configuration changed to typedoc.
 - [a46dbd1](https://github.com/bhaireshm/ez.js/commit/a46dbd133aa7ee8c3ef251cc87a2f64f6102e0a8) config: lint-staged, pre-commit updated.
 - [f67d3aa](https://github.com/bhaireshm/ez.js/commit/f67d3aa539f090ba280a79f32aaf3520d4582724) update: dataFormatter.
   - converted to typescript.
@@ -199,7 +214,7 @@ docs: configuration changed to typedoc.
   - test cases added.
 - [b32858e](https://github.com/bhaireshm/ez.js/commit/b32858e1e42527716e7e352af214a37400618131) chore: todolist added
 - [7f8d0d6](https://github.com/bhaireshm/ez.js/commit/7f8d0d622fb5620e963df6028e884f3f10b3359f) chore: pre-commit command updated.
-chore: script updted.
+  chore: script updted.
 - [0feab4c](https://github.com/bhaireshm/ez.js/commit/0feab4c33a823ee1512a3755c70b476fda79ccae) update: mergeObjects.
   - converted to typescript.
   - test cases added.
@@ -211,7 +226,7 @@ chore: script updted.
 - [0ddaf97](https://github.com/bhaireshm/ez.js/commit/0ddaf97a4c7a991b382f9b823f7efaf2803979a4) update: add2Matrix ts conversion.
 - [f910ed6](https://github.com/bhaireshm/ez.js/commit/f910ed6dbea1e55ef9bf8ec3a71c5bd5a28b6b8a) chore: version check pattern updated in release script.
 - [d94cc78](https://github.com/bhaireshm/ez.js/commit/d94cc784567e9bf04a92db28aece9a258bae05bd) chore: dataFormatter todo list added.
-chore: sortObjectByKey var rename.
+  chore: sortObjectByKey var rename.
 - [dc7b4e7](https://github.com/bhaireshm/ez.js/commit/dc7b4e7eda343d09679ab58e6f234d32dd39993a) update: convert.
   - converted to typescript.
   - test cases added.
@@ -245,6 +260,7 @@ chore: sortObjectByKey var rename.
 ## v0.0.23 (10-27-2023, 6:22:09)
 
 ### 📃 Commits
+
 - [e412011](https://github.com/bhaireshm/ez.js/commit/e41201180d26a4af1b5111957619841c399ad6bf) fix: uniqueArrayOfObjects more than 3 getting replicated.
 - [2d1cf1f](https://github.com/bhaireshm/ez.js/commit/2d1cf1faf5f67bd3de7fdd0b4df3c46739e80c36) Update README.md- [79c40ec](https://github.com/bhaireshm/ez.js/commit/79c40ec50a10f4f72752422569f0f7d6ca3381c6) Update CONTRIBUTION.md- [7ae30b0](https://github.com/bhaireshm/ez.js/commit/7ae30b0ae85e75949c121024bf85924353ef5202) CHANGELOG.md updated.
 
@@ -296,8 +312,6 @@ chore: sortObjectByKey var rename.
 - [6a4654d](https://github.com/bhaireshm/ez.js/commit/6a4654ddb42b2b3d37fb0453be3858fb1b8f6e4b) docs: CHANGELOG.md updated.
 
 ## v0.0.17 (9-2-2023, 8:36:46)
-
-Clean
 
 ### ✨ Features
 
