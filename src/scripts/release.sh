@@ -35,9 +35,6 @@ fi
 # Update documentation
 pnpm docs:ts true
 
-# Create a release branch from $defaultBranch.
-git checkout -b release/$ver
-
 # Bump version in package.json, but do not create a git tag
 npm version $ver --no-git-tag-version
 
@@ -49,13 +46,8 @@ git add CHANGELOG.md package.json
 git commit -am "release: v$ver"
 
 # Merge the release branch into $defaultBranch, create a tag and push
-git checkout $defaultBranch
-git merge --no-ff release/$ver
 git tag -a "v$ver" -m "release-v$ver"
 git push origin $defaultBranch --follow-tags
-
-# Remove release branch
-git branch -d release/$ver
 
 # clear variables
 unset msg ver defaultBranch
