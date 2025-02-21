@@ -26,10 +26,10 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier  --write .",
     "lint-staged": "lint-staged",
-    "setup": "sh ./src/scripts/setup.sh",
-    "release": "sh ./src/scripts/release.sh",
-    "update:branches": "sh ./src/scripts/update-all-branchs-to-default.sh",
-    "docs:ts": "sh ./src/scripts/generate-docs.sh"
+    "setup": "sh ./scripts/setup.sh",
+    "release": "sh ./scripts/release.sh",
+    "update:branches": "sh ./scripts/update-all-branchs-to-default.sh",
+    "docs:ts": "sh ./scripts/generate-docs.sh"
   },
   "author": "Bhairesh M <bhairesh@koadz.ai>",
   "homepage": "https://bhaireshm.github.io/ez.js/",
@@ -58,7 +58,7 @@
     "simple-git": "^3.27.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typedoc": "^0.27.6",
+    "typedoc": "^0.27.7",
     "typescript": "^5.7.3"
   }
 }

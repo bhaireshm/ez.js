@@ -9,13 +9,14 @@ ctrl_c() {
 # ctrl_c is the name of the signal ctrl_c function for SIGINT signal
 trap 'ctrl_c' SIGINT
 
-if [ -z "$(git diff --cached --name-only)" ]; then
-  echo "No changes to commit."
+if [ -z "$(git diff --cached --name-only src package.json typedoc.json tsconfig.json)" ]; then
+  echo
+  echo "No changes detected in 'src' folder. Skipping checks..."
   exit 0
 fi
 
 echo
-echo "Styling, testing and building project before committing..."
+echo "Pre-commit checks started..."
 echo
 
 # Prettier check
