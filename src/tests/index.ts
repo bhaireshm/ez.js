@@ -122,7 +122,7 @@
 // const result = mergeObjects({ template: { name: "test" } }, projectJSON);
 // console.log("result", result);
 
-import { dateDiff } from "../../dist/src";
+import { DateFormatter } from "../date";
 // import { chmod } from "fs";
 
 // type NewType<T> = {
@@ -139,14 +139,11 @@ import { dateDiff } from "../../dist/src";
 //   .catch(console.error);
 
 console.time("test");
-// const arr = [1, 3, 5, 7, 9, 3, 2, 5, 7, 8, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// console.log(getUniqueArray(arr));
 
-const result = dateDiff(new Date("12/12/2012 12:00:00"), new Date("12/12/2012 13:45:00"));
-console.log("file: dateDiff.test.ts:45  result", result);
+console.log(new DateFormatter("2021-11-16 21:35:48").format()); // "2021-11-16 21:35:48"
+console.log(new DateFormatter("2021-11-16 21:35:48").format("dd/MM/yyyy")); // "16/11/2021"
+console.log(new DateFormatter("2021-11-16 21:35:48").format("yyyy-MM-dd")); // "2021-11-16"
+console.log(new DateFormatter("2021-11-16 21:35:48").format("HH:mm:ss")); // "21:35:48"
+console.log(new DateFormatter("2021-11-16 21:35:48").format("hh:mm tt")); // "09:35 PM"
 
 console.timeEnd("test");
-
-// console.time("test2");
-// console.log(Array.from(new Set(arr)));
-// console.timeEnd("test2");

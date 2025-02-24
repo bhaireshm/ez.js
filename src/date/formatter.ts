@@ -1,11 +1,11 @@
-export interface DateFormatI18n {
+export type DateFormatI18n = {
   dayNames: string[];
   monthNames: string[];
   timeNames: string[];
   suffixes: string[];
-}
+};
 
-export interface DateFormatOptions {
+export type DateFormatOptions = {
   /**
    * Use UTC timezone
    */
@@ -20,7 +20,7 @@ export interface DateFormatOptions {
    * Timezone offset in minutes, between -720 and +720 (±12 hours)
    */
   timezoneOffset?: number;
-}
+};
 
 /**
  * Formats a date according to the specified mask.
@@ -85,7 +85,7 @@ export class DateFormatter extends Date {
 
   static readonly masks: Record<string, string> = {
     default: "ddd MMM dd yyyy HH:mm:ss",
-    shortDate: "m/d/yy",
+    shortDate: "M/d/yy",
     longDate: "dddd, MMMM d, yyyy",
     isoDate: "yyyy-MM-dd",
     isoTime: "HH:mm:ss",
