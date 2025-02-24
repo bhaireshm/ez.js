@@ -1,13 +1,11 @@
-interface DateFormatI18n {
+export interface DateFormatI18n {
   dayNames: string[];
   monthNames: string[];
   timeNames: string[];
   suffixes: string[];
 }
 
-interface DateFormatOptions {
-  // mask?: string;
-
+export interface DateFormatOptions {
   /**
    * Use UTC timezone
    */
@@ -19,9 +17,9 @@ interface DateFormatOptions {
   gmt?: boolean;
 
   /**
-   * TODO: Timezone offset In minutes, between ±720
+   * Timezone offset in minutes, between -720 and +720 (±12 hours)
    */
-  // timezoneOffset?: number;
+  timezoneOffset?: number;
 }
 
 /**
@@ -96,8 +94,9 @@ export class DateFormatter extends Date {
   };
 
   constructor(date?: string | number | Date) {
-    super(date || new Date());
-    if (isNaN(this.getTime())) throw new Error("Invalid date");
+    // Initialize with current date if no date provided
+    const inputDate = date || new Date();
+    super(inputDate);
   }
 
   private static pad(val: number, len = 2): string {
@@ -110,19 +109,23 @@ export class DateFormatter extends Date {
   }
 
   format(mask: string = DateFormatter.masks.default, options: DateFormatOptions = {}): string {
-    const { utc = false, gmt = false } = options; // timezoneOffset
+    // Check if date is valid after construction
+    if (isNaN(this.getTime())) throw new Error("Invalid date");
+    const { utc = false, gmt = false, timezoneOffset } = options;
 
     let date: Date = this;
 
-    // TODO: TimezoneOffset implementation.
-    // if (timezoneOffset !== undefined && (timezoneOffset < -12 * 60 || timezoneOffset > 12 * 60)) {
-    //   throw new Error('Invalid timezone offset');
-    // }
-    // Apply timezone offset if provided
-    // if (timezoneOffset !== undefined) {
-    //   const offsetInMinutes = timezoneOffset - date.getTimezoneOffset();
-    //   date = new Date(this.getTime() + (offsetInMinutes * 60 * 1000));
-    // }
+    // Handle timezone offset
+    if (timezoneOffset !== undefined) {
+      if (timezoneOffset < -720 || timezoneOffset > 720) {
+        throw new Error("Invalid timezone offset. Must be between -720 and +720 minutes");
+      }
+
+      // First convert to UTC
+      const utcTime = date.getTime() + date.getTimezoneOffset() * 60 * 1000;
+      // Then apply the desired offset
+      date = new Date(utcTime - -timezoneOffset * 60 * 1000);
+    }
 
     const getMethod = (method: string): (() => number) => {
       const methodName = `${utc ? "getUTC" : "get"}${method}`;
