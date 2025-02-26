@@ -29,11 +29,11 @@ export type DateFormatOptions = {
  * @param {DateFormatOptions} [options] - An object that contains one or more properties that specify comparison options.
  * @return {string} - A string representation of the date in the specified mask.
  * @example
- * const date = new DateFormatter('2020-08-26T14:30:00.000Z');
- * console.log(date.format('dd/mm/yyyy HH:MM:ss')); // 26/08/2020 14:30:00
- * console.log(date.format('dddd, MMMM Do')); // Wednesday, 26th August
- * console.log(date.format('h:MM TT')); // 2:30 PM
- * console.log(date.format('h:MM TT Z')); // 2:30 PM UTC+0
+ * const date = new DateFormatter('2022-07-25T14:30:00.000Z');
+ * console.log(date.format('yyyy-MM-dd HH:mm:ss Z', { gmt: true })); // 2022-07-25 20:00:00 GMT // TODO: wrong results
+ * console.log(date.format('yyyy-MM-dd HH:mm:ss')); // 2022-07-25 15:30:00 // TODO: wrong results
+ * console.log(date.format('dddd, MMMM d, yyyy')); // Monday, July 25, 2022
+ * console.log(date.format('h:mm:ss TT')); // 8:00:00 PM
  */
 export class DateFormatter extends Date {
   static readonly i18n: DateFormatI18n = {

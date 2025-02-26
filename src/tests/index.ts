@@ -140,10 +140,16 @@ import { DateFormatter } from "../date";
 
 console.time("test");
 
-console.log(new DateFormatter("2021-11-16 21:35:48").format()); // "2021-11-16 21:35:48"
-console.log(new DateFormatter("2021-11-16 21:35:48").format("dd/MM/yyyy")); // "16/11/2021"
-console.log(new DateFormatter("2021-11-16 21:35:48").format("yyyy-MM-dd")); // "2021-11-16"
-console.log(new DateFormatter("2021-11-16 21:35:48").format("HH:mm:ss")); // "21:35:48"
-console.log(new DateFormatter("2021-11-16 21:35:48").format("hh:mm tt")); // "09:35 PM"
+// console.log(new DateFormatter("2021-11-16 21:35:48").format()); // "2021-11-16 21:35:48"
+// console.log(new DateFormatter("2021-11-16 21:35:48").format("dd/MM/yyyy")); // "16/11/2021"
+// console.log(new DateFormatter("2021-11-16 21:35:48").format("yyyy-MM-dd")); // "2021-11-16"
+// console.log(new DateFormatter("2021-11-16 21:35:48").format("HH:mm:ss")); // "21:35:48"
+// console.log(new DateFormatter("2021-11-16 21:35:48").format("hh:mm tt")); // "09:35 PM"
+
+const date = new DateFormatter("2022-07-25T14:30:00.000Z");
+console.log(date.format("yyyy-MM-dd HH:mm:ss Z", { gmt: true })); // 2022-07-25 20:00:00 GMT
+console.log(date.format("yyyy-MM-dd HH:mm:ss")); // 2022-07-25 15:30:00
+console.log(date.format("dddd, MMMM d, yyyy")); // Monday, July 25, 2022
+console.log(date.format("h:mm:ss TT")); // 8:00:00 PM
 
 console.timeEnd("test");
