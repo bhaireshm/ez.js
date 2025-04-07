@@ -6,6 +6,9 @@
  */
 export default function objectToQueryParams(o: { [key: string]: any } = {}): string {
   return Object.entries(o)
-    .map((p) => `${encodeURIComponent(p[0])}=${encodeURIComponent(p[1])}`)
+    .map(([key, value]) => {
+      value = typeof value === "object" ? JSON.stringify(value) : value;
+      return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+    })
     .join("&");
 }

@@ -34,4 +34,16 @@ describe("objectToQueryParams function", () => {
     const expected = "id=123&quantity=5";
     expect(result).toEqual(expected);
   });
+
+  test("should handle nested objects", () => {
+    const inputObject = {
+      id: 123,
+      quantity: 5,
+      items: { name: "John Doe", location: "New York, NY" },
+    };
+    const result = objectToQueryParams(inputObject);
+    const expected =
+      "id=123&quantity=5&items=%7B%22name%22%3A%22John%20Doe%22%2C%22location%22%3A%22New%20York%2C%20NY%22%7D";
+    expect(result).toEqual(expected);
+  });
 });
