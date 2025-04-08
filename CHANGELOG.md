@@ -1,3 +1,20 @@
+## v1.2.9 (8-4-2025, 8:39:27 pm)
+
+### ✨ Features
+- [f743865](https://github.com/bhaireshm/ez.js/commit/f743865debbf4e97628836d0ec9b75178d9eff74) feat: DateFormatter implementation.
+
+### 📃 Commits
+- [c218f0d](https://github.com/bhaireshm/ez.js/commit/c218f0d90b59a7d694a47cae54e672be1d8eb6ec) fix: objectToQueryParams convertion issue.
+- [3e19581](https://github.com/bhaireshm/ez.js/commit/3e1958185ef291cddf9344343f14ed6132605003) update: queryParamsToObject method added.
+- [129ed1d](https://github.com/bhaireshm/ez.js/commit/129ed1de3fe6092a3692eae3fc21d27b03cfeabb) fix: objectToQueryParams   - nested object as value.
+- [189772c](https://github.com/bhaireshm/ez.js/commit/189772c76c48761a3595ec3586b3211d97d5fcfb) docs: jsDoc added for DateFormatter
+- [49e1e25](https://github.com/bhaireshm/ez.js/commit/49e1e25ab9e596f555b335756a16405da70296ef) update: shortDate mask, types exported.
+- [5d48bbf](https://github.com/bhaireshm/ez.js/commit/5d48bbff757653b68b3b18b1285820db42b8cdac) update: setup script changes
+- [53aebd4](https://github.com/bhaireshm/ez.js/commit/53aebd4ab0af8f4fadf81b299079bf6676c2ad2e) update: pre-commit modified to check only src & required files.
+- [725fdfd](https://github.com/bhaireshm/ez.js/commit/725fdfdf98160c2d24313022d804d5efb9ed0469) BREAKING CHANGE: scripts folder moved to base folder.
+- [8c0afc4](https://github.com/bhaireshm/ez.js/commit/8c0afc4f424da3a0f5e3ee9037fce461d5657534) docs: CHANGELOG.md updated.
+- [11a3a93](https://github.com/bhaireshm/ez.js/commit/11a3a93a904d6bf718a3aab0e0809944884334e1) update: release script   - removed release branch creation flow.
+
 ## v1.2.8 (20-2-2025, 3:01:42 pm)
 
 ### ✨ Features
