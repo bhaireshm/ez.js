@@ -1,3 +1,12 @@
+## v1.3.0 (1-9-2025, 11:33:21 pm)
+
+### ✨ Features
+- [1d2d516](https://github.com/bhaireshm/ez.js/commit/1d2d516baed21cdfc0705416cedf5a79abd60bd8) feat: Implement findDataInCollection and enhance utilities
+
+fix: Date Formatting: Improved DateFormatter to correctly handle timezone and GMT options.
+
+### 📃 Commits
+
 ## v1.2.9 (8-4-2025, 8:39:27 pm)
 
 ### ✨ Features
