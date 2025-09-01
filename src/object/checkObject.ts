@@ -16,7 +16,15 @@ import getNestedValue from "./getNestedValue";
  * console.log(checkObject(payload, ["address.city"]));// true
  */
 export default function checkObject(data: AnyObject, keys: string[] = []): boolean {
-  if (keys.length) return keys.map((key) => getNestedValue(data, key)).some((v) => !isEmpty(v));
-  for (const key in data) return !isEmpty(data[key]);
+  if (keys.length) {
+    return keys.map((key) => getNestedValue(data, key)).some((v) => !isEmpty(v));
+  }
+  for (const key in data) {
+    if (Object.prototype.hasOwnProperty.call(data, key)) {
+      if (isEmpty(data[key])) {
+        return false; // Found an empty property
+      }
+    }
+  }
   return true;
 }

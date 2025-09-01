@@ -27,17 +27,15 @@ export default function sortObjectByMultipleKeys(
   keys: string[] = [],
 ): AnyObject[] {
   return arr.sort((a, b) => {
-    return keys
-      .map((o) => {
-        let dir = 1;
-        if (o.startsWith("-")) {
-          dir = -1;
-          o = o.substring(1);
-        }
-        if (a[o] > b[o]) return dir;
-        if (a[o] < b[o]) return -dir;
-        return 0;
-      })
-      .reduce((p, n) => p || n, 0);
+    for (let o of keys) {
+      let dir = 1;
+      if (o.startsWith("-")) {
+        dir = -1;
+        o = o.substring(1);
+      }
+      if (a[o] > b[o]) return dir;
+      if (a[o] < b[o]) return -dir;
+    }
+    return 0;
   });
 }
