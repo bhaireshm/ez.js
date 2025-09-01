@@ -5,25 +5,23 @@
  * @returns The input string converted to snake case.
  *
  * @example
- * const input = "helloWorld";
- * const output = toSnakeCase(input);
- * console.log(output); // Output: "hello_world"
+ * toSnakeCase("helloWorld"); // "hello_world"
+ * toSnakeCase("PascalCaseString"); // "pascal_case_string"
+ * toSnakeCase("String with Spaces"); // "string_with_spaces"
+ * toSnakeCase("stringWith1Number"); // "string_with_1_number"
+ * toSnakeCase("string-with_special!chars"); // "string_with_special_chars"
  */
 export default function toSnakeCase(str: string): string {
-  // Handle empty string
   if (!str.trim()) return str;
 
-  return (
-    str
-      // Trim leading and trailing spaces
-      .trim()
-
-      // Insert underscore before lowercase letters and after underscores
-      .replace(/([A-Z])(?=[a-z])|_/g, (match, char) => (char ? "_" + char.toLowerCase() : match))
-
-      // Convert everything to lowercase
-      .toLowerCase()
-  );
+  return str
+    .trim()
+    .replace(/[^a-zA-Z0-9]/g, " ") // Replace non-alphanumeric with space
+    .replace(/([a-z])(\d)/g, "$1 $2") // Add space between letter and digit
+    .replace(/(\d)([a-zA-Z])/g, "$1 $2") // Add space between digit and letter
+    .replace(/([a-z\d])([A-Z])/g, "$1 $2") // Add space before uppercase in camelCase/PascalCase
+    .replace(/\s+/g, "_") // Replace multiple spaces with single underscore
+    .toLowerCase();
 }
 
 // export default function toSnakeCase(str: string): string {

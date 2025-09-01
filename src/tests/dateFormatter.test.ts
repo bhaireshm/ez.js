@@ -23,7 +23,7 @@ describe("DateFormatter", () => {
     const date = new Date("2022-07-25T14:30:00.000Z");
     const formatter = new DateFormatter(date);
     expect(formatter.format("yyyy-MM-dd HH:mm:ss Z", { gmt: true })).toBe(
-      "2022-07-25 20:00:00 GMT",
+      "2022-07-25 14:30:00 GMT",
     );
   });
 

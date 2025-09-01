@@ -6,8 +6,8 @@ import getNestedValue from "./getNestedValue";
  *
  * @param {object} obj - The object to check for properties.
  * @param {string} keys - The keys to check for in the object, separated by commas.
- * @param {boolean} [returnType=false] - Determines the return type of the function. Defaults to false.
- * @returns {string|boolean} - If returnType is true, returns a boolean value indicating whether all keys were found in the object. If returnType is false, returns a string indicating whether all keys were found or which keys were not found.
+ * @param {boolean} [returnBoolean=false] - Determines the return type of the function. Defaults to false.
+ * @returns {string|boolean} - If returnBoolean is true, returns a boolean value indicating whether all keys were found in the object. If returnBoolean is false, returns a string indicating whether all keys were found or which keys were not found.
  *
  * @example
  * console.log(hasOwnProperty({'a':1, 'b':2, 'c':3}, "a,d"));
@@ -16,25 +16,35 @@ import getNestedValue from "./getNestedValue";
 export default function hasOwnProperty(
   obj: object,
   keys: string,
-  returnType: boolean = false,
+  returnBoolean: boolean = false,
 ): string | boolean {
-  if (isEmpty(obj) || isEmpty(keys)) return returnType ? false : "false";
-
-  const _keys = keys.split(",");
-  let isFound = false;
-  let error = "";
-
-  function checkProperty(k: string) {
-    if (isEmpty(k)) return;
-    else if (k.split(".").length > 1 && getNestedValue(obj, k)) isFound = true;
-    else if (Object.hasOwn(obj, k)) isFound = true;
-    else isFound = false;
-    if (!isFound) error += `${k} `;
+  if (isEmpty(obj) || isEmpty(keys)) {
+    return returnBoolean ? false : "false";
   }
 
-  if (_keys.length > 1) for (const k of _keys) checkProperty(k);
-  else checkProperty(_keys[0]);
+  const keysToCheck = keys.split(",");
+  const notFoundKeys: string[] = [];
 
-  if (isFound) return returnType ? isFound : "All key(s) found";
-  else return returnType ? isFound : `${error}not found`;
+  for (const k of keysToCheck) {
+    const key = k.trim();
+    if (isEmpty(key)) continue;
+
+    // Check for nested properties
+    if (key.includes(".")) {
+      if (getNestedValue(obj, key) === null) {
+        notFoundKeys.push(key);
+      }
+    } else {
+      // Check for own property
+      if (!Object.prototype.hasOwnProperty.call(obj, key)) {
+        notFoundKeys.push(key);
+      }
+    }
+  }
+
+  if (notFoundKeys.length > 0) {
+    return returnBoolean ? false : `${notFoundKeys.join(", ")} not found`;
+  }
+
+  return returnBoolean ? true : "All key(s) found";
 }

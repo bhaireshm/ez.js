@@ -18,11 +18,11 @@ export default function isEmpty(data: unknown): boolean {
 
   if (Array.isArray(data) || isStr(data)) return (data as any[] | string).length === 0;
 
+  if (isRegexp(data)) return false;
+
   if (isObj(data)) {
-    let count = 0;
-    for (const i in data as object) if (Object.prototype.hasOwnProperty.call(data, i)) count++;
-    return count === 0;
+    return Object.keys(data as object).length === 0;
   }
 
-  return !isRegexp(data);
+  return true;
 }

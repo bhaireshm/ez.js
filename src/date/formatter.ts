@@ -30,8 +30,8 @@ export type DateFormatOptions = {
  * @return {string} - A string representation of the date in the specified mask.
  * @example
  * const date = new DateFormatter('2022-07-25T14:30:00.000Z');
- * console.log(date.format('yyyy-MM-dd HH:mm:ss Z', { gmt: true })); // 2022-07-25 20:00:00 GMT // TODO: wrong results
- * console.log(date.format('yyyy-MM-dd HH:mm:ss')); // 2022-07-25 15:30:00 // TODO: wrong results
+ * console.log(date.format('yyyy-MM-dd HH:mm:ss Z', { gmt: true })); // 2022-07-25 14:30:00 GMT
+ * console.log(date.format('yyyy-MM-dd HH:mm:ss', { timezoneOffset: 60 })); // 2022-07-25 15:30:00
  * console.log(date.format('dddd, MMMM d, yyyy')); // Monday, July 25, 2022
  * console.log(date.format('h:mm:ss TT')); // 8:00:00 PM
  */
@@ -111,20 +111,20 @@ export class DateFormatter extends Date {
   format(mask: string = DateFormatter.masks.default, options: DateFormatOptions = {}): string {
     // Check if date is valid after construction
     if (isNaN(this.getTime())) throw new Error("Invalid date");
-    const { utc = false, gmt = false, timezoneOffset } = options;
+    let { utc = false, gmt = false, timezoneOffset } = options;
 
     let date: Date = this;
+
+    if (gmt) utc = true;
 
     // Handle timezone offset
     if (timezoneOffset !== undefined) {
       if (timezoneOffset < -720 || timezoneOffset > 720) {
         throw new Error("Invalid timezone offset. Must be between -720 and +720 minutes");
       }
-
-      // First convert to UTC
-      const utcTime = date.getTime() + date.getTimezoneOffset() * 60 * 1000;
-      // Then apply the desired offset
-      date = new Date(utcTime - -timezoneOffset * 60 * 1000);
+      // Create a new date object with the applied offset from UTC
+      date = new Date(this.getTime() + timezoneOffset * 60 * 1000);
+      utc = true; // We must use UTC methods on the offset-adjusted date
     }
 
     const getMethod = (method: string): (() => number) => {

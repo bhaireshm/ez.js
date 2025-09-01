@@ -31,7 +31,7 @@
     "update:branches": "sh ./scripts/update-all-branchs-to-default.sh",
     "docs:ts": "sh ./scripts/generate-docs.sh"
   },
-  "author": "Bhairesh M <bhairesh@koadz.ai>",
+  "author": "Bhairesh M <bhairesh@makelooplabs.com>",
   "homepage": "https://bhaireshm.github.io/ez.js/",
   "repository": {
     "type": "git",

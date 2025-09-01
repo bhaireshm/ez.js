@@ -12,16 +12,10 @@
 export default function arrayIntoChunks<T>(arr: T[], n: number): T[][] {
   if (!arr.length || n <= 0) return [];
 
-  const out = [];
-  let j = 0;
-
-  for (let i = 0; i < Math.ceil(arr.length / Math.floor(n)); i++) {
-    const temp = [];
-    while (j < arr.length && temp.length < Math.floor(n)) {
-      temp.push(arr[j]);
-      j++;
-    }
-    out.push(temp);
+  const result: T[][] = [];
+  const size = Math.floor(n);
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
   }
-  return out;
+  return result;
 }
