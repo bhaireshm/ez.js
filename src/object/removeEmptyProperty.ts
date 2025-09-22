@@ -1,6 +1,7 @@
 import isEmpty from "../common/isEmpty";
 import isObj from "../common/isObj";
 import { AnyObject } from "../types";
+import deepClone from "./deepClone";
 
 /**
  * Removes all the keys from an object for which the value is empty.
@@ -8,6 +9,7 @@ import { AnyObject } from "../types";
  * @returns {object} - An object with all the empty properties removed.
  */
 export default function removeEmptyProperty(data: AnyObject = {}) {
+
   function removeEmptyProperties(obj: any): any {
     let result: any;
     if (Array.isArray(obj)) {
@@ -28,8 +30,8 @@ export default function removeEmptyProperty(data: AnyObject = {}) {
     } else return obj;
   }
 
-  // Create a deep copy of the data object
-  const _data = JSON.parse(JSON.stringify(data));
+  // Create a deep copy of the data object using the new deepClone helper
+  const _data = deepClone(data);
 
   // Remove empty properties recursively
   return removeEmptyProperties(_data);

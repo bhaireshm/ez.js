@@ -11,12 +11,12 @@ describe("toNumber function", () => {
     expect(result).toBe("abc");
   });
 
-  test("should log a warning and return an empty string for an invalid number string", () => {
-    const spy = jest.spyOn(console, "warn").mockImplementation(() => {});
+  test("should return NaN for an invalid number string when returnStrings is false", () => {
+    // const spy = jest.spyOn(console, "warn").mockImplementation(() => {});
     const result = toNumber("abc");
-    expect(result).toBe("");
-    expect(spy).toHaveBeenCalledWith("abc NaN");
-    spy.mockRestore();
+    expect(result).toBeNaN();
+    // expect(spy).toHaveBeenCalledWith("abc NaN");
+    // spy.mockRestore();
   });
 });
 

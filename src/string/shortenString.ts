@@ -4,6 +4,10 @@
  * @returns {string} - The shortened string if the length of the input string is greater than the specified length, otherwise the original string.
  */
 export default function shortenString(str: string = "", len: number = 50): string {
-  if (str.length > len) return str.substring(0, len);
+  // Use Array.from to correctly handle Unicode characters (e.g., emojis)
+  const chars = Array.from(str);
+  if (chars.length > len) {
+    return chars.slice(0, len).join("");
+  }
   return str;
 }

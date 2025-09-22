@@ -3,8 +3,9 @@ import { objectToQueryParams } from "..";
 describe("objectToQueryParams function", () => {
   test("should convert an object into a query string", () => {
     const inputObject = { name: "John", age: 25, city: "New York" };
+    // Expected: "name=%22John%22&age=25&city=%22New+York%22" (old behavior)
+    const expected = "name=John&age=25&city=New+York"; // New behavior
     const result = objectToQueryParams(inputObject);
-    const expected = "name=%22John%22&age=25&city=%22New+York%22";
     expect(result).toEqual(expected);
   });
 
@@ -16,15 +17,17 @@ describe("objectToQueryParams function", () => {
 
   test("should handle an object with one key-value pair", () => {
     const inputObject = { key: "value" };
+    // Expected: "key=%22value%22" (old behavior)
+    const expected = "key=value"; // New behavior
     const result = objectToQueryParams(inputObject);
-    const expected = "key=%22value%22";
     expect(result).toEqual(expected);
   });
 
   test("should handle special characters in key-value pairs", () => {
     const inputObject = { name: "John Doe", location: "New York, NY" };
+    // Expected: "name=%22John+Doe%22&location=%22New+York%2C+NY%22" (old behavior)
+    const expected = "name=John+Doe&location=New+York%2C+NY"; // New behavior
     const result = objectToQueryParams(inputObject);
-    const expected = "name=%22John+Doe%22&location=%22New+York%2C+NY%22";
     expect(result).toEqual(expected);
   });
 
@@ -41,9 +44,20 @@ describe("objectToQueryParams function", () => {
       quantity: 5,
       items: { name: "John Doe", location: "New York, NY" },
     };
-    const result = objectToQueryParams(inputObject);
+    // This test case expects JSON.stringify for the 'items' object, which is still the behavior for objects.
     const expected =
       "id=123&quantity=5&items=%7B%22name%22%3A%22John+Doe%22%2C%22location%22%3A%22New+York%2C+NY%22%7D";
+    const result = objectToQueryParams(inputObject);
+    expect(result).toEqual(expected);
+  });
+
+  test("should handle array values", () => {
+    const inputObject = {
+      colors: ["red", "green", "blue"],
+      sizes: [10, 20],
+    };
+    const expected = "colors=red&colors=green&colors=blue&sizes=10&sizes=20";
+    const result = objectToQueryParams(inputObject);
     expect(result).toEqual(expected);
   });
 });

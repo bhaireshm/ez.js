@@ -6,7 +6,17 @@
  */
 export function objectToQueryParams(o: { [key: string]: any } = {}): string {
   const sp = new URLSearchParams();
-  Object.entries(o).forEach(([k, v]) => sp.set(k, JSON.stringify(v)));
+  Object.entries(o).forEach(([k, v]) => {
+    if (Array.isArray(v)) {
+      v.forEach(item => sp.append(k, String(item))); // Use append for arrays to allow multiple values for same key
+    } else if (typeof v === 'object' && v !== null) {
+      // For objects, stringify them. This might still be problematic for some APIs.
+      // A more robust solution might involve flattening the object or defining a custom serialization.
+      sp.set(k, JSON.stringify(v));
+    } else {
+      sp.set(k, String(v));
+    }
+  });
   return sp.toString();
 }
 
@@ -16,7 +26,16 @@ export function objectToQueryParams(o: { [key: string]: any } = {}): string {
  * @param {string} qs - The query string.
  * @returns {object} - The object created from the query string.
  */
-function queryParamsToObject(qs: string): object {
+export function queryParamsToObject(qs: string): object {
   const sp = new URLSearchParams(qs);
-  return Object.fromEntries(sp.entries().map(([k, v]) => [k, JSON.parse(v)]));
+  const result: { [key: string]: any } = {};
+  for (const [k, v] of sp.entries()) {
+    try {
+      // Attempt to parse as JSON, otherwise keep as string
+      result[k] = JSON.parse(v);
+    } catch (e) {
+      result[k] = v;
+    }
+  }
+  return result;
 }

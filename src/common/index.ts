@@ -12,4 +12,4 @@ export { default as isRegExp } from "./isRegExp";
 export { default as isStr } from "./isStr";
 export { default as isStrHasSpecialChar } from "./isStrHasSpecialChar";
 export { default as isUndefined } from "./isUndefined";
-export { default as isURLValid } from "./isURLValid";
+

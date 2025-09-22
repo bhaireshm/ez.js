@@ -16,7 +16,7 @@ const toNumber = (str: string, returnStrings: boolean = false): number | string 
     if (returnStrings) return str;
     else {
       console.warn(`${str} NaN`);
-      return "";
+      return NaN;
     }
   }
   return result;

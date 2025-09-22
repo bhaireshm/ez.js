@@ -3,6 +3,7 @@
  *
  * @param {number} [length=13] - The desired length of the random string. Default is 13.
  * @returns {string} - The randomly generated string.
+ * @warning This function uses `Math.random()` and is not cryptographically secure. Do not use for security-sensitive purposes (e.g., generating passwords, session tokens).
  */
 export default function generateRandomString(length: number = 13): string {
   let res = "";

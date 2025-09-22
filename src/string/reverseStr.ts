@@ -5,7 +5,8 @@
  * @returns {string} The reversed version of the input string.
  */
 function reverseStr(str: string): string {
-  return str.split("").reverse().join("");
+  // Use Array.from to correctly handle Unicode characters (e.g., emojis)
+  return Array.from(str).reverse().join("");
 }
 
 /**
